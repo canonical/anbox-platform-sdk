@@ -1,0 +1,12 @@
+<map id="plugin.h" name="plugin.h">
+<area shape="rect" id="node2" href="$platform_8h.html" title="anbox&#45;platform&#45;sdk\l/platform.h" alt="" coords="808,80,959,121"/>
+<area shape="rect" id="node3" href="$common_8h.html" title="anbox&#45;platform&#45;sdk\l/common.h" alt="" coords="85,259,236,300"/>
+<area shape="rect" id="node4" href="$version_8h.html" title="anbox&#45;platform&#45;sdk\l/version.h" alt="" coords="633,169,784,211"/>
+<area shape="rect" id="node6" href="$audio__format_8h.html" title="anbox&#45;platform&#45;sdk\l/audio_format.h" alt="" coords="5,169,156,211"/>
+<area shape="rect" id="node7" href="$audio__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/audio_processor.h" alt="" coords="1221,169,1372,211"/>
+<area shape="rect" id="node11" href="$input__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/input_processor.h" alt="" coords="808,169,959,211"/>
+<area shape="rect" id="node13" href="$sensor__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/sensor_processor.h" alt="" coords="232,169,383,211"/>
+<area shape="rect" id="node15" href="$gps__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/gps_processor.h" alt="" coords="407,169,557,211"/>
+<area shape="rect" id="node16" href="$graphics__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/graphics_processor.h" alt="" coords="1034,169,1197,211"/>
+<area shape="rect" id="node18" href="$anbox__proxy_8h.html" title="anbox&#45;platform&#45;sdk\l/anbox_proxy.h" alt="" coords="1499,169,1649,211"/>
+</map>

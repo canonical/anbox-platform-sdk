@@ -1,0 +1,4 @@
+<map id="AnboxGnssData" name="AnboxGnssData">
+<area shape="rect" id="node3" href="$structGnssMeasurement.html" title="{GnssMeasurement\n||}" alt="" coords="995,189,1138,267"/>
+<area shape="rect" id="node10" href="$structGnssClock.html" title="{GnssClock\n||}" alt="" coords="272,189,363,267"/>
+</map>

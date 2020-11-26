@@ -1,0 +1,7 @@
+<map id="AnboxGpsData" name="AnboxGpsData">
+<area shape="rect" id="node3" href="$structAnboxRMCData.html" title="{AnboxRMCData\n||}" alt="" coords="189,189,312,267"/>
+<area shape="rect" id="node8" href="$structAnboxGGAData.html" title="{AnboxGGAData\n||}" alt="" coords="473,189,596,267"/>
+<area shape="rect" id="node11" href="$structGnssMeasurement.html" title="{GnssMeasurement\n||}" alt="" coords="1067,189,1210,267"/>
+<area shape="rect" id="node15" href="$structGnssClock.html" title="{GnssClock\n||}" alt="" coords="1728,189,1818,267"/>
+<area shape="rect" id="node9" href="$structAnboxGnssData.html" title="{AnboxGnssData\n||}" alt="" coords="802,329,928,407"/>
+</map>

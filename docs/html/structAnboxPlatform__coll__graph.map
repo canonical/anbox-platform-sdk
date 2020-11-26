@@ -1,0 +1,15 @@
+<map id="AnboxPlatform" name="AnboxPlatform">
+<area shape="rect" id="node2" href="$structAnboxProxy.html" title="{AnboxProxy\n||}" alt="" coords="101,343,201,421"/>
+<area shape="rect" id="node3" href="$classanbox_1_1AnboxProxy.html" title="AnboxProxy provides a proxy layer which encapsulates callbacks that can be used by a platform to chan..." alt="" coords="5,13,244,266"/>
+<area shape="rect" id="node4" href="$structAnboxSensorProcessor.html" title="{AnboxSensorProcessor\n||}" alt="" coords="283,343,454,421"/>
+<area shape="rect" id="node5" href="$classanbox_1_1SensorProcessor.html" title="SensorProcessor allows processing sensor events from the Android container and perform sensor process..." alt="" coords="268,57,445,222"/>
+<area shape="rect" id="node6" href="$structAnboxGraphicsProcessor.html" title="{AnboxGraphicsProcessor\n||}" alt="" coords="500,343,683,421"/>
+<area shape="rect" id="node7" href="$classanbox_1_1GraphicsProcessor.html" title="GraphicsProcessor allows integration with the graphics engine inside Anbox. " alt="" coords="470,42,689,237"/>
+<area shape="rect" id="node8" href="$structAnboxGpsProcessor.html" title="{AnboxGpsProcessor\n||}" alt="" coords="717,343,868,421"/>
+<area shape="rect" id="node9" href="$classanbox_1_1GpsProcessor.html" title="GpsProcessor allows forwarding the gps data from platform plugin to Android container and process gps..." alt="" coords="713,64,872,215"/>
+<area shape="rect" id="node10" href="$structAnboxInputProcessor.html" title="{AnboxInputProcessor\n||}" alt="" coords="896,343,1055,421"/>
+<area shape="rect" id="node11" href="$classanbox_1_1InputProcessor.html" title="InputProcessor allows a plugin to propagate input events to Anbox which will forward them to the Andr..." alt="" coords="896,64,1063,215"/>
+<area shape="rect" id="node12" href="$structAnboxAudioProcessor.html" title="{AnboxAudioProcessor\n||}" alt="" coords="1097,343,1259,421"/>
+<area shape="rect" id="node13" href="$classanbox_1_1AudioProcessor.html" title="AudioProcessor allows processing audio data from the Android container and perform audio processing l..." alt="" coords="1087,42,1301,237"/>
+<area shape="rect" id="node15" href="$classanbox_1_1Platform.html" title="Platform defines the custom Anbox platform implemented by a plugin. " alt="" coords="1325,5,1497,273"/>
+</map>
