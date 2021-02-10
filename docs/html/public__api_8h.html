@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.6.0</span>
+   &#160;<span id="projectnumber">1.9.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -67,16 +67,17 @@ $(document).ready(function(){initNavTree('public__api_8h.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="public__api_8h__incl.png" border="0" usemap="#public__api_8h" alt=""/></div>
 <map name="public__api_8h" id="public__api_8h">
-<area shape="rect" id="node2" href="platform_8h.html" title="anbox&#45;platform&#45;sdk\l/platform.h" alt="" coords="808,80,959,121"/>
-<area shape="rect" id="node3" href="common_8h.html" title="anbox&#45;platform&#45;sdk\l/common.h" alt="" coords="85,259,236,300"/>
-<area shape="rect" id="node4" href="version_8h.html" title="anbox&#45;platform&#45;sdk\l/version.h" alt="" coords="633,169,784,211"/>
-<area shape="rect" id="node6" href="audio__format_8h.html" title="anbox&#45;platform&#45;sdk\l/audio_format.h" alt="" coords="5,169,156,211"/>
-<area shape="rect" id="node7" href="audio__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/audio_processor.h" alt="" coords="1221,169,1372,211"/>
-<area shape="rect" id="node11" href="input__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/input_processor.h" alt="" coords="808,169,959,211"/>
-<area shape="rect" id="node13" href="sensor__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/sensor_processor.h" alt="" coords="232,169,383,211"/>
-<area shape="rect" id="node15" href="gps__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/gps_processor.h" alt="" coords="407,169,557,211"/>
-<area shape="rect" id="node16" href="graphics__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/graphics_processor.h" alt="" coords="1034,169,1197,211"/>
-<area shape="rect" id="node18" href="anbox__proxy_8h.html" title="anbox&#45;platform&#45;sdk\l/anbox_proxy.h" alt="" coords="1499,169,1649,211"/>
+<area shape="rect" id="node2" href="platform_8h.html" title="anbox&#45;platform&#45;sdk\l/platform.h" alt="" coords="868,80,1019,121"/>
+<area shape="rect" id="node3" href="common_8h.html" title="anbox&#45;platform&#45;sdk\l/common.h" alt="" coords="5,259,156,300"/>
+<area shape="rect" id="node4" href="version_8h.html" title="anbox&#45;platform&#45;sdk\l/version.h" alt="" coords="812,169,963,211"/>
+<area shape="rect" id="node6" href="audio__format_8h.html" title="anbox&#45;platform&#45;sdk\l/audio_format.h" alt="" coords="61,169,212,211"/>
+<area shape="rect" id="node7" href="audio__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/audio_processor.h" alt="" coords="1405,169,1556,211"/>
+<area shape="rect" id="node11" href="input__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/input_processor.h" alt="" coords="637,169,788,211"/>
+<area shape="rect" id="node13" href="sensor__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/sensor_processor.h" alt="" coords="463,169,613,211"/>
+<area shape="rect" id="node15" href="gps__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/gps_processor.h" alt="" coords="236,169,387,211"/>
+<area shape="rect" id="node16" href="graphics__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/graphics_processor.h" alt="" coords="1038,169,1201,211"/>
+<area shape="rect" id="node18" href="camera__processor_8h.html" title="anbox&#45;platform&#45;sdk\l/camera_processor.h" alt="" coords="1225,169,1381,211"/>
+<area shape="rect" id="node19" href="anbox__proxy_8h.html" title="anbox&#45;platform&#45;sdk\l/anbox_proxy.h" alt="" coords="1683,169,1833,211"/>
 </map>
 </div>
 </div>
@@ -105,6 +106,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ab476d3996061bae8879c71b59f1f0b77"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="structAnboxGpsProcessor.html">AnboxGpsProcessor</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#ab476d3996061bae8879c71b59f1f0b77">AnboxPlatformGetGpsProcessorFunc</a>) (const <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a> *platform)</td></tr>
 <tr class="memdesc:ab476d3996061bae8879c71b59f1f0b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the platform gps processor instance.  <a href="#ab476d3996061bae8879c71b59f1f0b77">More...</a><br /></td></tr>
 <tr class="separator:ab476d3996061bae8879c71b59f1f0b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ebc04c87b46f92125600701943eb265"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="structAnboxCameraProcessor.html">AnboxCameraProcessor</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#a5ebc04c87b46f92125600701943eb265">AnboxPlatformGetCameraProcessorFunc</a>) (const <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a> *platform)</td></tr>
+<tr class="memdesc:a5ebc04c87b46f92125600701943eb265"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the platform camera processor instance.  <a href="#a5ebc04c87b46f92125600701943eb265">More...</a><br /></td></tr>
+<tr class="separator:a5ebc04c87b46f92125600701943eb265"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a452f2978a079e3bd76f681a6b53704d5"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="structAnboxProxy.html">AnboxProxy</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#a452f2978a079e3bd76f681a6b53704d5">AnboxPlatformGetAnboxProxyFunc</a>) (const <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a> *platform)</td></tr>
 <tr class="memdesc:a452f2978a079e3bd76f681a6b53704d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the platform anbox proxy.  <a href="#a452f2978a079e3bd76f681a6b53704d5">More...</a><br /></td></tr>
 <tr class="separator:a452f2978a079e3bd76f681a6b53704d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,6 +124,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a386a23a6f4d0de4463cebe404846762f"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#a386a23a6f4d0de4463cebe404846762f">AnboxPlatformStopFunc</a>) (const <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a> *platform)</td></tr>
 <tr class="memdesc:a386a23a6f4d0de4463cebe404846762f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask the platform to stop any pending work it has to prepare for Anbox to terminate.  <a href="#a386a23a6f4d0de4463cebe404846762f">More...</a><br /></td></tr>
 <tr class="separator:a386a23a6f4d0de4463cebe404846762f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac847d9913e63acf079620f2b38e9f5b9"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#ac847d9913e63acf079620f2b38e9f5b9">AnboxPlatformHandleEventFunc</a>) (const <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a> *platform, <a class="el" href="platform_8h.html#ae8e588cce2d344b061234aa73ecdfdac">AnboxEventType</a> type)</td></tr>
+<tr class="memdesc:ac847d9913e63acf079620f2b38e9f5b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle an event fired from Anbox by a platform.  <a href="#ac847d9913e63acf079620f2b38e9f5b9">More...</a><br /></td></tr>
+<tr class="separator:ac847d9913e63acf079620f2b38e9f5b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cb33b1439a71fa1a3c44a48c07c4946"><td class="memItemLeft" align="right" valign="top">typedef size_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#a7cb33b1439a71fa1a3c44a48c07c4946">AnboxAudioProcessorProcessDataFunc</a>) (const <a class="el" href="structAnboxAudioProcessor.html">AnboxAudioProcessor</a> *audio_processor, const uint8_t *data, size_t size)</td></tr>
 <tr class="memdesc:a7cb33b1439a71fa1a3c44a48c07c4946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a chunk of audio data.  <a href="#a7cb33b1439a71fa1a3c44a48c07c4946">More...</a><br /></td></tr>
 <tr class="separator:a7cb33b1439a71fa1a3c44a48c07c4946"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,6 +151,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a04234860725f490f48e03580d6df9e1a"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#a04234860725f490f48e03580d6df9e1a">AnboxGraphicsProcessorInitializeFunc</a>) (const <a class="el" href="structAnboxGraphicsProcessor.html">AnboxGraphicsProcessor</a> *graphics_processor, <a class="el" href="structAnboxGraphicsConfiguration.html">AnboxGraphicsConfiguration</a> *configuration)</td></tr>
 <tr class="memdesc:a04234860725f490f48e03580d6df9e1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the graphics processor.  <a href="#a04234860725f490f48e03580d6df9e1a">More...</a><br /></td></tr>
 <tr class="separator:a04234860725f490f48e03580d6df9e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65061a69df5c3edb56f4fff61de59054"><td class="memItemLeft" align="right" valign="top">typedef EGLDisplay(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#a65061a69df5c3edb56f4fff61de59054">AnboxGraphicsProcessorCreateDisplayFunc</a>) (const <a class="el" href="structAnboxGraphicsProcessor.html">AnboxGraphicsProcessor</a> *graphics_processor)</td></tr>
+<tr class="memdesc:a65061a69df5c3edb56f4fff61de59054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an EGL display.  <a href="#a65061a69df5c3edb56f4fff61de59054">More...</a><br /></td></tr>
+<tr class="separator:a65061a69df5c3edb56f4fff61de59054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2b1a48f1a08fffc1367029211f1dfab"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#ad2b1a48f1a08fffc1367029211f1dfab">AnboxGraphicsProcessorBeginFrameFunc</a>) (const <a class="el" href="structAnboxGraphicsProcessor.html">AnboxGraphicsProcessor</a> *graphics_processor)</td></tr>
 <tr class="memdesc:ad2b1a48f1a08fffc1367029211f1dfab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin a new frame.  <a href="#ad2b1a48f1a08fffc1367029211f1dfab">More...</a><br /></td></tr>
 <tr class="separator:ad2b1a48f1a08fffc1367029211f1dfab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,6 +184,12 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ad81dac8688501740cf976f745bdf2b0e"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#ad81dac8688501740cf976f745bdf2b0e">AnboxProxySetChangeDisplaySizeCallbackFunc</a>) (const <a class="el" href="structAnboxProxy.html">AnboxProxy</a> *anbox_proxy, const <a class="el" href="anbox__proxy_8h.html#a9fbc850f3be844de8a9d00d595195c10">AnboxChangeDisplaySizeCallback</a> &amp;callback, void *user_data)</td></tr>
 <tr class="memdesc:ad81dac8688501740cf976f745bdf2b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the change display size callback function.  <a href="#ad81dac8688501740cf976f745bdf2b0e">More...</a><br /></td></tr>
 <tr class="separator:ad81dac8688501740cf976f745bdf2b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d8a02082e795e09cdeaa1e326d5a15e"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#a3d8a02082e795e09cdeaa1e326d5a15e">AnboxProxySendMessageFunc</a>) (const <a class="el" href="structAnboxProxy.html">AnboxProxy</a> *anbox_proxy, const char *type, size_t type_size, const char *data, size_t data_size)</td></tr>
+<tr class="memdesc:a3d8a02082e795e09cdeaa1e326d5a15e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message from Anbox to the platform.  <a href="#a3d8a02082e795e09cdeaa1e326d5a15e">More...</a><br /></td></tr>
+<tr class="separator:a3d8a02082e795e09cdeaa1e326d5a15e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a83a323a5ca7b3a5327d624f5f76f4"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#aa8a83a323a5ca7b3a5327d624f5f76f4">AnboxProxySetTriggerActionCallbackFunc</a>) (const <a class="el" href="structAnboxProxy.html">AnboxProxy</a> *proxy, const <a class="el" href="anbox__proxy_8h.html#aadadbe551a4580965514e87fa82592be">AnboxTriggerActionCallback</a> &amp;callback, void *user_data)</td></tr>
+<tr class="memdesc:aa8a83a323a5ca7b3a5327d624f5f76f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows the platform to trigger an action within the Android system.  <a href="#aa8a83a323a5ca7b3a5327d624f5f76f4">More...</a><br /></td></tr>
+<tr class="separator:aa8a83a323a5ca7b3a5327d624f5f76f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3669448d232be08b521e6a8fcd7ed38f"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#a3669448d232be08b521e6a8fcd7ed38f">AnboxGpsProcessorStartFunc</a>) (const <a class="el" href="structAnboxGpsProcessor.html">AnboxGpsProcessor</a> *gps_processor)</td></tr>
 <tr class="memdesc:a3669448d232be08b521e6a8fcd7ed38f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request Gps processor to start forwarding the GPS data to Android container.  <a href="#a3669448d232be08b521e6a8fcd7ed38f">More...</a><br /></td></tr>
 <tr class="separator:a3669448d232be08b521e6a8fcd7ed38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,6 +202,21 @@ Typedefs</h2></td></tr>
 <tr class="memitem:aca73665152549f4119525425a50515c5"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#aca73665152549f4119525425a50515c5">AnboxGpsProcessorInjectDataFunc</a>) (const <a class="el" href="structAnboxGpsProcessor.html">AnboxGpsProcessor</a> *gps_processor, <a class="el" href="structAnboxGpsData.html">AnboxGpsData</a> data)</td></tr>
 <tr class="memdesc:aca73665152549f4119525425a50515c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inject a gps data into <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a>.  <a href="#aca73665152549f4119525425a50515c5">More...</a><br /></td></tr>
 <tr class="separator:aca73665152549f4119525425a50515c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ee366ba7ca30a42f8452c61b2e6d281"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#a9ee366ba7ca30a42f8452c61b2e6d281">AnboxCameraProcessorGetDeviceSpecsFunc</a>) (const <a class="el" href="structAnboxCameraProcessor.html">AnboxCameraProcessor</a> *camera_processor, <a class="el" href="structAnboxCameraSpec.html">AnboxCameraSpec</a> **specs, size_t *length)</td></tr>
+<tr class="memdesc:a9ee366ba7ca30a42f8452c61b2e6d281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a camera device.  <a href="#a9ee366ba7ca30a42f8452c61b2e6d281">More...</a><br /></td></tr>
+<tr class="separator:a9ee366ba7ca30a42f8452c61b2e6d281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1a554f38f88b1730292c5556046aa54"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#aa1a554f38f88b1730292c5556046aa54">AnboxCameraProcessorOpenDeviceFunc</a>) (const <a class="el" href="structAnboxCameraProcessor.html">AnboxCameraProcessor</a> *camera_processor, <a class="el" href="structAnboxCameraSpec.html">AnboxCameraSpec</a> spec, <a class="el" href="camera__processor_8h.html#a8c28661499bae24ed73a8afe1e9dc906">AnboxCameraOrientation</a> orientation)</td></tr>
+<tr class="memdesc:aa1a554f38f88b1730292c5556046aa54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a camera device.  <a href="#aa1a554f38f88b1730292c5556046aa54">More...</a><br /></td></tr>
+<tr class="separator:aa1a554f38f88b1730292c5556046aa54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d36f1c078434ae597daaaecd233b465"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#a6d36f1c078434ae597daaaecd233b465">AnboxCameraProcessorCloseDeviceFunc</a>) (const <a class="el" href="structAnboxCameraProcessor.html">AnboxCameraProcessor</a> *camera_processor)</td></tr>
+<tr class="memdesc:a6d36f1c078434ae597daaaecd233b465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a camera device.  <a href="#a6d36f1c078434ae597daaaecd233b465">More...</a><br /></td></tr>
+<tr class="separator:a6d36f1c078434ae597daaaecd233b465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a934b9271fea1de1fec4823a42d4e2978"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#a934b9271fea1de1fec4823a42d4e2978">AnboxCameraProcessorReadFrameFunc</a>) (const <a class="el" href="structAnboxCameraProcessor.html">AnboxCameraProcessor</a> *camera_processor, <a class="el" href="structAnboxVideoFrame.html">AnboxVideoFrame</a> *frame, int timeout)</td></tr>
+<tr class="memdesc:a934b9271fea1de1fec4823a42d4e2978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read next available video frame.  <a href="#a934b9271fea1de1fec4823a42d4e2978">More...</a><br /></td></tr>
+<tr class="separator:a934b9271fea1de1fec4823a42d4e2978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d04a33778a31e98c4f1c510711a29ac"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#a0d04a33778a31e98c4f1c510711a29ac">AnboxCameraProcessorInjectFrameFunc</a>) (const <a class="el" href="structAnboxCameraProcessor.html">AnboxCameraProcessor</a> *camera_processor, <a class="el" href="structAnboxVideoFrame.html">AnboxVideoFrame</a> frame)</td></tr>
+<tr class="memdesc:a0d04a33778a31e98c4f1c510711a29ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inject a video frame into <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a>.  <a href="#a0d04a33778a31e98c4f1c510711a29ac">More...</a><br /></td></tr>
+<tr class="separator:a0d04a33778a31e98c4f1c510711a29ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a0da3c5303a10d3df3a0714b361315a83"></a>
@@ -203,7 +234,7 @@ Typedefs</h2></td></tr>
 <p>Produce a silent audio stream on need while the audio output stream goes into the standby state. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1AudioProcessor.html#aba43b545d797e73eff50b997366c80b9" title="Produce a silent audio stream on need while the audio output stream goes into the standby state...">anbox::AudioProcessor::need_silence_on_standby</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00177">177</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00196">196</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -222,7 +253,7 @@ Typedefs</h2></td></tr>
 <p>Process a chunk of audio data. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1AudioProcessor.html#a93b5f068d850604529cb03687373792c" title="Process a chunk of audio data. ">anbox::AudioProcessor::process_data</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00134">134</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00153">153</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -241,7 +272,7 @@ Typedefs</h2></td></tr>
 <p>Read a chunk of audio data. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1AudioProcessor.html#ab09bbc0c384613d7056a5d0a0d338c96" title="Read a chunk of audio data. ">anbox::AudioProcessor::read_data</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00156">156</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00175">175</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -260,7 +291,7 @@ Typedefs</h2></td></tr>
 <p>Notify the platform when an audio stream is in standby mode. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1AudioProcessor.html#acfbc1ee7af52339cf30c49dd44baea52" title="Notify the platform when an audio stream is in standby mode. ">anbox::AudioProcessor::standby</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00167">167</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00186">186</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -279,7 +310,102 @@ Typedefs</h2></td></tr>
 <p>Write a chunk of audio data. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1AudioProcessor.html#a3446f1e075788eada9f4434fa25d973b" title="Write a chunk of audio data. ">anbox::AudioProcessor::write_data</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00145">145</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00164">164</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+
+</div>
+</div>
+<a id="a6d36f1c078434ae597daaaecd233b465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d36f1c078434ae597daaaecd233b465">&#9670;&nbsp;</a></span>AnboxCameraProcessorCloseDeviceFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* AnboxCameraProcessorCloseDeviceFunc) (const <a class="el" href="structAnboxCameraProcessor.html">AnboxCameraProcessor</a> *camera_processor)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close a camera device. </p>
+<p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1CameraProcessor.html#a051e33b1fa7c073e03bdec0e083bb8df" title="Close the camera device for not receiving video frames from the platform further. ...">anbox::CameraProcessor::close_device</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00432">432</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+
+</div>
+</div>
+<a id="a9ee366ba7ca30a42f8452c61b2e6d281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ee366ba7ca30a42f8452c61b2e6d281">&#9670;&nbsp;</a></span>AnboxCameraProcessorGetDeviceSpecsFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* AnboxCameraProcessorGetDeviceSpecsFunc) (const <a class="el" href="structAnboxCameraProcessor.html">AnboxCameraProcessor</a> *camera_processor, <a class="el" href="structAnboxCameraSpec.html">AnboxCameraSpec</a> **specs, size_t *length)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open a camera device. </p>
+<p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1CameraProcessor.html#a2cebe02bbd5e4ff9fa3e8767ed56f8d9" title="Get camera device specifications of the platform. ">anbox::CameraProcessor::get_device_specs</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00410">410</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+
+</div>
+</div>
+<a id="a0d04a33778a31e98c4f1c510711a29ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d04a33778a31e98c4f1c510711a29ac">&#9670;&nbsp;</a></span>AnboxCameraProcessorInjectFrameFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* AnboxCameraProcessorInjectFrameFunc) (const <a class="el" href="structAnboxCameraProcessor.html">AnboxCameraProcessor</a> *camera_processor, <a class="el" href="structAnboxVideoFrame.html">AnboxVideoFrame</a> frame)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inject a video frame into <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a>. </p>
+<p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1CameraProcessor.html#a3df209945228c24cb648edbededee688" title="Inject a video frame into AnboxPlatform. ">anbox::CameraProcessor::inject_frame</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00453">453</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+
+</div>
+</div>
+<a id="aa1a554f38f88b1730292c5556046aa54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1a554f38f88b1730292c5556046aa54">&#9670;&nbsp;</a></span>AnboxCameraProcessorOpenDeviceFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* AnboxCameraProcessorOpenDeviceFunc) (const <a class="el" href="structAnboxCameraProcessor.html">AnboxCameraProcessor</a> *camera_processor, <a class="el" href="structAnboxCameraSpec.html">AnboxCameraSpec</a> spec, <a class="el" href="camera__processor_8h.html#a8c28661499bae24ed73a8afe1e9dc906">AnboxCameraOrientation</a> orientation)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open a camera device. </p>
+<p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1CameraProcessor.html#a967b5d97bae600bb3d73d9d5477abf30" title="Open the camera device and being ready for posting video frames to Android container. ">anbox::CameraProcessor::open_device</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00421">421</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+
+</div>
+</div>
+<a id="a934b9271fea1de1fec4823a42d4e2978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a934b9271fea1de1fec4823a42d4e2978">&#9670;&nbsp;</a></span>AnboxCameraProcessorReadFrameFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* AnboxCameraProcessorReadFrameFunc) (const <a class="el" href="structAnboxCameraProcessor.html">AnboxCameraProcessor</a> *camera_processor, <a class="el" href="structAnboxVideoFrame.html">AnboxVideoFrame</a> *frame, int timeout)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read next available video frame. </p>
+<p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1CameraProcessor.html#ae759e0e80a73be14c394954d4a0f81f4" title="Read next available video frame. ">anbox::CameraProcessor::read_frame</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00442">442</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -298,7 +424,7 @@ Typedefs</h2></td></tr>
 <p>Inject a gps data into <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a>. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1SensorProcessor.html#aaade1f91f7fce6e904d6f358c8162bb5" title="Inject sensor data into AnboxPlatform. ">anbox::SensorProcessor::inject_data</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00349">349</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00400">400</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -317,7 +443,7 @@ Typedefs</h2></td></tr>
 <p>Read next available gps data. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1GpsProcessor.html#a9b2339b4ef39c25b2bbabaa220b1276e" title="Read available gps data. ">anbox::GpsProcessor::read_data</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00338">338</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00389">389</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -336,7 +462,7 @@ Typedefs</h2></td></tr>
 <p>Request Gps processor to start forwarding the GPS data to Android container. </p>
 <p>The function prototype for C API function which stands for the C++ method of anbox::GpsProcessor::start </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00320">320</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00371">371</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -355,7 +481,7 @@ Typedefs</h2></td></tr>
 <p>Request Gps processor to stop forwarding the GPS data to Android container. </p>
 <p>The function prototype for C API function which stands for the C++ method of anbox::GpsProcessor::stop </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00329">329</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00380">380</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -374,7 +500,26 @@ Typedefs</h2></td></tr>
 <p>Begin a new frame. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1GraphicsProcessor.html#a8d39b62d7f7be354f1534b66c43a053d" title="Called from Anbox when a new frame is started. ">anbox::GraphicsProcessor::begin_frame</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00216">216</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00243">243</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+
+</div>
+</div>
+<a id="a65061a69df5c3edb56f4fff61de59054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65061a69df5c3edb56f4fff61de59054">&#9670;&nbsp;</a></span>AnboxGraphicsProcessorCreateDisplayFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef EGLDisplay(* AnboxGraphicsProcessorCreateDisplayFunc) (const <a class="el" href="structAnboxGraphicsProcessor.html">AnboxGraphicsProcessor</a> *graphics_processor)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create an EGL display. </p>
+<p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1GraphicsProcessor.html#a4e55a1016837d1479a2931e7b2c2b719" title="Create an EGL display. ">anbox::GraphicsProcessor::create_display</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00234">234</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -393,7 +538,7 @@ Typedefs</h2></td></tr>
 <p>Create an offscreen EGL surface. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1GraphicsProcessor.html#a4d5c953b99b75f31f2e6c0d185c23ca0" title="Create an offscreen EGL surface for the given display, configuration and attributes. ">anbox::GraphicsProcessor::create_offscreen_surface</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00234">234</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00261">261</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -412,7 +557,7 @@ Typedefs</h2></td></tr>
 <p>Destroy an offscreen EGL surface. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1GraphicsProcessor.html#a104f313b0f08d6ea96f7efb5b44d5447">anbox::GraphicsProcessor::destroy_offscreen_surface</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00246">246</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00273">273</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -431,7 +576,7 @@ Typedefs</h2></td></tr>
 <p>Finish the currently rendered frame. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1GraphicsProcessor.html#a55fec07f5d0646bd972311795c079a0d" title="Called from Anbox when a frame was fully rendered. ">anbox::GraphicsProcessor::finish_frame</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00225">225</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00252">252</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -450,7 +595,7 @@ Typedefs</h2></td></tr>
 <p>Initialize the graphics processor. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1GraphicsProcessor.html#a262c9710d107d3685f112452a1f3184f" title="Initialize the graphics processor. ">anbox::GraphicsProcessor::initialize</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00206">206</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00225">225</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -488,7 +633,7 @@ Typedefs</h2></td></tr>
 <p>Inject an input event into <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a>. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1InputProcessor.html#a9f6a16f84c5c82559d9ad5792baeb8dc" title="Inject an input event into AnboxPlatform. ">anbox::InputProcessor::inject_event</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00197">197</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00216">216</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -507,7 +652,7 @@ Typedefs</h2></td></tr>
 <p>Read next available input event. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1InputProcessor.html#a5a0da2efa170c72758095d60a19c44ae" title="Read next available input event. ">anbox::InputProcessor::read_event</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00186">186</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00205">205</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -526,7 +671,7 @@ Typedefs</h2></td></tr>
 <p>Retrieve the platform anbox proxy. </p>
 <p>Every platform implementation has to export a symbol named 'anbox_platform_get_anbox_proxy' implementing the AnboxPlatformGetAnboxProxyFunc function prototype. </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00087">87</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00097">97</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -549,6 +694,25 @@ Typedefs</h2></td></tr>
 
 </div>
 </div>
+<a id="a5ebc04c87b46f92125600701943eb265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebc04c87b46f92125600701943eb265">&#9670;&nbsp;</a></span>AnboxPlatformGetCameraProcessorFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="structAnboxCameraProcessor.html">AnboxCameraProcessor</a>*(* AnboxPlatformGetCameraProcessorFunc) (const <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a> *platform)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the platform camera processor instance. </p>
+<p>Every platform implementation has to export a symbol named 'anbox_platform_get_camera_processor' implementing the AnboxPlatformGetCameraProcessorFunc function prototype. </p>
+
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00087">87</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+
+</div>
+</div>
 <a id="a63ee3c130ffcfe33abf489ef5fb3b853"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63ee3c130ffcfe33abf489ef5fb3b853">&#9670;&nbsp;</a></span>AnboxPlatformGetConfigItemFunc</h2>
 
@@ -564,7 +728,7 @@ Typedefs</h2></td></tr>
 <p>Retrieve the configuration options provided by platform plugin. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1Platform.html#a90ff17206a0fc0cb05cfdaf8caf6d782" title="Retrieve the configuration options provided by platform plugin. ">anbox::Platform::get_config_item</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00114">114</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00124">124</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -644,6 +808,25 @@ Typedefs</h2></td></tr>
 
 </div>
 </div>
+<a id="ac847d9913e63acf079620f2b38e9f5b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac847d9913e63acf079620f2b38e9f5b9">&#9670;&nbsp;</a></span>AnboxPlatformHandleEventFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* AnboxPlatformHandleEventFunc) (const <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a> *platform, <a class="el" href="platform_8h.html#ae8e588cce2d344b061234aa73ecdfdac">AnboxEventType</a> type)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handle an event fired from Anbox by a platform. </p>
+<p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1Platform.html#a3c6d0ac26305e68bdb19e1c3bcaa528b" title="Handle an event sending from Anbox. ">anbox::Platform::handle_event</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00144">144</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+
+</div>
+</div>
 <a id="a2ee229f9fcd113b3ed0b88454357bd2a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ee229f9fcd113b3ed0b88454357bd2a">&#9670;&nbsp;</a></span>AnboxPlatformReadyFunc</h2>
 
@@ -659,7 +842,7 @@ Typedefs</h2></td></tr>
 <p>Query the platform for its ready status. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1Platform.html#a3cfb767fac35c8e355923f7d85327b9c" title="Query the platform for its ready status. ">anbox::Platform::ready</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00096">96</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00106">106</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -678,7 +861,7 @@ Typedefs</h2></td></tr>
 <p>Ask the platform to stop any pending work it has to prepare for Anbox to terminate. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1Platform.html#af7a0fcf1b3d7f08a47b880215b63745c" title="Ask the platform to stop any pending work it has to prepare for Anbox to terminate. ">anbox::Platform::stop</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00125">125</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00135">135</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -697,7 +880,26 @@ Typedefs</h2></td></tr>
 <p>Wait for platform plugin to be initialized. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1Platform.html#a7d8fa1d14143a5af92de58deb780ea40" title="Wait for platform plugin to be initialized. ">anbox::Platform::wait_until_ready</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00105">105</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00115">115</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+
+</div>
+</div>
+<a id="a3d8a02082e795e09cdeaa1e326d5a15e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d8a02082e795e09cdeaa1e326d5a15e">&#9670;&nbsp;</a></span>AnboxProxySendMessageFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* AnboxProxySendMessageFunc) (const <a class="el" href="structAnboxProxy.html">AnboxProxy</a> *anbox_proxy, const char *type, size_t type_size, const char *data, size_t data_size)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send a message from Anbox to the platform. </p>
+<p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1AnboxProxy.html#a4f66c8b7d37198edb89300e0be7329ef" title="Send a message from Anbox to the platform. ">anbox::AnboxProxy::send_message</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00347">347</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -716,7 +918,7 @@ Typedefs</h2></td></tr>
 <p>Set the change display density callback function. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1AnboxProxy.html#a890bec8aad1f7bbb0d9d5e369ed4d13d" title="Set the display density change callback. ">anbox::AnboxProxy::set_change_display_density_callback</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00298">298</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00325">325</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -735,7 +937,7 @@ Typedefs</h2></td></tr>
 <p>Set the change display size callback function. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1AnboxProxy.html#a0082ec7ce8b7dc54905bb0be64298851" title="Set the display size change callback. ">anbox::AnboxProxy::set_change_display_size_callback</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00309">309</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00336">336</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -754,7 +956,26 @@ Typedefs</h2></td></tr>
 <p>Set the change screen orientation callback function. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1AnboxProxy.html#a2590a55c45b9dbdeaaa2250f67456828" title="Set the screen orientation change callback. ">anbox::AnboxProxy::set_change_screen_orientation_callback</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00287">287</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00314">314</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+
+</div>
+</div>
+<a id="aa8a83a323a5ca7b3a5327d624f5f76f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8a83a323a5ca7b3a5327d624f5f76f4">&#9670;&nbsp;</a></span>AnboxProxySetTriggerActionCallbackFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* AnboxProxySetTriggerActionCallbackFunc) (const <a class="el" href="structAnboxProxy.html">AnboxProxy</a> *proxy, const <a class="el" href="anbox__proxy_8h.html#aadadbe551a4580965514e87fa82592be">AnboxTriggerActionCallback</a> &amp;callback, void *user_data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows the platform to trigger an action within the Android system. </p>
+<p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1AnboxProxy.html#a3a3889387a1bda7ec1af5ad193affb62" title="Trigger an action which is executed within the Android container. ">anbox::AnboxProxy::trigger_action</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00360">360</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -792,7 +1013,7 @@ Typedefs</h2></td></tr>
 <p>Inject a sensor data into <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a>. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1SensorProcessor.html#aaade1f91f7fce6e904d6f358c8162bb5" title="Inject sensor data into AnboxPlatform. ">anbox::SensorProcessor::inject_data</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00277">277</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00304">304</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -811,7 +1032,7 @@ Typedefs</h2></td></tr>
 <p>Read next available sensor data. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1SensorProcessor.html#a6be51ee1116dc036c5b7c642036af76c" title="Read available sensor data. ">anbox::SensorProcessor::read_data</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00266">266</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00293">293</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -830,7 +1051,7 @@ Typedefs</h2></td></tr>
 <p>Sensors supported by the platform. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1SensorProcessor.html#a503eca5e80480d6f62d5cc7970264188" title="Sensors supported by this processor. ">anbox::SensorProcessor::supported_sensors</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00257">257</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00284">284</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -840,7 +1061,7 @@ Typedefs</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4f1595be0889d3a0a4532aea0648ca74.html">anbox-platform-sdk</a></li><li class="navelem"><a class="el" href="public__api_8h.html">public_api.h</a></li>
-    <li class="footer">Generated on Fri Oct 30 2020 19:28:05 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Feb 10 2021 13:05:45 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

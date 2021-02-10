@@ -1,0 +1,5 @@
+<map id="anbox::GraphicsProcessor::create_display" name="anbox::GraphicsProcessor::create_display">
+<area shape="rect" id="node2" href="$classanbox_1_1GraphicsProcessor.html#a8d39b62d7f7be354f1534b66c43a053d" title="Called from Anbox when a new frame is started. " alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node3" href="$classanbox_1_1GraphicsProcessor.html#a55fec07f5d0646bd972311795c079a0d" title="Called from Anbox when a frame was fully rendered. " alt="" coords="244,71,435,112"/>
+<area shape="rect" id="node4" href="$classanbox_1_1GraphicsProcessor.html#a262c9710d107d3685f112452a1f3184f" title="Initialize the graphics processor. " alt="" coords="244,136,435,177"/>
+</map>

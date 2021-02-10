@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.6.0</span>
+   &#160;<span id="projectnumber">1.9.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -98,6 +98,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a33ae2ef994dd4760e07af982b452be91"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classanbox_1_1GpsProcessor.html">GpsProcessor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1Platform.html#a33ae2ef994dd4760e07af982b452be91">gps_processor</a> ()</td></tr>
 <tr class="memdesc:a33ae2ef994dd4760e07af982b452be91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the platform gps processor instance.  <a href="#a33ae2ef994dd4760e07af982b452be91">More...</a><br /></td></tr>
 <tr class="separator:a33ae2ef994dd4760e07af982b452be91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aedc580fcea297f287feb8b512a0f6d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classanbox_1_1CameraProcessor.html">CameraProcessor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1Platform.html#a1aedc580fcea297f287feb8b512a0f6d">camera_processor</a> ()</td></tr>
+<tr class="memdesc:a1aedc580fcea297f287feb8b512a0f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the platform camera processor instance.  <a href="#a1aedc580fcea297f287feb8b512a0f6d">More...</a><br /></td></tr>
+<tr class="separator:a1aedc580fcea297f287feb8b512a0f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16f6ea0ed2b2dc10f90b95887ef7ace5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classanbox_1_1AnboxProxy.html">AnboxProxy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1Platform.html#a16f6ea0ed2b2dc10f90b95887ef7ace5">anbox_proxy</a> ()</td></tr>
 <tr class="memdesc:a16f6ea0ed2b2dc10f90b95887ef7ace5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the platform anbox proxy.  <a href="#a16f6ea0ed2b2dc10f90b95887ef7ace5">More...</a><br /></td></tr>
 <tr class="separator:a16f6ea0ed2b2dc10f90b95887ef7ace5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,6 +116,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af7a0fcf1b3d7f08a47b880215b63745c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1Platform.html#af7a0fcf1b3d7f08a47b880215b63745c">stop</a> ()</td></tr>
 <tr class="memdesc:af7a0fcf1b3d7f08a47b880215b63745c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask the platform to stop any pending work it has to prepare for Anbox to terminate.  <a href="#af7a0fcf1b3d7f08a47b880215b63745c">More...</a><br /></td></tr>
 <tr class="separator:af7a0fcf1b3d7f08a47b880215b63745c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c6d0ac26305e68bdb19e1c3bcaa528b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1Platform.html#a3c6d0ac26305e68bdb19e1c3bcaa528b">handle_event</a> (<a class="el" href="platform_8h.html#ae8e588cce2d344b061234aa73ecdfdac">AnboxEventType</a> type)</td></tr>
+<tr class="memdesc:a3c6d0ac26305e68bdb19e1c3bcaa528b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle an event sending from Anbox.  <a href="#a3c6d0ac26305e68bdb19e1c3bcaa528b">More...</a><br /></td></tr>
+<tr class="separator:a3c6d0ac26305e68bdb19e1c3bcaa528b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classanbox_1_1Platform.html" title="Platform defines the custom Anbox platform implemented by a plugin. ">Platform</a> defines the custom Anbox platform implemented by a plugin. </p>
@@ -122,7 +128,7 @@ Public Member Functions</h2></td></tr>
 <li>Loading a custom Open GL ES/EGL driver implementation. </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00229">229</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00240">240</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1734405780b905b5b3a14382fc8c6c70"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1734405780b905b5b3a14382fc8c6c70">&#9670;&nbsp;</a></span>Platform() <span class="overload">[1/2]</span></h2>
@@ -228,7 +234,7 @@ Public Member Functions</h2></td></tr>
 <p>A platform is supposed to have only a single anbox proxy instance at all time.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1AnboxProxy.html" title="AnboxProxy provides a proxy layer which encapsulates callbacks that can be used by a platform to chan...">AnboxProxy</a> instance, otherwise NULL when an error occured. or the platform does not support to handle the system behavior change via callbacks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00300">300</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00323">323</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -258,6 +264,37 @@ Public Member Functions</h2></td></tr>
 <p>Retrieve the platform audio processor instance. </p>
 <p>A platform is supposed to have only a single audio processor instance at all time.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1AudioProcessor.html" title="AudioProcessor allows processing audio data from the Android container and perform audio processing l...">AudioProcessor</a> instance, otherwise NULL when an error occured or the platform does not support audio processing. </dd></dl>
+
+</div>
+</div>
+<a id="a1aedc580fcea297f287feb8b512a0f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aedc580fcea297f287feb8b512a0f6d">&#9670;&nbsp;</a></span>camera_processor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classanbox_1_1CameraProcessor.html">CameraProcessor</a>* anbox::Platform::camera_processor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve the platform camera processor instance. </p>
+<p>A platform is supposed to have only a single camera processor instance at all time.</p>
+<dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1CameraProcessor.html" title="CameraProcessor allows a plugin to respond to the camera actions triggered from Anobx and post video ...">CameraProcessor</a> instance, otherwise NULL when an error occured. or the platform does not support posting a video frame to a camera application running in Android container. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00313">313</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -341,7 +378,7 @@ Public Member Functions</h2></td></tr>
 <p>A platform is supposed to have only a single gps processor instance at all time.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1SensorProcessor.html" title="SensorProcessor allows processing sensor events from the Android container and perform sensor process...">SensorProcessor</a> instance, otherwise NULL when an error occured. or the platform does not support gps processing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00290">290</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00301">301</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -372,7 +409,39 @@ Public Member Functions</h2></td></tr>
 <p>A platform is supposed to have only a single graphics processor instance at all time. Providing a graphics processor is not mandatory for a platform.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1GraphicsProcessor.html" title="GraphicsProcessor allows integration with the graphics engine inside Anbox. ">GraphicsProcessor</a> instance, otherwise NULL when an error occured. or the platform does not support graphics processing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00268">268</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00279">279</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+
+</div>
+</div>
+<a id="a3c6d0ac26305e68bdb19e1c3bcaa528b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c6d0ac26305e68bdb19e1c3bcaa528b">&#9670;&nbsp;</a></span>handle_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void anbox::Platform::handle_event </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="platform_8h.html#ae8e588cce2d344b061234aa73ecdfdac">AnboxEventType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handle an event sending from Anbox. </p>
+<p>Some operations (E.g. trigger an action) or initialization routine of a platform may require Android container fully booted or all essential components of Anbox are fully initialized.</p>
+<p>This enables a platform to get notified when an event was fired from Anbox and perform one specific operation when a certain event is received. </p>
+
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00381">381</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -487,7 +556,7 @@ Public Member Functions</h2></td></tr>
 <p>A platform is supposed to have only a single sensor processor instance at all time.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1SensorProcessor.html" title="SensorProcessor allows processing sensor events from the Android container and perform sensor process...">SensorProcessor</a> instance, otherwise NULL when an error occured. or the platform does not support sensor processing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00279">279</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00290">290</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -519,7 +588,7 @@ Public Member Functions</h2></td></tr>
 <p>The platform is expected to stop its processors and don't provide any further data to Anbox. Any further data provided to Anbox after the function has returned will not be considered.</p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, a negative error code otherwise. Possible is -EINVAL (invalid arguments supplied). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00347">347</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00370">370</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -561,7 +630,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceanbox.html">anbox</a></li><li class="navelem"><a class="el" href="classanbox_1_1Platform.html">Platform</a></li>
-    <li class="footer">Generated on Fri Oct 30 2020 19:28:05 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Feb 10 2021 13:05:45 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

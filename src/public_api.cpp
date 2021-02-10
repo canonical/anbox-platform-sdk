@@ -5,7 +5,7 @@
 
 extern "C" {
 ANBOX_EXPORT const AnboxAudioProcessor* anbox_platform_get_audio_processor(const AnboxPlatform* platform) {
-  if (!platform)
+  if (!platform || !platform->audio_processor.instance)
     return nullptr;
   return &platform->audio_processor;
 }
@@ -47,6 +47,14 @@ ANBOX_EXPORT int anbox_platform_stop(const AnboxPlatform* platform) {
     return -EINVAL;
 
   return platform->instance->stop();
+}
+
+ANBOX_EXPORT void anbox_platform_handle_event(const AnboxPlatform* platform,
+                                              AnboxEventType type) {
+  if (!platform->instance)
+    return;
+
+  platform->instance->handle_event(type);
 }
 
 ANBOX_EXPORT size_t anbox_audio_processor_process_data(const AnboxAudioProcessor* audio_processor,
@@ -106,6 +114,12 @@ ANBOX_EXPORT int anbox_graphics_processor_initialize(const AnboxGraphicsProcesso
   if (!graphics_processor || !graphics_processor->instance)
     return -EINVAL;
   return graphics_processor->instance->initialize(configuration);
+}
+
+ANBOX_EXPORT EGLDisplay anbox_graphics_processor_create_display(const AnboxGraphicsProcessor* graphics_processor) {
+  if (!graphics_processor || !graphics_processor->instance)
+    return EGL_NO_DISPLAY;
+  return graphics_processor->instance->create_display();
 }
 
 ANBOX_EXPORT void anbox_graphics_processor_begin_frame(const AnboxGraphicsProcessor* graphics_processor) {
@@ -186,6 +200,49 @@ ANBOX_EXPORT int anbox_gps_processor_inject_data(const AnboxGpsProcessor* gps_pr
   return gps_processor->instance->inject_data(data);
 }
 
+ANBOX_EXPORT const AnboxCameraProcessor* anbox_platform_get_camera_processor(const AnboxPlatform* platform) {
+  if (!platform || !platform->camera_processor.instance)
+    return nullptr;
+  return &platform->camera_processor;
+}
+
+ANBOX_EXPORT int anbox_camera_processor_get_device_specs(const AnboxCameraProcessor* camera_processor,
+                                                         AnboxCameraSpec** specs,
+                                                         size_t *length) {
+  if (!camera_processor || !camera_processor->instance)
+    return -EINVAL;
+  return camera_processor->instance->get_device_specs(specs, length);
+}
+
+ANBOX_EXPORT int anbox_camera_processor_open_device(const AnboxCameraProcessor* camera_processor,
+                                                    AnboxCameraSpec spec,
+                                                    AnboxCameraOrientation orientation) {
+  if (!camera_processor || !camera_processor->instance)
+    return -EINVAL;
+  return camera_processor->instance->open_device(spec, orientation);
+}
+
+ANBOX_EXPORT int anbox_camera_processor_close_device(const AnboxCameraProcessor* camera_processor) {
+  if (!camera_processor || !camera_processor->instance)
+    return -EINVAL;
+  return camera_processor->instance->close_device();
+}
+
+ANBOX_EXPORT int anbox_camera_processor_read_frame(const AnboxCameraProcessor* camera_processor,
+                                                   AnboxVideoFrame* frame,
+                                                   int timeout) {
+  if (!camera_processor || !camera_processor->instance)
+    return -EINVAL;
+  return camera_processor->instance->read_frame(frame, timeout);
+}
+
+ANBOX_EXPORT int anbox_camera_processor_inject_frame(const AnboxCameraProcessor* camera_processor,
+                                                     AnboxVideoFrame frame) {
+  if (!camera_processor || !camera_processor->instance)
+    return -EINVAL;
+  return camera_processor->instance->inject_frame(frame);
+}
+
 ANBOX_EXPORT const AnboxProxy* anbox_platform_get_anbox_proxy(const AnboxPlatform* platform) {
   if (!platform || !platform->anbox_proxy.instance)
     return nullptr;
@@ -216,6 +273,25 @@ ANBOX_EXPORT int anbox_proxy_set_change_display_size_callback(const AnboxProxy* 
   if (!anbox_proxy || !anbox_proxy->instance)
     return -EINVAL;
   anbox_proxy->instance->set_change_display_size_callback(callback, user_data);
+  return  0;
+}
+
+ANBOX_EXPORT int anbox_proxy_send_message(const AnboxProxy* anbox_proxy,
+                                          const char* type,
+                                          size_t type_size,
+                                          const char* data,
+                                          size_t data_size) {
+  if (!anbox_proxy || !anbox_proxy->instance)
+    return -EINVAL;
+  return anbox_proxy->instance->send_message(type, type_size, data, data_size);
+}
+
+ANBOX_EXPORT int anbox_proxy_set_trigger_action_callback(const AnboxProxy* anbox_proxy,
+                                                         const AnboxTriggerActionCallback& callback,
+                                                         void* user_data) {
+  if (!anbox_proxy || !anbox_proxy->instance)
+    return -EINVAL;
+  anbox_proxy->instance->set_trigger_action_callback(callback, user_data);
   return  0;
 }
 } // extern "C"

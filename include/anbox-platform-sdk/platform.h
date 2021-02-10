@@ -12,6 +12,7 @@
 #include "anbox-platform-sdk/sensor_processor.h"
 #include "anbox-platform-sdk/gps_processor.h"
 #include "anbox-platform-sdk/graphics_processor.h"
+#include "anbox-platform-sdk/camera_processor.h"
 #include "anbox-platform-sdk/anbox_proxy.h"
 
 #include <stdint.h>
@@ -216,6 +217,16 @@ struct AnboxPlatformDescriptor {
   uint32_t platform_version;
 };
 
+/**
+ * @brief AnboxEventType describes the type of event sent from Anbox
+ */
+typedef enum {
+  /** Android is fully booted */
+  ANBOX_EVENT_TYPE_ANDROID_BOOT_FINISHED = 0,
+  /** Anbox is fully initialized */
+  ANBOX_EVENT_TYPE_INITIALIZATION_FINISHED,
+} AnboxEventType;
+
 namespace anbox {
 
 /**
@@ -290,6 +301,18 @@ class Platform {
   virtual GpsProcessor* gps_processor() { return nullptr; }
 
   /**
+   * @brief Retrieve the platform camera processor instance.
+   *
+   * A platform is supposed to have only a single camera processor
+   * instance at all time.
+   *
+   * @return a valid CameraProcessor instance, otherwise NULL when an error occured.
+   * or the platform does not support posting a video frame to a camera application
+   * running in Android container.
+   */
+  virtual CameraProcessor* camera_processor() { return nullptr; }
+
+  /**
    * @brief Retrieve the platform anbox proxy.
    *
    * A platform is supposed to have only a single anbox proxy instance at all time.
@@ -346,6 +369,16 @@ class Platform {
    */
   virtual int stop() { return 0; }
 
+  /**
+   * @brief Handle an event sending from Anbox
+   *
+   * Some operations (E.g. trigger an action) or initialization routine of a platform may
+   * require Android container fully booted or all essential components of Anbox are fully initialized.
+   *
+   * This enables a platform to get notified when an event was fired from Anbox and perform
+   * one specific operation when a certain event is received.
+   */
+  virtual void handle_event(AnboxEventType type) { (void)type; }
  private:
   AnboxProxy  anbox_proxy_;
 };

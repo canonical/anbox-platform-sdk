@@ -77,6 +77,16 @@ typedef const AnboxSensorProcessor* (*AnboxPlatformGetSensorProcessorFunc)(const
 typedef const AnboxGpsProcessor* (*AnboxPlatformGetGpsProcessorFunc)(const AnboxPlatform* platform);
 
 /**
+ * @brief Retrieve the platform camera processor instance.
+ *
+ * Every platform implementation has to export a symbol named
+ * 'anbox_platform_get_camera_processor' implementing the AnboxPlatformGetCameraProcessorFunc
+ * function prototype.
+ *
+ **/
+typedef const AnboxCameraProcessor* (*AnboxPlatformGetCameraProcessorFunc)(const AnboxPlatform* platform);
+
+/**
  * @brief Retrieve the platform anbox proxy.
  *
  * Every platform implementation has to export a symbol named
@@ -123,6 +133,15 @@ typedef int (*AnboxPlatformGetConfigItemFunc)(const AnboxPlatform* platform,
  *
  **/
 typedef int (*AnboxPlatformStopFunc)(const AnboxPlatform* platform);
+
+/**
+ * @brief Handle an event fired from Anbox by a platform
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::Platform::handle_event
+ *
+ **/
+typedef void (*AnboxPlatformHandleEventFunc)(const AnboxPlatform* platform, AnboxEventType type);
 
 /**
  * @brief Process a chunk of audio data.
@@ -198,13 +217,21 @@ typedef int (*AnboxInputProcessorInjectEventFunc)(const AnboxInputProcessor* inp
                                                   AnboxInputEvent event);
 
 /**
-    * @brief Initialize the graphics processor
-    *
-    * The function prototype for C API function which stands for
-    * the C++ method of anbox::GraphicsProcessor::initialize
-    **/
+ * @brief Initialize the graphics processor
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::GraphicsProcessor::initialize
+ **/
 typedef int (*AnboxGraphicsProcessorInitializeFunc)(const AnboxGraphicsProcessor* graphics_processor,
                                                     AnboxGraphicsConfiguration* configuration);
+
+/**
+ * @brief Create an EGL display
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::GraphicsProcessor::create_display
+ **/
+typedef EGLDisplay (*AnboxGraphicsProcessorCreateDisplayFunc)(const AnboxGraphicsProcessor* graphics_processor);
 
 /**
  * @brief Begin a new frame
@@ -311,6 +338,30 @@ typedef int (*AnboxProxySetChangeDisplaySizeCallbackFunc)(const AnboxProxy* anbo
                                                           void* user_data);
 
 /**
+ * @brief Send a message from Anbox to the platform
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::AnboxProxy::send_message
+ *
+ **/
+typedef int (*AnboxProxySendMessageFunc)(const AnboxProxy* anbox_proxy,
+                                         const char* type,
+                                         size_t type_size,
+                                         const char* data,
+                                         size_t data_size);
+
+/**
+ * @brief Allows the platform to trigger an action within the Android system
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::AnboxProxy::trigger_action
+ *
+ **/
+typedef int (*AnboxProxySetTriggerActionCallbackFunc)(const AnboxProxy* proxy,
+                                                      const AnboxTriggerActionCallback& callback,
+                                                      void* user_data);
+
+/**
  * @brief Request Gps processor to start forwarding the GPS data to Android container.
  *
  * The function prototype for C API function which stands for
@@ -348,5 +399,58 @@ typedef int (*AnboxGpsProcessorReadDataFunc)(const AnboxGpsProcessor* gps_proces
  **/
 typedef int (*AnboxGpsProcessorInjectDataFunc)(const AnboxGpsProcessor* gps_processor,
                                                AnboxGpsData data);
+
+/**
+ * @brief Open a camera device.
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::CameraProcessor::get_device_specs
+ *
+ **/
+typedef int (*AnboxCameraProcessorGetDeviceSpecsFunc)(const AnboxCameraProcessor* camera_processor,
+                                                      AnboxCameraSpec** specs,
+                                                      size_t *length);
+
+/**
+ * @brief Open a camera device.
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::CameraProcessor::open_device
+ *
+ **/
+typedef int (*AnboxCameraProcessorOpenDeviceFunc)(const AnboxCameraProcessor* camera_processor,
+                                                  AnboxCameraSpec spec,
+                                                  AnboxCameraOrientation orientation);
+
+/**
+ * @brief Close a camera device.
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::CameraProcessor::close_device
+ *
+ **/
+typedef int (*AnboxCameraProcessorCloseDeviceFunc)(const AnboxCameraProcessor* camera_processor);
+
+
+/**
+ * @brief Read next available video frame.
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::CameraProcessor::read_frame
+ *
+ **/
+typedef int (*AnboxCameraProcessorReadFrameFunc)(const AnboxCameraProcessor* camera_processor,
+                                                 AnboxVideoFrame* frame,
+                                                 int timeout);
+
+/**
+ * @brief Inject a video frame into AnboxPlatform
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::CameraProcessor::inject_frame
+ *
+ **/
+typedef int (*AnboxCameraProcessorInjectFrameFunc)(const AnboxCameraProcessor* camera_processor,
+                                                   AnboxVideoFrame frame);
 
 #endif

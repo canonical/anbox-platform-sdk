@@ -46,4 +46,4 @@ set_target_properties(
 
 # Run the validation test suites against the platform implementation
 add_test(NAME GpsPlatformValidation
-    COMMAND ${ANBOX_PLATFORM_TESTER} --gtest_filter=-PlatformInputProcessorTest.*:PlatformAudioProcessorTest.*:PlatformGraphicsProcessorTest.*:PlatformSensorProcessorTest.* ${CMAKE_CURRENT_BINARY_DIR}/platform_gps.so)
+    COMMAND ${ANBOX_PLATFORM_TESTER} --gtest_filter=-PlatformInputProcessorTest.*:PlatformAudioProcessorTest.*:PlatformGraphicsProcessorTest.*:PlatformSensorProcessorTest.*:PlatformCameraProcessorTest.*:PlatformProxyTest.SendMessageWhenSet ${CMAKE_CURRENT_BINARY_DIR}/platform_gps.so)

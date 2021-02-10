@@ -23,7 +23,8 @@ set(PLATFORMS
     minimal
     audio_streaming
     sensor
-    gps)
+    gps
+    camera)
 
 foreach(platform ${PLATFORMS})
     string(TOLOWER ${platform} platform_name)

@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.6.0</span>
+   &#160;<span id="projectnumber">1.9.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -83,6 +83,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac4506a8c508e9e2305cebaa71421d9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a319661e5be57a4d77c075a62ffb52880"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classanbox_1_1GraphicsProcessor.html">GraphicsProcessor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1GraphicsProcessor.html#a319661e5be57a4d77c075a62ffb52880">operator=</a> (const <a class="el" href="classanbox_1_1GraphicsProcessor.html">GraphicsProcessor</a> &amp;)=delete</td></tr>
 <tr class="separator:a319661e5be57a4d77c075a62ffb52880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e55a1016837d1479a2931e7b2c2b719"><td class="memItemLeft" align="right" valign="top">virtual EGLDisplay&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1GraphicsProcessor.html#a4e55a1016837d1479a2931e7b2c2b719">create_display</a> ()</td></tr>
+<tr class="memdesc:a4e55a1016837d1479a2931e7b2c2b719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an EGL display.  <a href="#a4e55a1016837d1479a2931e7b2c2b719">More...</a><br /></td></tr>
+<tr class="separator:a4e55a1016837d1479a2931e7b2c2b719"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a262c9710d107d3685f112452a1f3184f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1GraphicsProcessor.html#a262c9710d107d3685f112452a1f3184f">initialize</a> (<a class="el" href="structAnboxGraphicsConfiguration.html">AnboxGraphicsConfiguration</a> *configuration)=0</td></tr>
 <tr class="memdesc:a262c9710d107d3685f112452a1f3184f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the graphics processor.  <a href="#a262c9710d107d3685f112452a1f3184f">More...</a><br /></td></tr>
 <tr class="separator:a262c9710d107d3685f112452a1f3184f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,6 +209,53 @@ Public Member Functions</h2></td></tr>
 <p>Called from Anbox when a new frame is started. </p>
 <p>This function is called by Anbox from its render thread after the call to eglMakeCurrent to make the main rendering surface and context current. Any operation performed should be as fast as possible to not delay the frame for too long. </p>
 
+<p class="reference">Referenced by <a class="el" href="graphics__processor_8h_source.html#l00100">create_display()</a>.</p>
+
+</div>
+</div>
+<a id="a4e55a1016837d1479a2931e7b2c2b719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e55a1016837d1479a2931e7b2c2b719">&#9670;&nbsp;</a></span>create_display()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual EGLDisplay anbox::GraphicsProcessor::create_display </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create an EGL display. </p>
+<p>This function is called by Anbox when it initializes the rendering pipeline to create an EGLDisplay to use for rendering. In case that a platform provides no implementation or EGL_NO_DISPLAY is returned Anbox will use EGL_DEFAULT_DISPLAY to create an EGLDisplay</p>
+<dl class="section return"><dt>Returns</dt><dd>EGLDisplay A valid EGLDisplay or EGL_NO_DISPLAY </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00100">100</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+
+<p class="reference">References <a class="el" href="classanbox_1_1GraphicsProcessor.html#a8d39b62d7f7be354f1534b66c43a053d">begin_frame()</a>, <a class="el" href="classanbox_1_1GraphicsProcessor.html#a55fec07f5d0646bd972311795c079a0d">finish_frame()</a>, and <a class="el" href="classanbox_1_1GraphicsProcessor.html#a262c9710d107d3685f112452a1f3184f">initialize()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classanbox_1_1GraphicsProcessor_a4e55a1016837d1479a2931e7b2c2b719_cgraph.png" border="0" usemap="#classanbox_1_1GraphicsProcessor_a4e55a1016837d1479a2931e7b2c2b719_cgraph" alt=""/></div>
+<map name="classanbox_1_1GraphicsProcessor_a4e55a1016837d1479a2931e7b2c2b719_cgraph" id="classanbox_1_1GraphicsProcessor_a4e55a1016837d1479a2931e7b2c2b719_cgraph">
+<area shape="rect" id="node2" href="classanbox_1_1GraphicsProcessor.html#a8d39b62d7f7be354f1534b66c43a053d" title="Called from Anbox when a new frame is started. " alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node3" href="classanbox_1_1GraphicsProcessor.html#a55fec07f5d0646bd972311795c079a0d" title="Called from Anbox when a frame was fully rendered. " alt="" coords="244,71,435,112"/>
+<area shape="rect" id="node4" href="classanbox_1_1GraphicsProcessor.html#a262c9710d107d3685f112452a1f3184f" title="Initialize the graphics processor. " alt="" coords="244,136,435,177"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a4d5c953b99b75f31f2e6c0d185c23ca0"></a>
@@ -260,7 +310,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Created EGLSurface or EGL_NO_SURFACE on error </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00132">132</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00144">144</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -308,7 +358,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true, if the surface is successfully destroyed and false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00148">148</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00160">160</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -337,6 +387,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Called from Anbox when a frame was fully rendered. </p>
 <p>This function is called by Anbox from its render thread before its calling eglSwapBuffers on the main EGL surface. Any operation performed should be as fast as possible to not delay the frame for too long. </p>
+
+<p class="reference">Referenced by <a class="el" href="graphics__processor_8h_source.html#l00100">create_display()</a>.</p>
 
 </div>
 </div>
@@ -373,6 +425,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, a negative error code otherwise. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="graphics__processor_8h_source.html#l00100">create_display()</a>.</p>
 
 </div>
 </div>
@@ -411,7 +465,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceanbox.html">anbox</a></li><li class="navelem"><a class="el" href="classanbox_1_1GraphicsProcessor.html">GraphicsProcessor</a></li>
-    <li class="footer">Generated on Fri Oct 30 2020 19:28:05 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Feb 10 2021 13:05:45 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

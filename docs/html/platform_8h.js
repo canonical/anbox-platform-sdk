@@ -9,6 +9,10 @@ var platform_8h =
     [ "ANBOX_PLATFORM_DESCRIPTOR_SECTION", "platform_8h.html#a7b567b2d0d9819d6a9676ba4363f0154", null ],
     [ "ANBOX_PLATFORM_PLUGIN_DESCRIBE", "platform_8h.html#a18b834b14b05e5d31ab80b441c094247", null ],
     [ "MAX_STRING_LENGTH", "platform_8h.html#a6789ebc0df71a8ef76bfbb4fb5f74aad", null ],
+    [ "AnboxEventType", "platform_8h.html#ae8e588cce2d344b061234aa73ecdfdac", [
+      [ "ANBOX_EVENT_TYPE_ANDROID_BOOT_FINISHED", "platform_8h.html#ae8e588cce2d344b061234aa73ecdfdacafeca1fb68e6059662c0f2113f16263b5", null ],
+      [ "ANBOX_EVENT_TYPE_INITIALIZATION_FINISHED", "platform_8h.html#ae8e588cce2d344b061234aa73ecdfdaca937ceb35ac34e189393657306aaa7320", null ]
+    ] ],
     [ "AnboxPlatformConfigurationKey", "platform_8h.html#a0ea2707450519d64745267790a9f2f0d", [
       [ "EGL_DRIVER_PATH", "platform_8h.html#a0ea2707450519d64745267790a9f2f0dae8ab64cd5952052e49c3d623a10b9715", null ],
       [ "OPENGL_ES1_CM_DRIVER_PATH", "platform_8h.html#a0ea2707450519d64745267790a9f2f0da392efc082569013b5fce326af0293f2f", null ],

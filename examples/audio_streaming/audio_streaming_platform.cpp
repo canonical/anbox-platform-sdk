@@ -481,12 +481,35 @@ void AudioStreamingPlatformGraphicsProcessor::begin_frame() {}
 
 void AudioStreamingPlatformGraphicsProcessor::finish_frame() {}
 
+
+class AudioStreamingPlatformProxy : public AnboxProxy {
+ public:
+  AudioStreamingPlatformProxy() {}
+  ~AudioStreamingPlatformProxy() override = default;
+
+  int send_message(const char* type, size_t type_size,
+                   const char* data, size_t data_size) override;
+};
+
+int AudioStreamingPlatformProxy::send_message(
+    const char* type, size_t type_size,
+    const char* data, size_t data_size) {
+  if (type == nullptr || type_size == 0 ||
+      data == nullptr || data_size == 0)
+    return -EINVAL;
+
+  std::cout << "Send message type: " << std::string(type, type_size)
+            << " data: " << std::string(data, data_size) << std::endl;
+  return 0;
+}
+
 class AudioStreamingPlatform : public anbox::Platform {
  public:
   AudioStreamingPlatform(const AnboxPlatformConfiguration* configuration) :
     audio_processor_(std::make_unique<AudioStreamingPlatformAudioProcessor>(audio_out_spec_)),
     input_processor_(std::make_unique<AudioStreamingPlatformInputProcessor>()),
-    graphics_processor_(std::make_unique<AudioStreamingPlatformGraphicsProcessor>()) {
+    graphics_processor_(std::make_unique<AudioStreamingPlatformGraphicsProcessor>()),
+    anbox_proxy_(std::make_unique<AudioStreamingPlatformProxy>()) {
       (void) configuration;
     }
   ~AudioStreamingPlatform() override = default;
@@ -494,6 +517,7 @@ class AudioStreamingPlatform : public anbox::Platform {
   AudioProcessor* audio_processor() override;
   InputProcessor* input_processor() override;
   GraphicsProcessor* graphics_processor() override;
+  AnboxProxy* anbox_proxy() override;
   bool ready() const override;
   int wait_until_ready() override;
   int get_config_item(AnboxPlatformConfigurationKey key, void* data, size_t data_size) override;
@@ -505,6 +529,7 @@ class AudioStreamingPlatform : public anbox::Platform {
   const std::unique_ptr<AudioStreamingPlatformAudioProcessor> audio_processor_;
   const std::unique_ptr<AudioStreamingPlatformInputProcessor> input_processor_;
   const std::unique_ptr<AudioStreamingPlatformGraphicsProcessor> graphics_processor_;
+  const std::unique_ptr<AudioStreamingPlatformProxy> anbox_proxy_;
 };
 
 AudioProcessor* AudioStreamingPlatform::audio_processor() {
@@ -517,6 +542,10 @@ InputProcessor* AudioStreamingPlatform::input_processor() {
 
 GraphicsProcessor* AudioStreamingPlatform::graphics_processor() {
   return graphics_processor_.get();
+}
+
+AnboxProxy* AudioStreamingPlatform::anbox_proxy() {
+  return anbox_proxy_.get();
 }
 
 bool AudioStreamingPlatform::ready() const {

@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.6.0</span>
+   &#160;<span id="projectnumber">1.9.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -60,7 +60,7 @@ $(document).ready(function(){initNavTree('anbox_sdk_api_overview_page.html','');
 <div class="textblock"><p>This page provides a high-level overview of the entire Anbox Platform SDK API, including those defined in <a class="el" href="platform_8h.html">platform.h</a>, <a class="el" href="audio__processor_8h.html">audio_processor.h</a>, <a class="el" href="graphics__processor_8h.html">graphics_processor.h</a> <a class="el" href="sensor__processor_8h.html">sensor_processor.h</a> and <a class="el" href="input__processor_8h.html">input_processor.h</a>.</p>
 <h1><a class="anchor" id="API"></a>
 Introduction</h1>
-<p>The Anbox Platform SDK provides a class based C++ API to implement plugins in. The internal implementation wraps C-based API functions and exposes them for Anbox internal use. The platform plugin implementer only needs to use the stable C++ based API like <a class="el" href="classanbox_1_1Platform.html">anbox::Platform</a>, <a class="el" href="classanbox_1_1InputProcessor.html">anbox::InputProcessor</a>, <a class="el" href="classanbox_1_1GraphicsProcessor.html">anbox::GraphicsProcessor</a>, <a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a>, <a class="el" href="classanbox_1_1AudioProcessor.html">anbox::AudioProcessor</a> and <a class="el" href="classanbox_1_1GpsProcessor.html">anbox::GpsProcessor</a>. Any usage of the internal C exposed functions is not guaranteed to be stable and could break at any point. </p><div class="image">
+<p>The Anbox Platform SDK provides a class based C++ API to implement plugins in. The internal implementation wraps C-based API functions and exposes them for Anbox internal use. The platform plugin implementer only needs to use the stable C++ based API like <a class="el" href="classanbox_1_1Platform.html">anbox::Platform</a>, <a class="el" href="classanbox_1_1InputProcessor.html">anbox::InputProcessor</a>, <a class="el" href="classanbox_1_1GraphicsProcessor.html">anbox::GraphicsProcessor</a>, <a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a>, <a class="el" href="classanbox_1_1AudioProcessor.html">anbox::AudioProcessor</a>, <a class="el" href="classanbox_1_1GpsProcessor.html">anbox::GpsProcessor</a> and <a class="el" href="classanbox_1_1CameraProcessor.html">anbox::CameraProcessor</a>. Any usage of the internal C exposed functions is not guaranteed to be stable and could break at any point. </p><div class="image">
 <img src="classes_abstract.png" alt="classes_abstract.png"/>
 </div>
 <p>The intent of the API design is to provide a platform implementation that the Anbox runtime calls into. The plugin shouldn't ever call into Anbox, instead Anbox will always call functions that the plugin implements. Internally this is accomplished with C style ABI compatibility with the exported functions that are dynamically loaded by Anbox. These C functions essentially call the methods of an instance of the <a class="el" href="classanbox_1_1Platform.html">anbox::Platform</a> class. They are exported at compile time of the plugin, as the implementation of the SDK is compiled alongside the SDK using CMake interface targets.</p>
@@ -92,6 +92,7 @@ Abstract classes</h1>
 <li><a class="el" href="classanbox_1_1Platform.html#a3cfb767fac35c8e355923f7d85327b9c">anbox::Platform::ready</a></li>
 <li><a class="el" href="classanbox_1_1Platform.html#a7d8fa1d14143a5af92de58deb780ea40">anbox::Platform::wait_until_ready</a></li>
 <li><a class="el" href="classanbox_1_1Platform.html#af7a0fcf1b3d7f08a47b880215b63745c">anbox::Platform::stop</a></li>
+<li><a class="el" href="classanbox_1_1Platform.html#a3c6d0ac26305e68bdb19e1c3bcaa528b">anbox::Platform::handle_event</a></li>
 </ul>
 <p>The first pure virtual function, <a class="el" href="classanbox_1_1Platform.html#a4ab51c5daf0c30f5e1cbca6fec1f1499">anbox::Platform::audio_processor()</a>, returns the audio processor provided by the platform plugin as a <a class="el" href="classanbox_1_1AudioProcessor.html">anbox::AudioProcessor</a>. Similarly, <a class="el" href="classanbox_1_1Platform.html#a02ef565c2757d395fe86333175d3a2a8">anbox::Platform::input_processor()</a> returns the input processor as a <a class="el" href="classanbox_1_1InputProcessor.html">anbox::InputProcessor</a>, <a class="el" href="classanbox_1_1Platform.html#af0ada09473c66da26efafa0828fe74d7">anbox::Platform::sensor_processor()</a> returns the sensor processor as a anbox::Platform::SensorProcessor and <a class="el" href="classanbox_1_1Platform.html#a3455195c7b102a54647d4f1aec85618c">anbox::Platform::graphics_processor()</a> returns the graphics processor as a anbox::Platform::GraphicsProcessor. All of these subclasses have to be implemented as described below.</p>
 <p>The pure virtual function <a class="el" href="classanbox_1_1Platform.html#a90ff17206a0fc0cb05cfdaf8caf6d782">anbox::Platform::get_config_item</a>, takes a <a class="el" href="platform_8h.html#a0ea2707450519d64745267790a9f2f0d">AnboxPlatformConfigurationKey</a>, a <code>data</code> value pointer and a <code>data_size</code> as parameters, returning 0 when managing to retrieve configuration options provided by the platform plugin. This function makes it possible to pass the plugin-specific configurations to Anbox.</p>
@@ -115,6 +116,16 @@ Abstract classes</h1>
 </table>
 <p>The function <a class="el" href="classanbox_1_1Platform.html#a3cfb767fac35c8e355923f7d85327b9c">anbox::Platform::ready</a>, is used to query the platform for its ready status, returning true once the platform plugin is ready to perform any further operation, otherwise false if it is not ready yet to be used. <a class="el" href="classanbox_1_1Platform.html#a3cfb767fac35c8e355923f7d85327b9c">anbox::Platform::ready</a> will be called in conjunction with <a class="el" href="classanbox_1_1Platform.html#a7d8fa1d14143a5af92de58deb780ea40">anbox::Platform::wait_until_ready</a> by Anbox to check the platform plugin status on startup. <a class="el" href="classanbox_1_1Platform.html#a7d8fa1d14143a5af92de58deb780ea40">anbox::Platform::wait_until_ready</a> should return an error when something goes wrong. Generally, it's useful to perform the long time or blocked operations in <a class="el" href="classanbox_1_1Platform.html#a7d8fa1d14143a5af92de58deb780ea40">anbox::Platform::wait_until_ready</a> instead of the platform constructor.</p>
 <p>The func <a class="el" href="classanbox_1_1Platform.html#af7a0fcf1b3d7f08a47b880215b63745c">anbox::Platform::stop</a> is used by Anbox to tell the platform implementation to stop all of its activity in preparation for Anbox to initiate its termination sequence. It is called before the Android container is terminated. The platform should not provide any further data after <a class="el" href="classanbox_1_1Platform.html#af7a0fcf1b3d7f08a47b880215b63745c">anbox::Platform::stop</a> has succeeded and free up all resources.</p>
+<p>The func <a class="el" href="classanbox_1_1Platform.html#a3c6d0ac26305e68bdb19e1c3bcaa528b">anbox::Platform::handle_event</a> is used by Anbox to fire some key events which are crucial for a platform initialization if some operations of the platform (E.g. trigger an action) or initialization routine requires Android container fully booted or all essential components of Anbox are fully initialized.</p>
+<p>The events that are fired by Anbox event as follows:</p>
+<table class="doxtable">
+<tr>
+<th>Event type </th><th>Description  </th></tr>
+<tr>
+<td>ANBOX_EVENT_TYPE_ANDROID_BOOT_FINISHED </td><td>Android container is fully booted </td></tr>
+<tr>
+<td>ANBOX_EVENT_TYPE_INITIALIZATION_FINISHED </td><td>All essential components of Anbox are fully initialized </td></tr>
+</table>
 <h2><a class="anchor" id="anbox_audio_processor"></a>
 AudioProcessor</h2>
 <p>The <a class="el" href="classanbox_1_1AudioProcessor.html">anbox::AudioProcessor</a> class declares the following virtual functions:</p>
@@ -202,6 +213,8 @@ AnboxProxy</h2>
 <li><a class="el" href="classanbox_1_1AnboxProxy.html#a890bec8aad1f7bbb0d9d5e369ed4d13d">anbox::AnboxProxy::set_change_display_density_callback</a></li>
 <li><a class="el" href="classanbox_1_1AnboxProxy.html#a48cb35438285268f87978adaa1e44fc9">anbox::AnboxProxy::change_display_size</a></li>
 <li><a class="el" href="classanbox_1_1AnboxProxy.html#a0082ec7ce8b7dc54905bb0be64298851">anbox::AnboxProxy::set_change_display_size_callback</a></li>
+<li><a class="el" href="classanbox_1_1AnboxProxy.html#a4f66c8b7d37198edb89300e0be7329ef">anbox::AnboxProxy::send_message</a></li>
+<li><a class="el" href="classanbox_1_1AnboxProxy.html#a3a3889387a1bda7ec1af5ad193affb62">anbox::AnboxProxy::trigger_action</a></li>
 </ul>
 <p>The first member function, <a class="el" href="classanbox_1_1AnboxProxy.html#a59b5d87df0950408f6afc1314752eec3">anbox::AnboxProxy::change_screen_orientation</a>, can be used by platform plugin to change the screen orientation. For example, when a platform detect that screen rotation changes, it can call this function to change the screen orientation in Android container to honor the rotation detection on a platform plugin.</p>
 <p>The available orientation types that are supported by Anbox are as follows:</p>
@@ -220,6 +233,9 @@ AnboxProxy</h2>
 <p>The second member function, <a class="el" href="classanbox_1_1AnboxProxy.html#a2590a55c45b9dbdeaaa2250f67456828">anbox::AnboxProxy::set_change_screen_orientation_callback</a>, is called by Anbox to set the screen orientation change callback function to the platform. The callback function will be invoked internally when <a class="el" href="classanbox_1_1AnboxProxy.html#a59b5d87df0950408f6afc1314752eec3">anbox::AnboxProxy::change_screen_orientation</a> is called by the platform plugin if it's registered by the Anbox. If the callback function is not registered properly by Anbox, the EINVAL error will be returned.</p>
 <p>The third member function, <a class="el" href="classanbox_1_1AnboxProxy.html#acaecd05dd474572e753887d0d82c0461">anbox::AnboxProxy::change_display_density</a>, can be used by platform plugin to adjust the display density to your preferred screen. When <a class="el" href="classanbox_1_1AnboxProxy.html#acaecd05dd474572e753887d0d82c0461">anbox::AnboxProxy::change_display_density</a> is called by the platform plugin, a callback function which is registered by the Anbox via <a class="el" href="classanbox_1_1AnboxProxy.html#a890bec8aad1f7bbb0d9d5e369ed4d13d">anbox::AnboxProxy::set_change_display_density_callback</a> will be invoked internally. If the callback function is not registered properly by Anbox, the EINVAL error will be returned.</p>
 <p>The fifth member function, <a class="el" href="classanbox_1_1AnboxProxy.html#a48cb35438285268f87978adaa1e44fc9">anbox::AnboxProxy::change_display_size</a>, can be used by platform plugin to adjust the display size to better fit the screen. When <a class="el" href="classanbox_1_1AnboxProxy.html#a48cb35438285268f87978adaa1e44fc9">anbox::AnboxProxy::change_display_size</a> is called by the platform plugin, a callback function which is registered by the Anbox via <a class="el" href="classanbox_1_1AnboxProxy.html#a0082ec7ce8b7dc54905bb0be64298851">anbox::AnboxProxy::set_change_display_size_callback</a> will be invoked internally. If the callback function is not registered properly by Anbox, the EINVAL error will be returned.</p>
+<p>The <a class="el" href="classanbox_1_1AnboxProxy.html#a4f66c8b7d37198edb89300e0be7329ef">anbox::AnboxProxy::send_message</a>, can be used by a platform plugin to send a message from Anbox to the Platform. A common use case is that a message sent by an application running in the container is forwarded to a Platform via Anbox. And platform should get a response to the message and accurately reflect it on the UI or for further processing by the platform during the data transportation.</p>
+<p>The <a class="el" href="classanbox_1_1AnboxProxy.html#a3a3889387a1bda7ec1af5ad193affb62">anbox::AnboxProxy::trigger_action</a>, can be used by a platform plugin to trigger an action to be executed within the Android container. The action script must be installed at the ANDROID_ROOTFS/system/bin/anbox/actions folder ahead of the execution. This can be done by utilizing the hooks of an <a href="https://anbox-cloud.io/docs/manage/managing-addons">addon</a>. <br />
+<b>Note:</b> the function parameter <code>args</code> only stands for the parameter to action and unlike standard C the action name must not be included in the parameters. So does <code>args_len</code> only reflects the number of parameters, action_name must not be counted. Also the returned value 0 only implies the request to launch action is handled by Anbox successfully, it doesn't tell if the action is invoked successfully within the Android container or not. To check the actual error message if an action script is not executed successfully within the Android container, please view the log of anbox service unit.</p>
 <h2><a class="anchor" id="anbox_gps_processor"></a>
 GpsProcessor</h2>
 <p>The <a class="el" href="classanbox_1_1GpsProcessor.html">anbox::GpsProcessor</a> class declares two pure virtual functions.</p>
@@ -234,13 +250,56 @@ GpsProcessor</h2>
 </ul>
 <p>Please check the NMEA standard sentences documentation (<a href="http://www.gpsinformation.org/dale/nmea.htm">http://www.gpsinformation.org/dale/nmea.htm</a>) for more details.</p>
 <p>The second pure virtual function, <a class="el" href="classanbox_1_1GpsProcessor.html#a929837a6a46f37d9b5cd6f015f1a732d">anbox::GpsProcessor::inject_data</a>, allows injecting an <a class="el" href="structAnboxGpsData.html">AnboxGpsData</a> into the platform and letting the GpsProcessor handle the gps data.<br />
+<b>Note:</b> This function is only used in the test suite to facilitate test automation tests and it is subject to change at any time.</p>
+<h2><a class="anchor" id="anbox_camera_processor"></a>
+CameraProcessor</h2>
+<p>The <a class="el" href="classanbox_1_1CameraProcessor.html">anbox::CameraProcessor</a> class declares a few virtual functions.</p>
+<ul>
+<li><a class="el" href="classanbox_1_1CameraProcessor.html#a2cebe02bbd5e4ff9fa3e8767ed56f8d9">anbox::CameraProcessor::get_device_specs</a></li>
+<li><a class="el" href="classanbox_1_1CameraProcessor.html#a967b5d97bae600bb3d73d9d5477abf30">anbox::CameraProcessor::open_device</a></li>
+<li><a class="el" href="classanbox_1_1CameraProcessor.html#a051e33b1fa7c073e03bdec0e083bb8df">anbox::CameraProcessor::close_device</a></li>
+<li><a class="el" href="classanbox_1_1CameraProcessor.html#ae759e0e80a73be14c394954d4a0f81f4">anbox::CameraProcessor::read_frame</a></li>
+<li><a class="el" href="classanbox_1_1CameraProcessor.html#a3df209945228c24cb648edbededee688">anbox::CameraProcessor::inject_frame</a></li>
+</ul>
+<p>The first virtual function, <a class="el" href="classanbox_1_1CameraProcessor.html#a2cebe02bbd5e4ff9fa3e8767ed56f8d9">anbox::CameraProcessor::get_device_specs</a>, is called by Anbox to retrieve all the specifications of camera that the platform supports. The camera specifications will be forwarded to Android container by Anbox when the camera service in Android queries the information of the supported camera devices, like resolution, facing-mode, video frame color space format and video frame rate. The camera service can't get started successfully without proper camera specs and in order to send video frames to Android container via Anbox, providing proper camera specs is a must.</p>
+<p>The the following video frame color formats are supported by Anbox to camera</p>
+<table class="doxtable">
+<tr>
+<th>Video color space format </th><th>Enum value  </th></tr>
+<tr>
+<td>Standard YUV (4:2:0) </td><td>(AnboxVideoColorSpaceFormat::VIDEO_FRAME_FORMAT_YUV420) </td></tr>
+<tr>
+<td>Raw 32 bit RGBA </td><td>(AnboxVideoColorSpaceFormat::VIDEO_FRAME_FORMAT_RGBA) </td></tr>
+</table>
+<p>The available camera facing modes are following:</p>
+<table class="doxtable">
+<tr>
+<th>Facing mode </th><th>Enum value  </th></tr>
+<tr>
+<td>Front </td><td>(AnboxCameraFacingMode::CAMERA_FACING_MODE_FRONT) </td></tr>
+<tr>
+<td>Rear or back </td><td>(AnboxCameraFacingMode::CAMERA_FACING_MODE_REAR) </td></tr>
+</table>
+<p>Whenever a camera-based Android application get started and be ready for receiving the video frame sending by a platform for preview, <a class="el" href="classanbox_1_1CameraProcessor.html#a967b5d97bae600bb3d73d9d5477abf30">anbox::CameraProcessor::open_device</a> will be called, the function arguments describe the current camera specification that Android application is using and the current camera sensor orientation as well.</p>
+<p>The supported camera sensor orientations as follows:</p>
+<table class="doxtable">
+<tr>
+<th>Camera sensor orientation </th><th>Enum value  </th></tr>
+<tr>
+<td>Camera in portrait mode </td><td>(AnboxCameraOrientation::CAMERA_ORIENTATION_PORTRAIT) </td></tr>
+<tr>
+<td>Camera in landscape mode </td><td>(AnboxCameraOrientation::CAMERA_ORIENTATION_LANDSCAPE) </td></tr>
+</table>
+<p>Once <a class="el" href="classanbox_1_1CameraProcessor.html#a967b5d97bae600bb3d73d9d5477abf30">anbox::CameraProcessor::open_device</a> is called, a platform can send video frames by invoking the function <a class="el" href="classanbox_1_1CameraProcessor.html#ae759e0e80a73be14c394954d4a0f81f4">anbox::CameraProcessor::read_frame</a>. This function will give a proper video frame <a class="el" href="structAnboxVideoFrame.html">AnboxVideoFrame</a> back to Anbox. The underlying color format and dimension of video frame buffer must be kept consistent with the camera specification that Android application is requesting (the first function parameter of <a class="el" href="classanbox_1_1CameraProcessor.html#a967b5d97bae600bb3d73d9d5477abf30">anbox::CameraProcessor::open_device</a>). And Anbox will release the video frame after it succeeds in passing the video frame to Android container(Camera HAL).</p>
+<p>When a camera stops preview from an Android application, <a class="el" href="classanbox_1_1CameraProcessor.html#a051e33b1fa7c073e03bdec0e083bb8df">anbox::CameraProcessor::close_device</a> will be called consequently. When a platform received this signal, it should stop sending video frames to Anbox immediately and any remaining video frames in the queue should be drop right away.</p>
+<p>The last virtual function, <a class="el" href="classanbox_1_1CameraProcessor.html#a3df209945228c24cb648edbededee688">anbox::CameraProcessor::inject_frame</a>, allows injecting an <a class="el" href="structAnboxVideoFrame.html">AnboxVideoFrame</a> into the platform <br />
 <b>Note:</b> This function is only used in the test suite to facilitate test automation tests and it is subject to change at any time. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Oct 30 2020 19:28:05 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Feb 10 2021 13:05:45 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

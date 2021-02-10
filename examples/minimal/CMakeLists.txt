@@ -46,4 +46,4 @@ set_target_properties(
 # only aims to provide a basic implementation of an Anbox platform.
 # For all production ready platform plugin, all tests need to pass.
 add_test(NAME MinimalPlatformValidation
-	COMMAND ${ANBOX_PLATFORM_TESTER} --gtest_filter=-PlatformInputProcessorTest.*:PlatformAudioProcessorTest.*:PlatformGraphicsProcessorTest.*:PlatformSensorProcessorTest.*:PlatformGpsProcessorTest.* ${CMAKE_CURRENT_BINARY_DIR}/platform_minimal.so)
+    COMMAND ${ANBOX_PLATFORM_TESTER} --gtest_filter=-PlatformInputProcessorTest.*:PlatformAudioProcessorTest.*:PlatformGraphicsProcessorTest.*:PlatformSensorProcessorTest.*:PlatformGpsProcessorTest.*:PlatformCameraProcessorTest.*:PlatformProxyTest.SendMessageWhenSet ${CMAKE_CURRENT_BINARY_DIR}/platform_minimal.so)

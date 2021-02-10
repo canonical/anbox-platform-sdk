@@ -14,7 +14,8 @@ var NAVTREE =
         [ "GraphicsProcessor", "anbox_sdk_api_overview_page.html#anbox_graphics_processor", null ],
         [ "SensorProcessor", "anbox_sdk_api_overview_page.html#anbox_sensor_processor", null ],
         [ "AnboxProxy", "anbox_sdk_api_overview_page.html#anbox_proxy", null ],
-        [ "GpsProcessor", "anbox_sdk_api_overview_page.html#anbox_gps_processor", null ]
+        [ "GpsProcessor", "anbox_sdk_api_overview_page.html#anbox_gps_processor", null ],
+        [ "CameraProcessor", "anbox_sdk_api_overview_page.html#anbox_camera_processor", null ]
       ] ]
     ] ],
     [ "Creating a Platform Plugin", "creating_a_platform_plugin.html", [
@@ -54,7 +55,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "anbox__proxy_8h.html",
-"public__api_8h.html#ad2b1a48f1a08fffc1367029211f1dfab"
+"platform_8h.html#ae8e588cce2d344b061234aa73ecdfdacafeca1fb68e6059662c0f2113f16263b5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

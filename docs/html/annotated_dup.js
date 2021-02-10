@@ -3,6 +3,8 @@ var annotated_dup =
     [ "anbox", "namespaceanbox.html", "namespaceanbox" ],
     [ "AnboxAudioProcessor", "structAnboxAudioProcessor.html", "structAnboxAudioProcessor" ],
     [ "AnboxAudioSpec", "structAnboxAudioSpec.html", "structAnboxAudioSpec" ],
+    [ "AnboxCameraProcessor", "structAnboxCameraProcessor.html", "structAnboxCameraProcessor" ],
+    [ "AnboxCameraSpec", "structAnboxCameraSpec.html", "structAnboxCameraSpec" ],
     [ "AnboxDisplaySpec", "structAnboxDisplaySpec.html", "structAnboxDisplaySpec" ],
     [ "AnboxDisplaySpec2", "structAnboxDisplaySpec2.html", "structAnboxDisplaySpec2" ],
     [ "AnboxGGAData", "structAnboxGGAData.html", "structAnboxGGAData" ],
@@ -21,6 +23,7 @@ var annotated_dup =
     [ "AnboxSensorData", "structAnboxSensorData.html", "structAnboxSensorData" ],
     [ "AnboxSensorProcessor", "structAnboxSensorProcessor.html", "structAnboxSensorProcessor" ],
     [ "AnboxSensorVector", "structAnboxSensorVector.html", "structAnboxSensorVector" ],
+    [ "AnboxVideoFrame", "structAnboxVideoFrame.html", "structAnboxVideoFrame" ],
     [ "GnssClock", "structGnssClock.html", "structGnssClock" ],
     [ "GnssMeasurement", "structGnssMeasurement.html", "structGnssMeasurement" ]
 ];

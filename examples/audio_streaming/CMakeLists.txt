@@ -54,4 +54,4 @@ set_target_properties(
 
 # Run the validation test suites against the platform implementation
 add_test(NAME AudioStreamingPlatformValidation
-         COMMAND ${ANBOX_PLATFORM_TESTER} --gtest_filter=-PlatformSensorProcessorTest.*:PlatformGpsProcessorTest.* ${CMAKE_CURRENT_BINARY_DIR}/platform_audio_streaming.so)
+    COMMAND ${ANBOX_PLATFORM_TESTER} --gtest_filter=-PlatformSensorProcessorTest.*:PlatformGpsProcessorTest.*:PlatformCameraProcessorTest.*:PlatformProxyTest.SendMessageWhenNotSet ${CMAKE_CURRENT_BINARY_DIR}/platform_audio_streaming.so)

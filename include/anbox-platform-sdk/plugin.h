@@ -28,6 +28,10 @@ struct AnboxGpsProcessor {
   anbox::GpsProcessor* instance{nullptr};
 };
 
+struct AnboxCameraProcessor {
+  anbox::CameraProcessor* instance{nullptr};
+};
+
 struct AnboxProxy {
   anbox::AnboxProxy* instance{nullptr};
 };
@@ -39,6 +43,7 @@ struct AnboxPlatform {
   AnboxSensorProcessor sensor_processor;
   AnboxGpsProcessor gps_processor;
   AnboxGraphicsProcessor graphics_processor;
+  AnboxCameraProcessor camera_processor;
   AnboxProxy anbox_proxy;
 };
 

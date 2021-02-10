@@ -11,6 +11,7 @@ AnboxPlatform* anbox_platform_plugin_register(std::unique_ptr<anbox::Platform>&&
   anbox_platform->sensor_processor.instance = platform->sensor_processor();
   anbox_platform->anbox_proxy.instance = platform->anbox_proxy();
   anbox_platform->gps_processor.instance = platform->gps_processor();
+  anbox_platform->camera_processor.instance = platform->camera_processor();
   anbox_platform->instance = std::move(platform);
   return anbox_platform;
 }

@@ -3,6 +3,7 @@ var files =
     [ "anbox_proxy.h", "anbox__proxy_8h.html", "anbox__proxy_8h" ],
     [ "audio_format.h", "audio__format_8h.html", "audio__format_8h" ],
     [ "audio_processor.h", "audio__processor_8h.html", "audio__processor_8h" ],
+    [ "camera_processor.h", "camera__processor_8h.html", "camera__processor_8h" ],
     [ "common.h", "common_8h.html", "common_8h" ],
     [ "gps_processor.h", "gps__processor_8h.html", "gps__processor_8h" ],
     [ "graphics_processor.h", "graphics__processor_8h.html", "graphics__processor_8h" ],

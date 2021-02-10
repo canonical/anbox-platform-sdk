@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.6.0</span>
+   &#160;<span id="projectnumber">1.9.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -114,6 +114,13 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>c_n0_dbhz
 : <a class="el" href="structGnssMeasurement.html#a185afc6be08f8c0023e2ef7a9640c84a">GnssMeasurement</a>
 </li>
+<li>camera_processor()
+: <a class="el" href="classanbox_1_1Platform.html#a1aedc580fcea297f287feb8b512a0f6d">anbox::Platform</a>
+, <a class="el" href="structAnboxPlatform.html#af65666a2e78f5136ddc2711cae4bd2f6">AnboxPlatform</a>
+</li>
+<li>CameraProcessor()
+: <a class="el" href="classanbox_1_1CameraProcessor.html#a477d3629b40ae10011462961ad8706a1">anbox::CameraProcessor</a>
+</li>
 <li>carrier_frequency_hz
 : <a class="el" href="structGnssMeasurement.html#a17e3ec196ecc689f055cea4c3f57dfa8">GnssMeasurement</a>
 </li>
@@ -132,11 +139,17 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>clock
 : <a class="el" href="structAnboxGnssData.html#a72e356820b82a3cfc3d1ff883b03f933">AnboxGnssData</a>
 </li>
+<li>close_device()
+: <a class="el" href="classanbox_1_1CameraProcessor.html#a051e33b1fa7c073e03bdec0e083bb8df">anbox::CameraProcessor</a>
+</li>
 <li>code
 : <a class="el" href="structAnboxInputEvent.html#a4bc4412ad82709ce7b8968139297e27e">AnboxInputEvent</a>
 </li>
 <li>constellation
 : <a class="el" href="structGnssMeasurement.html#a4730e7d718b9fcb8b74a1fec29784ce2">GnssMeasurement</a>
+</li>
+<li>create_display()
+: <a class="el" href="classanbox_1_1GraphicsProcessor.html#a4e55a1016837d1479a2931e7b2c2b719">anbox::GraphicsProcessor</a>
 </li>
 <li>create_offscreen_surface()
 : <a class="el" href="classanbox_1_1GraphicsProcessor.html#a4d5c953b99b75f31f2e6c0d185c23ca0">anbox::GraphicsProcessor</a>
@@ -145,6 +158,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a id="index_d"></a>- d -</h3><ul>
+<li>data
+: <a class="el" href="structAnboxVideoFrame.html#a77e2ad67736d7d8334f2ec709afcc5db">AnboxVideoFrame</a>
+</li>
 <li>data_type
 : <a class="el" href="structAnboxGpsData.html#ab0ec5b765fe24f92ef816f5874ecb03b">AnboxGpsData</a>
 </li>
@@ -177,6 +193,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a id="index_f"></a>- f -</h3><ul>
+<li>facing_mode
+: <a class="el" href="structAnboxCameraSpec.html#a98a5e807efabe75143327de15a43e398">AnboxCameraSpec</a>
+</li>
 <li>finish_frame()
 : <a class="el" href="classanbox_1_1GraphicsProcessor.html#a55fec07f5d0646bd972311795c079a0d">anbox::GraphicsProcessor</a>
 </li>
@@ -185,9 +204,11 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>format
 : <a class="el" href="structAnboxAudioSpec.html#a4bb7643b05fcb8c106ec7c2b1e738e76">AnboxAudioSpec</a>
+, <a class="el" href="structAnboxCameraSpec.html#ab8519803422865efa861e720de67e391">AnboxCameraSpec</a>
 </li>
 <li>fps
-: <a class="el" href="structAnboxDisplaySpec2.html#a0b6c7278880641209ee8064415ab5126">AnboxDisplaySpec2</a>
+: <a class="el" href="structAnboxCameraSpec.html#a4742670b003a8741ba40735df2a98fe7">AnboxCameraSpec</a>
+, <a class="el" href="structAnboxDisplaySpec2.html#a0b6c7278880641209ee8064415ab5126">AnboxDisplaySpec2</a>
 </li>
 <li>freq
 : <a class="el" href="structAnboxAudioSpec.html#af02253167f3e889945c44a2ef4d0c952">AnboxAudioSpec</a>
@@ -201,6 +222,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a id="index_g"></a>- g -</h3><ul>
 <li>get_config_item()
 : <a class="el" href="classanbox_1_1Platform.html#a90ff17206a0fc0cb05cfdaf8caf6d782">anbox::Platform</a>
+</li>
+<li>get_device_specs()
+: <a class="el" href="classanbox_1_1CameraProcessor.html#a2cebe02bbd5e4ff9fa3e8767ed56f8d9">anbox::CameraProcessor</a>
 </li>
 <li>gga_data
 : <a class="el" href="structAnboxGpsData.html#a82d9a49b1b98e082b73b96b98c830ec4">AnboxGpsData</a>
@@ -229,8 +253,12 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a id="index_h"></a>- h -</h3><ul>
+<li>handle_event()
+: <a class="el" href="classanbox_1_1Platform.html#a3c6d0ac26305e68bdb19e1c3bcaa528b">anbox::Platform</a>
+</li>
 <li>height
-: <a class="el" href="structAnboxDisplaySpec2.html#a7f570c57216d28d2c34d29b46bc27f50">AnboxDisplaySpec2</a>
+: <a class="el" href="structAnboxCameraSpec.html#a539581c9d5d0a2616154de0402e5fce0">AnboxCameraSpec</a>
+, <a class="el" href="structAnboxDisplaySpec2.html#a7f570c57216d28d2c34d29b46bc27f50">AnboxDisplaySpec2</a>
 , <a class="el" href="structAnboxDisplaySpec.html#ae9c80663030f676e9ccb7704db422494">AnboxDisplaySpec</a>
 </li>
 <li>humidity
@@ -253,6 +281,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>inject_event()
 : <a class="el" href="classanbox_1_1InputProcessor.html#a9f6a16f84c5c82559d9ad5792baeb8dc">anbox::InputProcessor</a>
 </li>
+<li>inject_frame()
+: <a class="el" href="classanbox_1_1CameraProcessor.html#a3df209945228c24cb648edbededee688">anbox::CameraProcessor</a>
+</li>
 <li>input_processor()
 : <a class="el" href="classanbox_1_1Platform.html#a02ef565c2757d395fe86333175d3a2a8">anbox::Platform</a>
 , <a class="el" href="structAnboxPlatform.html#a6e8b815660b60ea238610c174981a18f">AnboxPlatform</a>
@@ -262,6 +293,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>instance
 : <a class="el" href="structAnboxAudioProcessor.html#a31843f43a794758bf5bc8d35ea6110fa">AnboxAudioProcessor</a>
+, <a class="el" href="structAnboxCameraProcessor.html#a93e266fbfd5491869d69feb6e4fadbc9">AnboxCameraProcessor</a>
 , <a class="el" href="structAnboxGpsProcessor.html#a93ac80228dfa86630dd772b4db0e6fbc">AnboxGpsProcessor</a>
 , <a class="el" href="structAnboxGraphicsProcessor.html#ac0c7e1fb86e3a5506ac3b4f1d27c803c">AnboxGraphicsProcessor</a>
 , <a class="el" href="structAnboxInputProcessor.html#ad5fcf7194a2db0485e1ce5537a5fa2d8">AnboxInputProcessor</a>
@@ -325,9 +357,13 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a id="index_o"></a>- o -</h3><ul>
+<li>open_device()
+: <a class="el" href="classanbox_1_1CameraProcessor.html#a967b5d97bae600bb3d73d9d5477abf30">anbox::CameraProcessor</a>
+</li>
 <li>operator=()
 : <a class="el" href="classanbox_1_1AnboxProxy.html#ae7f6d56b898c8b2a2e79709f451044fa">anbox::AnboxProxy</a>
 , <a class="el" href="classanbox_1_1AudioProcessor.html#ab190f474d3c1a4c7b77ce30a4b425a70">anbox::AudioProcessor</a>
+, <a class="el" href="classanbox_1_1CameraProcessor.html#a7e9a25ab31131ede45ab5f56006e912a">anbox::CameraProcessor</a>
 , <a class="el" href="classanbox_1_1GpsProcessor.html#a2368befd5eb2bcf07bbe484f853388b5">anbox::GpsProcessor</a>
 , <a class="el" href="classanbox_1_1GraphicsProcessor.html#a319661e5be57a4d77c075a62ffb52880">anbox::GraphicsProcessor</a>
 , <a class="el" href="classanbox_1_1InputProcessor.html#ac6a9ebfa0b143a7d5e0054d7ab2e944c">anbox::InputProcessor</a>
@@ -380,6 +416,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>read_event()
 : <a class="el" href="classanbox_1_1InputProcessor.html#a5a0da2efa170c72758095d60a19c44ae">anbox::InputProcessor</a>
 </li>
+<li>read_frame()
+: <a class="el" href="classanbox_1_1CameraProcessor.html#ae759e0e80a73be14c394954d4a0f81f4">anbox::CameraProcessor</a>
+</li>
 <li>ready()
 : <a class="el" href="classanbox_1_1Platform.html#a3cfb767fac35c8e355923f7d85327b9c">anbox::Platform</a>
 </li>
@@ -402,6 +441,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>samples
 : <a class="el" href="structAnboxAudioSpec.html#aa30d68a34065abc9b12bcad951cca77f">AnboxAudioSpec</a>
 </li>
+<li>send_message()
+: <a class="el" href="classanbox_1_1AnboxProxy.html#a4f66c8b7d37198edb89300e0be7329ef">anbox::AnboxProxy</a>
+</li>
 <li>sensor_processor()
 : <a class="el" href="classanbox_1_1Platform.html#af0ada09473c66da26efafa0828fe74d7">anbox::Platform</a>
 , <a class="el" href="structAnboxPlatform.html#a57501b223a9c2b632cd20b2854fd6d9a">AnboxPlatform</a>
@@ -420,6 +462,12 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>set_change_screen_orientation_callback()
 : <a class="el" href="classanbox_1_1AnboxProxy.html#a2590a55c45b9dbdeaaa2250f67456828">anbox::AnboxProxy</a>
+</li>
+<li>set_trigger_action_callback()
+: <a class="el" href="classanbox_1_1AnboxProxy.html#a8c1439694607607aa52f610f30cdff25">anbox::AnboxProxy</a>
+</li>
+<li>size
+: <a class="el" href="structAnboxVideoFrame.html#a6b1398bb5ded8fab51d07779668cb895">AnboxVideoFrame</a>
 </li>
 <li>speed
 : <a class="el" href="structAnboxRMCData.html#af316dfd05467eb2fa63763c96b0d8872">AnboxRMCData</a>
@@ -459,6 +507,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>time_ns
 : <a class="el" href="structGnssClock.html#a6f3e6603426edcd44c9a68e249fa0da4">GnssClock</a>
 </li>
+<li>trigger_action()
+: <a class="el" href="classanbox_1_1AnboxProxy.html#a3a3889387a1bda7ec1af5ad193affb62">anbox::AnboxProxy</a>
+</li>
 <li>type
 : <a class="el" href="structAnboxInputEvent.html#ab6579528f8e4dcfd23722e76cc287a09">AnboxInputEvent</a>
 </li>
@@ -486,7 +537,8 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classanbox_1_1Platform.html#a7d8fa1d14143a5af92de58deb780ea40">anbox::Platform</a>
 </li>
 <li>width
-: <a class="el" href="structAnboxDisplaySpec2.html#ad5aea7e8143aed9ab8d5a3063596b9ab">AnboxDisplaySpec2</a>
+: <a class="el" href="structAnboxCameraSpec.html#a8926062abafa403cf54aae33dec26334">AnboxCameraSpec</a>
+, <a class="el" href="structAnboxDisplaySpec2.html#ad5aea7e8143aed9ab8d5a3063596b9ab">AnboxDisplaySpec2</a>
 , <a class="el" href="structAnboxDisplaySpec.html#a4c25b0345faabeabc1fbe4d751d0ed72">AnboxDisplaySpec</a>
 </li>
 <li>write_data()
@@ -523,6 +575,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>~AudioProcessor()
 : <a class="el" href="classanbox_1_1AudioProcessor.html#a74e55d459f8d58c38f93d72113c19c2b">anbox::AudioProcessor</a>
 </li>
+<li>~CameraProcessor()
+: <a class="el" href="classanbox_1_1CameraProcessor.html#a8b9a3ce633352c8306d79d58831cb0de">anbox::CameraProcessor</a>
+</li>
 <li>~GpsProcessor()
 : <a class="el" href="classanbox_1_1GpsProcessor.html#a7358221962cb9c1b269d62b6100da17a">anbox::GpsProcessor</a>
 </li>
@@ -544,7 +599,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Oct 30 2020 19:28:05 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Feb 10 2021 13:05:45 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

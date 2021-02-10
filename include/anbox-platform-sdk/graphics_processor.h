@@ -88,6 +88,18 @@ class GraphicsProcessor {
     GraphicsProcessor& operator=(const GraphicsProcessor &) = delete;
 
     /**
+     * @brief Create an EGL display
+     *
+     * This function is called by Anbox when it initializes the rendering pipeline
+     * to create an EGLDisplay to use for rendering. In case that a platform provides
+     * no implementation or EGL_NO_DISPLAY is returned Anbox will use EGL_DEFAULT_DISPLAY
+     * to create an EGLDisplay
+     *
+     * @return EGLDisplay A valid EGLDisplay or EGL_NO_DISPLAY
+     */
+    virtual EGLDisplay create_display() { return EGL_NO_DISPLAY; }
+
+    /**
      * @brief Initialize the graphics processor
      *
      * This function is called by Anbox when the rendering pipeline is initialized. The

@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.6.0</span>
+   &#160;<span id="projectnumber">1.9.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -66,16 +66,19 @@ $(document).ready(function(){initNavTree('classanbox_1_1AnboxProxy.html','');});
   <tr><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html#a48cb35438285268f87978adaa1e44fc9">change_display_size</a>(uint32_t width, uint32_t height)</td><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html">anbox::AnboxProxy</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html#a59b5d87df0950408f6afc1314752eec3">change_screen_orientation</a>(AnboxScreenOrientationType orientation_type)</td><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html">anbox::AnboxProxy</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html#ae7f6d56b898c8b2a2e79709f451044fa">operator=</a>(const AnboxProxy &amp;)=delete</td><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html">anbox::AnboxProxy</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html#a890bec8aad1f7bbb0d9d5e369ed4d13d">set_change_display_density_callback</a>(const AnboxChangeDisplayDensityCallback &amp;callback, void *user_data)</td><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html">anbox::AnboxProxy</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html#a0082ec7ce8b7dc54905bb0be64298851">set_change_display_size_callback</a>(const AnboxChangeDisplaySizeCallback &amp;callback, void *user_data)</td><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html">anbox::AnboxProxy</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html#a2590a55c45b9dbdeaaa2250f67456828">set_change_screen_orientation_callback</a>(const AnboxChangeScreenOrientationCallback &amp;callback, void *user_data)</td><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html">anbox::AnboxProxy</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html#a794ae6713c2a60ea1afd13ece6df63be">~AnboxProxy</a>()=default</td><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html">anbox::AnboxProxy</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html#a4f66c8b7d37198edb89300e0be7329ef">send_message</a>(const char *type, size_t type_size, const char *data, size_t data_size)</td><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html">anbox::AnboxProxy</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html#a890bec8aad1f7bbb0d9d5e369ed4d13d">set_change_display_density_callback</a>(const AnboxChangeDisplayDensityCallback &amp;callback, void *user_data)</td><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html">anbox::AnboxProxy</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html#a0082ec7ce8b7dc54905bb0be64298851">set_change_display_size_callback</a>(const AnboxChangeDisplaySizeCallback &amp;callback, void *user_data)</td><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html">anbox::AnboxProxy</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html#a2590a55c45b9dbdeaaa2250f67456828">set_change_screen_orientation_callback</a>(const AnboxChangeScreenOrientationCallback &amp;callback, void *user_data)</td><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html">anbox::AnboxProxy</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html#a8c1439694607607aa52f610f30cdff25">set_trigger_action_callback</a>(const AnboxTriggerActionCallback &amp;callback, void *user_data)</td><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html">anbox::AnboxProxy</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html#a3a3889387a1bda7ec1af5ad193affb62">trigger_action</a>(const char *name, const char **args, size_t args_len)</td><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html">anbox::AnboxProxy</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html#a794ae6713c2a60ea1afd13ece6df63be">~AnboxProxy</a>()=default</td><td class="entry"><a class="el" href="classanbox_1_1AnboxProxy.html">anbox::AnboxProxy</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Oct 30 2020 19:28:05 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Feb 10 2021 13:05:45 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

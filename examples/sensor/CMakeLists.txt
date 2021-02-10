@@ -46,4 +46,4 @@ set_target_properties(
 
 # Run the validation test suites against the platform implementation
 add_test(NAME SensorPlatformValidation
-         COMMAND ${ANBOX_PLATFORM_TESTER} --gtest_filter=-PlatformInputProcessorTest.*:PlatformAudioProcessorTest.*:PlatformGraphicsProcessorTest.*:PlatformGpsProcessorTest.* ${CMAKE_CURRENT_BINARY_DIR}/platform_sensor.so)
+    COMMAND ${ANBOX_PLATFORM_TESTER} --gtest_filter=-PlatformInputProcessorTest.*:PlatformAudioProcessorTest.*:PlatformGraphicsProcessorTest.*:PlatformGpsProcessorTest.*:PlatformCameraProcessorTest.*:PlatformProxyTest.SendMessageWhenSet ${CMAKE_CURRENT_BINARY_DIR}/platform_sensor.so)
