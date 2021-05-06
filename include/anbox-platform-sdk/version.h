@@ -6,10 +6,10 @@
 #include <stdint.h>
 
 #define ANBOX_PLATFORM_MAJOR_VERSION 1
-#define ANBOX_PLATFORM_MINOR_VERSION 9
+#define ANBOX_PLATFORM_MINOR_VERSION 10
 #define ANBOX_PLATFORM_PATCH_VERSION 0
 
-#define ANBOX_PLATFORM_VERSION 10900
+#define ANBOX_PLATFORM_VERSION 11000
 
 /**
  * @brief      Get the individual version numbers from the combined version number.
