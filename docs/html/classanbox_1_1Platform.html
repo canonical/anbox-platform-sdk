@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.10.0</span>
+   &#160;<span id="projectnumber">1.11.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -104,6 +104,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a16f6ea0ed2b2dc10f90b95887ef7ace5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classanbox_1_1AnboxProxy.html">AnboxProxy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1Platform.html#a16f6ea0ed2b2dc10f90b95887ef7ace5">anbox_proxy</a> ()</td></tr>
 <tr class="memdesc:a16f6ea0ed2b2dc10f90b95887ef7ace5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the platform anbox proxy.  <a href="#a16f6ea0ed2b2dc10f90b95887ef7ace5">More...</a><br /></td></tr>
 <tr class="separator:a16f6ea0ed2b2dc10f90b95887ef7ace5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6478bd39fb07951c0e95903f42857089"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classanbox_1_1VideoDecoder.html">VideoDecoder</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1Platform.html#a6478bd39fb07951c0e95903f42857089">create_video_decoder</a> (<a class="el" href="video__decoder_8h.html#a542c5a12a80bf1d2aaa235ad133a7a34">AnboxVideoCodecType</a> codec_type)</td></tr>
+<tr class="memdesc:a6478bd39fb07951c0e95903f42857089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a video decoder instances for a codec of the given name.  <a href="#a6478bd39fb07951c0e95903f42857089">More...</a><br /></td></tr>
+<tr class="separator:a6478bd39fb07951c0e95903f42857089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cfb767fac35c8e355923f7d85327b9c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1Platform.html#a3cfb767fac35c8e355923f7d85327b9c">ready</a> () const =0</td></tr>
 <tr class="memdesc:a3cfb767fac35c8e355923f7d85327b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query the platform for its ready status.  <a href="#a3cfb767fac35c8e355923f7d85327b9c">More...</a><br /></td></tr>
 <tr class="separator:a3cfb767fac35c8e355923f7d85327b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,6 +122,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3c6d0ac26305e68bdb19e1c3bcaa528b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1Platform.html#a3c6d0ac26305e68bdb19e1c3bcaa528b">handle_event</a> (<a class="el" href="platform_8h.html#ae8e588cce2d344b061234aa73ecdfdac">AnboxEventType</a> type)</td></tr>
 <tr class="memdesc:a3c6d0ac26305e68bdb19e1c3bcaa528b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle an event sending from Anbox.  <a href="#a3c6d0ac26305e68bdb19e1c3bcaa528b">More...</a><br /></td></tr>
 <tr class="separator:a3c6d0ac26305e68bdb19e1c3bcaa528b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02d7d7b6900910b0913b3051e99313c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1Platform.html#aa02d7d7b6900910b0913b3051e99313c">set_config_item</a> (<a class="el" href="platform_8h.html#a0ea2707450519d64745267790a9f2f0d">AnboxPlatformConfigurationKey</a> key, void *data, size_t data_size)</td></tr>
+<tr class="memdesc:aa02d7d7b6900910b0913b3051e99313c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the configuration options by Anbox to the platform.  <a href="#aa02d7d7b6900910b0913b3051e99313c">More...</a><br /></td></tr>
+<tr class="separator:aa02d7d7b6900910b0913b3051e99313c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classanbox_1_1Platform.html" title="Platform defines the custom Anbox platform implemented by a plugin. ">Platform</a> defines the custom Anbox platform implemented by a plugin. </p>
@@ -128,7 +134,7 @@ Public Member Functions</h2></td></tr>
 <li>Loading a custom Open GL ES/EGL driver implementation. </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00240">240</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00274">274</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1734405780b905b5b3a14382fc8c6c70"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1734405780b905b5b3a14382fc8c6c70">&#9670;&nbsp;</a></span>Platform() <span class="overload">[1/2]</span></h2>
@@ -234,7 +240,7 @@ Public Member Functions</h2></td></tr>
 <p>A platform is supposed to have only a single anbox proxy instance at all time.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1AnboxProxy.html" title="AnboxProxy provides a proxy layer which encapsulates callbacks that can be used by a platform to chan...">AnboxProxy</a> instance, otherwise NULL when an error occured. or the platform does not support to handle the system behavior change via callbacks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00323">323</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00357">357</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -294,7 +300,38 @@ Public Member Functions</h2></td></tr>
 <p>A platform is supposed to have only a single camera processor instance at all time.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1CameraProcessor.html" title="CameraProcessor allows a plugin to respond to the camera actions triggered from Anobx and post video ...">CameraProcessor</a> instance, otherwise NULL when an error occured. or the platform does not support posting a video frame to a camera application running in Android container. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00313">313</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00347">347</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+
+</div>
+</div>
+<a id="a6478bd39fb07951c0e95903f42857089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6478bd39fb07951c0e95903f42857089">&#9670;&nbsp;</a></span>create_video_decoder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classanbox_1_1VideoDecoder.html">VideoDecoder</a>* anbox::Platform::create_video_decoder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="video__decoder_8h.html#a542c5a12a80bf1d2aaa235ad133a7a34">AnboxVideoCodecType</a>&#160;</td>
+          <td class="paramname"><em>codec_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a video decoder instances for a codec of the given name. </p>
+<dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1VideoDecoder.html" title="Provides access to a video decoder which will be used by both Anbox and the Android instance for hard...">VideoDecoder</a> instance, otherwise NULL when an error occurred or if video decoding is not supported by the platform. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00365">365</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -378,7 +415,7 @@ Public Member Functions</h2></td></tr>
 <p>A platform is supposed to have only a single gps processor instance at all time.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1SensorProcessor.html" title="SensorProcessor allows processing sensor events from the Android container and perform sensor process...">SensorProcessor</a> instance, otherwise NULL when an error occured. or the platform does not support gps processing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00301">301</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00335">335</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -409,7 +446,7 @@ Public Member Functions</h2></td></tr>
 <p>A platform is supposed to have only a single graphics processor instance at all time. Providing a graphics processor is not mandatory for a platform.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1GraphicsProcessor.html" title="GraphicsProcessor allows integration with the graphics engine inside Anbox. ">GraphicsProcessor</a> instance, otherwise NULL when an error occured. or the platform does not support graphics processing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00279">279</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00313">313</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -441,7 +478,7 @@ Public Member Functions</h2></td></tr>
 <p>Some operations (E.g. trigger an action) or initialization routine of a platform may require Android container fully booted or all essential components of Anbox are fully initialized.</p>
 <p>This enables a platform to get notified when an event was fired from Anbox and perform one specific operation when a certain event is received. </p>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00381">381</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00426">426</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -556,7 +593,63 @@ Public Member Functions</h2></td></tr>
 <p>A platform is supposed to have only a single sensor processor instance at all time.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1SensorProcessor.html" title="SensorProcessor allows processing sensor events from the Android container and perform sensor process...">SensorProcessor</a> instance, otherwise NULL when an error occured. or the platform does not support sensor processing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00290">290</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00324">324</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+
+</div>
+</div>
+<a id="aa02d7d7b6900910b0913b3051e99313c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa02d7d7b6900910b0913b3051e99313c">&#9670;&nbsp;</a></span>set_config_item()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int anbox::Platform::set_config_item </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="platform_8h.html#a0ea2707450519d64745267790a9f2f0d">AnboxPlatformConfigurationKey</a>&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>data_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the configuration options by Anbox to the platform. </p>
+<p>This function provides a way for anbox to write a configuration option to the plugin.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>plugin configuration option key. </td></tr>
+    <tr><td class="paramname">data</td><td>pointer stores the address of the configuration key value. </td></tr>
+    <tr><td class="paramname">data_size</td><td>size of the memory the <code>data</code> pointer points to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, a negative error code otherwise. Possible are -EINVAL (invalid arguments supplied) and -ENOMEM (provided memory is not large enough to store the value of the configuration item). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00440">440</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -588,7 +681,7 @@ Public Member Functions</h2></td></tr>
 <p>The platform is expected to stop its processors and don't provide any further data to Anbox. Any further data provided to Anbox after the function has returned will not be considered.</p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, a negative error code otherwise. Possible is -EINVAL (invalid arguments supplied). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00370">370</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00415">415</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -630,7 +723,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceanbox.html">anbox</a></li><li class="navelem"><a class="el" href="classanbox_1_1Platform.html">Platform</a></li>
-    <li class="footer">Generated on Thu May 6 2021 13:27:01 for anbox-platform-sdk by
+    <li class="footer">Generated on Thu Aug 5 2021 14:26:07 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

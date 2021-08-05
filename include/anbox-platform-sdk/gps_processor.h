@@ -381,6 +381,10 @@ struct AnboxGGAData {
   double          altitude;
   /** Represents altitude unit. */
   char            altitudeUnit;
+  /** Represents horizontal accuracy. */
+  float           horizontalAccuracy;
+  /** Represents vertical accuracy. */
+  float           verticalAccuracy;
 };
 
 /**
@@ -405,6 +409,10 @@ struct AnboxRMCData {
   float           bearing;
   /** Represents date for the location fix. */
   GpsUtcTime      date;
+  /** Represents horizontal accuracy. */
+  float           horizontalAccuracy;
+  /** Represents vertical accuracy. */
+  float           verticalAccuracy;
 };
 
 /**

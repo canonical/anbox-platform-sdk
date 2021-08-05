@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.10.0</span>
+   &#160;<span id="projectnumber">1.11.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -95,6 +95,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acfbc1ee7af52339cf30c49dd44baea52"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1AudioProcessor.html#acfbc1ee7af52339cf30c49dd44baea52">standby</a> (<a class="el" href="audio__processor_8h.html#ad170c2a2aa875f714570aeacf77f2c1c">AnboxAudioStreamType</a> type)</td></tr>
 <tr class="memdesc:acfbc1ee7af52339cf30c49dd44baea52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the platform when an audio stream is in standby mode.  <a href="#acfbc1ee7af52339cf30c49dd44baea52">More...</a><br /></td></tr>
 <tr class="separator:acfbc1ee7af52339cf30c49dd44baea52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb92724241331ffbfd7e07a8c53153ba"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1AudioProcessor.html#abb92724241331ffbfd7e07a8c53153ba">activate</a> (<a class="el" href="audio__processor_8h.html#ad170c2a2aa875f714570aeacf77f2c1c">AnboxAudioStreamType</a> type)</td></tr>
+<tr class="memdesc:abb92724241331ffbfd7e07a8c53153ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the platform when an audio stream is in activation mode.  <a href="#abb92724241331ffbfd7e07a8c53153ba">More...</a><br /></td></tr>
+<tr class="separator:abb92724241331ffbfd7e07a8c53153ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba43b545d797e73eff50b997366c80b9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1AudioProcessor.html#aba43b545d797e73eff50b997366c80b9">need_silence_on_standby</a> () const</td></tr>
 <tr class="memdesc:aba43b545d797e73eff50b997366c80b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce a silent audio stream on need while the audio output stream goes into the standby state.  <a href="#aba43b545d797e73eff50b997366c80b9">More...</a><br /></td></tr>
 <tr class="separator:aba43b545d797e73eff50b997366c80b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,6 +184,44 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="abb92724241331ffbfd7e07a8c53153ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb92724241331ffbfd7e07a8c53153ba">&#9670;&nbsp;</a></span>activate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int anbox::AudioProcessor::activate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="audio__processor_8h.html#ad170c2a2aa875f714570aeacf77f2c1c">AnboxAudioStreamType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notify the platform when an audio stream is in activation mode. </p>
+<p>This function will be called when an audio stream is in activation mode. If a platform is notified by Anbox that one audio stream is going to activation mode,</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>the specified audio stream type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success or negative on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="audio__processor_8h_source.html#l00104">104</a> of file <a class="el" href="audio__processor_8h_source.html">audio_processor.h</a>.</p>
+
+</div>
+</div>
 <a id="aba43b545d797e73eff50b997366c80b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba43b545d797e73eff50b997366c80b9">&#9670;&nbsp;</a></span>need_silence_on_standby()</h2>
 
@@ -208,7 +249,7 @@ Public Member Functions</h2></td></tr>
 <p>Anbox will produce a silent audio stream while the audio output stream goes into the standby state if this function returns true, otherwise returns false. Producing a silent audio stream helps with the audio latency reduction when doing audio playback if no audio output device is installed on a platform.</p>
 <dl class="section return"><dt>Returns</dt><dd>true when needs to produce a silent audio stream while audio output stream goes into the standby state, otherwise return false. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="audio__processor_8h_source.html#l00106">106</a> of file <a class="el" href="audio__processor_8h_source.html">audio_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="audio__processor_8h_source.html#l00120">120</a> of file <a class="el" href="audio__processor_8h_source.html">audio_processor.h</a>.</p>
 
 </div>
 </div>
@@ -430,7 +471,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceanbox.html">anbox</a></li><li class="navelem"><a class="el" href="classanbox_1_1AudioProcessor.html">AudioProcessor</a></li>
-    <li class="footer">Generated on Thu May 6 2021 13:27:01 for anbox-platform-sdk by
+    <li class="footer">Generated on Thu Aug 5 2021 14:26:07 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

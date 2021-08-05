@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.10.0</span>
+   &#160;<span id="projectnumber">1.11.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -56,11 +56,14 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 &#160;
 
 <h3><a id="index_a"></a>- a -</h3><ul>
+<li>activate()
+: <a class="el" href="classanbox_1_1AudioProcessor.html#abb92724241331ffbfd7e07a8c53153ba">anbox::AudioProcessor</a>
+</li>
 <li>anbox_proxy()
 : <a class="el" href="classanbox_1_1Platform.html#a16f6ea0ed2b2dc10f90b95887ef7ace5">anbox::Platform</a>
 </li>
 <li>AnboxProxy()
-: <a class="el" href="classanbox_1_1AnboxProxy.html#a1b030ca3e07c16067572d443853a1200">anbox::AnboxProxy</a>
+: <a class="el" href="classanbox_1_1AnboxProxy.html#a205619ca2b2b555b7ab60896664765ff">anbox::AnboxProxy</a>
 </li>
 <li>audio_processor()
 : <a class="el" href="classanbox_1_1Platform.html#a4ab51c5daf0c30f5e1cbca6fec1f1499">anbox::Platform</a>
@@ -97,16 +100,25 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>close_device()
 : <a class="el" href="classanbox_1_1CameraProcessor.html#a051e33b1fa7c073e03bdec0e083bb8df">anbox::CameraProcessor</a>
 </li>
+<li>configure()
+: <a class="el" href="classanbox_1_1VideoDecoder.html#a0fad7e06b27b7365faa7bff456caafc2">anbox::VideoDecoder</a>
+</li>
 <li>create_display()
 : <a class="el" href="classanbox_1_1GraphicsProcessor.html#a4e55a1016837d1479a2931e7b2c2b719">anbox::GraphicsProcessor</a>
 </li>
 <li>create_offscreen_surface()
 : <a class="el" href="classanbox_1_1GraphicsProcessor.html#a4d5c953b99b75f31f2e6c0d185c23ca0">anbox::GraphicsProcessor</a>
 </li>
+<li>create_video_decoder()
+: <a class="el" href="classanbox_1_1Platform.html#a6478bd39fb07951c0e95903f42857089">anbox::Platform</a>
+</li>
 </ul>
 
 
 <h3><a id="index_d"></a>- d -</h3><ul>
+<li>decode_frame()
+: <a class="el" href="classanbox_1_1VideoDecoder.html#a039250757e1bb2630dd491f97d17b489">anbox::VideoDecoder</a>
+</li>
 <li>destroy_offscreen_surface()
 : <a class="el" href="classanbox_1_1GraphicsProcessor.html#a104f313b0f08d6ea96f7efb5b44d5447">anbox::GraphicsProcessor</a>
 </li>
@@ -116,6 +128,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <h3><a id="index_f"></a>- f -</h3><ul>
 <li>finish_frame()
 : <a class="el" href="classanbox_1_1GraphicsProcessor.html#a55fec07f5d0646bd972311795c079a0d">anbox::GraphicsProcessor</a>
+</li>
+<li>flush()
+: <a class="el" href="classanbox_1_1VideoDecoder.html#adb7ed6fc7f95d9848be172396d1dc51e">anbox::VideoDecoder</a>
 </li>
 </ul>
 
@@ -137,7 +152,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classanbox_1_1Platform.html#a3455195c7b102a54647d4f1aec85618c">anbox::Platform</a>
 </li>
 <li>GraphicsProcessor()
-: <a class="el" href="classanbox_1_1GraphicsProcessor.html#a6d095b313e234a75405842423b32eeef">anbox::GraphicsProcessor</a>
+: <a class="el" href="classanbox_1_1GraphicsProcessor.html#ac4506a8c508e9e2305cebaa71421d9c1">anbox::GraphicsProcessor</a>
 </li>
 </ul>
 
@@ -167,7 +182,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classanbox_1_1Platform.html#a02ef565c2757d395fe86333175d3a2a8">anbox::Platform</a>
 </li>
 <li>InputProcessor()
-: <a class="el" href="classanbox_1_1InputProcessor.html#a749dc0be5dc9ab3b475827ccf61f6bca">anbox::InputProcessor</a>
+: <a class="el" href="classanbox_1_1InputProcessor.html#a6d10d3266b9ccdcdb520906eb3b9f2e4">anbox::InputProcessor</a>
 </li>
 </ul>
 
@@ -192,6 +207,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="classanbox_1_1InputProcessor.html#ac6a9ebfa0b143a7d5e0054d7ab2e944c">anbox::InputProcessor</a>
 , <a class="el" href="classanbox_1_1Platform.html#a9a06cdaf2484f9dfe1426fee4f43a567">anbox::Platform</a>
 , <a class="el" href="classanbox_1_1SensorProcessor.html#a7e2a041bc8e159374491b3001b68ee76">anbox::SensorProcessor</a>
+, <a class="el" href="classanbox_1_1VideoDecoder.html#a94fd348a227f8cfa63da2b5bc4788414">anbox::VideoDecoder</a>
 </li>
 </ul>
 
@@ -221,6 +237,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>ready()
 : <a class="el" href="classanbox_1_1Platform.html#a3cfb767fac35c8e355923f7d85327b9c">anbox::Platform</a>
 </li>
+<li>retrieve_image()
+: <a class="el" href="classanbox_1_1VideoDecoder.html#abc8c84d1cf638bc55e65eac5e8f1355c">anbox::VideoDecoder</a>
+</li>
 </ul>
 
 
@@ -232,7 +251,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classanbox_1_1Platform.html#af0ada09473c66da26efafa0828fe74d7">anbox::Platform</a>
 </li>
 <li>SensorProcessor()
-: <a class="el" href="classanbox_1_1SensorProcessor.html#a74338a9780a40c244955d65a067d47a8">anbox::SensorProcessor</a>
+: <a class="el" href="classanbox_1_1SensorProcessor.html#aa809cce84e0444cd19c685ba239ecb73">anbox::SensorProcessor</a>
 </li>
 <li>set_change_display_density_callback()
 : <a class="el" href="classanbox_1_1AnboxProxy.html#a890bec8aad1f7bbb0d9d5e369ed4d13d">anbox::AnboxProxy</a>
@@ -242,6 +261,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>set_change_screen_orientation_callback()
 : <a class="el" href="classanbox_1_1AnboxProxy.html#a2590a55c45b9dbdeaaa2250f67456828">anbox::AnboxProxy</a>
+</li>
+<li>set_config_item()
+: <a class="el" href="classanbox_1_1Platform.html#aa02d7d7b6900910b0913b3051e99313c">anbox::Platform</a>
 </li>
 <li>set_trigger_action_callback()
 : <a class="el" href="classanbox_1_1AnboxProxy.html#a8c1439694607607aa52f610f30cdff25">anbox::AnboxProxy</a>
@@ -261,6 +283,13 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <h3><a id="index_t"></a>- t -</h3><ul>
 <li>trigger_action()
 : <a class="el" href="classanbox_1_1AnboxProxy.html#a3a3889387a1bda7ec1af5ad193affb62">anbox::AnboxProxy</a>
+</li>
+</ul>
+
+
+<h3><a id="index_v"></a>- v -</h3><ul>
+<li>VideoDecoder()
+: <a class="el" href="classanbox_1_1VideoDecoder.html#a95925fb99ded329a77ae3e6ce261e6de">anbox::VideoDecoder</a>
 </li>
 </ul>
 
@@ -300,13 +329,16 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>~SensorProcessor()
 : <a class="el" href="classanbox_1_1SensorProcessor.html#aea515ade1b711d6af4e5b7c6c99dcb87">anbox::SensorProcessor</a>
 </li>
+<li>~VideoDecoder()
+: <a class="el" href="classanbox_1_1VideoDecoder.html#ae2ed66af366c8833583293d1b23fc9de">anbox::VideoDecoder</a>
+</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu May 6 2021 13:27:01 for anbox-platform-sdk by
+    <li class="footer">Generated on Thu Aug 5 2021 14:26:07 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

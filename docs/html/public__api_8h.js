@@ -1,5 +1,6 @@
 var public__api_8h =
 [
+    [ "AnboxAudioProcessorActivateFunc", "public__api_8h.html#ac67e3aaaf28518cad631f55f665a07d5", null ],
     [ "AnboxAudioProcessorNeedSilenceOnStandbyFunc", "public__api_8h.html#a0da3c5303a10d3df3a0714b361315a83", null ],
     [ "AnboxAudioProcessorProcessDataFunc", "public__api_8h.html#a7cb33b1439a71fa1a3c44a48c07c4946", null ],
     [ "AnboxAudioProcessorReadDataFunc", "public__api_8h.html#a46076f164b54fe5a15297678c1c88238", null ],
@@ -23,6 +24,7 @@ var public__api_8h =
     [ "AnboxInitializePlatformFunc", "public__api_8h.html#ac09b323c0bfe6d401e5d45e36bdfc0e4", null ],
     [ "AnboxInputProcessorInjectEventFunc", "public__api_8h.html#ac3fec6b570a6563157ae7e9d1af10cec", null ],
     [ "AnboxInputProcessorReadEventFunc", "public__api_8h.html#ad82a8caae8e776b31440c2357f3a525b", null ],
+    [ "AnboxPlatformCreateVideoDecoderFunc", "public__api_8h.html#a00d3767113f9f93adb059b8bcee2cde7", null ],
     [ "AnboxPlatformGetAnboxProxyFunc", "public__api_8h.html#a452f2978a079e3bd76f681a6b53704d5", null ],
     [ "AnboxPlatformGetAudioProcessorFunc", "public__api_8h.html#a21267d4ad9c7d6ef2cfd359c54e76905", null ],
     [ "AnboxPlatformGetCameraProcessorFunc", "public__api_8h.html#a5ebc04c87b46f92125600701943eb265", null ],
@@ -33,6 +35,7 @@ var public__api_8h =
     [ "AnboxPlatformGetSensorProcessorFunc", "public__api_8h.html#a19a84572d40fb3a0852924c1c6f81d6d", null ],
     [ "AnboxPlatformHandleEventFunc", "public__api_8h.html#ac847d9913e63acf079620f2b38e9f5b9", null ],
     [ "AnboxPlatformReadyFunc", "public__api_8h.html#a2ee229f9fcd113b3ed0b88454357bd2a", null ],
+    [ "AnboxPlatformSetConfigItemFunc", "public__api_8h.html#afe50d4ab98249692af0f55ccc13ae6dc", null ],
     [ "AnboxPlatformStopFunc", "public__api_8h.html#a386a23a6f4d0de4463cebe404846762f", null ],
     [ "AnboxPlatformWaitUntilReadyFunc", "public__api_8h.html#a46de799d1c3ff840c3a030f47c561826", null ],
     [ "AnboxProxySendMessageFunc", "public__api_8h.html#a3d8a02082e795e09cdeaa1e326d5a15e", null ],
@@ -43,5 +46,10 @@ var public__api_8h =
     [ "AnboxReleasePlatformFunc", "public__api_8h.html#ad8d5bef2a99a19983ace86513af6fdb7", null ],
     [ "AnboxSensorProcessorInjectDataFunc", "public__api_8h.html#a0f5eb866a08ac559130029b0b9d7c601", null ],
     [ "AnboxSensorProcessorReadDataFunc", "public__api_8h.html#a9e2c869068c200fde2a4b5c9387b392c", null ],
-    [ "AnboxSensorProcessorSupportedSensorsFunc", "public__api_8h.html#acd70b2d9434c6a034cd234a01a31c749", null ]
+    [ "AnboxSensorProcessorSupportedSensorsFunc", "public__api_8h.html#acd70b2d9434c6a034cd234a01a31c749", null ],
+    [ "AnboxVideoDecoderConfigureFunc", "public__api_8h.html#aa748d3695157788b1740fe564ae51b03", null ],
+    [ "AnboxVideoDecoderDecodeFrameFunc", "public__api_8h.html#a654966e11c8813f14eda343e9f537a8d", null ],
+    [ "AnboxVideoDecoderFlushFunc", "public__api_8h.html#a4ad413198fac5483354ba6c6a18073b3", null ],
+    [ "AnboxVideoDecoderReleaseFunc", "public__api_8h.html#a5fab24e45b28582a8e40748a0e60ab96", null ],
+    [ "AnboxVideoDecoderRetrieveImageFunc", "public__api_8h.html#a01d365135caccdf8d40cf36e2a3b6f09", null ]
 ];

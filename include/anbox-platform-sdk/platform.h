@@ -14,10 +14,12 @@
 #include "anbox-platform-sdk/graphics_processor.h"
 #include "anbox-platform-sdk/camera_processor.h"
 #include "anbox-platform-sdk/anbox_proxy.h"
+#include "anbox-platform-sdk/video_decoder.h"
 
 #include <stdint.h>
 #include <stddef.h>
 #include <linux/input.h>
+#include <linux/limits.h>
 
 #include <EGL/egl.h>
 
@@ -114,6 +116,18 @@ struct AnboxAudioSpec {
 };
 
 /**
+ * @brief The struct of binder devices that being used in Android container.
+ */
+struct AnboxBinderDevices {
+  /** framework binder which is used for IPC between framework/app processes with AIDL interfaces */
+  char framework[PATH_MAX];
+  /** hardware binder which is used for IPC between framework/vendor processes with HIDL interfaces */
+  char hardware[PATH_MAX];
+  /** vendor binder which is used for IPC between vendor/vendor processes with AIDL Interfaces */
+  char vendor[PATH_MAX];
+};
+
+/**
  * @brief AnboxPlatformConfigurationKey specifies configuration items which
  * allow to influence the behavior and configuration of Anbox.
  */
@@ -153,7 +167,7 @@ typedef enum {
    * dimension, density and other relevant parameters of the the created virtual
    * display.
    *
-   * The value of this configuration is of type `AnboxDisplaySpec`
+   * The value of this configuration item is of type `AnboxDisplaySpec`
    * @note: deprecated, it exists only for backward compatibility. Please use DISPLAY_SPEC2 instead.
    */
   DISPLAY_SPEC = 3,
@@ -166,8 +180,7 @@ typedef enum {
    * audio format, channel, sample rate and other relevant parameters of
    * the created audio server.
    *
-   * The value of this configuration is of type `AnboxAudioSpec`
-   * @note: deprecated, it exists only for backward compatibility. Please use AUDIO_OUTPUT_SPEC instead.
+   * The value of this configuration item is of type `AnboxAudioSpec`
    */
   AUDIO_SPEC = 4,
 
@@ -179,7 +192,7 @@ typedef enum {
    * dimension, density and other relevant parameters of the the created virtual
    * display.
    *
-   * The value of this configuration is of type `AnboxDisplaySpec2`
+   * The value of this configuration item is of type `AnboxDisplaySpec2`
    */
   DISPLAY_SPEC2 = 5,
 
@@ -191,9 +204,30 @@ typedef enum {
    * audio format, channel, sample rate and other relevant parameters of
    * the created audio server.
    *
-   * The value of this configuration is of type `AnboxAudioSpec`
+   * The value of this configuration item is of type `AnboxAudioSpec`
    */
   AUDIO_INPUT_SPEC = 6,
+
+  /**
+   * Structure of path to binder devices used by the Android container.
+   *
+   * This is used by Anbox to notify the platform that all binder devices
+   * are available by calling \sa anbox::Platform::set_config_item.
+   *
+   * The value of this configuration item is of type `AnboxBinderDevices`
+   */
+  BINDER_DEVICES = 7,
+
+  /*
+   * List of supported video codecs supported by the video decoder implemented
+   * by the platform.
+   *
+   * Anbox will instruct it's HAL layer on the Android side to only exposed
+   * support for the codecs listed.
+   *
+   * The value of this configuration item is of type AnboxVideoCodecType[]
+   */
+  SUPPORTED_VIDEO_DECODE_CODECS = 8,
 } AnboxPlatformConfigurationKey;
 
 /**
@@ -323,6 +357,17 @@ class Platform {
   virtual AnboxProxy* anbox_proxy() { return &anbox_proxy_; }
 
   /**
+   * @brief Create a video decoder instances for a codec of the given name
+   *
+   * @return a valid VideoDecoder instance, otherwise NULL when an error occurred or
+   * if video decoding is not supported by the platform.
+   */
+  virtual VideoDecoder* create_video_decoder(AnboxVideoCodecType codec_type) {
+    (void) codec_type;
+    return nullptr;
+  }
+
+  /**
    * @brief Query the platform for its ready status
    *
    * A platform is supposed to have different status during initialization
@@ -379,6 +424,25 @@ class Platform {
    * one specific operation when a certain event is received.
    */
   virtual void handle_event(AnboxEventType type) { (void)type; }
+
+  /**
+   * @brief Set the configuration options by Anbox to the platform.
+   *
+   * This function provides a way for anbox to write a configuration option to the plugin.
+   *
+   * @param key plugin configuration option key.
+   * @param data pointer stores the address of the configuration key value.
+   * @param data_size size of the memory the `data` pointer points to
+   * @return 0 on success, a negative error code otherwise. Possible are -EINVAL
+   * (invalid arguments supplied) and -ENOMEM (provided memory is not large enough
+   * to store the value of the configuration item).
+   */
+  virtual int set_config_item(AnboxPlatformConfigurationKey key, void* data, size_t data_size) {
+    (void)key;
+    (void)data;
+    (void)data_size;
+    return 0;
+  }
  private:
   AnboxProxy  anbox_proxy_;
 };

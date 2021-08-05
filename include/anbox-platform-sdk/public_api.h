@@ -97,6 +97,15 @@ typedef const AnboxCameraProcessor* (*AnboxPlatformGetCameraProcessorFunc)(const
 typedef const AnboxProxy* (*AnboxPlatformGetAnboxProxyFunc)(const AnboxPlatform* platform);
 
 /**
+ * @brief Create a new video decoder for the given codec
+ *
+ * Every platform implementation has to export a symbol named
+ * 'anbox_platform_create_video_decoder' implementing the AnboxPlatformCreateVideoDecoder
+ * function prototype.
+ */
+typedef AnboxVideoDecoder* (*AnboxPlatformCreateVideoDecoderFunc)(const AnboxPlatform* platform, AnboxVideoCodecType codec_type);
+
+/**
  * @brief Query the platform for its ready status
  *
  * The function prototype for C API function which stands for
@@ -122,6 +131,17 @@ typedef int (*AnboxPlatformWaitUntilReadyFunc)(const AnboxPlatform* platform);
  *
  **/
 typedef int (*AnboxPlatformGetConfigItemFunc)(const AnboxPlatform* platform,
+                                              AnboxPlatformConfigurationKey key,
+                                              void* data, size_t data_size);
+
+/**
+ * @brief Set the configuration options by Anbox to the platform
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::Platform::set_config_item
+ *
+ **/
+typedef int (*AnboxPlatformSetConfigItemFunc)(const AnboxPlatform* platform,
                                               AnboxPlatformConfigurationKey key,
                                               void* data, size_t data_size);
 
@@ -185,6 +205,16 @@ typedef ssize_t (*AnboxAudioProcessorReadDataFunc)(const AnboxAudioProcessor* au
  **/
 typedef int (*AnboxAudioProcessorStandbyFunc)(const AnboxAudioProcessor* audio_processor,
                                               AnboxAudioStreamType type);
+
+/**
+ * @brief Notify the platform when an audio stream is in activation mode.
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::AudioProcessor::activate
+ *
+ **/
+typedef int (*AnboxAudioProcessorActivateFunc)(const AnboxAudioProcessor* audio_processor,
+                                               AnboxAudioStreamType type);
 
 /**
  * @brief Produce a silent audio stream on need while the audio output stream goes into the standby state
@@ -452,5 +482,46 @@ typedef int (*AnboxCameraProcessorReadFrameFunc)(const AnboxCameraProcessor* cam
  **/
 typedef int (*AnboxCameraProcessorInjectFrameFunc)(const AnboxCameraProcessor* camera_processor,
                                                    AnboxVideoFrame frame);
+
+/*
+ * @brief Release the video decoder instance
+ **/
+typedef int (*AnboxVideoDecoderReleaseFunc)(AnboxVideoDecoder* decoder);
+
+/*
+ * @brief Configure the video decoder with the given spec
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::VideoDecoder::configure
+ *
+ **/
+typedef int (*AnboxVideoDecoderConfigureFunc)(const AnboxVideoDecoder* decoder, AnboxVideoDecoderConfig config);
+
+/*
+ * @brief Flush any pending work the video decoder may have
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::VideoDecoder::flush
+ *
+ **/
+typedef int (*AnboxVideoDecoderFlushFunc)(const AnboxVideoDecoder* decoder);
+
+/*
+ * @brief Submit the given frame to the video decoder
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::VideoDecoder::decode_frame
+ *
+ **/
+typedef uint64_t (*AnboxVideoDecoderDecodeFrameFunc)(const AnboxVideoDecoder* decoder, const AnboxVideoFrame* frame, uint64_t pts);
+
+/*
+ * @brief Retrieve a decoded image from the decoder
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::VideoDecoder::retrieve_image
+ *
+ **/
+typedef int (*AnboxVideoDecoderRetrieveImageFunc)(const AnboxVideoDecoder* decoder, AnboxVideoImage *img);
 
 #endif

@@ -36,6 +36,10 @@ struct AnboxProxy {
   anbox::AnboxProxy* instance{nullptr};
 };
 
+struct AnboxVideoDecoder {
+  std::unique_ptr<anbox::VideoDecoder> instance;
+};
+
 struct AnboxPlatform {
   std::unique_ptr<anbox::Platform> instance{nullptr};
   AnboxAudioProcessor audio_processor;

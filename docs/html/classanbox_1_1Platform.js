@@ -6,6 +6,7 @@ var classanbox_1_1Platform =
     [ "anbox_proxy", "classanbox_1_1Platform.html#a16f6ea0ed2b2dc10f90b95887ef7ace5", null ],
     [ "audio_processor", "classanbox_1_1Platform.html#a4ab51c5daf0c30f5e1cbca6fec1f1499", null ],
     [ "camera_processor", "classanbox_1_1Platform.html#a1aedc580fcea297f287feb8b512a0f6d", null ],
+    [ "create_video_decoder", "classanbox_1_1Platform.html#a6478bd39fb07951c0e95903f42857089", null ],
     [ "get_config_item", "classanbox_1_1Platform.html#a90ff17206a0fc0cb05cfdaf8caf6d782", null ],
     [ "gps_processor", "classanbox_1_1Platform.html#a33ae2ef994dd4760e07af982b452be91", null ],
     [ "graphics_processor", "classanbox_1_1Platform.html#a3455195c7b102a54647d4f1aec85618c", null ],
@@ -14,6 +15,7 @@ var classanbox_1_1Platform =
     [ "operator=", "classanbox_1_1Platform.html#a9a06cdaf2484f9dfe1426fee4f43a567", null ],
     [ "ready", "classanbox_1_1Platform.html#a3cfb767fac35c8e355923f7d85327b9c", null ],
     [ "sensor_processor", "classanbox_1_1Platform.html#af0ada09473c66da26efafa0828fe74d7", null ],
+    [ "set_config_item", "classanbox_1_1Platform.html#aa02d7d7b6900910b0913b3051e99313c", null ],
     [ "stop", "classanbox_1_1Platform.html#af7a0fcf1b3d7f08a47b880215b63745c", null ],
     [ "wait_until_ready", "classanbox_1_1Platform.html#a7d8fa1d14143a5af92de58deb780ea40", null ]
 ];

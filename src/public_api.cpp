@@ -42,6 +42,14 @@ ANBOX_EXPORT int anbox_platform_get_config_item(const AnboxPlatform* platform,
   return platform->instance->get_config_item(key, data, data_size);
 }
 
+ANBOX_EXPORT int anbox_platform_set_config_item(const AnboxPlatform* platform,
+                                                AnboxPlatformConfigurationKey key,
+                                                void* data, size_t data_size) {
+  if (!platform->instance)
+    return -EINVAL;
+  return platform->instance->set_config_item(key, data, data_size);
+}
+
 ANBOX_EXPORT int anbox_platform_stop(const AnboxPlatform* platform) {
   if (!platform->instance)
     return -EINVAL;
@@ -55,6 +63,18 @@ ANBOX_EXPORT void anbox_platform_handle_event(const AnboxPlatform* platform,
     return;
 
   platform->instance->handle_event(type);
+}
+
+ANBOX_EXPORT AnboxVideoDecoder* anbox_platform_create_video_decoder(const AnboxPlatform* platform,
+                                                                    AnboxVideoCodecType codec_type) {
+  if (!platform->instance)
+    return nullptr;
+
+  std::unique_ptr<anbox::VideoDecoder> decoder(platform->instance->create_video_decoder(codec_type));
+  if (!decoder)
+    return nullptr;
+
+  return new AnboxVideoDecoder{std::move(decoder)};
 }
 
 ANBOX_EXPORT size_t anbox_audio_processor_process_data(const AnboxAudioProcessor* audio_processor,
@@ -79,6 +99,13 @@ ANBOX_EXPORT ssize_t anbox_audio_processor_read_data(const AnboxAudioProcessor* 
   if (!audio_processor || !audio_processor->instance)
     return 0;
   return audio_processor->instance->read_data(data, size);
+}
+
+ANBOX_EXPORT int anbox_audio_processor_activate(const AnboxAudioProcessor* audio_processor,
+                                                AnboxAudioStreamType type) {
+  if (!audio_processor || !audio_processor->instance)
+    return -EINVAL;
+  return audio_processor->instance->activate(type);
 }
 
 ANBOX_EXPORT int anbox_audio_processor_standby(const AnboxAudioProcessor* audio_processor,
@@ -293,5 +320,42 @@ ANBOX_EXPORT int anbox_proxy_set_trigger_action_callback(const AnboxProxy* anbox
     return -EINVAL;
   anbox_proxy->instance->set_trigger_action_callback(callback, user_data);
   return  0;
+}
+
+ANBOX_EXPORT int anbox_video_decoder_release(AnboxVideoDecoder* decoder) {
+  if (!decoder || !decoder->instance)
+    return -EINVAL;
+
+  decoder->instance.reset();
+  delete decoder;
+  return 0;
+}
+
+ANBOX_EXPORT int anbox_video_decoder_configure(const AnboxVideoDecoder* decoder, AnboxVideoDecoderConfig config) {
+  if (!decoder || !decoder->instance)
+    return -EINVAL;
+
+  return decoder->instance->configure(config);
+}
+
+ANBOX_EXPORT int anbox_video_decoder_flush(const AnboxVideoDecoder* decoder) {
+  if (!decoder || !decoder->instance)
+    return -EINVAL;
+
+  return decoder->instance->flush();
+}
+
+ANBOX_EXPORT uint64_t anbox_video_decoder_decode_frame(const AnboxVideoDecoder* decoder, const AnboxVideoFrame* frame, uint64_t pts) {
+  if (!decoder || !decoder->instance)
+    return 0;
+
+  return decoder->instance->decode_frame(frame, pts);
+}
+
+ANBOX_EXPORT int anbox_video_decoder_retrieve_image(const AnboxVideoDecoder* decoder, AnboxVideoImage* img) {
+  if (!decoder || !decoder->instance)
+    return -EINVAL;
+
+  return decoder->instance->retrieve_image(img);
 }
 } // extern "C"

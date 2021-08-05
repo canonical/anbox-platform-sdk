@@ -93,6 +93,20 @@ class AudioProcessor {
     }
 
     /**
+     * @brief Notify the platform when an audio stream is in activation mode
+     *
+     * This function will be called when an audio stream is in activation mode.
+     * If a platform is notified by Anbox that one audio stream is going to activation mode,
+     *
+     * @param type the specified audio stream type.
+     * @return 0 on success or negative on failure.
+     */
+    virtual int activate(AnboxAudioStreamType type) {
+      (void) type;
+      return 0;
+    }
+
+    /**
      * @brief Produce a silent audio stream on need while the audio output stream goes into the standby state
      *
      * Anbox will produce a silent audio stream while the audio output stream goes into

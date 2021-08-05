@@ -12,5 +12,6 @@ var files =
     [ "plugin.h", "plugin_8h.html", "plugin_8h" ],
     [ "public_api.h", "public__api_8h.html", "public__api_8h" ],
     [ "sensor_processor.h", "sensor__processor_8h.html", "sensor__processor_8h" ],
-    [ "version.h", "version_8h.html", "version_8h" ]
+    [ "version.h", "version_8h.html", "version_8h" ],
+    [ "video_decoder.h", "video__decoder_8h.html", "video__decoder_8h" ]
 ];

@@ -3,6 +3,7 @@ var platform_8h =
     [ "AnboxDisplaySpec", "structAnboxDisplaySpec.html", "structAnboxDisplaySpec" ],
     [ "AnboxDisplaySpec2", "structAnboxDisplaySpec2.html", "structAnboxDisplaySpec2" ],
     [ "AnboxAudioSpec", "structAnboxAudioSpec.html", "structAnboxAudioSpec" ],
+    [ "AnboxBinderDevices", "structAnboxBinderDevices.html", "structAnboxBinderDevices" ],
     [ "AnboxPlatformConfiguration", "structAnboxPlatformConfiguration.html", null ],
     [ "AnboxPlatformDescriptor", "structAnboxPlatformDescriptor.html", "structAnboxPlatformDescriptor" ],
     [ "Platform", "classanbox_1_1Platform.html", "classanbox_1_1Platform" ],
@@ -20,6 +21,8 @@ var platform_8h =
       [ "DISPLAY_SPEC", "platform_8h.html#a0ea2707450519d64745267790a9f2f0dacc774ae76b43f47f0908ea92a1dbc426", null ],
       [ "AUDIO_SPEC", "platform_8h.html#a0ea2707450519d64745267790a9f2f0da9339b374c5d694fea6b43cb67fa7962a", null ],
       [ "DISPLAY_SPEC2", "platform_8h.html#a0ea2707450519d64745267790a9f2f0dad2b555c8723f089c402eeb1f487f73bb", null ],
-      [ "AUDIO_INPUT_SPEC", "platform_8h.html#a0ea2707450519d64745267790a9f2f0daa97a5df35a195b8b2c6912db068228b6", null ]
+      [ "AUDIO_INPUT_SPEC", "platform_8h.html#a0ea2707450519d64745267790a9f2f0daa97a5df35a195b8b2c6912db068228b6", null ],
+      [ "BINDER_DEVICES", "platform_8h.html#a0ea2707450519d64745267790a9f2f0da2151ac8a77c4640609d7d0b9f4bc2160", null ],
+      [ "SUPPORTED_VIDEO_DECODE_CODECS", "platform_8h.html#a0ea2707450519d64745267790a9f2f0da8c8b46ee8c1ce0a41a7c37751fce7238", null ]
     ] ]
 ];

@@ -188,23 +188,27 @@ class GpsDataGenerator {
        case AnboxGpsDataType::GGA:
          gps_data->data_type = data_type;
          gps_data->gga_data.time = std::time(0) * 1000; // timestamp in milliseconds
-         gps_data->gga_data.latitude = generate_random_number<float>(-90.0, 90.0);
+         gps_data->gga_data.latitude = generate_random_number<double>(-90.0, 90.0);
          gps_data->gga_data.latitudeHemi = generate_random_number<int>(0, 2) == 0 ? 'N':'S';
-         gps_data->gga_data.longitude = generate_random_number<float>(-90.0, 90.0);
+         gps_data->gga_data.longitude = generate_random_number<double>(-90.0, 90.0);
          gps_data->gga_data.longitudeHemi = generate_random_number<int>(0, 2) == 0 ? 'E':'W';
-         gps_data->gga_data.altitude = generate_random_number<float>(-100.0, 1000.0);
+         gps_data->gga_data.altitude = generate_random_number<double>(-100.0, 1000.0);
          gps_data->gga_data.altitudeUnit = 'M';
+         gps_data->gga_data.horizontalAccuracy = generate_random_number<float>(0, 10.0);
+         gps_data->gga_data.verticalAccuracy = generate_random_number<float>(0, 10.0);
          break;
        case AnboxGpsDataType::RMC:
          gps_data->rmc_data.time =  std::time(0) * 1000;
          gps_data->rmc_data.status = generate_random_number<int>(0, 2) == 0 ? 'A':'V';
-         gps_data->rmc_data.latitude = generate_random_number<float>(-90.0, 90.0);
+         gps_data->rmc_data.latitude = generate_random_number<double>(-90.0, 90.0);
          gps_data->rmc_data.latitudeHemi =  generate_random_number<int>(0, 2) == 0 ? 'N':'S';
-         gps_data->rmc_data.longitude = generate_random_number<float>(-90.0, 90.0);
+         gps_data->rmc_data.longitude = generate_random_number<double>(-90.0, 90.0);
          gps_data->rmc_data.longitudeHemi =  generate_random_number<int>(0, 2) == 0 ? 'E':'W';
          gps_data->rmc_data.speed = generate_random_number<float>(0, 100.0);
          gps_data->rmc_data.bearing = generate_random_number<float>(-90, 90.0);
          gps_data->rmc_data.date = rmc_current_date();
+         gps_data->rmc_data.horizontalAccuracy = generate_random_number<float>(0, 10.0);
+         gps_data->rmc_data.verticalAccuracy = generate_random_number<float>(0, 10.0);
          break;
        case AnboxGpsDataType::GNSSv1:
          gps_data->gnss_data.measurement_count = generate_random_number<int>(0, 10);

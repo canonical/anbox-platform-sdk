@@ -7,5 +7,6 @@ var namespaceanbox =
     [ "GraphicsProcessor", "classanbox_1_1GraphicsProcessor.html", "classanbox_1_1GraphicsProcessor" ],
     [ "InputProcessor", "classanbox_1_1InputProcessor.html", "classanbox_1_1InputProcessor" ],
     [ "Platform", "classanbox_1_1Platform.html", "classanbox_1_1Platform" ],
-    [ "SensorProcessor", "classanbox_1_1SensorProcessor.html", "classanbox_1_1SensorProcessor" ]
+    [ "SensorProcessor", "classanbox_1_1SensorProcessor.html", "classanbox_1_1SensorProcessor" ],
+    [ "VideoDecoder", "classanbox_1_1VideoDecoder.html", "classanbox_1_1VideoDecoder" ]
 ];
