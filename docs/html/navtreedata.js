@@ -56,7 +56,7 @@ var NAVTREEINDEX =
 [
 "anbox__proxy_8h.html",
 "graphics__processor_8h.html#a88f5eeb5ba694f6e2520594a53182338a07cc68d40325ac4dd609cf12887c22ed",
-"structGnssClock.html#a00055aa5f7d3431f9bff42d515ba2b41"
+"structAnboxVideoImage.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

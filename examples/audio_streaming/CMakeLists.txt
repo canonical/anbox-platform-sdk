@@ -1,5 +1,18 @@
-# Anbox - The Android in a Box runtime environment
-# Copyright 2018 Canonical Ltd.  All rights reserved.
+# This file is part of Anbox Platform SDK
+#
+# Copyright 2021 Canonical Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 project(ANBOX_PLATFORM_PLUGIN_AUDIO_STREAMING)
 cmake_minimum_required(VERSION 3.1.3)
@@ -29,7 +42,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DPLATFORM_INSTALL_DIR=\\\"${CMAKE_INSTA
 
 # Add the plugin target
 set(AUDIO_STREAMING_PLATFORM_SOURCES audio_streaming_platform.cpp)
-add_library(AnboxAudioStreamingPlatform 
+add_library(AnboxAudioStreamingPlatform
   SHARED ${AUDIO_STREAMING_PLATFORM_SOURCES})
 
 # Link against the anbox-platform-sdk-internal library

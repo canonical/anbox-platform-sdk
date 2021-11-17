@@ -134,7 +134,7 @@ Public Member Functions</h2></td></tr>
 <li>Loading a custom Open GL ES/EGL driver implementation. </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00274">274</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00361">361</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1734405780b905b5b3a14382fc8c6c70"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1734405780b905b5b3a14382fc8c6c70">&#9670;&nbsp;</a></span>Platform() <span class="overload">[1/2]</span></h2>
@@ -240,7 +240,7 @@ Public Member Functions</h2></td></tr>
 <p>A platform is supposed to have only a single anbox proxy instance at all time.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1AnboxProxy.html" title="AnboxProxy provides a proxy layer which encapsulates callbacks that can be used by a platform to chan...">AnboxProxy</a> instance, otherwise NULL when an error occured. or the platform does not support to handle the system behavior change via callbacks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00357">357</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00444">444</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -300,7 +300,7 @@ Public Member Functions</h2></td></tr>
 <p>A platform is supposed to have only a single camera processor instance at all time.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1CameraProcessor.html" title="CameraProcessor allows a plugin to respond to the camera actions triggered from Anobx and post video ...">CameraProcessor</a> instance, otherwise NULL when an error occured. or the platform does not support posting a video frame to a camera application running in Android container. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00347">347</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00434">434</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -331,7 +331,7 @@ Public Member Functions</h2></td></tr>
 <p>Create a video decoder instances for a codec of the given name. </p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1VideoDecoder.html" title="Provides access to a video decoder which will be used by both Anbox and the Android instance for hard...">VideoDecoder</a> instance, otherwise NULL when an error occurred or if video decoding is not supported by the platform. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00365">365</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00452">452</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -415,7 +415,7 @@ Public Member Functions</h2></td></tr>
 <p>A platform is supposed to have only a single gps processor instance at all time.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1SensorProcessor.html" title="SensorProcessor allows processing sensor events from the Android container and perform sensor process...">SensorProcessor</a> instance, otherwise NULL when an error occured. or the platform does not support gps processing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00335">335</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00422">422</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -446,7 +446,7 @@ Public Member Functions</h2></td></tr>
 <p>A platform is supposed to have only a single graphics processor instance at all time. Providing a graphics processor is not mandatory for a platform.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1GraphicsProcessor.html" title="GraphicsProcessor allows integration with the graphics engine inside Anbox. ">GraphicsProcessor</a> instance, otherwise NULL when an error occured. or the platform does not support graphics processing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00313">313</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00400">400</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -478,7 +478,7 @@ Public Member Functions</h2></td></tr>
 <p>Some operations (E.g. trigger an action) or initialization routine of a platform may require Android container fully booted or all essential components of Anbox are fully initialized.</p>
 <p>This enables a platform to get notified when an event was fired from Anbox and perform one specific operation when a certain event is received. </p>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00426">426</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00513">513</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -593,7 +593,7 @@ Public Member Functions</h2></td></tr>
 <p>A platform is supposed to have only a single sensor processor instance at all time.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid <a class="el" href="classanbox_1_1SensorProcessor.html" title="SensorProcessor allows processing sensor events from the Android container and perform sensor process...">SensorProcessor</a> instance, otherwise NULL when an error occured. or the platform does not support sensor processing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00324">324</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00411">411</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -649,7 +649,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, a negative error code otherwise. Possible are -EINVAL (invalid arguments supplied) and -ENOMEM (provided memory is not large enough to store the value of the configuration item). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00440">440</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00527">527</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -681,7 +681,7 @@ Public Member Functions</h2></td></tr>
 <p>The platform is expected to stop its processors and don't provide any further data to Anbox. Any further data provided to Anbox after the function has returned will not be considered.</p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, a negative error code otherwise. Possible is -EINVAL (invalid arguments supplied). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00415">415</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00502">502</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -723,7 +723,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceanbox.html">anbox</a></li><li class="navelem"><a class="el" href="classanbox_1_1Platform.html">Platform</a></li>
-    <li class="footer">Generated on Thu Aug 5 2021 14:26:07 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Nov 17 2021 15:31:03 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

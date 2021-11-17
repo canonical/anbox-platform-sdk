@@ -16,6 +16,7 @@ var annotated_dup =
     [ "AnboxGraphicsProcessor", "structAnboxGraphicsProcessor.html", "structAnboxGraphicsProcessor" ],
     [ "AnboxInputEvent", "structAnboxInputEvent.html", "structAnboxInputEvent" ],
     [ "AnboxInputProcessor", "structAnboxInputProcessor.html", "structAnboxInputProcessor" ],
+    [ "AnboxNativeGraphicsConfiguration", "structAnboxNativeGraphicsConfiguration.html", "structAnboxNativeGraphicsConfiguration" ],
     [ "AnboxPlatform", "structAnboxPlatform.html", "structAnboxPlatform" ],
     [ "AnboxPlatformConfiguration", "structAnboxPlatformConfiguration.html", null ],
     [ "AnboxPlatformDescriptor", "structAnboxPlatformDescriptor.html", "structAnboxPlatformDescriptor" ],

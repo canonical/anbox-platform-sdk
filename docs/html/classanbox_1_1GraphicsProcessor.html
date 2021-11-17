@@ -104,7 +104,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classanbox_1_1GraphicsProcessor.html" title="GraphicsProcessor allows integration with the graphics engine inside Anbox. ">GraphicsProcessor</a> allows integration with the graphics engine inside Anbox. </p>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00083">83</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00098">98</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6d095b313e234a75405842423b32eeef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d095b313e234a75405842423b32eeef">&#9670;&nbsp;</a></span>GraphicsProcessor() <span class="overload">[1/2]</span></h2>
@@ -209,7 +209,7 @@ Public Member Functions</h2></td></tr>
 <p>Called from Anbox when a new frame is started. </p>
 <p>This function is called by Anbox from its render thread after the call to eglMakeCurrent to make the main rendering surface and context current. Any operation performed should be as fast as possible to not delay the frame for too long. </p>
 
-<p class="reference">Referenced by <a class="el" href="graphics__processor_8h_source.html#l00100">create_display()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graphics__processor_8h_source.html#l00115">create_display()</a>.</p>
 
 </div>
 </div>
@@ -240,7 +240,7 @@ Public Member Functions</h2></td></tr>
 <p>This function is called by Anbox when it initializes the rendering pipeline to create an EGLDisplay to use for rendering. In case that a platform provides no implementation or EGL_NO_DISPLAY is returned Anbox will use EGL_DEFAULT_DISPLAY to create an EGLDisplay</p>
 <dl class="section return"><dt>Returns</dt><dd>EGLDisplay A valid EGLDisplay or EGL_NO_DISPLAY </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00100">100</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00115">115</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 <p class="reference">References <a class="el" href="classanbox_1_1GraphicsProcessor.html#a8d39b62d7f7be354f1534b66c43a053d">begin_frame()</a>, <a class="el" href="classanbox_1_1GraphicsProcessor.html#a55fec07f5d0646bd972311795c079a0d">finish_frame()</a>, and <a class="el" href="classanbox_1_1GraphicsProcessor.html#a262c9710d107d3685f112452a1f3184f">initialize()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -310,7 +310,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Created EGLSurface or EGL_NO_SURFACE on error </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00144">144</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00159">159</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -358,7 +358,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true, if the surface is successfully destroyed and false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00160">160</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00175">175</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -388,7 +388,7 @@ Public Member Functions</h2></td></tr>
 <p>Called from Anbox when a frame was fully rendered. </p>
 <p>This function is called by Anbox from its render thread before its calling eglSwapBuffers on the main EGL surface. Any operation performed should be as fast as possible to not delay the frame for too long. </p>
 
-<p class="reference">Referenced by <a class="el" href="graphics__processor_8h_source.html#l00100">create_display()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graphics__processor_8h_source.html#l00115">create_display()</a>.</p>
 
 </div>
 </div>
@@ -426,7 +426,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, a negative error code otherwise. </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="graphics__processor_8h_source.html#l00100">create_display()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graphics__processor_8h_source.html#l00115">create_display()</a>.</p>
 
 </div>
 </div>
@@ -465,7 +465,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceanbox.html">anbox</a></li><li class="navelem"><a class="el" href="classanbox_1_1GraphicsProcessor.html">GraphicsProcessor</a></li>
-    <li class="footer">Generated on Thu Aug 5 2021 14:26:07 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Nov 17 2021 15:31:03 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

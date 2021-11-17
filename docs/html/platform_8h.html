@@ -126,6 +126,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxBinderDevices.html">AnboxBinderDevices</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The struct of binder devices that being used in Android container.  <a href="structAnboxBinderDevices.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxNativeGraphicsConfiguration.html">AnboxNativeGraphicsConfiguration</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAnboxNativeGraphicsConfiguration.html" title="AnboxNativeGraphicsConfiguration defines how Anbox should configure the native graphics implementatio...">AnboxNativeGraphicsConfiguration</a> defines how Anbox should configure the native graphics implementation inside the Android container.  <a href="structAnboxNativeGraphicsConfiguration.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxPlatformConfiguration.html">AnboxPlatformConfiguration</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAnboxPlatformConfiguration.html" title="AnboxPlatformConfiguration holds platform configuration options which Anbox supplies to the platform ...">AnboxPlatformConfiguration</a> holds platform configuration options which Anbox supplies to the platform implementation at initialization time.  <a href="structAnboxPlatformConfiguration.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,6 +146,8 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a0c397a708cec89c74029582574516b30"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform_8h.html#a0c397a708cec89c74029582574516b30">MAX_NAME_LENGTH</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a0c397a708cec89c74029582574516b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6789ebc0df71a8ef76bfbb4fb5f74aad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform_8h.html#a6789ebc0df71a8ef76bfbb4fb5f74aad">MAX_STRING_LENGTH</a>&#160;&#160;&#160;256</td></tr>
 <tr class="separator:a6789ebc0df71a8ef76bfbb4fb5f74aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b567b2d0d9819d6a9676ba4363f0154"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform_8h.html#a7b567b2d0d9819d6a9676ba4363f0154">ANBOX_PLATFORM_DESCRIPTOR_SECTION</a>&#160;&#160;&#160;&quot;.anbox_platform_descriptor_section&quot;</td></tr>
@@ -154,6 +159,16 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:ad670af381fe2a26f66dcf726d2130702"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform_8h.html#ad670af381fe2a26f66dcf726d2130702">AnboxGraphicsImplementationType</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="platform_8h.html#ad670af381fe2a26f66dcf726d2130702a283000879cf021bcad2adbee1dbe9566">ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_UNKNOWN</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="platform_8h.html#ad670af381fe2a26f66dcf726d2130702a525a0fc0753d7e8f54a203977d4ca849">ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_HOST_RENDERING</a> = 1, 
+<br />
+&#160;&#160;<a class="el" href="platform_8h.html#ad670af381fe2a26f66dcf726d2130702af05db69afcd57df48ebc9ea963741d4a">ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_NATIVE_RENDERING</a> = 2
+<br />
+ }<tr class="memdesc:ad670af381fe2a26f66dcf726d2130702"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxGraphicsImplementationType describes type of the graphics implementation the platform provides.  <a href="platform_8h.html#ad670af381fe2a26f66dcf726d2130702">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ad670af381fe2a26f66dcf726d2130702"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ea2707450519d64745267790a9f2f0d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform_8h.html#a0ea2707450519d64745267790a9f2f0d">AnboxPlatformConfigurationKey</a> { <br />
 &#160;&#160;<a class="el" href="platform_8h.html#a0ea2707450519d64745267790a9f2f0dae8ab64cd5952052e49c3d623a10b9715">EGL_DRIVER_PATH</a> = 0, 
 <br />
@@ -171,7 +186,11 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="platform_8h.html#a0ea2707450519d64745267790a9f2f0da2151ac8a77c4640609d7d0b9f4bc2160">BINDER_DEVICES</a> = 7, 
 <br />
-&#160;&#160;<a class="el" href="platform_8h.html#a0ea2707450519d64745267790a9f2f0da8c8b46ee8c1ce0a41a7c37751fce7238">SUPPORTED_VIDEO_DECODE_CODECS</a> = 8
+&#160;&#160;<a class="el" href="platform_8h.html#a0ea2707450519d64745267790a9f2f0da8c8b46ee8c1ce0a41a7c37751fce7238">SUPPORTED_VIDEO_DECODE_CODECS</a> = 8, 
+<br />
+&#160;&#160;<a class="el" href="platform_8h.html#a0ea2707450519d64745267790a9f2f0daa8ee28426256651a900cdd3ab8f599ea">GRAPHICS_IMPLEMENTATION_TYPE</a> = 9, 
+<br />
+&#160;&#160;<a class="el" href="platform_8h.html#a0ea2707450519d64745267790a9f2f0dace72d8f68cccf8ce6416ef6b84d2da3c">NATIVE_GRAPHICS_CONFIGURATION</a> = 10
 <br />
  }<tr class="memdesc:a0ea2707450519d64745267790a9f2f0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxPlatformConfigurationKey specifies configuration items which allow to influence the behavior and configuration of Anbox.  <a href="platform_8h.html#a0ea2707450519d64745267790a9f2f0d">More...</a><br /></td></tr>
 </td></tr>
@@ -179,7 +198,9 @@ Enumerations</h2></td></tr>
 <tr class="memitem:ae8e588cce2d344b061234aa73ecdfdac"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform_8h.html#ae8e588cce2d344b061234aa73ecdfdac">AnboxEventType</a> { <br />
 &#160;&#160;<a class="el" href="platform_8h.html#ae8e588cce2d344b061234aa73ecdfdacafeca1fb68e6059662c0f2113f16263b5">ANBOX_EVENT_TYPE_ANDROID_BOOT_FINISHED</a> = 0, 
 <br />
-&#160;&#160;<a class="el" href="platform_8h.html#ae8e588cce2d344b061234aa73ecdfdaca937ceb35ac34e189393657306aaa7320">ANBOX_EVENT_TYPE_INITIALIZATION_FINISHED</a>
+&#160;&#160;<a class="el" href="platform_8h.html#ae8e588cce2d344b061234aa73ecdfdaca937ceb35ac34e189393657306aaa7320">ANBOX_EVENT_TYPE_INITIALIZATION_FINISHED</a>, 
+<br />
+&#160;&#160;<a class="el" href="platform_8h.html#ae8e588cce2d344b061234aa73ecdfdaca8276d1f17b7aa05102f52303f76249d1">ANBOX_EVENT_TYPE_TERMINATING</a>
 <br />
  }<tr class="memdesc:ae8e588cce2d344b061234aa73ecdfdac"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxEventType describes the type of event sent from Anbox.  <a href="platform_8h.html#ae8e588cce2d344b061234aa73ecdfdac">More...</a><br /></td></tr>
 </td></tr>
@@ -200,7 +221,7 @@ Enumerations</h2></td></tr>
 
 <p>A particular elf section that Anbox needs various information from the platform plugin to appear in. </p>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00032">32</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00048">48</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -241,12 +262,12 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="structAnboxPlatformDescriptor.html">AnboxPlatformDescriptor</a> anbox_platform_descriptor __attribute((section(<a class="code" href="platform_8h.html#a7b567b2d0d9819d6a9676ba4363f0154">ANBOX_PLATFORM_DESCRIPTOR_SECTION</a>))) = \</div><div class="line">    { name, vendor, description, <a class="code" href="version_8h.html#ab947475269d3e8939a3791143320a3b1">ANBOX_PLATFORM_VERSION</a> }; \</div><div class="line">extern <span class="stringliteral">&quot;C&quot;</span> { \</div><div class="line">  ANBOX_EXPORT <a class="code" href="structAnboxPlatform.html">AnboxPlatform</a>* anbox_initialize(<span class="keyword">const</span> <a class="code" href="structAnboxPlatformConfiguration.html">AnboxPlatformConfiguration</a>* configuration) { \</div><div class="line">    auto platform = std::make_unique&lt;platform_type&gt;(configuration); \</div><div class="line">    return <a class="code" href="plugin_8h.html#ad04f9a53e4dc96a7d945da269443b6dd">anbox_platform_plugin_register</a>(std::move(platform)); \</div><div class="line">  } \</div><div class="line">  ANBOX_EXPORT <span class="keywordtype">void</span> anbox_deinitialize(<a class="code" href="structAnboxPlatform.html">AnboxPlatform</a>* platform) { \</div><div class="line">      anbox_platform_plugin_unregister(platform); \</div><div class="line">  } \</div><div class="line">}</div><div class="ttc" id="structAnboxPlatformConfiguration_html"><div class="ttname"><a href="structAnboxPlatformConfiguration.html">AnboxPlatformConfiguration</a></div><div class="ttdoc">AnboxPlatformConfiguration holds platform configuration options which Anbox supplies to the platform ...</div><div class="ttdef"><b>Definition:</b> <a href="platform_8h_source.html#l00237">platform.h:237</a></div></div>
-<div class="ttc" id="platform_8h_html_a7b567b2d0d9819d6a9676ba4363f0154"><div class="ttname"><a href="platform_8h.html#a7b567b2d0d9819d6a9676ba4363f0154">ANBOX_PLATFORM_DESCRIPTOR_SECTION</a></div><div class="ttdeci">#define ANBOX_PLATFORM_DESCRIPTOR_SECTION</div><div class="ttdoc">A particular elf section that Anbox needs various information from the platform plugin to appear in...</div><div class="ttdef"><b>Definition:</b> <a href="platform_8h_source.html#l00032">platform.h:32</a></div></div>
-<div class="ttc" id="version_8h_html_ab947475269d3e8939a3791143320a3b1"><div class="ttname"><a href="version_8h.html#ab947475269d3e8939a3791143320a3b1">ANBOX_PLATFORM_VERSION</a></div><div class="ttdeci">#define ANBOX_PLATFORM_VERSION</div><div class="ttdef"><b>Definition:</b> <a href="version_8h_source.html#l00012">version.h:12</a></div></div>
-<div class="ttc" id="structAnboxPlatformDescriptor_html"><div class="ttname"><a href="structAnboxPlatformDescriptor.html">AnboxPlatformDescriptor</a></div><div class="ttdoc">AnboxPlatformDescriptor provides information about the implemented platform. </div><div class="ttdef"><b>Definition:</b> <a href="platform_8h_source.html#l00243">platform.h:243</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="structAnboxPlatformDescriptor.html">AnboxPlatformDescriptor</a> anbox_platform_descriptor __attribute((section(<a class="code" href="platform_8h.html#a7b567b2d0d9819d6a9676ba4363f0154">ANBOX_PLATFORM_DESCRIPTOR_SECTION</a>))) = \</div><div class="line">    { name, vendor, description, <a class="code" href="version_8h.html#ab947475269d3e8939a3791143320a3b1">ANBOX_PLATFORM_VERSION</a> }; \</div><div class="line">extern <span class="stringliteral">&quot;C&quot;</span> { \</div><div class="line">  ANBOX_EXPORT <a class="code" href="structAnboxPlatform.html">AnboxPlatform</a>* anbox_initialize(<span class="keyword">const</span> <a class="code" href="structAnboxPlatformConfiguration.html">AnboxPlatformConfiguration</a>* configuration) { \</div><div class="line">    auto platform = std::make_unique&lt;platform_type&gt;(configuration); \</div><div class="line">    return <a class="code" href="plugin_8h.html#ad04f9a53e4dc96a7d945da269443b6dd">anbox_platform_plugin_register</a>(std::move(platform)); \</div><div class="line">  } \</div><div class="line">  ANBOX_EXPORT <span class="keywordtype">void</span> anbox_deinitialize(<a class="code" href="structAnboxPlatform.html">AnboxPlatform</a>* platform) { \</div><div class="line">      anbox_platform_plugin_unregister(platform); \</div><div class="line">  } \</div><div class="line">}</div><div class="ttc" id="structAnboxPlatformConfiguration_html"><div class="ttname"><a href="structAnboxPlatformConfiguration.html">AnboxPlatformConfiguration</a></div><div class="ttdoc">AnboxPlatformConfiguration holds platform configuration options which Anbox supplies to the platform ...</div><div class="ttdef"><b>Definition:</b> <a href="platform_8h_source.html#l00322">platform.h:322</a></div></div>
+<div class="ttc" id="platform_8h_html_a7b567b2d0d9819d6a9676ba4363f0154"><div class="ttname"><a href="platform_8h.html#a7b567b2d0d9819d6a9676ba4363f0154">ANBOX_PLATFORM_DESCRIPTOR_SECTION</a></div><div class="ttdeci">#define ANBOX_PLATFORM_DESCRIPTOR_SECTION</div><div class="ttdoc">A particular elf section that Anbox needs various information from the platform plugin to appear in...</div><div class="ttdef"><b>Definition:</b> <a href="platform_8h_source.html#l00048">platform.h:48</a></div></div>
+<div class="ttc" id="version_8h_html_ab947475269d3e8939a3791143320a3b1"><div class="ttname"><a href="version_8h.html#ab947475269d3e8939a3791143320a3b1">ANBOX_PLATFORM_VERSION</a></div><div class="ttdeci">#define ANBOX_PLATFORM_VERSION</div><div class="ttdef"><b>Definition:</b> <a href="version_8h_source.html#l00028">version.h:28</a></div></div>
+<div class="ttc" id="structAnboxPlatformDescriptor_html"><div class="ttname"><a href="structAnboxPlatformDescriptor.html">AnboxPlatformDescriptor</a></div><div class="ttdoc">AnboxPlatformDescriptor provides information about the implemented platform. </div><div class="ttdef"><b>Definition:</b> <a href="platform_8h_source.html#l00328">platform.h:328</a></div></div>
 <div class="ttc" id="plugin_8h_html_ad04f9a53e4dc96a7d945da269443b6dd"><div class="ttname"><a href="plugin_8h.html#ad04f9a53e4dc96a7d945da269443b6dd">anbox_platform_plugin_register</a></div><div class="ttdeci">AnboxPlatform * anbox_platform_plugin_register(std::unique_ptr&lt; anbox::Platform &gt; &amp;&amp;platform)</div><div class="ttdoc">Register a platform plugin. </div></div>
-<div class="ttc" id="structAnboxPlatform_html"><div class="ttname"><a href="structAnboxPlatform.html">AnboxPlatform</a></div><div class="ttdef"><b>Definition:</b> <a href="plugin_8h_source.html#l00043">plugin.h:43</a></div></div>
+<div class="ttc" id="structAnboxPlatform_html"><div class="ttname"><a href="structAnboxPlatform.html">AnboxPlatform</a></div><div class="ttdef"><b>Definition:</b> <a href="plugin_8h_source.html#l00058">plugin.h:58</a></div></div>
 </div><!-- fragment -->
 <p>A descriptor that describes the basic information of the platform plugin. </p>
 <p>This macro enables registering and unregistering a platform plugin, adding an additional section which allows Anbox to mainly verify platform API version at plugin compiling time. It comes with a few necessary plugin information too, such as the vendor name. Every platform implementation has to instantiate a platform descriptor which declares the implemented platform plugin and describes the following things.</p><ul>
@@ -255,7 +276,23 @@ Enumerations</h2></td></tr>
 <li>description: The description of the platform. </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00464">464</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00551">551</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+
+</div>
+</div>
+<a id="a0c397a708cec89c74029582574516b30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c397a708cec89c74029582574516b30">&#9670;&nbsp;</a></span>MAX_NAME_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_NAME_LENGTH&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00041">41</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -271,7 +308,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00026">26</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00042">42</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -294,9 +331,34 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ae8e588cce2d344b061234aa73ecdfdaca937ceb35ac34e189393657306aaa7320"></a>ANBOX_EVENT_TYPE_INITIALIZATION_FINISHED&#160;</td><td class="fielddoc"><p>Anbox is fully initialized </p>
 </td></tr>
+<tr><td class="fieldname"><a id="ae8e588cce2d344b061234aa73ecdfdaca8276d1f17b7aa05102f52303f76249d1"></a>ANBOX_EVENT_TYPE_TERMINATING&#160;</td><td class="fielddoc"><p>Anbox is terminating </p>
+</td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00257">257</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00342">342</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+
+</div>
+</div>
+<a id="ad670af381fe2a26f66dcf726d2130702"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad670af381fe2a26f66dcf726d2130702">&#9670;&nbsp;</a></span>AnboxGraphicsImplementationType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="platform_8h.html#ad670af381fe2a26f66dcf726d2130702">AnboxGraphicsImplementationType</a> : uint8_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AnboxGraphicsImplementationType describes type of the graphics implementation the platform provides. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad670af381fe2a26f66dcf726d2130702a283000879cf021bcad2adbee1dbe9566"></a>ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad670af381fe2a26f66dcf726d2130702a525a0fc0753d7e8f54a203977d4ca849"></a>ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_HOST_RENDERING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad670af381fe2a26f66dcf726d2130702af05db69afcd57df48ebc9ea963741d4a"></a>ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_NATIVE_RENDERING&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00150">150</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -347,9 +409,11 @@ Enumerations</h2></td></tr>
 <p>The value of this configuration item is of type <code><a class="el" href="structAnboxBinderDevices.html" title="The struct of binder devices that being used in Android container. ">AnboxBinderDevices</a></code> </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0da8c8b46ee8c1ce0a41a7c37751fce7238"></a>SUPPORTED_VIDEO_DECODE_CODECS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0daa8ee28426256651a900cdd3ab8f599ea"></a>GRAPHICS_IMPLEMENTATION_TYPE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0dace72d8f68cccf8ce6416ef6b84d2da3c"></a>NATIVE_GRAPHICS_CONFIGURATION&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00134">134</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00191">191</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
 
 </div>
 </div>
@@ -359,7 +423,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4f1595be0889d3a0a4532aea0648ca74.html">anbox-platform-sdk</a></li><li class="navelem"><a class="el" href="platform_8h.html">platform.h</a></li>
-    <li class="footer">Generated on Thu Aug 5 2021 14:26:07 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Nov 17 2021 15:31:03 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

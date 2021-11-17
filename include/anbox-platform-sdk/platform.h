@@ -1,5 +1,20 @@
-// Anbox - The Android in a Box runtime environment
-// Copyright 2018 Canonical Ltd.  All rights reserved.
+/*
+ * This file is part of Anbox Platform SDK
+ *
+ * Copyright 2021 Canonical Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 #ifndef ANBOX_PLATFORM_SDK_PLATFORM_H_
 #define ANBOX_PLATFORM_SDK_PLATFORM_H_
@@ -23,6 +38,7 @@
 
 #include <EGL/egl.h>
 
+#define MAX_NAME_LENGTH 100
 #define MAX_STRING_LENGTH 256
 
 /**
@@ -128,6 +144,47 @@ struct AnboxBinderDevices {
 };
 
 /**
+ * @brief AnboxGraphicsImplementationType describes type of the graphics implementation the
+ * platform provides
+ */
+typedef enum : uint8_t {
+  /* Unknown graphics implementation */
+  ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_UNKNOWN = 0,
+  /* Host rendering on the Anbox side */
+  ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_HOST_RENDERING = 1,
+  /* Native rendering inside the Android container */
+  ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_NATIVE_RENDERING = 2,
+} AnboxGraphicsImplementationType;
+
+/**
+ * @brief AnboxNativeGraphicsConfiguration defines how Anbox should configure the
+ * native graphics implementation inside the Android container.
+ *
+ * This primarily contains names to be used to instruct Android which drivers
+ * to load.
+ *
+ * @note Both a GL and a gralloc implementation MUST be provided. Providing
+ * the name of a Vulkan implementation is optional.
+ */
+typedef struct {
+  /*
+   * Name of the vendor whichs OpenGL ES implementation Android should use. Value
+   * will be set to the `ro.hardware.egl` Android system property.
+   */
+  char gl_vendor[MAX_NAME_LENGTH];
+  /*
+   * Name of the vendor whichs Vulkan implementation Android should use. Value will
+   * be set to the `ro.hardware.vulkan` Android system property.
+   */
+  char vulkan_vendor[MAX_NAME_LENGTH];
+  /*
+   * Name of the gralloc implementation Android should use. Value will be set to the
+   * `ro.hardware.gralloc` Android system property.
+   */
+  char gralloc_vendor[MAX_NAME_LENGTH];
+} AnboxNativeGraphicsConfiguration;
+
+/**
  * @brief AnboxPlatformConfigurationKey specifies configuration items which
  * allow to influence the behavior and configuration of Anbox.
  */
@@ -228,6 +285,34 @@ typedef enum {
    * The value of this configuration item is of type AnboxVideoCodecType[]
    */
   SUPPORTED_VIDEO_DECODE_CODECS = 8,
+
+  /*
+   * The graphics implementation type defines how graphics acceleration will be
+   * provided to the Android container.
+   *
+   * Anbox supports different ways of exposing graphic acceleration to the Android
+   * container. Graphics acceleration can either be provided through a translation
+   * layer where all access to the GPU happens on the Anbox side and Android has
+   * no direct access to the GPU. Alternatively Android can get direct GPU access
+   * and perform all graphics acceleration natively.
+   *
+   * If not provided by a platform implementation, Anbox will default to
+   * ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_HOST_RENDERING
+   *
+   * The value of this configuration item is of type `AnboxGraphicsImplementationType`
+   */
+  GRAPHICS_IMPLEMENTATION_TYPE = 9,
+
+  /*
+   * Configuration details for native graphics acceleration
+   *
+   * The platform can further detail on how nativ graphics acceleration will be
+   * made available inside the Android container. This allows defining GL/Vulkan
+   * driver implementation names and other things.
+   *
+   * The value of this configuration item is of type `AnboxNativeGraphicsConfiguration`
+   */
+  NATIVE_GRAPHICS_CONFIGURATION = 10,
 } AnboxPlatformConfigurationKey;
 
 /**
@@ -259,6 +344,8 @@ typedef enum {
   ANBOX_EVENT_TYPE_ANDROID_BOOT_FINISHED = 0,
   /** Anbox is fully initialized */
   ANBOX_EVENT_TYPE_INITIALIZATION_FINISHED,
+  /** Anbox is terminating */
+  ANBOX_EVENT_TYPE_TERMINATING,
 } AnboxEventType;
 
 namespace anbox {
