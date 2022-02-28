@@ -86,7 +86,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2cebe02bbd5e4ff9fa3e8767ed56f8d9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1CameraProcessor.html#a2cebe02bbd5e4ff9fa3e8767ed56f8d9">get_device_specs</a> (<a class="el" href="structAnboxCameraSpec.html">AnboxCameraSpec</a> **specs, size_t *specs_len)</td></tr>
 <tr class="memdesc:a2cebe02bbd5e4ff9fa3e8767ed56f8d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get camera device specifications of the platform.  <a href="#a2cebe02bbd5e4ff9fa3e8767ed56f8d9">More...</a><br /></td></tr>
 <tr class="separator:a2cebe02bbd5e4ff9fa3e8767ed56f8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a967b5d97bae600bb3d73d9d5477abf30"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1CameraProcessor.html#a967b5d97bae600bb3d73d9d5477abf30">open_device</a> (<a class="el" href="structAnboxCameraSpec.html">AnboxCameraSpec</a> spec, <a class="el" href="camera__processor_8h.html#a8c28661499bae24ed73a8afe1e9dc906">AnboxCameraOrientation</a> orientation)</td></tr>
+<tr class="memitem:a967b5d97bae600bb3d73d9d5477abf30"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1CameraProcessor.html#a967b5d97bae600bb3d73d9d5477abf30">open_device</a> (<a class="el" href="structAnboxCameraSpec.html">AnboxCameraSpec</a> spec, <a class="el" href="types_8h.html#a8c28661499bae24ed73a8afe1e9dc906">AnboxCameraOrientation</a> orientation)</td></tr>
 <tr class="memdesc:a967b5d97bae600bb3d73d9d5477abf30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open the camera device and being ready for posting video frames to Android container.  <a href="#a967b5d97bae600bb3d73d9d5477abf30">More...</a><br /></td></tr>
 <tr class="separator:a967b5d97bae600bb3d73d9d5477abf30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a051e33b1fa7c073e03bdec0e083bb8df"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1CameraProcessor.html#a051e33b1fa7c073e03bdec0e083bb8df">close_device</a> ()</td></tr>
@@ -102,7 +102,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classanbox_1_1CameraProcessor.html" title="CameraProcessor allows a plugin to respond to the camera actions triggered from Anobx and post video ...">CameraProcessor</a> allows a plugin to respond to the camera actions triggered from Anobx and post video frames to Android container after a camera is open up and display in camera preview for the picture taken ad video recording. </p>
 
-<p class="definition">Definition at line <a class="el" href="camera__processor_8h_source.html#l00090">90</a> of file <a class="el" href="camera__processor_8h_source.html">camera_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="camera__processor_8h_source.html#l00034">34</a> of file <a class="el" href="camera__processor_8h_source.html">camera_processor.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a477d3629b40ae10011462961ad8706a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a477d3629b40ae10011462961ad8706a1">&#9670;&nbsp;</a></span>CameraProcessor() <span class="overload">[1/2]</span></h2>
@@ -207,7 +207,7 @@ Public Member Functions</h2></td></tr>
 <p>Close the camera device for not receiving video frames from the platform further. </p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, otherwise returns EINVAL on error occurs. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="camera__processor_8h_source.html#l00127">127</a> of file <a class="el" href="camera__processor_8h_source.html">camera_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="camera__processor_8h_source.html#l00071">71</a> of file <a class="el" href="camera__processor_8h_source.html">camera_processor.h</a>.</p>
 
 </div>
 </div>
@@ -255,7 +255,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, otherwise returns EINVAL on error occurs. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="camera__processor_8h_source.html#l00104">104</a> of file <a class="el" href="camera__processor_8h_source.html">camera_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="camera__processor_8h_source.html#l00048">48</a> of file <a class="el" href="camera__processor_8h_source.html">camera_processor.h</a>.</p>
 
 </div>
 </div>
@@ -294,7 +294,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, otherwise returns EINVAL on error occurs. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>This function is only used in our test suite to facilitate our automation tests and it is subject to change at any time. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="camera__processor_8h_source.html#l00165">165</a> of file <a class="el" href="camera__processor_8h_source.html">camera_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="camera__processor_8h_source.html#l00109">109</a> of file <a class="el" href="camera__processor_8h_source.html">camera_processor.h</a>.</p>
 
 </div>
 </div>
@@ -316,7 +316,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="camera__processor_8h.html#a8c28661499bae24ed73a8afe1e9dc906">AnboxCameraOrientation</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a8c28661499bae24ed73a8afe1e9dc906">AnboxCameraOrientation</a>&#160;</td>
           <td class="paramname"><em>orientation</em>&#160;</td>
         </tr>
         <tr>
@@ -342,7 +342,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, otherwise returns EINVAL on error occurs. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="camera__processor_8h_source.html#l00117">117</a> of file <a class="el" href="camera__processor_8h_source.html">camera_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="camera__processor_8h_source.html#l00061">61</a> of file <a class="el" href="camera__processor_8h_source.html">camera_processor.h</a>.</p>
 
 </div>
 </div>
@@ -426,7 +426,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="camera__processor_8h_source.html#l00148">148</a> of file <a class="el" href="camera__processor_8h_source.html">camera_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="camera__processor_8h_source.html#l00092">92</a> of file <a class="el" href="camera__processor_8h_source.html">camera_processor.h</a>.</p>
 
 </div>
 </div>
@@ -439,7 +439,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceanbox.html">anbox</a></li><li class="navelem"><a class="el" href="classanbox_1_1CameraProcessor.html">CameraProcessor</a></li>
-    <li class="footer">Generated on Wed Nov 17 2021 15:31:03 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Feb 23 2022 08:16:55 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

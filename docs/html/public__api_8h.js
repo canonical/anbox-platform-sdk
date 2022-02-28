@@ -21,6 +21,7 @@ var public__api_8h =
     [ "AnboxGraphicsProcessorDestroyOffscreenSurfaceFunc", "public__api_8h.html#aeb5e4a4230cd6efb45560f2be56ab66a", null ],
     [ "AnboxGraphicsProcessorFinishFrameFunc", "public__api_8h.html#add9b7d8eebf1aecc215ff4bb4803f1f9", null ],
     [ "AnboxGraphicsProcessorInitializeFunc", "public__api_8h.html#a04234860725f490f48e03580d6df9e1a", null ],
+    [ "AnboxGraphicsProcessorPresentFunc", "public__api_8h.html#ae44ba9e16e31ab8e045289a4095e09bb", null ],
     [ "AnboxInitializePlatformFunc", "public__api_8h.html#ac09b323c0bfe6d401e5d45e36bdfc0e4", null ],
     [ "AnboxInputProcessorInjectEventFunc", "public__api_8h.html#ac3fec6b570a6563157ae7e9d1af10cec", null ],
     [ "AnboxInputProcessorReadEventFunc", "public__api_8h.html#ad82a8caae8e776b31440c2357f3a525b", null ],

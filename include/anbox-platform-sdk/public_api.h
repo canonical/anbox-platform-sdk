@@ -320,6 +320,16 @@ typedef bool (*AnboxGraphicsProcessorDestroyOffscreenSurfaceFunc)(const AnboxGra
                                                                   EGLSurface surface);
 
 /**
+ * @brief Present the given buffer to a display or other output
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::GraphicsProcessor::present
+ */
+typedef bool (*AnboxGraphicsProcessorPresentFunc)(const AnboxGraphicsProcessor* graphics_processor,
+                                                  AnboxGraphicsBuffer* buffer,
+                                                  AnboxCallback* callback);
+
+/**
  * @brief Sensors supported by the platform
  *
  * The function prototype for C API function which stands for

@@ -19,20 +19,12 @@
 #ifndef ANBOX_SDK_AUDIO_PROCESSOR_H_
 #define ANBOX_SDK_AUDIO_PROCESSOR_H_
 
+#include "anbox-platform-sdk/types.h"
+
 #include <stdint.h>
 #include <stddef.h>
 #include <unistd.h>
 #include <errno.h>
-
-/**
- * @brief AnboxAudioStreamType describes the audio stream type
- */
-typedef enum {
-  /** Audio output stream  */
-  AUDIO_OUTPUT_STREAM = 0,
-  /** Audio input stream */
-  AUDIO_INPUT_STREAM = 1,
-} AnboxAudioStreamType;
 
 namespace anbox {
 /**

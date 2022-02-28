@@ -1,0 +1,5 @@
+<map id="anbox::Platform::create_video_decoder" name="anbox::Platform::create_video_decoder">
+<area shape="rect" id="node2" href="$classanbox_1_1Platform.html#a90ff17206a0fc0cb05cfdaf8caf6d782" title="Retrieve the configuration options provided by platform plugin. " alt="" coords="236,5,391,47"/>
+<area shape="rect" id="node3" href="$classanbox_1_1Platform.html#a3cfb767fac35c8e355923f7d85327b9c" title="Query the platform for its ready status. " alt="" coords="228,71,399,98"/>
+<area shape="rect" id="node4" href="$classanbox_1_1Platform.html#a7d8fa1d14143a5af92de58deb780ea40" title="Wait for platform plugin to be initialized. " alt="" coords="232,123,395,164"/>
+</map>

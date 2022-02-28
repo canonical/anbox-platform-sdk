@@ -103,6 +103,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>c_n0_dbhz
 : <a class="el" href="structGnssMeasurement.html#a185afc6be08f8c0023e2ef7a9640c84a">GnssMeasurement</a>
 </li>
+<li>callback
+: <a class="el" href="structAnboxCallback.html#a27b9a82f4b3e55b622a8806a7bdc0f20">AnboxCallback</a>
+</li>
 <li>camera_processor
 : <a class="el" href="structAnboxPlatform.html#af65666a2e78f5136ddc2711cae4bd2f6">AnboxPlatform</a>
 </li>
@@ -179,6 +182,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>format
 : <a class="el" href="structAnboxAudioSpec.html#a4bb7643b05fcb8c106ec7c2b1e738e76">AnboxAudioSpec</a>
 , <a class="el" href="structAnboxCameraSpec.html#ab8519803422865efa861e720de67e391">AnboxCameraSpec</a>
+, <a class="el" href="structAnboxGraphicsBuffer.html#a912d6da51d6f01d42acabfacd12cace7">AnboxGraphicsBuffer</a>
 </li>
 <li>fps
 : <a class="el" href="structAnboxCameraSpec.html#a4742670b003a8741ba40735df2a98fe7">AnboxCameraSpec</a>
@@ -201,7 +205,10 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="structAnboxGpsData.html#a82d9a49b1b98e082b73b96b98c830ec4">AnboxGpsData</a>
 </li>
 <li>gl_vendor
-: <a class="el" href="structAnboxNativeGraphicsConfiguration.html#a5917f0d452054b374d46cc61e209bc50">AnboxNativeGraphicsConfiguration</a>
+: <a class="el" href="structAnboxDirectGraphicsConfiguration.html#ada1d1bc59f4df4e1af664119c91687a4">AnboxDirectGraphicsConfiguration</a>
+</li>
+<li>gl_version
+: <a class="el" href="structAnboxDirectGraphicsConfiguration.html#a4a85361454858d521c13a052c256a3b4">AnboxDirectGraphicsConfiguration</a>
 </li>
 <li>gnss_data
 : <a class="el" href="structAnboxGpsData.html#a5e3b86c157c84eea6e717fecfd6b71a1">AnboxGpsData</a>
@@ -210,7 +217,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="structAnboxPlatform.html#a527a1ea7bf88e175d79bcda5562aa69b">AnboxPlatform</a>
 </li>
 <li>gralloc_vendor
-: <a class="el" href="structAnboxNativeGraphicsConfiguration.html#a63f53166a77e237f008752c6cfc0b215">AnboxNativeGraphicsConfiguration</a>
+: <a class="el" href="structAnboxDirectGraphicsConfiguration.html#ac716faaf7c62fd549ef4d13135477844">AnboxDirectGraphicsConfiguration</a>
 </li>
 <li>graphics_processor
 : <a class="el" href="structAnboxPlatform.html#a08764e11cb1b064b63a36c6ab8084598">AnboxPlatform</a>
@@ -222,6 +229,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 
 
 <h3><a id="index_h"></a>- h -</h3><ul>
+<li>handle
+: <a class="el" href="structAnboxGraphicsBuffer.html#a455be4bb7b364981b3fa76714adfe16e">AnboxGraphicsBuffer</a>
+</li>
 <li>hardware
 : <a class="el" href="structAnboxBinderDevices.html#afd405dc517f0be6368251a59ca6b65b5">AnboxBinderDevices</a>
 </li>
@@ -229,6 +239,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="structAnboxCameraSpec.html#a539581c9d5d0a2616154de0402e5fce0">AnboxCameraSpec</a>
 , <a class="el" href="structAnboxDisplaySpec2.html#a7f570c57216d28d2c34d29b46bc27f50">AnboxDisplaySpec2</a>
 , <a class="el" href="structAnboxDisplaySpec.html#ae9c80663030f676e9ccb7704db422494">AnboxDisplaySpec</a>
+, <a class="el" href="structAnboxGraphicsBuffer.html#af9362801b97391249fb00b8199c39c87">AnboxGraphicsBuffer</a>
 , <a class="el" href="structAnboxVideoDecoderConfig.html#a7f8b6df28f8f8450df2853bc10b8a985">AnboxVideoDecoderConfig</a>
 , <a class="el" href="structAnboxVideoImage.html#a998e1cbd492043ff8917c487a34d684a">AnboxVideoImage</a>
 </li>
@@ -392,6 +403,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>status
 : <a class="el" href="structAnboxRMCData.html#a3ecaff3e7d2b0344a6c0f72f7f83edd5">AnboxRMCData</a>
 </li>
+<li>stride
+: <a class="el" href="structAnboxGraphicsBuffer.html#a41dd6f71d7890243b373ad851fe28b56">AnboxGraphicsBuffer</a>
+</li>
 <li>svid
 : <a class="el" href="structGnssMeasurement.html#a28ad173ae2d893dbc4e83b7040882863">GnssMeasurement</a>
 </li>
@@ -418,6 +432,13 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </ul>
 
 
+<h3><a id="index_u"></a>- u -</h3><ul>
+<li>user_data
+: <a class="el" href="structAnboxCallback.html#a3ddbe6c496e664dfd8ef06894ea5a5a3">AnboxCallback</a>
+</li>
+</ul>
+
+
 <h3><a id="index_v"></a>- v -</h3><ul>
 <li>v
 : <a class="el" href="structAnboxSensorVector.html#a63e935ba3059e558aaa270adf933a757">AnboxSensorVector</a>
@@ -437,7 +458,10 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 , <a class="el" href="structAnboxRMCData.html#a5592e2559d8ca614949b9e9e1fc7b74e">AnboxRMCData</a>
 </li>
 <li>vulkan_vendor
-: <a class="el" href="structAnboxNativeGraphicsConfiguration.html#a773d17e2c602177aeedc1d013394669f">AnboxNativeGraphicsConfiguration</a>
+: <a class="el" href="structAnboxDirectGraphicsConfiguration.html#a8bdad41390d9cdb54eb231b17bf77eda">AnboxDirectGraphicsConfiguration</a>
+</li>
+<li>vulkan_version
+: <a class="el" href="structAnboxDirectGraphicsConfiguration.html#a55c3092d5614a774e732f31181acc3ab">AnboxDirectGraphicsConfiguration</a>
 </li>
 </ul>
 
@@ -447,6 +471,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="structAnboxCameraSpec.html#a8926062abafa403cf54aae33dec26334">AnboxCameraSpec</a>
 , <a class="el" href="structAnboxDisplaySpec2.html#ad5aea7e8143aed9ab8d5a3063596b9ab">AnboxDisplaySpec2</a>
 , <a class="el" href="structAnboxDisplaySpec.html#a4c25b0345faabeabc1fbe4d751d0ed72">AnboxDisplaySpec</a>
+, <a class="el" href="structAnboxGraphicsBuffer.html#a23e9605d3f1ad6e1961ef2124d57e837">AnboxGraphicsBuffer</a>
 , <a class="el" href="structAnboxVideoDecoderConfig.html#a43f61d00b0b2588ad5ced043fb4d2c40">AnboxVideoDecoderConfig</a>
 , <a class="el" href="structAnboxVideoImage.html#a1e0e5e18d03797f8ceeb1b841e5ee48f">AnboxVideoImage</a>
 </li>
@@ -477,7 +502,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Nov 17 2021 15:31:03 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Feb 23 2022 08:16:56 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

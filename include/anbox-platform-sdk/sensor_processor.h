@@ -19,94 +19,7 @@
 #ifndef ANBOX_SDK_SENSOR_PROCESSOR_H_
 #define ANBOX_SDK_SENSOR_PROCESSOR_H_
 
-#include <stdint.h>
-#include <stddef.h>
-#include <cstdint>
-
-#define MAX_SENSOR_DATA_LENGTH 16
-#define MAX_VECTOR_DATA_LENGTH 3
-
-/**
- * @brief AnboxSensorType describes all sensor types supported by Anbox
- */
-typedef enum : std::uint32_t {
-  /** no sensor support */
-  NONE = 0,
-  /** 3-axis Accelerometer */
-  ACCELERATION  = 1 << 0,
-  /** 3-axis Gyroscope */
-  GYROSCOPE     = 1 << 1,
-  /** 3-axis Magnetic field sensor */
-  MAGNETOMETER  = 1 << 2,
-  /** Orientation sensor */
-  ORIENTATION   = 1 << 3,
-  /** Ambient Temperature sensor */
-  TEMPERATURE   = 1 << 4,
-  /** Proximity sensor */
-  PROXIMITY     = 1 << 5,
-  /** Light sensor */
-  LIGHT         = 1 << 6,
-  /** Pressure sensor */
-  PRESSURE      = 1 << 7,
-  /** Humidity sensor */
-  HUMIDITY      = 1 << 8,
-} AnboxSensorType;
-
-/**
- * @brief AnboxSensorVector represents acceleration along each device axis
- * or current device rotation angles: azimuth, pitch, roll
- */
-struct AnboxSensorVector {
-  union {
-    /** Underlying data value */
-    float v[MAX_VECTOR_DATA_LENGTH];
-    struct {
-      /** X axis */
-      float x;
-      /** Y axis */
-      float y;
-      /** Z axis */
-      float z;
-    } axis;
-    struct {
-      /** Rotation angles: azimuth */
-      float azimuth;
-      /** Rotation angles: pitch */
-      float pitch;
-      /** Rotation angles: roll */
-      float roll;
-    } angle;
-  };
-};
-
-/**
- * @brief AnboxSensorData represents the sensor data stucture,
- */
-struct AnboxSensorData {
-  /** Type of the sensor */
-  AnboxSensorType sensor_type;
-  union {
-    float  values[MAX_SENSOR_DATA_LENGTH];
-    /** Sensor data for 3-axis accelerometer */
-    AnboxSensorVector acceleration;
-    /** Sensor data for 3-axis gyroscope */
-    AnboxSensorVector gyroscope;
-    /** Sensor data for orientation */
-    AnboxSensorVector orientation;
-    /** Sensor data for magnetic field */
-    AnboxSensorVector magnetic;
-    /** Sensor data for ambient temperature */
-    float           temperature;
-    /** Sensor data for proximity */
-    float           proximity;
-    /** Sensor data for light */
-    float           light;
-    /** Sensor data for pressure */
-    float           pressure;
-    /** Sensor data for humidity */
-    float           humidity;
-  };
-};
+#include "anbox-platform-sdk/types.h"
 
 namespace anbox {
 /**
@@ -123,7 +36,7 @@ class SensorProcessor {
     /**
      * @brief Sensors supported by this processor
      *
-     * Internally Anbox will tell Android about the supported sensors and 
+     * Internally Anbox will tell Android about the supported sensors and
      * ensure they are being exposed through the right Android APIs.
      * Multiple sensor types can be specified by using OR bitwise operator.
      *

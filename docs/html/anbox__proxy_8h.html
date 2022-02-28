@@ -56,13 +56,13 @@ $(document).ready(function(){initNavTree('anbox__proxy_8h.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">anbox_proxy.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;errno.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="types_8h_source.html">anbox-platform-sdk/types.h</a>&quot;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -71,6 +71,9 @@ $(document).ready(function(){initNavTree('anbox__proxy_8h.html','');});
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="anbox__proxy_8h__incl.png" border="0" usemap="#anbox__proxy_8h" alt=""/></div>
+<map name="anbox__proxy_8h" id="anbox__proxy_8h">
+<area shape="rect" id="node2" href="types_8h.html" title="anbox&#45;platform&#45;sdk\l/types.h" alt="" coords="176,80,327,121"/>
+</map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -100,7 +103,7 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ad2d8be27e52056d3c2df618608b58f18"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anbox__proxy_8h.html#ad2d8be27e52056d3c2df618608b58f18">AnboxChangeScreenOrientationCallback</a>) (<a class="el" href="anbox__proxy_8h.html#a1364b7a0195d2c2e4a72fe363b409c6f">AnboxScreenOrientationType</a> orientation_type, void *user_data)</td></tr>
+<tr class="memitem:ad2d8be27e52056d3c2df618608b58f18"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anbox__proxy_8h.html#ad2d8be27e52056d3c2df618608b58f18">AnboxChangeScreenOrientationCallback</a>) (<a class="el" href="types_8h.html#a1364b7a0195d2c2e4a72fe363b409c6f">AnboxScreenOrientationType</a> orientation_type, void *user_data)</td></tr>
 <tr class="memdesc:ad2d8be27e52056d3c2df618608b58f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxChangeScreenOrientationCallback is invoked when changing the screen orientation.  <a href="#ad2d8be27e52056d3c2df618608b58f18">More...</a><br /></td></tr>
 <tr class="separator:ad2d8be27e52056d3c2df618608b58f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4fde40767c8c65bf78c9d0972220e20"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anbox__proxy_8h.html#ae4fde40767c8c65bf78c9d0972220e20">AnboxChangeDisplayDensityCallback</a>) (uint32_t density, void *user_data)</td></tr>
@@ -112,21 +115,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:aadadbe551a4580965514e87fa82592be"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anbox__proxy_8h.html#aadadbe551a4580965514e87fa82592be">AnboxTriggerActionCallback</a>) (const char *name, const char **args, size_t args_len, void *user_data)</td></tr>
 <tr class="memdesc:aadadbe551a4580965514e87fa82592be"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxTriggerActionCallback is invoked when an action is triggered within the Android system.  <a href="#aadadbe551a4580965514e87fa82592be">More...</a><br /></td></tr>
 <tr class="separator:aadadbe551a4580965514e87fa82592be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a1364b7a0195d2c2e4a72fe363b409c6f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anbox__proxy_8h.html#a1364b7a0195d2c2e4a72fe363b409c6f">AnboxScreenOrientationType</a> { <br />
-&#160;&#160;<a class="el" href="anbox__proxy_8h.html#a1364b7a0195d2c2e4a72fe363b409c6faf824fcbdaf7ede37030e39a2156f51e1">PORTRAIT</a> = 0, 
-<br />
-&#160;&#160;<a class="el" href="anbox__proxy_8h.html#a1364b7a0195d2c2e4a72fe363b409c6faad82a3dd15e2be2845cecf9a97017a4a">LANDSCAPE</a>, 
-<br />
-&#160;&#160;<a class="el" href="anbox__proxy_8h.html#a1364b7a0195d2c2e4a72fe363b409c6faafb9177bcae5a110f0a94210dc0ce164">PORTRAIT_REVERSED</a>, 
-<br />
-&#160;&#160;<a class="el" href="anbox__proxy_8h.html#a1364b7a0195d2c2e4a72fe363b409c6fa50a9dd31f516b89789e6b989a6e147fc">LANDSCAPE_REVERSED</a>
-<br />
- }<tr class="memdesc:a1364b7a0195d2c2e4a72fe363b409c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxScreenOrientationType describes the type of display orientation.  <a href="anbox__proxy_8h.html#a1364b7a0195d2c2e4a72fe363b409c6f">More...</a><br /></td></tr>
-</td></tr>
-<tr class="separator:a1364b7a0195d2c2e4a72fe363b409c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="ae4fde40767c8c65bf78c9d0972220e20"></a>
@@ -144,7 +132,7 @@ Enumerations</h2></td></tr>
 <p>AnboxChangeDisplayDensityCallback is invoked when changing the display density. </p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success otherwise returns EINVAL on error occurs. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="anbox__proxy_8h_source.html#l00050">50</a> of file <a class="el" href="anbox__proxy_8h_source.html">anbox_proxy.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="anbox__proxy_8h_source.html#l00038">38</a> of file <a class="el" href="anbox__proxy_8h_source.html">anbox_proxy.h</a>.</p>
 
 </div>
 </div>
@@ -163,7 +151,7 @@ Enumerations</h2></td></tr>
 <p>AnboxChangeDisplaySizeCallback is invoked when changing the display size. </p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success otherwise returns EINVAL on error occurs. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="anbox__proxy_8h_source.html#l00056">56</a> of file <a class="el" href="anbox__proxy_8h_source.html">anbox_proxy.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="anbox__proxy_8h_source.html#l00044">44</a> of file <a class="el" href="anbox__proxy_8h_source.html">anbox_proxy.h</a>.</p>
 
 </div>
 </div>
@@ -174,7 +162,7 @@ Enumerations</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef int(* AnboxChangeScreenOrientationCallback) (<a class="el" href="anbox__proxy_8h.html#a1364b7a0195d2c2e4a72fe363b409c6f">AnboxScreenOrientationType</a> orientation_type, void *user_data)</td>
+          <td class="memname">typedef int(* AnboxChangeScreenOrientationCallback) (<a class="el" href="types_8h.html#a1364b7a0195d2c2e4a72fe363b409c6f">AnboxScreenOrientationType</a> orientation_type, void *user_data)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -182,7 +170,7 @@ Enumerations</h2></td></tr>
 <p>AnboxChangeScreenOrientationCallback is invoked when changing the screen orientation. </p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success otherwise returns EINVAL on error occurs. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="anbox__proxy_8h_source.html#l00044">44</a> of file <a class="el" href="anbox__proxy_8h_source.html">anbox_proxy.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="anbox__proxy_8h_source.html#l00032">32</a> of file <a class="el" href="anbox__proxy_8h_source.html">anbox_proxy.h</a>.</p>
 
 </div>
 </div>
@@ -201,36 +189,7 @@ Enumerations</h2></td></tr>
 <p>AnboxTriggerActionCallback is invoked when an action is triggered within the Android system. </p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success otherwise returns EINVAL on error occurs. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="anbox__proxy_8h_source.html#l00063">63</a> of file <a class="el" href="anbox__proxy_8h_source.html">anbox_proxy.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a1364b7a0195d2c2e4a72fe363b409c6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1364b7a0195d2c2e4a72fe363b409c6f">&#9670;&nbsp;</a></span>AnboxScreenOrientationType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="anbox__proxy_8h.html#a1364b7a0195d2c2e4a72fe363b409c6f">AnboxScreenOrientationType</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>AnboxScreenOrientationType describes the type of display orientation. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1364b7a0195d2c2e4a72fe363b409c6faf824fcbdaf7ede37030e39a2156f51e1"></a>PORTRAIT&#160;</td><td class="fielddoc"><p>Portrait orientation mode </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a1364b7a0195d2c2e4a72fe363b409c6faad82a3dd15e2be2845cecf9a97017a4a"></a>LANDSCAPE&#160;</td><td class="fielddoc"><p>Landscape orientation mode </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a1364b7a0195d2c2e4a72fe363b409c6faafb9177bcae5a110f0a94210dc0ce164"></a>PORTRAIT_REVERSED&#160;</td><td class="fielddoc"><p>Reversed portrait orientation mode </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a1364b7a0195d2c2e4a72fe363b409c6fa50a9dd31f516b89789e6b989a6e147fc"></a>LANDSCAPE_REVERSED&#160;</td><td class="fielddoc"><p>Reversed landscape orientation mode </p>
-</td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="anbox__proxy_8h_source.html#l00029">29</a> of file <a class="el" href="anbox__proxy_8h_source.html">anbox_proxy.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="anbox__proxy_8h_source.html#l00051">51</a> of file <a class="el" href="anbox__proxy_8h_source.html">anbox_proxy.h</a>.</p>
 
 </div>
 </div>
@@ -240,7 +199,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4f1595be0889d3a0a4532aea0648ca74.html">anbox-platform-sdk</a></li><li class="navelem"><a class="el" href="anbox__proxy_8h.html">anbox_proxy.h</a></li>
-    <li class="footer">Generated on Wed Nov 17 2021 15:31:03 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Feb 23 2022 08:16:54 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

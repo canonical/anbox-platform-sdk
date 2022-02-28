@@ -193,6 +193,15 @@ ANBOX_EXPORT bool anbox_graphics_processor_destroy_offscreen_surface(const Anbox
   return graphics_processor->instance->destroy_offscreen_surface(display, surface);
 }
 
+ANBOX_EXPORT bool anbox_graphics_processor_present(const AnboxGraphicsProcessor* graphics_processor,
+                                                   AnboxGraphicsBuffer* buffer,
+                                                   AnboxCallback* callback) {
+  if (!graphics_processor || !graphics_processor->instance)
+    return false;
+
+  return graphics_processor->instance->present(buffer, callback);
+}
+
 ANBOX_EXPORT const AnboxSensorProcessor* anbox_platform_get_sensor_processor(const AnboxPlatform* platform) {
   if (!platform || !platform->sensor_processor.instance)
     return nullptr;

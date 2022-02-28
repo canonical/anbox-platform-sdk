@@ -41,7 +41,7 @@ var NAVTREE =
     [ "Files", null, [
       [ "File List", "files.html", "files" ],
       [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
+        [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
@@ -55,8 +55,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "anbox__proxy_8h.html",
-"graphics__processor_8h.html#a88f5eeb5ba694f6e2520594a53182338a07cc68d40325ac4dd609cf12887c22ed",
-"structAnboxVideoImage.html"
+"public__api_8h.html#aca73665152549f4119525425a50515c5",
+"types_8h.html#a7e43115fd296e3cb7c14a1453b407c3b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

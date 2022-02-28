@@ -9,5 +9,6 @@ var classanbox_1_1GraphicsProcessor =
     [ "destroy_offscreen_surface", "classanbox_1_1GraphicsProcessor.html#a104f313b0f08d6ea96f7efb5b44d5447", null ],
     [ "finish_frame", "classanbox_1_1GraphicsProcessor.html#a55fec07f5d0646bd972311795c079a0d", null ],
     [ "initialize", "classanbox_1_1GraphicsProcessor.html#a262c9710d107d3685f112452a1f3184f", null ],
-    [ "operator=", "classanbox_1_1GraphicsProcessor.html#a319661e5be57a4d77c075a62ffb52880", null ]
+    [ "operator=", "classanbox_1_1GraphicsProcessor.html#a319661e5be57a4d77c075a62ffb52880", null ],
+    [ "present", "classanbox_1_1GraphicsProcessor.html#ac796f7d8812c19e8528bdde7754892ac", null ]
 ];

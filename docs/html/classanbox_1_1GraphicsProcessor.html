@@ -100,11 +100,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4d5c953b99b75f31f2e6c0d185c23ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a104f313b0f08d6ea96f7efb5b44d5447"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1GraphicsProcessor.html#a104f313b0f08d6ea96f7efb5b44d5447">destroy_offscreen_surface</a> (EGLDisplay display, EGLSurface surface)</td></tr>
 <tr class="separator:a104f313b0f08d6ea96f7efb5b44d5447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac796f7d8812c19e8528bdde7754892ac"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1GraphicsProcessor.html#ac796f7d8812c19e8528bdde7754892ac">present</a> (<a class="el" href="structAnboxGraphicsBuffer.html">AnboxGraphicsBuffer</a> *buffer, <a class="el" href="structAnboxCallback.html">AnboxCallback</a> *callback)</td></tr>
+<tr class="memdesc:ac796f7d8812c19e8528bdde7754892ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Present the given buffer to a display or other output.  <a href="#ac796f7d8812c19e8528bdde7754892ac">More...</a><br /></td></tr>
+<tr class="separator:ac796f7d8812c19e8528bdde7754892ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classanbox_1_1GraphicsProcessor.html" title="GraphicsProcessor allows integration with the graphics engine inside Anbox. ">GraphicsProcessor</a> allows integration with the graphics engine inside Anbox. </p>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00098">98</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00028">28</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6d095b313e234a75405842423b32eeef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d095b313e234a75405842423b32eeef">&#9670;&nbsp;</a></span>GraphicsProcessor() <span class="overload">[1/2]</span></h2>
@@ -209,7 +212,7 @@ Public Member Functions</h2></td></tr>
 <p>Called from Anbox when a new frame is started. </p>
 <p>This function is called by Anbox from its render thread after the call to eglMakeCurrent to make the main rendering surface and context current. Any operation performed should be as fast as possible to not delay the frame for too long. </p>
 
-<p class="reference">Referenced by <a class="el" href="graphics__processor_8h_source.html#l00115">create_display()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graphics__processor_8h_source.html#l00045">create_display()</a>.</p>
 
 </div>
 </div>
@@ -240,7 +243,7 @@ Public Member Functions</h2></td></tr>
 <p>This function is called by Anbox when it initializes the rendering pipeline to create an EGLDisplay to use for rendering. In case that a platform provides no implementation or EGL_NO_DISPLAY is returned Anbox will use EGL_DEFAULT_DISPLAY to create an EGLDisplay</p>
 <dl class="section return"><dt>Returns</dt><dd>EGLDisplay A valid EGLDisplay or EGL_NO_DISPLAY </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00115">115</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00045">45</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 <p class="reference">References <a class="el" href="classanbox_1_1GraphicsProcessor.html#a8d39b62d7f7be354f1534b66c43a053d">begin_frame()</a>, <a class="el" href="classanbox_1_1GraphicsProcessor.html#a55fec07f5d0646bd972311795c079a0d">finish_frame()</a>, and <a class="el" href="classanbox_1_1GraphicsProcessor.html#a262c9710d107d3685f112452a1f3184f">initialize()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -310,7 +313,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Created EGLSurface or EGL_NO_SURFACE on error </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00159">159</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00090">90</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -358,7 +361,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true, if the surface is successfully destroyed and false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00175">175</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00106">106</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -388,7 +391,7 @@ Public Member Functions</h2></td></tr>
 <p>Called from Anbox when a frame was fully rendered. </p>
 <p>This function is called by Anbox from its render thread before its calling eglSwapBuffers on the main EGL surface. Any operation performed should be as fast as possible to not delay the frame for too long. </p>
 
-<p class="reference">Referenced by <a class="el" href="graphics__processor_8h_source.html#l00115">create_display()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graphics__processor_8h_source.html#l00045">create_display()</a>.</p>
 
 </div>
 </div>
@@ -426,7 +429,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, a negative error code otherwise. </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="graphics__processor_8h_source.html#l00115">create_display()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graphics__processor_8h_source.html#l00045">create_display()</a>.</p>
 
 </div>
 </div>
@@ -456,6 +459,56 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac796f7d8812c19e8528bdde7754892ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac796f7d8812c19e8528bdde7754892ac">&#9670;&nbsp;</a></span>present()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool anbox::GraphicsProcessor::present </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structAnboxGraphicsBuffer.html">AnboxGraphicsBuffer</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structAnboxCallback.html">AnboxCallback</a> *&#160;</td>
+          <td class="paramname"><em>callback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Present the given buffer to a display or other output. </p>
+<p>Only used when graphics implementation is ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_DIRECT_RENDERING</p>
+<p>This method will be called by Anbox when Android has submitted a new buffer to be presented on the output managed by the platform. The buffer contains information about dimension, format and the handle to the buffer itself. The handle is opaque to Anbox and it's up to the platform to map it to something which it can handle (e.g. a dmabuf)</p>
+<p>When the platform has finished presenting the buffer it has to call the provided callback in order to return the buffer to Anbox for reuse. Not returning the buffer will cause the rendering pipeline to get stuck.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Buffer to be presented on the output display </td></tr>
+    <tr><td class="paramname">callback</td><td>A callback to be called by the platform when the buffer has been presented </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00129">129</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a></li>
 </ul>
@@ -465,7 +518,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceanbox.html">anbox</a></li><li class="navelem"><a class="el" href="classanbox_1_1GraphicsProcessor.html">GraphicsProcessor</a></li>
-    <li class="footer">Generated on Wed Nov 17 2021 15:31:03 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Feb 23 2022 08:16:55 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

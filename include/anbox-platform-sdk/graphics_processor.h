@@ -19,77 +19,7 @@
 #ifndef ANBOX_SDK_GRAPHICS_PROCESSOR_H_
 #define ANBOX_SDK_GRAPHICS_PROCESSOR_H_
 
-#include <stdint.h>
-#include <stddef.h>
-
-#include <EGL/egl.h>
-
-/**
- * @brief AnboxGraphicsFlipMode describes if the final frame needs to be
- * flipped to have the right visual orientation.
- */
-typedef enum {
-  /** No flip required */
-  FLIP_MODE_NONE = 0,
-  /** Flip the frame vertically */
-  FLIP_MODE_VERTICAL = 1,
-  /** Flip the frame horizontally */
-  FLIP_MODE_HORIZONTAL = 2,
-} AnboxGraphicsFlipMode;
-
-/**
- * @brief AnboxGraphicsTextureFormat describes a list of supported texture
- * formats Anbox can provide a frame in.
- */
-typedef enum {
-  /** RGBA texture format */
-  TEXTURE_FORMAT_RGBA = 0,
-  /** BGRA texture format */
-  TEXTURE_FORMAT_BGRA = 1,
-} AnboxGraphicsTextureFormat;
-
-/**
- * @brief AnboxDisplaySpec describes properties of the Anbox rendering
- * pipeline the platform plugin can influence.
- */
-typedef struct {
-  /**
-   * Native EGL display used to setup EGL
-   */
-  EGLNativeDisplayType native_display;
-
-  /**
-   * Native EGL window type used to create the main rendering surface. If
-   * set to NULL Anbox will assume rendering in headless mode.
-   */
-  EGLNativeWindowType native_window;
-
-  /**
-   * If the GPU stores texture in a different orientation than the native
-   * one the flip mode can be used to tell Anbox to flip frame over
-   * during the final render pass.
-   */
-  AnboxGraphicsFlipMode output_flip_mode;
-
-  /**
-   * If the texture used for rendering should use a different format as
-   * it should to a video encoder the texture format can be used to tell
-   * Anbox to flip the color bits during the final render pass.
-   *
-   * The default is RGBA.
-   */
-  AnboxGraphicsTextureFormat texture_format;
-
-  /**
-   * If set to true Anbox will avoid querying EGL for configurations with
-   * pbuffer support. This is usefull on driver implementations which don't
-   * support EGL pbuffers.
-   *
-   * The default is false.
-   */
-  bool avoid_pbuffers;
-} AnboxGraphicsConfiguration;
-
+#include "anbox-platform-sdk/types.h"
 
 namespace anbox {
 /**
@@ -145,6 +75,7 @@ class GraphicsProcessor {
      **/
     virtual void finish_frame() = 0;
 
+
     /**
      * @brief Create an offscreen EGL surface for the given display, configuration
      * and attributes.
@@ -175,6 +106,29 @@ class GraphicsProcessor {
     virtual bool destroy_offscreen_surface(EGLDisplay display, EGLSurface surface) {
       (void) display;
       (void) surface;
+      return false;
+    }
+
+    /**
+     * @brief Present the given buffer to a display or other output
+     *
+     * Only used when graphics implementation is ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_DIRECT_RENDERING
+     *
+     * This method will be called by Anbox when Android has submitted a new buffer to be
+     * presented on the output managed by the platform. The buffer contains information about
+     * dimension, format and the handle to the buffer itself. The handle is opaque to Anbox
+     * and it's up to the platform to map it to something which it can handle (e.g. a dmabuf)
+     *
+     * When the platform has finished presenting the buffer it has to call the provided callback
+     * in order to return the buffer to Anbox for reuse. Not returning the buffer will cause the
+     * rendering pipeline to get stuck.
+     *
+     * @param buffer Buffer to be presented on the output display
+     * @param callback A callback to be called by the platform when the buffer has been presented
+     */
+    virtual bool present(AnboxGraphicsBuffer* buffer, AnboxCallback* callback) {
+      (void) buffer;
+      (void) callback;
       return false;
     }
 };

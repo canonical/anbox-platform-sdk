@@ -19,67 +19,11 @@
 #ifndef ANBOX_SDK_CAMERA_PROCESSOR_H_
 #define ANBOX_SDK_CAMERA_PROCESSOR_H_
 
+#include "anbox-platform-sdk/types.h"
+
 #include <errno.h>
 #include <stdint.h>
 #include <stddef.h>
-
-/**
-* @brief AnboxVideoColorFormat describes the color space format of a video frame.
-*/
-typedef enum {
- /** Unknown color space format */
- VIDEO_FRAME_FORMAT_UNKNOWN = 0,
- /** YUV standard format 4:2:0 */
- VIDEO_FRAME_FORMAT_YUV420,
- /** RAW color format with alpha channel*/
- VIDEO_FRAME_FORMAT_RGBA,
-} AnboxVideoColorSpaceFormat;
-
-/**
- * @brief describes the orientations that Anbox supports in the camea processor
- */
-typedef enum {
-  /** Camera in portrait mode */
-  CAMERA_ORIENTATION_PORTRAIT = 0,
-  /** Camera in landscape mode */
-  CAMERA_ORIENTATION_LANDSCAPE = 1,
-} AnboxCameraOrientation;
-
-/**
- * @brief describes the camera facing mode
- */
-typedef enum {
-  /** Camera in front facing mode */
-  CAMERA_FACING_MODE_FRONT = 0,
-  /** Camera in rear facing mode */
-  CAMERA_FACING_MODE_REAR = 1,
-} AnboxCameraFacingMode;
-
-/**
- * @brief AnboxCameraSpec represents the camera specification
- */
-struct AnboxCameraSpec {
- /** Color space format of camera frame data */
- AnboxVideoColorSpaceFormat format;
- /** Camera facing mode */
- AnboxCameraFacingMode facing_mode;
- /** Camera video frame frequency */
- uint32_t fps;
- /** The width of the camera resolution */
- uint32_t width;
- /** The height  of the camera resolution */
- uint32_t height;
-};
-
-/**
-* @brief AnboxVideoFrame represents a single complete video frame
-*/
-struct AnboxVideoFrame {
- /** Pointer to video frame data */
- uint8_t* data;
- /** Pointer to video frame data */
- size_t size;
-};
 
 namespace anbox {
 /**

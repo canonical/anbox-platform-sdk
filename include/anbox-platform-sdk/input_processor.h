@@ -19,45 +19,7 @@
 #ifndef ANBOX_SDK_INPUT_PROCESSOR_H_
 #define ANBOX_SDK_INPUT_PROCESSOR_H_
 
-#include <stdint.h>
-#include <stddef.h>
-#include <linux/input.h>
-
-/**
- * @brief AnboxInputDeviceType describes the type of device an input event
- * belongs to. Possible device types are: pointer, keyboard, touchpanel.
- */
-typedef enum {
-  /** A pointer device */
-  POINTER = 0,
-  /** A keyboard device */
-  KEYBOARD,
-  /** A touchpanel device */
-  TOUCHPANEL,
-  /** A gamepad device */
-  GAMEPAD,
-} AnboxInputDeviceType;
-
-/**
- * @brief AnboxInputEvent is similar to the input_event that is defined in the
- * Linux kernel API. The three member variables type, code and value have the
- * same meaning as defined in the Linux kernel API.
- * Please see https://www.kernel.org/doc/Documentation/input/input.txt for further information.
- */
-struct AnboxInputEvent {
-  /** Type of the device the input event belongs to. */
-  AnboxInputDeviceType device_type;
-  /** Id identifying a device of a given type */
-  int32_t device_id;
-  /** The type of the input event. E.g. EV_KEY stands for a keyboard event.
-   * See complete list in /usr/include/linux/input-event-codes.h */
-  uint16_t type;
-  /** The code of the input event. E.g. KEY_ENTER when you press the ENTER key. */
-  uint16_t code;
-  /** The value of the input event. E.g. 0 when a keyboard key is released,
-   * 1 stands for keyboard key is pressed. */
-  int32_t value;
-};
+#include "anbox-platform-sdk/types.h"
 
 namespace anbox {
 /**

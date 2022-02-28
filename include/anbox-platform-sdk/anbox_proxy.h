@@ -19,23 +19,11 @@
 #ifndef ANBOX_SDK_ANBOX_PROXY_H_
 #define ANBOX_SDK_ANBOX_PROXY_H_
 
+#include "anbox-platform-sdk/types.h"
+
 #include <errno.h>
 #include <stdint.h>
 #include <unistd.h>
-
-/**
- * @brief AnboxScreenOrientationType describes the type of display orientation
- */
-typedef enum {
-  /** Portrait orientation mode */
-  PORTRAIT = 0,
-  /** Landscape orientation mode */
-  LANDSCAPE,
-  /** Reversed portrait orientation mode */
-  PORTRAIT_REVERSED,
-  /** Reversed landscape orientation mode */
-  LANDSCAPE_REVERSED,
-} AnboxScreenOrientationType;
 
 /**
  * @brief AnboxChangeScreenOrientationCallback is invoked when changing the screen orientation.
