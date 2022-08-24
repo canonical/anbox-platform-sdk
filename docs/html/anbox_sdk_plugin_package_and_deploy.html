@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>anbox-platform-sdk: Package and Deploy Your Platform Plugin Package</title>
+<title>anbox-platform-sdk: Package and deploy a platform plugin</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -54,16 +54,28 @@ $(document).ready(function(){initNavTree('anbox_sdk_plugin_package_and_deploy.ht
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">Package and Deploy Your Platform Plugin Package </div>  </div>
+<div class="title">Package and deploy a platform plugin </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>TBD </p>
+<div class="textblock"><p>Platform plugins must be installed within the containers that Anbox Cloud is running. Generally, all plugins are installed into <code>/usr/lib/\&lt;target_triple\&gt;/anbox/platforms/\&lt;plugin_name\&gt;</code> from where Anbox will load them.</p>
+<p>The recommended way of packaging and deploying a platform plugin is by using an <a href="https://anbox-cloud.io/docs/howto/addons/landing">addon</a> package in AMS. An addon lets you package the platform plugin and install it into the right location during container bootstrap time.</p>
+<h1><a class="anchor" id="package_as_ams_addon"></a>
+Package as AMS addon</h1>
+<p>For the following example it is expected that the platform plugin is already built and you have the <code>platform_&lt;name&gt;.so</code> file ready. In this example, we will use a platform named <code>foo</code>.</p>
+<p>In case that your platform has external dependencies you will have to install them as part of <code>pre-start</code> hook as well.</p>
+<p>First we have to create the directory structure for the addon as follows:</p>
+<div class="fragment"><div class="line">mkdir -p foo/hooks</div><div class="line">cp /path/to/platform_foo.so foo/</div><div class="line">cat &lt;&lt; EOF &gt; foo/hooks/pre-start</div><div class="line"><span class="preprocessor">#!/bin/bash -ex</span></div><div class="line"><span class="keywordflow">if</span> [ <span class="stringliteral">&quot;$CONTAINER_TYPE&quot;</span> != base ]; then</div><div class="line">    exit 0</div><div class="line">fi</div><div class="line"></div><div class="line">triplet=x86_64-linux-gnu</div><div class="line"><span class="keywordflow">if</span> [ $(uname -m) = aarch64 ]; then</div><div class="line">    triplet=aarch64-linux-gnu</div><div class="line">fi</div><div class="line"></div><div class="line">mkdir -p /usr/lib/\${triplet}/<a class="code" href="namespaceanbox.html">anbox</a>/platforms/foo</div><div class="line">cp \${ADDON_DIR}/platform_foo.so /usr/lib/\${triplet}/<a class="code" href="namespaceanbox.html">anbox</a>/platforms/foo</div><div class="line">EOF</div><div class="line">chmod +x foo/hooks/pre-start</div></div><!-- fragment --><p>As next step we have to upload the addon to AMS:</p>
+<div class="fragment"><div class="line">amc addon create foo ./foo</div></div><!-- fragment --><p>Once the addon is uploaded it's available for any container. It can be referenced by <a href="https://anbox-cloud.io/docs/howto/application/landing">applications</a> managed by AMS or used by <a href="https://anbox-cloud.io/docs/howto/container/launch">raw containers</a>.</p>
+<h1><a class="anchor" id="use_platform_in_a_container"></a>
+Use platform in a container</h1>
+<p>To let a raw container use the addon and start Anbox with the <code>foo</code> platform plugin, run the following command:</p>
+<div class="fragment"><div class="line">amc launch -p foo -a foo -r</div></div><!-- fragment --><p>This will create a raw container with the default image, install the <code>foo</code> addon and afterwards start Anbox with the <code>foo</code> platform plugin. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 23 2022 08:16:55 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Aug 17 2022 12:59:55 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

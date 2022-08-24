@@ -14,16 +14,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Check to make sure the SDK is only used on Ubuntu 18.04 by default
 option(ANBOX_UNSUPPORTED_PLATFORM_CHECK "Use unsupported platform" ON)
 if(ANBOX_UNSUPPORTED_PLATFORM_CHECK)
     execute_process(COMMAND bash -c "cat /etc/lsb-release | grep -oP 'DISTRIB_RELEASE=\\K.*' | tr -d '\\n'"
         OUTPUT_VARIABLE ANBOX_SDK_UBUNTU_VERSION)
-    if(NOT "${ANBOX_SDK_UBUNTU_VERSION}" STREQUAL "18.04")
-        message(FATAL_ERROR "Invalid platform - only Ubuntu 18.04 is supported")
+    if(NOT "${ANBOX_SDK_UBUNTU_VERSION}" STREQUAL "18.04" AND NOT "${ANBOX_SDK_UBUNTU_VERSION}" STREQUAL "22.04" )
+        message(FATAL_ERROR "Invalid platform - only Ubuntu 18.04 and 22.04 are supported")
     endif()
 else()
-    message(WARNING "Unsupported platform - only Ubuntu 18.04 is supported")
+    message(WARNING "Unsupported platform - only Ubuntu 18.04 and 22.04 are supported")
 endif()
 
 get_filename_component(SELF_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)

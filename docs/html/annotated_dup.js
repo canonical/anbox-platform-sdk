@@ -21,6 +21,8 @@ var annotated_dup =
     [ "AnboxInputProcessor", "structAnboxInputProcessor.html", "structAnboxInputProcessor" ],
     [ "AnboxPlatform", "structAnboxPlatform.html", "structAnboxPlatform" ],
     [ "AnboxPlatformConfiguration", "structAnboxPlatformConfiguration.html", null ],
+    [ "AnboxPlatformConfigurationInfo", "structAnboxPlatformConfigurationInfo.html", "structAnboxPlatformConfigurationInfo" ],
+    [ "AnboxPlatformConfigurationItemInfo", "structAnboxPlatformConfigurationItemInfo.html", "structAnboxPlatformConfigurationItemInfo" ],
     [ "AnboxPlatformDescriptor", "structAnboxPlatformDescriptor.html", "structAnboxPlatformDescriptor" ],
     [ "AnboxProxy", "structAnboxProxy.html", "structAnboxProxy" ],
     [ "AnboxRMCData", "structAnboxRMCData.html", "structAnboxRMCData" ],

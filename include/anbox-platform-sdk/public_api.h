@@ -161,6 +161,17 @@ typedef int (*AnboxPlatformSetConfigItemFunc)(const AnboxPlatform* platform,
                                               void* data, size_t data_size);
 
 /**
+ * @brief Register an external event tracing implementation with the platform
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::Platform::setup_tevent_tracer
+ *
+ **/
+typedef void (*AnboxPlatformSetupEventTracerFunc)(const AnboxPlatform* platform,
+                                                  AnboxTracerGetCategoryEnabledFunc get_category_enabled_func,
+                                                  AnboxTracerAddEventFunc add_event_func);
+
+/**
  * @brief Ask the platform to stop any pending work it has to prepare for Anbox to terminate.
  *
  * The function prototype for C API function which stands for

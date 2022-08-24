@@ -7,6 +7,8 @@ var types_8h =
     [ "AnboxGraphicsBuffer", "structAnboxGraphicsBuffer.html", "structAnboxGraphicsBuffer" ],
     [ "AnboxCallback", "structAnboxCallback.html", "structAnboxCallback" ],
     [ "AnboxDirectGraphicsConfiguration", "structAnboxDirectGraphicsConfiguration.html", "structAnboxDirectGraphicsConfiguration" ],
+    [ "AnboxPlatformConfigurationItemInfo", "structAnboxPlatformConfigurationItemInfo.html", "structAnboxPlatformConfigurationItemInfo" ],
+    [ "AnboxPlatformConfigurationInfo", "structAnboxPlatformConfigurationInfo.html", "structAnboxPlatformConfigurationInfo" ],
     [ "AnboxPlatformConfiguration", "structAnboxPlatformConfiguration.html", null ],
     [ "AnboxPlatformDescriptor", "structAnboxPlatformDescriptor.html", "structAnboxPlatformDescriptor" ],
     [ "AnboxCameraSpec", "structAnboxCameraSpec.html", "structAnboxCameraSpec" ],
@@ -30,6 +32,8 @@ var types_8h =
     [ "MAX_STRING_LENGTH", "types_8h.html#a6789ebc0df71a8ef76bfbb4fb5f74aad", null ],
     [ "MAX_VECTOR_DATA_LENGTH", "types_8h.html#a5a477e0aed144f1e05330c05e7d9ac50", null ],
     [ "AnboxNativeHandle", "types_8h.html#aeee9b5b982892491ddbda9f7933d4232", null ],
+    [ "AnboxTracerAddEventFunc", "types_8h.html#a9d68cc180fd50c073914cf9099d747af", null ],
+    [ "AnboxTracerGetCategoryEnabledFunc", "types_8h.html#a64a55e2b49dede6ae033b3d6eb7941ee", null ],
     [ "GpsUtcTime", "types_8h.html#af2b0ea531a44c010f81a4abd27504c15", null ],
     [ "AnboxAudioFormat", "types_8h.html#aec9e9f831c3e15bc1f4838979468685f", [
       [ "AUDIO_FORMAT_INVALID", "types_8h.html#aec9e9f831c3e15bc1f4838979468685fae578d2fc363ee3e1e9a7c53d4e07d86a", null ],
@@ -113,6 +117,9 @@ var types_8h =
       [ "TOUCHPANEL", "types_8h.html#adf8cc8125db12fa5f76b530f2f9939bca6260bf86d2b28cdeddf98cadbfb1c900", null ],
       [ "GAMEPAD", "types_8h.html#adf8cc8125db12fa5f76b530f2f9939bca273c15ddc1f5abadaf24cd191e7db5e0", null ]
     ] ],
+    [ "AnboxPlatformConfigurationItemValueType", "types_8h.html#a2db22e4829c8c814a7b302fd0f8c1d4c", [
+      [ "BOOLEAN", "types_8h.html#a2db22e4829c8c814a7b302fd0f8c1d4ca8a583f16e8d237a423c8c1d9087a4c72", null ]
+    ] ],
     [ "AnboxPlatformConfigurationKey", "types_8h.html#a0ea2707450519d64745267790a9f2f0d", [
       [ "EGL_DRIVER_PATH", "types_8h.html#a0ea2707450519d64745267790a9f2f0dae8ab64cd5952052e49c3d623a10b9715", null ],
       [ "OPENGL_ES1_CM_DRIVER_PATH", "types_8h.html#a0ea2707450519d64745267790a9f2f0da392efc082569013b5fce326af0293f2f", null ],
@@ -124,7 +131,10 @@ var types_8h =
       [ "BINDER_DEVICES", "types_8h.html#a0ea2707450519d64745267790a9f2f0da2151ac8a77c4640609d7d0b9f4bc2160", null ],
       [ "SUPPORTED_VIDEO_DECODE_CODECS", "types_8h.html#a0ea2707450519d64745267790a9f2f0da8c8b46ee8c1ce0a41a7c37751fce7238", null ],
       [ "GRAPHICS_IMPLEMENTATION_TYPE", "types_8h.html#a0ea2707450519d64745267790a9f2f0daa8ee28426256651a900cdd3ab8f599ea", null ],
-      [ "DIRECT_GRAPHICS_CONFIGURATION", "types_8h.html#a0ea2707450519d64745267790a9f2f0da46200865e94522191f1b621124851e0b", null ]
+      [ "DIRECT_GRAPHICS_CONFIGURATION", "types_8h.html#a0ea2707450519d64745267790a9f2f0da46200865e94522191f1b621124851e0b", null ],
+      [ "PLATFORM_CONFIGURATION_INFO", "types_8h.html#a0ea2707450519d64745267790a9f2f0dac0391bfd4243a924e276a034d91bd46a", null ],
+      [ "PLATFORM_CONFIGURATION_ID_START", "types_8h.html#a0ea2707450519d64745267790a9f2f0dae1f035c40b68d56fe2220442ab8ddd67", null ],
+      [ "PLATFORM_CONFIGURATION_ID_END", "types_8h.html#a0ea2707450519d64745267790a9f2f0dafcb3ebeabdd44ab7c5765b5e35d511c1", null ]
     ] ],
     [ "AnboxScreenOrientationType", "types_8h.html#a1364b7a0195d2c2e4a72fe363b409c6f", [
       [ "PORTRAIT", "types_8h.html#a1364b7a0195d2c2e4a72fe363b409c6faf824fcbdaf7ede37030e39a2156f51e1", null ],
@@ -143,6 +153,21 @@ var types_8h =
       [ "LIGHT", "types_8h.html#ada4f1d01bd8be2756c43da68b7ebe95daf917d6c11c85b4ac32e30d1cc9da25eb", null ],
       [ "PRESSURE", "types_8h.html#ada4f1d01bd8be2756c43da68b7ebe95da86426522c91b417229c899ae35258a46", null ],
       [ "HUMIDITY", "types_8h.html#ada4f1d01bd8be2756c43da68b7ebe95dafe1d7174637f10c7cfd0ea9d785cf9f1", null ]
+    ] ],
+    [ "AnboxTraceEventArgType", "types_8h.html#a9e881174b3514989ddda05b70ca5cc60", [
+      [ "ANBOX_TRACE_EVENT_ARG_TYPE_BOOL", "types_8h.html#a9e881174b3514989ddda05b70ca5cc60a135c47507ffd663ba6501f64fd45888c", null ],
+      [ "ANBOX_TRACE_EVENT_ARG_TYPE_UINT", "types_8h.html#a9e881174b3514989ddda05b70ca5cc60a555bc9105933c677bd60ced4f21a0d40", null ],
+      [ "ANBOX_TRACE_EVENT_ARG_TYPE_INT", "types_8h.html#a9e881174b3514989ddda05b70ca5cc60a7c9139721a3d08952b5e5b7bf1d18167", null ],
+      [ "ANBOX_TRACE_EVENT_ARG_TYPE_DOUBLE", "types_8h.html#a9e881174b3514989ddda05b70ca5cc60a9b78c5cdee31201001013c0c0ec20797", null ],
+      [ "ANBOX_TRACE_EVENT_ARG_TYPE_POINTER", "types_8h.html#a9e881174b3514989ddda05b70ca5cc60a9f2aec9fbc06e6bb7c1d1398a207bee8", null ],
+      [ "ANBOX_TRACE_EVENT_ARG_TYPE_STRING", "types_8h.html#a9e881174b3514989ddda05b70ca5cc60a015831a03f4ac1d962d76c13b642912f", null ],
+      [ "ANBOX_TRACE_EVENT_ARG_TYPE_COPY_STRING", "types_8h.html#a9e881174b3514989ddda05b70ca5cc60ad885db41158571fc04ddbdac8447ed75", null ]
+    ] ],
+    [ "AnboxTraceEventPhase", "types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fd", [
+      [ "ANBOX_TRACE_EVENT_PHASE_BEGIN", "types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fda6005593b7462b6eec4640d6f258288a4", null ],
+      [ "ANBOX_TRACE_EVENT_PHASE_END", "types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fda27088717c857b98f0e816dd00f600944", null ],
+      [ "ANBOX_TRACE_EVENT_PHASE_INSTANT", "types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fda767bcf528f27ff2788aa75b66ba212bc", null ],
+      [ "ANBOX_TRACE_EVENT_PHASE_COUNTER", "types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fda0dd1730f273e7289aa3ea124893322d6", null ]
     ] ],
     [ "AnboxVideoCodecType", "types_8h.html#a542c5a12a80bf1d2aaa235ad133a7a34", [
       [ "ANBOX_VIDEO_CODEC_TYPE_UNKNOWN", "types_8h.html#a542c5a12a80bf1d2aaa235ad133a7a34ad5fd480e1929f838fd1d87ce75d207cf", null ],

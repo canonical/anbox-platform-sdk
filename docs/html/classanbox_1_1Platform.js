@@ -16,6 +16,7 @@ var classanbox_1_1Platform =
     [ "ready", "classanbox_1_1Platform.html#a3cfb767fac35c8e355923f7d85327b9c", null ],
     [ "sensor_processor", "classanbox_1_1Platform.html#af0ada09473c66da26efafa0828fe74d7", null ],
     [ "set_config_item", "classanbox_1_1Platform.html#aa02d7d7b6900910b0913b3051e99313c", null ],
+    [ "setup_event_tracer", "classanbox_1_1Platform.html#ae51dc11ffd1d5c35c308b5da77c33c64", null ],
     [ "stop", "classanbox_1_1Platform.html#af7a0fcf1b3d7f08a47b880215b63745c", null ],
     [ "wait_until_ready", "classanbox_1_1Platform.html#a7d8fa1d14143a5af92de58deb780ea40", null ]
 ];

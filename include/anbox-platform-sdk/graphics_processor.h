@@ -54,7 +54,10 @@ class GraphicsProcessor {
      * @param configuration Configuration initialized with default values from Anbox
      * @return 0 on success, a negative error code otherwise.
      **/
-    virtual int initialize(AnboxGraphicsConfiguration* configuration) = 0;
+    virtual int initialize(AnboxGraphicsConfiguration* configuration) {
+      (void) configuration;
+      return 0;
+    };
 
     /**
      * @brief Called from Anbox when a new frame is started
@@ -64,7 +67,7 @@ class GraphicsProcessor {
      * Any operation performed should be as fast as possible to not delay the
      * frame for too long.
      **/
-    virtual void begin_frame() = 0;
+    virtual void begin_frame() { };
 
     /**
      * @brief Called from Anbox when a frame was fully rendered.
@@ -73,8 +76,7 @@ class GraphicsProcessor {
      * eglSwapBuffers on the main EGL surface. Any operation performed should be
      * as fast as possible to not delay the frame for too long.
      **/
-    virtual void finish_frame() = 0;
-
+    virtual void finish_frame() { };
 
     /**
      * @brief Create an offscreen EGL surface for the given display, configuration

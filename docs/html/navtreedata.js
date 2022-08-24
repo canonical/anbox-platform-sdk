@@ -24,7 +24,10 @@ var NAVTREE =
       [ "Build your platform plugin", "creating_a_platform_plugin.html#build_platform_plugin", null ],
       [ "Test your platform plugin", "creating_a_platform_plugin.html#test_platform_plugin", null ]
     ] ],
-    [ "Package and Deploy Your Platform Plugin Package", "anbox_sdk_plugin_package_and_deploy.html", null ],
+    [ "Package and deploy a platform plugin", "anbox_sdk_plugin_package_and_deploy.html", [
+      [ "Package as AMS addon", "anbox_sdk_plugin_package_and_deploy.html#package_as_ams_addon", null ],
+      [ "Use platform in a container", "anbox_sdk_plugin_package_and_deploy.html#use_platform_in_a_container", null ]
+    ] ],
     [ "Examples", "anbox_sdk_examples.html", "anbox_sdk_examples" ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ]
@@ -55,8 +58,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "anbox__proxy_8h.html",
-"public__api_8h.html#aca73665152549f4119525425a50515c5",
-"types_8h.html#a7e43115fd296e3cb7c14a1453b407c3b"
+"public__api_8h.html#ac09b323c0bfe6d401e5d45e36bdfc0e4",
+"types_8h.html#a43c0c22805d5ed3aff69f45dfb53ea9aa274db7ea6020340f7fa760dde09c227e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

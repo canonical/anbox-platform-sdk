@@ -121,6 +121,10 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxDirectGraphicsConfiguration.html">AnboxDirectGraphicsConfiguration</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAnboxDirectGraphicsConfiguration.html" title="AnboxDirectGraphicsConfiguration defines how Anbox should configure the graphics implementation insid...">AnboxDirectGraphicsConfiguration</a> defines how Anbox should configure the graphics implementation inside the Android container.  <a href="structAnboxDirectGraphicsConfiguration.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxPlatformConfigurationItemInfo.html">AnboxPlatformConfigurationItemInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxPlatformConfigurationInfo.html">AnboxPlatformConfigurationInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxPlatformConfiguration.html">AnboxPlatformConfiguration</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAnboxPlatformConfiguration.html" title="AnboxPlatformConfiguration holds platform configuration options which Anbox supplies to the platform ...">AnboxPlatformConfiguration</a> holds platform configuration options which Anbox supplies to the platform implementation at initialization time.  <a href="structAnboxPlatformConfiguration.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,6 +191,12 @@ Typedefs</h2></td></tr>
 <tr class="separator:aeee9b5b982892491ddbda9f7933d4232"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2b0ea531a44c010f81a4abd27504c15"><td class="memItemLeft" align="right" valign="top">typedef int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#af2b0ea531a44c010f81a4abd27504c15">GpsUtcTime</a></td></tr>
 <tr class="separator:af2b0ea531a44c010f81a4abd27504c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a55e2b49dede6ae033b3d6eb7941ee"><td class="memItemLeft" align="right" valign="top">typedef const unsigned char *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a64a55e2b49dede6ae033b3d6eb7941ee">AnboxTracerGetCategoryEnabledFunc</a>) (const char *name)</td></tr>
+<tr class="memdesc:a64a55e2b49dede6ae033b3d6eb7941ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method prototype which will be used to determine if the given tracing category is enabled for tracing inside the Anbox runtime.  <a href="#a64a55e2b49dede6ae033b3d6eb7941ee">More...</a><br /></td></tr>
+<tr class="separator:a64a55e2b49dede6ae033b3d6eb7941ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d68cc180fd50c073914cf9099d747af"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a9d68cc180fd50c073914cf9099d747af">AnboxTracerAddEventFunc</a>) (char phase, const unsigned char *category, const char *name, unsigned long long id, int num_args, const char **arg_names, const unsigned char *arg_types, const unsigned long long *arg_values, unsigned char flags)</td></tr>
+<tr class="memdesc:a9d68cc180fd50c073914cf9099d747af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method prototype which will be used by the platform to submit trace events to the tracing implementation inside the Anbox runtime.  <a href="#a9d68cc180fd50c073914cf9099d747af">More...</a><br /></td></tr>
+<tr class="separator:a9d68cc180fd50c073914cf9099d747af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -286,6 +296,9 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:ad941286af23aaea1407072ec3e1a5174"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxGraphicsVulkanVersion describes a particular Vulkan API version.  <a href="types_8h.html#ad941286af23aaea1407072ec3e1a5174">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:ad941286af23aaea1407072ec3e1a5174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2db22e4829c8c814a7b302fd0f8c1d4c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a2db22e4829c8c814a7b302fd0f8c1d4c">AnboxPlatformConfigurationItemValueType</a> { <a class="el" href="types_8h.html#a2db22e4829c8c814a7b302fd0f8c1d4ca8a583f16e8d237a423c8c1d9087a4c72">BOOLEAN</a>
+ }</td></tr>
+<tr class="separator:a2db22e4829c8c814a7b302fd0f8c1d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ea2707450519d64745267790a9f2f0d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a0ea2707450519d64745267790a9f2f0d">AnboxPlatformConfigurationKey</a> { <br />
 &#160;&#160;<a class="el" href="types_8h.html#a0ea2707450519d64745267790a9f2f0dae8ab64cd5952052e49c3d623a10b9715">EGL_DRIVER_PATH</a> = 0, 
 <br />
@@ -307,7 +320,13 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="types_8h.html#a0ea2707450519d64745267790a9f2f0daa8ee28426256651a900cdd3ab8f599ea">GRAPHICS_IMPLEMENTATION_TYPE</a> = 9, 
 <br />
-&#160;&#160;<a class="el" href="types_8h.html#a0ea2707450519d64745267790a9f2f0da46200865e94522191f1b621124851e0b">DIRECT_GRAPHICS_CONFIGURATION</a> = 10
+&#160;&#160;<a class="el" href="types_8h.html#a0ea2707450519d64745267790a9f2f0da46200865e94522191f1b621124851e0b">DIRECT_GRAPHICS_CONFIGURATION</a> = 10, 
+<br />
+&#160;&#160;<a class="el" href="types_8h.html#a0ea2707450519d64745267790a9f2f0dac0391bfd4243a924e276a034d91bd46a">PLATFORM_CONFIGURATION_INFO</a> = 11, 
+<br />
+&#160;&#160;<a class="el" href="types_8h.html#a0ea2707450519d64745267790a9f2f0dae1f035c40b68d56fe2220442ab8ddd67">PLATFORM_CONFIGURATION_ID_START</a> = 1000, 
+<br />
+&#160;&#160;<a class="el" href="types_8h.html#a0ea2707450519d64745267790a9f2f0dafcb3ebeabdd44ab7c5765b5e35d511c1">PLATFORM_CONFIGURATION_ID_END</a> = 1999
 <br />
  }<tr class="memdesc:a0ea2707450519d64745267790a9f2f0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxPlatformConfigurationKey specifies configuration items which allow to influence the behavior and configuration of Anbox.  <a href="types_8h.html#a0ea2707450519d64745267790a9f2f0d">More...</a><br /></td></tr>
 </td></tr>
@@ -513,6 +532,36 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:aa57c05de4b297da1d028ceedcaafb876"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxVideoPixelFormat describes a pixel format.  <a href="types_8h.html#aa57c05de4b297da1d028ceedcaafb876">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:aa57c05de4b297da1d028ceedcaafb876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5fe2482c9d323c9d80c37b84ba11fd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fd">AnboxTraceEventPhase</a> { <br />
+&#160;&#160;<a class="el" href="types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fda6005593b7462b6eec4640d6f258288a4">ANBOX_TRACE_EVENT_PHASE_BEGIN</a> = 'B', 
+<br />
+&#160;&#160;<a class="el" href="types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fda27088717c857b98f0e816dd00f600944">ANBOX_TRACE_EVENT_PHASE_END</a> = 'E', 
+<br />
+&#160;&#160;<a class="el" href="types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fda767bcf528f27ff2788aa75b66ba212bc">ANBOX_TRACE_EVENT_PHASE_INSTANT</a> = 'I', 
+<br />
+&#160;&#160;<a class="el" href="types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fda0dd1730f273e7289aa3ea124893322d6">ANBOX_TRACE_EVENT_PHASE_COUNTER</a> = 'C'
+<br />
+ }<tr class="memdesc:a2d5fe2482c9d323c9d80c37b84ba11fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type defining the phase of a trace event, e.g. begin/end pair.  <a href="types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fd">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a2d5fe2482c9d323c9d80c37b84ba11fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e881174b3514989ddda05b70ca5cc60"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a9e881174b3514989ddda05b70ca5cc60">AnboxTraceEventArgType</a> { <br />
+&#160;&#160;<a class="el" href="types_8h.html#a9e881174b3514989ddda05b70ca5cc60a135c47507ffd663ba6501f64fd45888c">ANBOX_TRACE_EVENT_ARG_TYPE_BOOL</a> = 1, 
+<br />
+&#160;&#160;<a class="el" href="types_8h.html#a9e881174b3514989ddda05b70ca5cc60a555bc9105933c677bd60ced4f21a0d40">ANBOX_TRACE_EVENT_ARG_TYPE_UINT</a> = 2, 
+<br />
+&#160;&#160;<a class="el" href="types_8h.html#a9e881174b3514989ddda05b70ca5cc60a7c9139721a3d08952b5e5b7bf1d18167">ANBOX_TRACE_EVENT_ARG_TYPE_INT</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="types_8h.html#a9e881174b3514989ddda05b70ca5cc60a9b78c5cdee31201001013c0c0ec20797">ANBOX_TRACE_EVENT_ARG_TYPE_DOUBLE</a> = 4, 
+<br />
+&#160;&#160;<a class="el" href="types_8h.html#a9e881174b3514989ddda05b70ca5cc60a9f2aec9fbc06e6bb7c1d1398a207bee8">ANBOX_TRACE_EVENT_ARG_TYPE_POINTER</a> = 5, 
+<br />
+&#160;&#160;<a class="el" href="types_8h.html#a9e881174b3514989ddda05b70ca5cc60a015831a03f4ac1d962d76c13b642912f">ANBOX_TRACE_EVENT_ARG_TYPE_STRING</a> = 6, 
+<br />
+&#160;&#160;<a class="el" href="types_8h.html#a9e881174b3514989ddda05b70ca5cc60ad885db41158571fc04ddbdac8447ed75">ANBOX_TRACE_EVENT_ARG_TYPE_COPY_STRING</a> = 7
+<br />
+ }<tr class="memdesc:a9e881174b3514989ddda05b70ca5cc60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of an argument passed with a trace event.  <a href="types_8h.html#a9e881174b3514989ddda05b70ca5cc60">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a9e881174b3514989ddda05b70ca5cc60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a7b567b2d0d9819d6a9676ba4363f0154"></a>
@@ -545,7 +594,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00573">573</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00633">633</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -577,7 +626,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01131">1131</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01191">1191</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -609,7 +658,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01132">1132</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01192">1192</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -632,6 +681,56 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a id="a9d68cc180fd50c073914cf9099d747af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d68cc180fd50c073914cf9099d747af">&#9670;&nbsp;</a></span>AnboxTracerAddEventFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* AnboxTracerAddEventFunc) (char phase, const unsigned char *category, const char *name, unsigned long long id, int num_args, const char **arg_names, const unsigned char *arg_types, const unsigned long long *arg_values, unsigned char flags)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Method prototype which will be used by the platform to submit trace events to the tracing implementation inside the Anbox runtime. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">phase</td><td>Phase of the trace event (see AnboxTraceEventPhase) </td></tr>
+    <tr><td class="paramname">category</td><td>Pointer to a statically allocated string naming the category the event belongs to </td></tr>
+    <tr><td class="paramname">name</td><td>Name of the trace event </td></tr>
+    <tr><td class="paramname">id</td><td>Unique id of the trace event </td></tr>
+    <tr><td class="paramname">num_args</td><td>Number of arguments the trace event has </td></tr>
+    <tr><td class="paramname">arg_names</td><td>Array of length num_args containing the argument names </td></tr>
+    <tr><td class="paramname">arg_types</td><td>Array of length num_args containing the argument types </td></tr>
+    <tr><td class="paramname">arg_values</td><td>Array of length num_args containing the argument values </td></tr>
+    <tr><td class="paramname">flags</td><td>Flags passed with the trace event, currently unused </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01376">1376</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a id="a64a55e2b49dede6ae033b3d6eb7941ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a55e2b49dede6ae033b3d6eb7941ee">&#9670;&nbsp;</a></span>AnboxTracerGetCategoryEnabledFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef const unsigned char*(* AnboxTracerGetCategoryEnabledFunc) (const char *name)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Method prototype which will be used to determine if the given tracing category is enabled for tracing inside the Anbox runtime. </p>
+
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01336">1336</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
 <a id="af2b0ea531a44c010f81a4abd27504c15"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af2b0ea531a44c010f81a4abd27504c15">&#9670;&nbsp;</a></span>GpsUtcTime</h2>
 
@@ -645,7 +744,7 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 <p>Milliseconds since January 1, 1970 </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00576">576</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00636">636</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -766,7 +865,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00540">540</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00600">600</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -790,7 +889,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00530">530</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00590">590</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -816,7 +915,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00492">492</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00552">552</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -844,7 +943,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01002">1002</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01062">1062</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -902,7 +1001,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01033">1033</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01093">1093</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -973,7 +1072,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01046">1046</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01106">1106</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1025,7 +1124,26 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01099">1099</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01159">1159</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a id="a2db22e4829c8c814a7b302fd0f8c1d4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2db22e4829c8c814a7b302fd0f8c1d4c">&#9670;&nbsp;</a></span>AnboxPlatformConfigurationItemValueType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="types_8h.html#a2db22e4829c8c814a7b302fd0f8c1d4c">AnboxPlatformConfigurationItemValueType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2db22e4829c8c814a7b302fd0f8c1d4ca8a583f16e8d237a423c8c1d9087a4c72"></a>BOOLEAN&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00341">341</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1078,9 +1196,12 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0da8c8b46ee8c1ce0a41a7c37751fce7238"></a>SUPPORTED_VIDEO_DECODE_CODECS&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0daa8ee28426256651a900cdd3ab8f599ea"></a>GRAPHICS_IMPLEMENTATION_TYPE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0da46200865e94522191f1b621124851e0b"></a>DIRECT_GRAPHICS_CONFIGURATION&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0dac0391bfd4243a924e276a034d91bd46a"></a>PLATFORM_CONFIGURATION_INFO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0dae1f035c40b68d56fe2220442ab8ddd67"></a>PLATFORM_CONFIGURATION_ID_START&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0dafcb3ebeabdd44ab7c5765b5e35d511c1"></a>PLATFORM_CONFIGURATION_ID_END&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00341">341</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00380">380</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1108,7 +1229,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00504">504</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00564">564</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1148,7 +1269,58 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01137">1137</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01197">1197</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a id="a9e881174b3514989ddda05b70ca5cc60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e881174b3514989ddda05b70ca5cc60">&#9670;&nbsp;</a></span>AnboxTraceEventArgType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="types_8h.html#a9e881174b3514989ddda05b70ca5cc60">AnboxTraceEventArgType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type of an argument passed with a trace event. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9e881174b3514989ddda05b70ca5cc60a135c47507ffd663ba6501f64fd45888c"></a>ANBOX_TRACE_EVENT_ARG_TYPE_BOOL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9e881174b3514989ddda05b70ca5cc60a555bc9105933c677bd60ced4f21a0d40"></a>ANBOX_TRACE_EVENT_ARG_TYPE_UINT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9e881174b3514989ddda05b70ca5cc60a7c9139721a3d08952b5e5b7bf1d18167"></a>ANBOX_TRACE_EVENT_ARG_TYPE_INT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9e881174b3514989ddda05b70ca5cc60a9b78c5cdee31201001013c0c0ec20797"></a>ANBOX_TRACE_EVENT_ARG_TYPE_DOUBLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9e881174b3514989ddda05b70ca5cc60a9f2aec9fbc06e6bb7c1d1398a207bee8"></a>ANBOX_TRACE_EVENT_ARG_TYPE_POINTER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9e881174b3514989ddda05b70ca5cc60a015831a03f4ac1d962d76c13b642912f"></a>ANBOX_TRACE_EVENT_ARG_TYPE_STRING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9e881174b3514989ddda05b70ca5cc60ad885db41158571fc04ddbdac8447ed75"></a>ANBOX_TRACE_EVENT_ARG_TYPE_COPY_STRING&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01352">1352</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a id="a2d5fe2482c9d323c9d80c37b84ba11fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d5fe2482c9d323c9d80c37b84ba11fd">&#9670;&nbsp;</a></span>AnboxTraceEventPhase</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fd">AnboxTraceEventPhase</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type defining the phase of a trace event, e.g. begin/end pair. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2d5fe2482c9d323c9d80c37b84ba11fda6005593b7462b6eec4640d6f258288a4"></a>ANBOX_TRACE_EVENT_PHASE_BEGIN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2d5fe2482c9d323c9d80c37b84ba11fda27088717c857b98f0e816dd00f600944"></a>ANBOX_TRACE_EVENT_PHASE_END&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2d5fe2482c9d323c9d80c37b84ba11fda767bcf528f27ff2788aa75b66ba212bc"></a>ANBOX_TRACE_EVENT_PHASE_INSTANT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2d5fe2482c9d323c9d80c37b84ba11fda0dd1730f273e7289aa3ea124893322d6"></a>ANBOX_TRACE_EVENT_PHASE_COUNTER&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01341">1341</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1170,7 +1342,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a542c5a12a80bf1d2aaa235ad133a7a34a3b2e6191088f6251546e79c85d91ab7a"></a>ANBOX_VIDEO_CODEC_TYPE_H264&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01219">1219</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01279">1279</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1196,7 +1368,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00518">518</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00578">578</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1218,7 +1390,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="aa57c05de4b297da1d028ceedcaafb876a23726397ea7e2ab1593fe88369850ed9"></a>ANBOX_VIDEO_PIXEL_FORMAT_YUV420P&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01228">1228</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01288">1288</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1251,7 +1423,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00628">628</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00688">688</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1277,7 +1449,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a4a78e8148254ece4b4c92a4d3816f680af6d041d14f6a7e8a76ae3f0eae6b9814"></a>GALILEO&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00581">581</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00641">641</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1316,7 +1488,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="aa479d42a9b58eeeae0cf06b90bc7ba08a363bd6e65ff817b80413c402bf2d2c8e"></a>STATE_GLO_TOD_KNOWN&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00605">605</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00665">665</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1326,7 +1498,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4f1595be0889d3a0a4532aea0648ca74.html">anbox-platform-sdk</a></li><li class="navelem"><a class="el" href="types_8h.html">types.h</a></li>
-    <li class="footer">Generated on Wed Feb 23 2022 08:16:55 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Aug 17 2022 12:59:55 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

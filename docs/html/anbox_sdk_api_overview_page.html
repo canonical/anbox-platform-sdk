@@ -161,14 +161,14 @@ InputProcessor</h2>
 GraphicsProcessor</h2>
 <p>The <a class="el" href="classanbox_1_1GraphicsProcessor.html">anbox::GraphicsProcessor</a> class declares the following functions:</p>
 <ul>
-<li><a class="el" href="classanbox_1_1GraphicsProcessor.html#a262c9710d107d3685f112452a1f3184f">anbox::GraphicsProcessor::initialize</a></li>
-<li><a class="el" href="classanbox_1_1GraphicsProcessor.html#a8d39b62d7f7be354f1534b66c43a053d">anbox::GraphicsProcessor::begin_frame</a></li>
-<li><a class="el" href="classanbox_1_1GraphicsProcessor.html#a55fec07f5d0646bd972311795c079a0d">anbox::GraphicsProcessor::finish_frame</a></li>
+<li><a class="el" href="classanbox_1_1GraphicsProcessor.html#abcea3c95c981a93e3fff222cb2043019">anbox::GraphicsProcessor::initialize</a></li>
+<li><a class="el" href="classanbox_1_1GraphicsProcessor.html#a86e36406f5f12623490d52dee6ae46be">anbox::GraphicsProcessor::begin_frame</a></li>
+<li><a class="el" href="classanbox_1_1GraphicsProcessor.html#aa19aff292101d04ba4cfc8fd7749003c">anbox::GraphicsProcessor::finish_frame</a></li>
 <li><a class="el" href="classanbox_1_1GraphicsProcessor.html#a4d5c953b99b75f31f2e6c0d185c23ca0">anbox::GraphicsProcessor::create_offscreen_surface</a></li>
 <li><a class="el" href="classanbox_1_1GraphicsProcessor.html#a104f313b0f08d6ea96f7efb5b44d5447">anbox::GraphicsProcessor::destroy_offscreen_surface</a></li>
 </ul>
-<p>The function <a class="el" href="classanbox_1_1GraphicsProcessor.html#a262c9710d107d3685f112452a1f3184f">anbox::GraphicsProcessor::initialize</a> is called when Anbox initializes its rendering pipeline and allows the platform customize certain parts. For example can the platform provide a EGLNativeDisplayType to connect EGL to a display.</p>
-<p>The two functions <a class="el" href="classanbox_1_1GraphicsProcessor.html#a8d39b62d7f7be354f1534b66c43a053d">anbox::GraphicsProcessor::begin_frame</a> and <a class="el" href="classanbox_1_1GraphicsProcessor.html#a55fec07f5d0646bd972311795c079a0d">anbox::GraphicsProcessor::finish_frame</a> allow integration into the rendering process inside Anbox. <a class="el" href="classanbox_1_1GraphicsProcessor.html#a8d39b62d7f7be354f1534b66c43a053d">anbox::GraphicsProcessor::begin_frame</a> is called before a new frame is rendered and <a class="el" href="classanbox_1_1GraphicsProcessor.html#a55fec07f5d0646bd972311795c079a0d">anbox::GraphicsProcessor::finish_frame</a> before its being finish and eglSwapBuffers is called. This allows rendering an entire frame to a specific OpenGL framebuffer or texture in order to enable for example zero copy video encoding.</p>
+<p>The function <a class="el" href="classanbox_1_1GraphicsProcessor.html#abcea3c95c981a93e3fff222cb2043019">anbox::GraphicsProcessor::initialize</a> is called when Anbox initializes its rendering pipeline and allows the platform customize certain parts. For example can the platform provide a EGLNativeDisplayType to connect EGL to a display.</p>
+<p>The two functions <a class="el" href="classanbox_1_1GraphicsProcessor.html#a86e36406f5f12623490d52dee6ae46be">anbox::GraphicsProcessor::begin_frame</a> and <a class="el" href="classanbox_1_1GraphicsProcessor.html#aa19aff292101d04ba4cfc8fd7749003c">anbox::GraphicsProcessor::finish_frame</a> allow integration into the rendering process inside Anbox. <a class="el" href="classanbox_1_1GraphicsProcessor.html#a86e36406f5f12623490d52dee6ae46be">anbox::GraphicsProcessor::begin_frame</a> is called before a new frame is rendered and <a class="el" href="classanbox_1_1GraphicsProcessor.html#aa19aff292101d04ba4cfc8fd7749003c">anbox::GraphicsProcessor::finish_frame</a> before its being finish and eglSwapBuffers is called. This allows rendering an entire frame to a specific OpenGL framebuffer or texture in order to enable for example zero copy video encoding.</p>
 <p>The function <a class="el" href="classanbox_1_1GraphicsProcessor.html#a4d5c953b99b75f31f2e6c0d185c23ca0">anbox::GraphicsProcessor::create_offscreen_surface</a> allows a platform to create an offscreen EGL surface for the given display, configuration and attributes. If this virtual function is not overridden, Anbox will use eglCreatePbufferSurface as fallback. The surface created with <a class="el" href="classanbox_1_1GraphicsProcessor.html#a4d5c953b99b75f31f2e6c0d185c23ca0">anbox::GraphicsProcessor::create_offscreen_surface</a> can be destroyed via <a class="el" href="classanbox_1_1GraphicsProcessor.html#a104f313b0f08d6ea96f7efb5b44d5447">anbox::GraphicsProcessor::destroy_offscreen_surface</a>. If it's not overridden, Anbox will use eglDestroySurface as fallback.</p>
 <h2><a class="anchor" id="anbox_sensor_processor"></a>
 SensorProcessor</h2>
@@ -301,7 +301,7 @@ CameraProcessor</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 23 2022 08:16:55 for anbox-platform-sdk by
+    <li class="footer">Generated on Wed Aug 17 2022 12:59:55 for anbox-platform-sdk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

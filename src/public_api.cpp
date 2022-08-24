@@ -38,13 +38,13 @@ ANBOX_EXPORT const AnboxGraphicsProcessor* anbox_platform_get_graphics_processor
 }
 
 ANBOX_EXPORT bool anbox_platform_ready(const AnboxPlatform* platform) {
-  if (!platform->instance)
+  if (!platform || !platform->instance)
     return false;
   return platform->instance->ready();
 }
 
 ANBOX_EXPORT int anbox_platform_wait_until_ready(const AnboxPlatform* platform) {
-  if (!platform->instance)
+  if (!platform || !platform->instance)
     return -EINVAL;
   return platform->instance->wait_until_ready();
 }
@@ -52,7 +52,7 @@ ANBOX_EXPORT int anbox_platform_wait_until_ready(const AnboxPlatform* platform) 
 ANBOX_EXPORT int anbox_platform_get_config_item(const AnboxPlatform* platform,
                                                 AnboxPlatformConfigurationKey key,
                                                 void* data, size_t data_size) {
-  if (!platform->instance)
+  if (!platform || !platform->instance)
     return -EINVAL;
   return platform->instance->get_config_item(key, data, data_size);
 }
@@ -60,9 +60,18 @@ ANBOX_EXPORT int anbox_platform_get_config_item(const AnboxPlatform* platform,
 ANBOX_EXPORT int anbox_platform_set_config_item(const AnboxPlatform* platform,
                                                 AnboxPlatformConfigurationKey key,
                                                 void* data, size_t data_size) {
-  if (!platform->instance)
+  if (!platform || !platform->instance)
     return -EINVAL;
   return platform->instance->set_config_item(key, data, data_size);
+}
+
+ANBOX_EXPORT void anbox_platform_setup_event_tracer(const AnboxPlatform* platform,
+                                                    AnboxTracerGetCategoryEnabledFunc get_category_enabled_callback,
+                                                    AnboxTracerAddEventFunc add_event_callback) {
+  if (!platform || !platform->instance)
+    return;
+
+  platform->instance->setup_event_tracer(get_category_enabled_callback, add_event_callback);
 }
 
 ANBOX_EXPORT int anbox_platform_stop(const AnboxPlatform* platform) {
@@ -82,7 +91,7 @@ ANBOX_EXPORT void anbox_platform_handle_event(const AnboxPlatform* platform,
 
 ANBOX_EXPORT AnboxVideoDecoder* anbox_platform_create_video_decoder(const AnboxPlatform* platform,
                                                                     AnboxVideoCodecType codec_type) {
-  if (!platform->instance)
+  if (!platform || !platform->instance)
     return nullptr;
 
   std::unique_ptr<anbox::VideoDecoder> decoder(platform->instance->create_video_decoder(codec_type));
@@ -97,7 +106,11 @@ ANBOX_EXPORT size_t anbox_audio_processor_process_data(const AnboxAudioProcessor
                                                        size_t size) {
   if (!audio_processor || !audio_processor->instance)
     return 0;
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
   return audio_processor->instance->process_data(data, size);
+#pragma GCC diagnostic pop
 }
 
 ANBOX_EXPORT ssize_t anbox_audio_processor_write_data(const AnboxAudioProcessor* audio_processor,

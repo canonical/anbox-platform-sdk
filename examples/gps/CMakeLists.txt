@@ -15,7 +15,7 @@
 # limitations under the License.
 
 project(ANBOX_PLATFORM_PLUGIN_GPS)
-cmake_minimum_required(VERSION 3.1.3)
+cmake_minimum_required(VERSION 3.10.2)
 
 include(CTest)
 enable_testing()

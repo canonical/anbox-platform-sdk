@@ -334,6 +334,45 @@ typedef struct {
   char gralloc_vendor[MAX_NAME_LENGTH];
 } AnboxDirectGraphicsConfiguration;
 
+/*
+ * @brief Defines the type of the value stored for a configuration item described by
+ * AnboxPlatformConfigurationItemInfo
+ */
+typedef enum {
+  /* boolean value, represented as 8 bit unsigned integer type (uint8_t) where 0 = false and > 0 = true */
+  BOOLEAN,
+} AnboxPlatformConfigurationItemValueType;
+
+/*
+ * @brief AnboxPlatformConfigurationItemInfo describes a single platform configuration item
+ *
+ * It allows the platform to define a set of configuration items which will remain transparent
+ * to Anbox but can be changed through it's /1.0/platform HTTP API endpoint at runtime.
+ */
+typedef struct {
+  /* ID of the configuration item, must be >= PLATFORM_CONFIGURATION_ID_START and <= PLATFORM_CONFIGURATION_ID_END */
+  int id;
+  /* Name of the configuration item */
+  char name[MAX_NAME_LENGTH];
+  /* Type of the value the configuration item stores */
+  AnboxPlatformConfigurationItemValueType type;
+} AnboxPlatformConfigurationItemInfo;
+
+/*
+ * @brief AnboxPlatformConfigurationInfo describes a set of platform specific
+ * configuration items.
+ *
+ * Anbox will query the platform for available configuration items and make
+ * them accessible through its /1.0/platform HTTP API endpoint. This allows
+ * runtime configuration of the platform.
+ */
+typedef struct {
+  /* Number of available configuration items */
+  uint16_t num_items;
+  /* Available configuration items or NULL if none are available */
+  AnboxPlatformConfigurationItemInfo **items;
+} AnboxPlatformConfigurationInfo;
+
 /**
  * @brief AnboxPlatformConfigurationKey specifies configuration items which
  * allow to influence the behavior and configuration of Anbox.
@@ -463,6 +502,27 @@ typedef enum {
    * The value of this configuration item is of type `AnboxDirectGraphicsConfiguration`
    */
   DIRECT_GRAPHICS_CONFIGURATION = 10,
+
+  /*
+   * Information about platform specific configuration options
+   *
+   * The value of this configuration is of type AnboxPlatformConfigurationInfo
+   */
+  PLATFORM_CONFIGURATION_INFO = 11,
+
+  /*
+   * The API defines a range of platform specific configuration items which can be
+   * dynamically exposed by the platform. PLATFORM_CONFIGURATION_START specifies
+   * the first configuration item id.
+   */
+  PLATFORM_CONFIGURATION_ID_START = 1000,
+
+    /*
+   * The API defines a range of platform specific configuration items which can be
+   * dynamically exposed by the platform. PLATFORM_CONFIGURATION_END specifies
+   * the last configuration item id.
+   */
+  PLATFORM_CONFIGURATION_ID_END = 1999,
 } AnboxPlatformConfigurationKey;
 
 /**
@@ -1268,5 +1328,60 @@ struct AnboxVideoImage {
   /* Data of the image */
   uint8_t* data = nullptr;
 };
+
+/**
+ * @brief Method prototype which will be used to determine if the given tracing category
+ * is enabled for tracing inside the Anbox runtime.
+ */
+typedef const unsigned char* (*AnboxTracerGetCategoryEnabledFunc)(const char* name);
+
+/**
+ * @brief Type defining the phase of a trace event, e.g. begin/end pair
+ */
+typedef enum {
+  ANBOX_TRACE_EVENT_PHASE_BEGIN = 'B',
+  ANBOX_TRACE_EVENT_PHASE_END = 'E',
+  ANBOX_TRACE_EVENT_PHASE_INSTANT = 'I',
+  ANBOX_TRACE_EVENT_PHASE_COUNTER = 'C',
+} AnboxTraceEventPhase;
+
+
+/**
+ * @brief Type of an argument passed with a trace event
+ */
+typedef enum {
+  ANBOX_TRACE_EVENT_ARG_TYPE_BOOL = 1,
+  ANBOX_TRACE_EVENT_ARG_TYPE_UINT = 2,
+  ANBOX_TRACE_EVENT_ARG_TYPE_INT = 3,
+  ANBOX_TRACE_EVENT_ARG_TYPE_DOUBLE = 4,
+  ANBOX_TRACE_EVENT_ARG_TYPE_POINTER = 5,
+  ANBOX_TRACE_EVENT_ARG_TYPE_STRING = 6,
+  ANBOX_TRACE_EVENT_ARG_TYPE_COPY_STRING = 7,
+} AnboxTraceEventArgType;
+
+/**
+ * @brief Method prototype which will be used by the platform to submit trace events to
+ * the tracing implementation inside the Anbox runtime.
+ *
+ * @param phase Phase of the trace event (see AnboxTraceEventPhase)
+ * @param category Pointer to a statically allocated string naming the category the event belongs to
+ * @param name Name of the trace event
+ * @param id Unique id of the trace event
+ * @param num_args Number of arguments the trace event has
+ * @param arg_names Array of length num_args containing the argument names
+ * @param arg_types Array of length num_args containing the argument types
+ * @param arg_values Array of length num_args containing the argument values
+ * @param flags Flags passed with the trace event, currently unused
+ */
+typedef void (*AnboxTracerAddEventFunc)(
+  char phase,
+  const unsigned char* category,
+  const char* name,
+  unsigned long long id,
+  int num_args,
+  const char** arg_names,
+  const unsigned char* arg_types,
+  const unsigned long long* arg_values,
+  unsigned char flags);
 
 #endif

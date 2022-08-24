@@ -213,6 +213,20 @@ class Platform {
     (void)data_size;
     return 0;
   }
+
+  /**
+   * @brief Register an external event tracing implementation withe platform.
+   *
+   * @param get_category_enabled_callback Callback the platform can use to determine if a certain tracing category is enabled
+   * @param add_event_callback  Callback to submit a tracing event to the Anbox runtime
+   */
+  virtual void setup_event_tracer(
+    AnboxTracerGetCategoryEnabledFunc get_category_enabled_callback,
+    AnboxTracerAddEventFunc add_event_callback) {
+    (void) get_category_enabled_callback;
+    (void) add_event_callback;
+  }
+
  private:
   AnboxProxy  anbox_proxy_;
 };

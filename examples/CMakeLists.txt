@@ -15,7 +15,7 @@
 # limitations under the License.
 
 project(ANBOX_PLATFORM_SDK_EXAMPLES)
-cmake_minimum_required(VERSION 3.1.3)
+cmake_minimum_required(VERSION 3.10.2)
 
 include(CTest)
 enable_testing()
@@ -37,7 +37,8 @@ set(PLATFORMS
     audio_streaming
     sensor
     gps
-    camera)
+    camera
+    direct_rendering)
 
 foreach(platform ${PLATFORMS})
     string(TOLOWER ${platform} platform_name)
