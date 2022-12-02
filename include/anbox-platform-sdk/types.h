@@ -511,6 +511,13 @@ typedef enum {
   PLATFORM_CONFIGURATION_INFO = 11,
 
   /*
+   * Base uid used in the Android contaienr
+   *
+   * The value of this configuration item is of type `uint32_t`.
+   */
+  CONTAINER_BASE_UID = 12,
+
+  /*
    * The API defines a range of platform specific configuration items which can be
    * dynamically exposed by the platform. PLATFORM_CONFIGURATION_START specifies
    * the first configuration item id.
