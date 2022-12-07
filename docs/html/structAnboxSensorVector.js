@@ -1,7 +1,7 @@
 var structAnboxSensorVector =
 [
-    [ "angle", "structAnboxSensorVector.html#af188b40e0c111c3847dd77dc17a87e09", null ],
-    [ "axis", "structAnboxSensorVector.html#a26a3a82c87cbb8ab5c17728f46e12c1c", null ],
+    [ "angle", "structAnboxSensorVector.html#abdea77bfb1eaea1abeaa2056668d78e6", null ],
+    [ "axis", "structAnboxSensorVector.html#af132769f0430aec391581327a4fcfb98", null ],
     [ "azimuth", "structAnboxSensorVector.html#aa58d1a1f0ca07bd1c949f3d5851511be", null ],
     [ "pitch", "structAnboxSensorVector.html#a120f07b6e4ae35d8f7ce18ac71f096f3", null ],
     [ "roll", "structAnboxSensorVector.html#aa8451be8e809d5695c1bc78db2d34033", null ],

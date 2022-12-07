@@ -1,2 +1,3 @@
 <map id="anbox::Platform" name="anbox::Platform">
+<area shape="rect" id="node1" title="Platform defines the custom Anbox platform implemented by a plugin." alt="" coords="5,5,177,229"/>
 </map>

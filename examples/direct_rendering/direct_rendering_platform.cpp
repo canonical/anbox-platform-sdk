@@ -145,7 +145,7 @@ int DirectRendering::get_config_item(AnboxPlatformConfigurationKey key, void* da
     if (data_size != sizeof(AnboxDisplaySpec2))
       return -ENOMEM;
 
-    auto spec = reinterpret_cast<AnboxDisplaySpec*>(data);
+    auto spec = reinterpret_cast<AnboxDisplaySpec2*>(data);
     memcpy(spec, &display_spec_, sizeof(AnboxDisplaySpec2));
     break;
   }

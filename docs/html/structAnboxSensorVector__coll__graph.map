@@ -1,2 +1,7 @@
 <map id="AnboxSensorVector" name="AnboxSensorVector">
+<area shape="rect" id="node1" title="AnboxSensorVector represents acceleration along each device axis or current device rotation angles: a..." alt="" coords="231,233,379,311"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,155,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="179,5,314,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="339,5,389,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="414,5,554,83"/>
 </map>

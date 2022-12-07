@@ -37,10 +37,17 @@
 
 namespace chrono = std::chrono;
 
+#ifndef SYSTEM_LIBDIR
+#define SYSTEM_LIBDIR
+#endif
+
 namespace {
-constexpr const char* opengl_es1_cm_driver_path = PLATFORM_INSTALL_DIR "/libGLESv2.so";
-constexpr const char* opengl_es2_driver_path = PLATFORM_INSTALL_DIR "/libGLESv2.so";
-constexpr const char* egl_driver_path = PLATFORM_INSTALL_DIR "/libEGL.so";
+// This will load the ANGLE based Null OpenGL driver implementation which the Anbox
+// runtime includes by default. It will not provide any rendered pixels but is
+// sufficient for first tests.
+constexpr const char* opengl_es1_cm_driver_path = SYSTEM_LIBDIR "/anbox/angle/libGLESv1_CM.so";
+constexpr const char* opengl_es2_driver_path = SYSTEM_LIBDIR  "/anbox/angle/libGLESv2.so";
+constexpr const char* egl_driver_path = SYSTEM_LIBDIR  "/anbox/angle/libEGL.so";
 } // namespace
 
 namespace anbox {
@@ -184,9 +191,16 @@ int CameraPlatformCameraProcessor::read_frame(AnboxVideoFrame* frame, int timeou
   return 0;
 }
 
+class CameraGraphicsProcessor : public GraphicsProcessor {
+ public:
+  CameraGraphicsProcessor() {}
+  ~CameraGraphicsProcessor() override = default;
+};
+
 class CameraPlatform : public anbox::Platform {
  public:
   CameraPlatform(const AnboxPlatformConfiguration* configuration) :
+    graphics_processor_(std::make_unique<CameraGraphicsProcessor>()),
     audio_processor_(std::make_unique<CameraPlatformAudioProcessor>()),
     input_processor_(std::make_unique<CameraPlatformInputProcessor>()),
     camera_processor_(std::make_unique<CameraPlatformCameraProcessor>()) {
@@ -194,6 +208,7 @@ class CameraPlatform : public anbox::Platform {
     }
   ~CameraPlatform() override = default;
 
+  GraphicsProcessor* graphics_processor() override;
   AudioProcessor* audio_processor() override;
   InputProcessor* input_processor() override;
   CameraProcessor* camera_processor() override;
@@ -204,10 +219,15 @@ class CameraPlatform : public anbox::Platform {
  private:
   AnboxDisplaySpec display_spec_{1280, 720, 0};
   AnboxAudioSpec audio_spec_{44100, AUDIO_FORMAT_PCM_16_BIT, 1, 4096};
+  const std::unique_ptr<CameraGraphicsProcessor> graphics_processor_;
   const std::unique_ptr<CameraPlatformAudioProcessor> audio_processor_;
   const std::unique_ptr<CameraPlatformInputProcessor> input_processor_;
   const std::unique_ptr<CameraPlatformCameraProcessor> camera_processor_;
 };
+
+GraphicsProcessor* CameraPlatform::graphics_processor() {
+  return graphics_processor_.get();
+}
 
 AudioProcessor* CameraPlatform::audio_processor() {
   return audio_processor_.get();

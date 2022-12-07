@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"public__api_8h.html#ac09b323c0bfe6d401e5d45e36bdfc0e4":[7,0,9,22],
 "public__api_8h.html#ac3fec6b570a6563157ae7e9d1af10cec":[7,0,9,23],
 "public__api_8h.html#ac67e3aaaf28518cad631f55f665a07d5":[7,0,9,0],
 "public__api_8h.html#ac847d9913e63acf079620f2b38e9f5b9":[7,0,9,34],
@@ -153,13 +152,13 @@ var NAVTREEINDEX1 =
 "structAnboxSensorVector.html":[6,0,28],
 "structAnboxSensorVector.html#a120f07b6e4ae35d8f7ce18ac71f096f3":[6,0,28,3],
 "structAnboxSensorVector.html#a13996a1978ab4116bfde6fa1bccafe7a":[6,0,28,7],
-"structAnboxSensorVector.html#a26a3a82c87cbb8ab5c17728f46e12c1c":[6,0,28,1],
 "structAnboxSensorVector.html#a2f88f53ccb88b9d41f4315eeb9759295":[6,0,28,8],
 "structAnboxSensorVector.html#a63e935ba3059e558aaa270adf933a757":[6,0,28,5],
 "structAnboxSensorVector.html#aa58d1a1f0ca07bd1c949f3d5851511be":[6,0,28,2],
 "structAnboxSensorVector.html#aa8451be8e809d5695c1bc78db2d34033":[6,0,28,4],
+"structAnboxSensorVector.html#abdea77bfb1eaea1abeaa2056668d78e6":[6,0,28,0],
 "structAnboxSensorVector.html#ae9e53d5ce6ad476fa5526e76acd3896f":[6,0,28,6],
-"structAnboxSensorVector.html#af188b40e0c111c3847dd77dc17a87e09":[6,0,28,0],
+"structAnboxSensorVector.html#af132769f0430aec391581327a4fcfb98":[6,0,28,1],
 "structAnboxVideoDecoder.html":[6,0,29],
 "structAnboxVideoDecoder.html#af44e8c64397f6e808a9abcf0adfc1f3b":[6,0,29,0],
 "structAnboxVideoDecoderConfig.html":[6,0,30],
@@ -249,5 +248,6 @@ var NAVTREEINDEX1 =
 "types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fda767bcf528f27ff2788aa75b66ba212bc":[7,0,11,54,2],
 "types_8h.html#a2db22e4829c8c814a7b302fd0f8c1d4c":[7,0,11,49],
 "types_8h.html#a2db22e4829c8c814a7b302fd0f8c1d4ca8a583f16e8d237a423c8c1d9087a4c72":[7,0,11,49,0],
-"types_8h.html#a43c0c22805d5ed3aff69f45dfb53ea9a":[7,0,11,58]
+"types_8h.html#a43c0c22805d5ed3aff69f45dfb53ea9a":[7,0,11,58],
+"types_8h.html#a43c0c22805d5ed3aff69f45dfb53ea9aa0836ae08906baf63eb489220ea3f3566":[7,0,11,58,0]
 };

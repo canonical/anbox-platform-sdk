@@ -1,4 +1,4 @@
-var files =
+var files_dup =
 [
     [ "anbox_proxy.h", "anbox__proxy_8h.html", "anbox__proxy_8h" ],
     [ "audio_processor.h", "audio__processor_8h.html", [

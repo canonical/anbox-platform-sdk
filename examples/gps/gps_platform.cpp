@@ -29,14 +29,20 @@
 
 namespace chrono = std::chrono;
 
+#ifndef SYSTEM_LIBDIR
+#define SYSTEM_LIBDIR
+#endif
+
 namespace {
-constexpr const char* opengl_es1_cm_driver_path = PLATFORM_INSTALL_DIR "/libGLESv2.so";
-constexpr const char* opengl_es2_driver_path = PLATFORM_INSTALL_DIR "/libGLESv2.so";
-constexpr const char* egl_driver_path = PLATFORM_INSTALL_DIR "/libEGL.so";
+// This will load the ANGLE based Null OpenGL driver implementation which the Anbox
+// runtime includes by default. It will not provide any rendered pixels but is
+// sufficient for first tests.
+constexpr const char* opengl_es1_cm_driver_path = SYSTEM_LIBDIR "/anbox/angle/libGLESv1_CM.so";
+constexpr const char* opengl_es2_driver_path = SYSTEM_LIBDIR  "/anbox/angle/libGLESv2.so";
+constexpr const char* egl_driver_path = SYSTEM_LIBDIR  "/anbox/angle/libEGL.so";
 } // namespace
 
 namespace anbox {
-
 class GpsPlatformAudioProcessor : public AudioProcessor {
  public:
   GpsPlatformAudioProcessor() {}
@@ -124,9 +130,16 @@ int GpsPlatformGpsProcessor::read_data(AnboxGpsData* data, int timeout) {
   }
 }
 
+class GpsGraphicsProcessor : public GraphicsProcessor {
+ public:
+  GpsGraphicsProcessor() {}
+  ~GpsGraphicsProcessor() override = default;
+};
+
 class GpsPlatform : public anbox::Platform {
  public:
   GpsPlatform(const AnboxPlatformConfiguration* configuration) :
+    graphics_processor_(std::make_unique<GpsGraphicsProcessor>()),
     audio_processor_(std::make_unique<GpsPlatformAudioProcessor>()),
     input_processor_(std::make_unique<GpsPlatformInputProcessor>()),
     gps_processor_(std::make_unique<GpsPlatformGpsProcessor>()) {
@@ -134,6 +147,7 @@ class GpsPlatform : public anbox::Platform {
     }
   ~GpsPlatform() override = default;
 
+  GraphicsProcessor* graphics_processor() override;
   AudioProcessor* audio_processor() override;
   InputProcessor* input_processor() override;
   GpsProcessor* gps_processor() override;
@@ -144,10 +158,15 @@ class GpsPlatform : public anbox::Platform {
  private:
   AnboxDisplaySpec display_spec_{1280, 720, 0};
   AnboxAudioSpec audio_spec_{44100, AUDIO_FORMAT_PCM_16_BIT, 1, 4096};
+  const std::unique_ptr<GpsGraphicsProcessor> graphics_processor_;
   const std::unique_ptr<GpsPlatformAudioProcessor> audio_processor_;
   const std::unique_ptr<GpsPlatformInputProcessor> input_processor_;
   const std::unique_ptr<GpsPlatformGpsProcessor> gps_processor_;
 };
+
+GraphicsProcessor* GpsPlatform::graphics_processor() {
+  return graphics_processor_.get();
+}
 
 AudioProcessor* GpsPlatform::audio_processor() {
   return audio_processor_.get();
@@ -196,7 +215,7 @@ int GpsPlatform::get_config_item(AnboxPlatformConfigurationKey key,
     if (data_size != sizeof(AnboxDisplaySpec))
       return -ENOMEM;
 
-    auto spec = reinterpret_cast<AnboxDisplaySpec*>(data);
+    auto spec = reinterpret_cast<AnboxDisplaySpec2*>(data);
     memcpy(spec, &display_spec_, sizeof(AnboxDisplaySpec));
     break;
   }

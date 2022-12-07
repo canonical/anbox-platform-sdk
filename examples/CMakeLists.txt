@@ -38,7 +38,8 @@ set(PLATFORMS
     sensor
     gps
     camera
-    direct_rendering)
+    direct_rendering
+    nvidia)
 
 foreach(platform ${PLATFORMS})
     string(TOLOWER ${platform} platform_name)

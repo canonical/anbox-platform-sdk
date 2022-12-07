@@ -24,6 +24,8 @@
 #include <queue>
 #include <iostream>
 #include <stdexcept>
+#include <thread>
+
 #include <string.h>
 #include <math.h>
 #include <limits.h>
@@ -35,10 +37,18 @@ extern "C" {
 
 namespace chrono = std::chrono;
 
+#ifndef SYSTEM_LIBDIR
+#define SYSTEM_LIBDIR
+#endif
+
 namespace {
-constexpr const char* opengl_es1_cm_driver_path = PLATFORM_INSTALL_DIR "/libGLESv2.so";
-constexpr const char* opengl_es2_driver_path = PLATFORM_INSTALL_DIR "/libGLESv2.so";
-constexpr const char* egl_driver_path = PLATFORM_INSTALL_DIR "/libEGL.so";
+// This will load the ANGLE based Null OpenGL driver implementation which the Anbox
+// runtime includes by default. It will not provide any rendered pixels but is
+// sufficient for first tests.
+constexpr const char* opengl_es1_cm_driver_path = SYSTEM_LIBDIR "/anbox/angle/libGLESv1_CM.so";
+constexpr const char* opengl_es2_driver_path = SYSTEM_LIBDIR  "/anbox/angle/libGLESv2.so";
+constexpr const char* egl_driver_path = SYSTEM_LIBDIR  "/anbox/angle/libEGL.so";
+
 constexpr const char* output_url = "rtp://127.0.0.1:37777";
 constexpr int max_audio_buffer_size = 50 * 1024;
 constexpr int frame_duration = 100;

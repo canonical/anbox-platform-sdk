@@ -1,2 +1,3 @@
 <map id="anbox::GpsProcessor" name="anbox::GpsProcessor">
+<area shape="rect" id="node1" title="GpsProcessor allows forwarding the gps data from platform plugin to Android container and process gps..." alt="" coords="5,5,164,156"/>
 </map>

@@ -37,8 +37,9 @@ set(MINIMAL_PLATFORM_SOURCES minimal_platform.cpp)
 add_library(AnboxMinimalPlatform
   SHARED ${MINIMAL_PLATFORM_SOURCES})
 
-set(PLATFORM_INSTALL_DIR ${CMAKE_INSTALL_LIBDIR}/anbox/platforms/custom)
+set(PLATFORM_INSTALL_DIR ${CMAKE_INSTALL_LIBDIR}/anbox/platforms/minimal)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DPLATFORM_INSTALL_DIR=\\\"${CMAKE_INSTALL_PREFIX}/${PLATFORM_INSTALL_DIR}\\\"")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DSYSTEM_LIBDIR=\\\"${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}\\\"")
 
 # Link against the anbox-platform-sdk-internal library
 target_link_libraries(AnboxMinimalPlatform
