@@ -25,6 +25,7 @@ var annotated_dup =
     [ "AnboxGpsData", "structAnboxGpsData.html", "structAnboxGpsData" ],
     [ "AnboxGpsProcessor", "structAnboxGpsProcessor.html", "structAnboxGpsProcessor" ],
     [ "AnboxGraphicsBuffer", "structAnboxGraphicsBuffer.html", "structAnboxGraphicsBuffer" ],
+    [ "AnboxGraphicsBuffer2", "structAnboxGraphicsBuffer2.html", "structAnboxGraphicsBuffer2" ],
     [ "AnboxGraphicsConfiguration", "structAnboxGraphicsConfiguration.html", "structAnboxGraphicsConfiguration" ],
     [ "AnboxGraphicsProcessor", "structAnboxGraphicsProcessor.html", "structAnboxGraphicsProcessor" ],
     [ "AnboxInputEvent", "structAnboxInputEvent.html", "structAnboxInputEvent" ],

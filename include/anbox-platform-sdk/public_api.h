@@ -341,6 +341,26 @@ typedef bool (*AnboxGraphicsProcessorPresentFunc)(const AnboxGraphicsProcessor* 
                                                   AnboxCallback* callback);
 
 /**
+ * @brief Present the given buffer to a display or other output
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::GraphicsProcessor::present
+ */
+typedef bool (*AnboxGraphicsProcessorPresent2Func)(const AnboxGraphicsProcessor* graphics_processor,
+                                                  AnboxGraphicsBuffer2* buffer,
+                                                  AnboxCallback* callback);
+
+/*
+ * @brief Create a new graphics buffer
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::GraphicsProcessor::create_buffer
+ */
+typedef bool (*AnboxGraphicsProcessorCreateBufferFunc)(const AnboxGraphicsProcessor* graphics_processor,
+                                                       uint32_t width, uint32_t height, uint32_t format,
+                                                       uint32_t usage, AnboxGraphicsBuffer2** buffer);
+
+/**
  * @brief Sensors supported by the platform
  *
  * The function prototype for C API function which stands for

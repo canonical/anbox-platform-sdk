@@ -180,12 +180,14 @@ ANBOX_EXPORT EGLDisplay anbox_graphics_processor_create_display(const AnboxGraph
 ANBOX_EXPORT void anbox_graphics_processor_begin_frame(const AnboxGraphicsProcessor* graphics_processor) {
   if (!graphics_processor || !graphics_processor->instance)
     return;
+
   graphics_processor->instance->begin_frame();
 }
 
 ANBOX_EXPORT void anbox_graphics_processor_finish_frame(const AnboxGraphicsProcessor* graphics_processor) {
   if (!graphics_processor || !graphics_processor->instance)
     return;
+
   graphics_processor->instance->finish_frame();
 }
 
@@ -212,7 +214,28 @@ ANBOX_EXPORT bool anbox_graphics_processor_present(const AnboxGraphicsProcessor*
   if (!graphics_processor || !graphics_processor->instance)
     return false;
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
   return graphics_processor->instance->present(buffer, callback);
+#pragma GCC diagnostic pop
+}
+
+ANBOX_EXPORT bool anbox_graphics_processor_present2(const AnboxGraphicsProcessor* graphics_processor,
+                                                    AnboxGraphicsBuffer2* buffer,
+                                                    AnboxCallback* callback) {
+  if (!graphics_processor || !graphics_processor->instance)
+    return false;
+
+  return graphics_processor->instance->present(buffer, callback);
+}
+
+ANBOX_EXPORT bool anbox_graphics_processor_create_buffer(const AnboxGraphicsProcessor* graphics_processor,
+                                                         uint32_t width, uint32_t height, uint32_t format,
+                                                         uint32_t usage, AnboxGraphicsBuffer2** buffer) {
+  if (!graphics_processor || !graphics_processor->instance)
+    return false;
+
+  return graphics_processor->instance->create_buffer(width, height, format, usage, buffer);
 }
 
 ANBOX_EXPORT const AnboxSensorProcessor* anbox_platform_get_sensor_processor(const AnboxPlatform* platform) {

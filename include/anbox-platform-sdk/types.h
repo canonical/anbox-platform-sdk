@@ -213,7 +213,7 @@ struct AnboxBinderDevices {
 typedef uintptr_t AnboxNativeHandle;
 
 /**
- * @brief Pixel format used for the pixels stored in a AnboxGraphicsBuffer
+ * @brief Pixel format used for the pixels stored in a AnboxGraphicsBuffer or AnboxGraphicsBuffer2
  */
 typedef enum {
   /** Unknown pixel format */
@@ -228,10 +228,15 @@ typedef enum {
   ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGB_565 = 4,
   /** 32 bit BGRA **/
   ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_8888 = 5,
+  /** **/
+  ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGBA_16F = 6,
 } AnboxGraphicsBufferPixelFormat;
 
 /**
  * @brief Graphics buffer
+ *
+ * This version of the graphics buffer is deprecated and should no longer be used. Please
+ * use AnboxGraphicsBuffer2 instead.
  */
 typedef struct {
   /** Native handle pointing to the actual buffer. Passed through from Androids gralloc **/
@@ -245,6 +250,31 @@ typedef struct {
   /** Pixel format of the buffer. See AnboxGraphicsBufferPixelFormat **/
   uint32_t format;
 } AnboxGraphicsBuffer;
+
+/** Maximum number of planes a buffer can have **/
+#define ANBOX_GRAPHICS_BUFFER_MAX_PLANES 4
+
+/**
+ * @brief Graphics buffer
+ */
+typedef struct {
+  /** Width of the buffer **/
+  uint32_t width;
+  /** Height of the buffer **/
+  uint32_t height;
+  /** DRM color format of the buffer. See drm/drm_fourcc.h for a list of valid formats **/
+  uint32_t format;
+  /** GPU driver specific modifier describing the memory layout of the buffer **/
+  uint64_t modifier;
+  /** Number of planes the buffer has **/
+  uint8_t num_planes;
+  /** Native handle for a plane of the buffer **/
+  AnboxNativeHandle handle[ANBOX_GRAPHICS_BUFFER_MAX_PLANES];
+  /** Stride of a specific plane in the buffer in bytes **/
+  uint32_t stride[ANBOX_GRAPHICS_BUFFER_MAX_PLANES];
+  /** Offset inside the memory handle for the plane */
+  uint32_t offset[ANBOX_GRAPHICS_BUFFER_MAX_PLANES];
+} AnboxGraphicsBuffer2;
 
 /**
  * @brief Generic callback wrapper
@@ -516,6 +546,21 @@ typedef enum {
    * The value of this configuration item is of type `uint32_t`.
    */
   CONTAINER_BASE_UID = 12,
+
+  /*
+   * Path to Vulkan ICD to be used for host side rendering
+   *
+   * The value of this configuration item is of type `const char*`
+   */
+  VULKAN_ICD_PATH = 13,
+
+  /*
+   * Path to the DRM render node Anbox should use for host side
+   * rendering.
+   *
+   * The value of this configuration item is of type `const char*`
+   */
+  DRM_RENDER_NODE_PATH = 14,
 
   /*
    * The API defines a range of platform specific configuration items which can be

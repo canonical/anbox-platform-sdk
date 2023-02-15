@@ -5,6 +5,7 @@ var types_8h =
     [ "AnboxAudioSpec", "structAnboxAudioSpec.html", "structAnboxAudioSpec" ],
     [ "AnboxBinderDevices", "structAnboxBinderDevices.html", "structAnboxBinderDevices" ],
     [ "AnboxGraphicsBuffer", "structAnboxGraphicsBuffer.html", "structAnboxGraphicsBuffer" ],
+    [ "AnboxGraphicsBuffer2", "structAnboxGraphicsBuffer2.html", "structAnboxGraphicsBuffer2" ],
     [ "AnboxCallback", "structAnboxCallback.html", "structAnboxCallback" ],
     [ "AnboxDirectGraphicsConfiguration", "structAnboxDirectGraphicsConfiguration.html", "structAnboxDirectGraphicsConfiguration" ],
     [ "AnboxPlatformConfigurationItemInfo", "structAnboxPlatformConfigurationItemInfo.html", "structAnboxPlatformConfigurationItemInfo" ],
@@ -25,6 +26,7 @@ var types_8h =
     [ "AnboxSensorData", "structAnboxSensorData.html", "structAnboxSensorData" ],
     [ "AnboxVideoDecoderConfig", "structAnboxVideoDecoderConfig.html", "structAnboxVideoDecoderConfig" ],
     [ "AnboxVideoImage", "structAnboxVideoImage.html", "structAnboxVideoImage" ],
+    [ "ANBOX_GRAPHICS_BUFFER_MAX_PLANES", "types_8h.html#ae77a3a2edf1ece63c9f377608743f9a2", null ],
     [ "ANBOX_PLATFORM_DESCRIPTOR_SECTION", "types_8h.html#a7b567b2d0d9819d6a9676ba4363f0154", null ],
     [ "GNSS_MAX_MEASUREMENT", "types_8h.html#ab0b354a57479f2d93eaaeb36b37adb34", null ],
     [ "MAX_NAME_LENGTH", "types_8h.html#a0c397a708cec89c74029582574516b30", null ],
@@ -83,7 +85,8 @@ var types_8h =
       [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_XRGB_8888", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba2159d7a8514a1c2dbb0e835386a39267", null ],
       [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGB_888", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6baefa16789a8ac4fc07bb9b31bc06454f4", null ],
       [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGB_565", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6bae2e23cc7b4af531c9c991c6b9605cb0b", null ],
-      [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_8888", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6baa6ab15ddd91da7c99ef83e89136b4bef", null ]
+      [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_8888", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6baa6ab15ddd91da7c99ef83e89136b4bef", null ],
+      [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGBA_16F", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba0a175356a485d926e0d4c33b54c63129", null ]
     ] ],
     [ "AnboxGraphicsFlipMode", "types_8h.html#a88f5eeb5ba694f6e2520594a53182338", [
       [ "FLIP_MODE_NONE", "types_8h.html#a88f5eeb5ba694f6e2520594a53182338a3789be1711031a849e5b3a5d82bc0d1c", null ],
@@ -134,6 +137,8 @@ var types_8h =
       [ "DIRECT_GRAPHICS_CONFIGURATION", "types_8h.html#a0ea2707450519d64745267790a9f2f0da46200865e94522191f1b621124851e0b", null ],
       [ "PLATFORM_CONFIGURATION_INFO", "types_8h.html#a0ea2707450519d64745267790a9f2f0dac0391bfd4243a924e276a034d91bd46a", null ],
       [ "CONTAINER_BASE_UID", "types_8h.html#a0ea2707450519d64745267790a9f2f0da436501b8c76f4bad0846307087daea19", null ],
+      [ "VULKAN_ICD_PATH", "types_8h.html#a0ea2707450519d64745267790a9f2f0daa5fc8504f3d6b627bdba6cf7c57f3b17", null ],
+      [ "DRM_RENDER_NODE_PATH", "types_8h.html#a0ea2707450519d64745267790a9f2f0da57643484e14afec792c943d9eb701ff7", null ],
       [ "PLATFORM_CONFIGURATION_ID_START", "types_8h.html#a0ea2707450519d64745267790a9f2f0dae1f035c40b68d56fe2220442ab8ddd67", null ],
       [ "PLATFORM_CONFIGURATION_ID_END", "types_8h.html#a0ea2707450519d64745267790a9f2f0dafcb3ebeabdd44ab7c5765b5e35d511c1", null ]
     ] ],

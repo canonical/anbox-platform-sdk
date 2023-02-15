@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.11.0</span>
+   &#160;<span id="projectnumber">1.17.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -71,7 +71,7 @@ $(document).ready(function(){initNavTree('classanbox_1_1GraphicsProcessor.html',
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classanbox_1_1GraphicsProcessor__coll__graph.png" border="0" usemap="#aanbox_1_1GraphicsProcessor_coll__map" alt="Collaboration graph"/></div>
 <map name="aanbox_1_1GraphicsProcessor_coll__map" id="aanbox_1_1GraphicsProcessor_coll__map">
-<area shape="rect" title="GraphicsProcessor allows integration with the graphics engine inside Anbox." alt="" coords="5,5,224,229"/>
+<area shape="rect" title="GraphicsProcessor allows integration with the graphics engine inside Anbox." alt="" coords="5,5,224,259"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -105,6 +105,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac796f7d8812c19e8528bdde7754892ac"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1GraphicsProcessor.html#ac796f7d8812c19e8528bdde7754892ac">present</a> (<a class="el" href="structAnboxGraphicsBuffer.html">AnboxGraphicsBuffer</a> *buffer, <a class="el" href="structAnboxCallback.html">AnboxCallback</a> *callback)</td></tr>
 <tr class="memdesc:ac796f7d8812c19e8528bdde7754892ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Present the given buffer to a display or other output.  <a href="classanbox_1_1GraphicsProcessor.html#ac796f7d8812c19e8528bdde7754892ac">More...</a><br /></td></tr>
 <tr class="separator:ac796f7d8812c19e8528bdde7754892ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ee96e86683ca845ef6df9817e982336"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1GraphicsProcessor.html#a1ee96e86683ca845ef6df9817e982336">present</a> (<a class="el" href="structAnboxGraphicsBuffer2.html">AnboxGraphicsBuffer2</a> *buffer, <a class="el" href="structAnboxCallback.html">AnboxCallback</a> *callback)</td></tr>
+<tr class="memdesc:a1ee96e86683ca845ef6df9817e982336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Present the given buffer to a display or other output.  <a href="classanbox_1_1GraphicsProcessor.html#a1ee96e86683ca845ef6df9817e982336">More...</a><br /></td></tr>
+<tr class="separator:a1ee96e86683ca845ef6df9817e982336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87713a66bf61c032230d549ed7443c74"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1GraphicsProcessor.html#a87713a66bf61c032230d549ed7443c74">create_buffer</a> (uint32_t width, uint32_t height, uint32_t format, uint32_t usage, <a class="el" href="structAnboxGraphicsBuffer2.html">AnboxGraphicsBuffer2</a> **buffer)</td></tr>
+<tr class="separator:a87713a66bf61c032230d549ed7443c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classanbox_1_1GraphicsProcessor.html" title="GraphicsProcessor allows integration with the graphics engine inside Anbox.">GraphicsProcessor</a> allows integration with the graphics engine inside Anbox. </p>
@@ -215,6 +220,62 @@ Public Member Functions</h2></td></tr>
 <p>This function is called by Anbox from its render thread after the call to eglMakeCurrent to make the main rendering surface and context current. Any operation performed should be as fast as possible to not delay the frame for too long. </p>
 
 <p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00070">70</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+
+</div>
+</div>
+<a id="a87713a66bf61c032230d549ed7443c74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87713a66bf61c032230d549ed7443c74">&#9670;&nbsp;</a></span>create_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool anbox::GraphicsProcessor::create_buffer </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>usage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structAnboxGraphicsBuffer2.html">AnboxGraphicsBuffer2</a> **&#160;</td>
+          <td class="paramname"><em>buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00186">186</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -448,7 +509,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="ac796f7d8812c19e8528bdde7754892ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac796f7d8812c19e8528bdde7754892ac">&#9670;&nbsp;</a></span>present()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac796f7d8812c19e8528bdde7754892ac">&#9670;&nbsp;</a></span>present() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -482,18 +543,75 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Present the given buffer to a display or other output. </p>
-<p>Only used when graphics implementation is ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_DIRECT_RENDERING</p>
-<p>This method will be called by Anbox when Android has submitted a new buffer to be presented on the output managed by the platform. The buffer contains information about dimension, format and the handle to the buffer itself. The handle is opaque to Anbox and it's up to the platform to map it to something which it can handle (e.g. a dmabuf)</p>
-<p>When the platform has finished presenting the buffer it has to call the provided callback in order to return the buffer to Anbox for reuse. Not returning the buffer will cause the rendering pipeline to get stuck.</p>
+<p>DEPRECATED: This variant of the <a class="el" href="classanbox_1_1GraphicsProcessor.html#ac796f7d8812c19e8528bdde7754892ac" title="Present the given buffer to a display or other output.">present</a> method is deprecated and should no longer be used. Instead use the variant which takes the <a class="el" href="structAnboxGraphicsBuffer2.html" title="Graphics buffer.">AnboxGraphicsBuffer2</a> structure.</p>
+<p>Used when graphics implementation is ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_DIRECT_RENDERING or ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_HOST_RENDERING</p>
+<p>This method will be called by Anbox when Android has submitted a new buffer to be presented on the output managed by the platform. The buffer contains information about dimension, format and the handle to the buffer itself.</p>
+<p>The buffer handle is opaque to Anbox and it's up to the platform to map it to something which it can handle. For all GPUs the handle is a file descriptor of a DMA buffer (see <a href="https://www.kernel.org/doc/html/latest/driver-api/dma-buf.html">https://www.kernel.org/doc/html/latest/driver-api/dma-buf.html</a>) which can imported into APIs like EGL or Vulkan for further processing. For software rendering the handle is a memfd (<a href="https://man7.org/linux/man-pages/man2/memfd_create.2.html">https://man7.org/linux/man-pages/man2/memfd_create.2.html</a>) pointing to a shared memory region containing the buffer data.</p>
+<p>When the platform has finished presenting the buffer it has to call the provided callback in order to return the buffer to Anbox for reuse. Not returning the buffer will cause the rendering pipeline to become stuck.</p>
+<p>If <a class="el" href="classanbox_1_1GraphicsProcessor.html#ac796f7d8812c19e8528bdde7754892ac" title="Present the given buffer to a display or other output.">present</a> returns false it is expected that #callback is not called by the implementation.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">buffer</td><td>Buffer to be presented on the output display </td></tr>
+    <tr><td class="paramname">buffer</td><td>Buffer to be presented on the output </td></tr>
     <tr><td class="paramname">callback</td><td>A callback to be called by the platform when the buffer has been presented </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the buffer was accepted for presentation, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00131">131</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00146">146</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+
+</div>
+</div>
+<a id="a1ee96e86683ca845ef6df9817e982336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ee96e86683ca845ef6df9817e982336">&#9670;&nbsp;</a></span>present() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool anbox::GraphicsProcessor::present </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structAnboxGraphicsBuffer2.html">AnboxGraphicsBuffer2</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structAnboxCallback.html">AnboxCallback</a> *&#160;</td>
+          <td class="paramname"><em>callback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Present the given buffer to a display or other output. </p>
+<p>Used when graphics implementation is ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_DIRECT_RENDERING or ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_HOST_RENDERING</p>
+<p>This method will be called by Anbox when Android has submitted a new buffer to be presented on the output managed by the platform. The buffer contains information about dimension, format and the handle to the buffer itself.</p>
+<p>The buffer handle is opaque to Anbox and it's up to the platform to map it to something which it can handle. For all GPUs the handle is a file descriptor of a DMA buffer (see <a href="https://www.kernel.org/doc/html/latest/driver-api/dma-buf.html">https://www.kernel.org/doc/html/latest/driver-api/dma-buf.html</a>) which can imported into APIs like EGL or Vulkan for further processing. For software rendering the handle is a memfd (<a href="https://man7.org/linux/man-pages/man2/memfd_create.2.html">https://man7.org/linux/man-pages/man2/memfd_create.2.html</a>) pointing to a shared memory region containing the buffer data.</p>
+<p>When the platform has finished presenting the buffer it has to call the provided callback in order to return the buffer to Anbox for reuse. Not returning the buffer will cause the rendering pipeline to become stuck.</p>
+<p>If <a class="el" href="classanbox_1_1GraphicsProcessor.html#ac796f7d8812c19e8528bdde7754892ac" title="Present the given buffer to a display or other output.">present</a> returns false it is expected that #callback is not called by the implementation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Buffer to be presented on the output </td></tr>
+    <tr><td class="paramname">callback</td><td>A callback to be called by the platform when the buffer has been presented </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the buffer was accepted for presentation, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00180">180</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -506,7 +624,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceanbox.html">anbox</a></li><li class="navelem"><a class="el" href="classanbox_1_1GraphicsProcessor.html">GraphicsProcessor</a></li>
-    <li class="footer">Generated on Wed Dec 7 2022 18:07:01 for anbox-platform-sdk by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Feb 14 2023 13:16:59 for anbox-platform-sdk by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

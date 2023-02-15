@@ -82,8 +82,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "anbox__proxy_8h.html",
-"public__api_8h.html#ac3fec6b570a6563157ae7e9d1af10cec",
-"types_8h.html#a43c0c22805d5ed3aff69f45dfb53ea9aa274db7ea6020340f7fa760dde09c227e"
+"public__api_8h.html#aa748d3695157788b1740fe564ae51b03",
+"types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba0a175356a485d926e0d4c33b54c63129"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
