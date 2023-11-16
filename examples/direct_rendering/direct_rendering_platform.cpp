@@ -129,17 +129,6 @@ int DirectRendering::get_config_item(AnboxPlatformConfigurationKey key, void* da
   if (!data)
     return -EINVAL;
 
-  auto provide_str_value = [data, data_size](const char* value) -> int {
-    const size_t value_size = strlen(value);
-    if (value_size > data_size)
-      return -ENOMEM;
-
-    if (value)
-      memcpy(data, reinterpret_cast<const void*>(value), value_size);
-
-    return 0;
-  };
-
   switch (key) {
   case DISPLAY_SPEC2: {
     if (data_size != sizeof(AnboxDisplaySpec2))
