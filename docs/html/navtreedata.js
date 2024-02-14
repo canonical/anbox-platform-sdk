@@ -62,7 +62,7 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "Variables", "functions_vars.html", "functions_vars" ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -82,8 +82,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "anbox__proxy_8h.html",
-"public__api_8h.html#aa748d3695157788b1740fe564ae51b03",
-"types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba0a175356a485d926e0d4c33b54c63129"
+"public__api_8h.html#a04234860725f490f48e03580d6df9e1a",
+"structAnboxVhalConnectorCallbacks.html#a2d38b3b3454e27de27faa5e2694782c6",
+"types_8h.html#ad941286af23aaea1407072ec3e1a5174"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

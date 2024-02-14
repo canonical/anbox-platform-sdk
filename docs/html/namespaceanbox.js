@@ -3,6 +3,7 @@ var namespaceanbox =
     [ "AnboxProxy", "classanbox_1_1AnboxProxy.html", "classanbox_1_1AnboxProxy" ],
     [ "AudioProcessor", "classanbox_1_1AudioProcessor.html", "classanbox_1_1AudioProcessor" ],
     [ "CameraProcessor", "classanbox_1_1CameraProcessor.html", "classanbox_1_1CameraProcessor" ],
+    [ "VhalConnector", "classanbox_1_1VhalConnector.html", "classanbox_1_1VhalConnector" ],
     [ "GpsProcessor", "classanbox_1_1GpsProcessor.html", "classanbox_1_1GpsProcessor" ],
     [ "GraphicsProcessor", "classanbox_1_1GraphicsProcessor.html", "classanbox_1_1GraphicsProcessor" ],
     [ "InputProcessor", "classanbox_1_1InputProcessor.html", "classanbox_1_1InputProcessor" ],

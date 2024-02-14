@@ -18,5 +18,6 @@ var classanbox_1_1Platform =
     [ "set_config_item", "classanbox_1_1Platform.html#aa02d7d7b6900910b0913b3051e99313c", null ],
     [ "setup_event_tracer", "classanbox_1_1Platform.html#ae51dc11ffd1d5c35c308b5da77c33c64", null ],
     [ "stop", "classanbox_1_1Platform.html#af7a0fcf1b3d7f08a47b880215b63745c", null ],
+    [ "vhal_connector", "classanbox_1_1Platform.html#a8190dfd8862f8e8008e11cdb738b7000", null ],
     [ "wait_until_ready", "classanbox_1_1Platform.html#a7d8fa1d14143a5af92de58deb780ea40", null ]
 ];

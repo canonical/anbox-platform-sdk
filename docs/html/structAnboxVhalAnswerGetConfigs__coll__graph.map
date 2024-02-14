@@ -1,0 +1,13 @@
+<map id="AnboxVhalAnswerGetConfigs" name="AnboxVhalAnswerGetConfigs">
+<area shape="rect" id="node1" title="AnboxVhalAnswerGet contains the answer for a GetAllPropConfigs or GetPropConfigs request sent to the ..." alt="" coords="5,484,216,561"/>
+<area shape="rect" id="node2" title=" " alt="" coords="52,175,127,252"/>
+<area shape="rect" id="node3" href="$structAnboxVhalPropertyConfig.html" title="AnboxVhalPropertyConfig describes the configuration of a VHAL property." alt="" coords="539,344,727,421"/>
+<area shape="rect" id="node4" title=" " alt="" coords="151,175,383,252"/>
+<area shape="rect" id="node5" title=" " alt="" coords="407,175,585,252"/>
+<area shape="rect" id="node6" title=" " alt="" coords="631,5,681,83"/>
+<area shape="rect" id="node10" href="$structAnboxVhalAreaConfig.html" title="AnboxVhalAreaConfig describes the configuration of a given area id for a VHAL property." alt="" coords="791,175,953,252"/>
+<area shape="rect" id="node7" title=" " alt="" coords="1255,175,1305,252"/>
+<area shape="rect" id="node8" title=" " alt="" coords="1029,5,1096,83"/>
+<area shape="rect" id="node9" title=" " alt="" coords="1329,175,1521,252"/>
+<area shape="rect" id="node11" title=" " alt="" coords="799,5,865,83"/>
+</map>

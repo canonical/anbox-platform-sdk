@@ -1,0 +1,9 @@
+<map id="AnboxVhalCommandGet" name="AnboxVhalCommandGet">
+<area shape="rect" id="node1" title="AnboxVhalCommandGet describes a get request to send to the Android VHAL." alt="" coords="255,204,438,281"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,56,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="132,5,183,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="249,5,316,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="379,5,445,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="500,5,575,83"/>
+<area shape="rect" id="node7" title=" " alt="" coords="663,5,729,83"/>
+</map>

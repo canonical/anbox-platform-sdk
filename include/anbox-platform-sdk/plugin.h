@@ -55,6 +55,10 @@ struct AnboxVideoDecoder {
   std::unique_ptr<anbox::VideoDecoder> instance;
 };
 
+struct AnboxVhalConnector {
+  anbox::VhalConnector* instance{nullptr};
+};
+
 struct AnboxPlatform {
   std::unique_ptr<anbox::Platform> instance{nullptr};
   AnboxAudioProcessor audio_processor;
@@ -64,6 +68,7 @@ struct AnboxPlatform {
   AnboxGraphicsProcessor graphics_processor;
   AnboxCameraProcessor camera_processor;
   AnboxProxy anbox_proxy;
+  AnboxVhalConnector vhal_connector;
 };
 
 /**

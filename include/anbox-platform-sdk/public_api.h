@@ -580,4 +580,24 @@ typedef uint64_t (*AnboxVideoDecoderDecodeFrameFunc)(const AnboxVideoDecoder* de
  **/
 typedef int (*AnboxVideoDecoderRetrieveImageFunc)(const AnboxVideoDecoder* decoder, AnboxVideoImage *img);
 
+/**
+ * @brief Retrieve the platform vhal connector instance.
+ *
+ * Every platform implementation has to export a symbol named
+ * 'anbox_platform_get_vhal_connector' implementing the
+ * AnboxPlatformGetVhalConnector function prototype.
+ */
+typedef AnboxVhalConnector* (*AnboxPlatformGetVhalConnectorFunc)(const AnboxPlatform* platform);
+
+/**
+ * @brief Allows the platform to call Android VHAL functions through Anbox.
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::AnboxVhalConnector::set_callbacks
+ *
+ **/
+typedef int (*AnboxVhalConnectorSetCallbacksFunc)(const AnboxVhalConnector* connector,
+                                                  const AnboxVhalConnectorCallbacks* callbacks,
+                                                  void* user_data);
+
 #endif

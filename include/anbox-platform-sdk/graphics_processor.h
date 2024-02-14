@@ -166,6 +166,9 @@ class GraphicsProcessor {
      * a memfd (https://man7.org/linux/man-pages/man2/memfd_create.2.html) pointing to a shared
      * memory region containing the buffer data.
      *
+     * Passed buffer objects are reused by the caller so the given address for the
+     * AnboxGraphicsBuffer2 can be used as identifier for cache implementations.
+     *
      * When the platform has finished presenting the buffer it has to call the provided callback
      * in order to return the buffer to Anbox for reuse. Not returning the buffer will cause the
      * rendering pipeline to become stuck.
@@ -183,6 +186,16 @@ class GraphicsProcessor {
       return false;
     }
 
+    /**
+     * @brief Create a buffer with the given specifications
+     *
+     * @param width Width of the buffer in pixels
+     * @param height Height of the buffer in pixels
+     * @param format Color format of the buffer. See AnboxGraphicsBufferPixelFormat
+     * @param usage Usage flags of the buffer. See AnboxGraphicsBufferUsage
+     * @param buffer Allocated buffer object. See AnboxGraphicsBuffer2
+     * @return true if the buffer was successfully created, false otherwise
+     */
     virtual bool create_buffer(uint32_t width, uint32_t height, uint32_t format,
                                uint32_t usage, AnboxGraphicsBuffer2** buffer) {
       (void) width;

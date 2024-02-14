@@ -7,5 +7,6 @@ var structAnboxPlatform =
     [ "graphics_processor", "structAnboxPlatform.html#a08764e11cb1b064b63a36c6ab8084598", null ],
     [ "input_processor", "structAnboxPlatform.html#a6e8b815660b60ea238610c174981a18f", null ],
     [ "instance", "structAnboxPlatform.html#a46a7eb6bdcab7fdbe8e40995714824ea", null ],
-    [ "sensor_processor", "structAnboxPlatform.html#a57501b223a9c2b632cd20b2854fd6d9a", null ]
+    [ "sensor_processor", "structAnboxPlatform.html#a57501b223a9c2b632cd20b2854fd6d9a", null ],
+    [ "vhal_connector", "structAnboxPlatform.html#af566df5f3dcf83c3898cf23ca1a6133a", null ]
 ];

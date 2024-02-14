@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.20.0</span>
+   &#160;<span id="projectnumber">1.21.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -173,6 +173,24 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxSensorData.html">AnboxSensorData</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAnboxSensorData.html" title="AnboxSensorData represents the sensor data stucture,.">AnboxSensorData</a> represents the sensor data stucture,.  <a href="structAnboxSensorData.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxVhalPropertyValue.html">AnboxVhalPropertyValue</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAnboxVhalPropertyValue.html" title="AnboxVhalPropertyValue describes the current value of a VHAL property, as returned by a get call to t...">AnboxVhalPropertyValue</a> describes the current value of a VHAL property, as returned by a get call to the Android VHAL.  <a href="structAnboxVhalPropertyValue.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxVhalAreaConfig.html">AnboxVhalAreaConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAnboxVhalAreaConfig.html" title="AnboxVhalAreaConfig describes the configuration of a given area id for a VHAL property.">AnboxVhalAreaConfig</a> describes the configuration of a given area id for a VHAL property.  <a href="structAnboxVhalAreaConfig.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxVhalPropertyConfig.html">AnboxVhalPropertyConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAnboxVhalPropertyConfig.html" title="AnboxVhalPropertyConfig describes the configuration of a VHAL property.">AnboxVhalPropertyConfig</a> describes the configuration of a VHAL property.  <a href="structAnboxVhalPropertyConfig.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxVhalAnswerGetConfigs.html">AnboxVhalAnswerGetConfigs</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxVhalAnswerGet contains the answer for a GetAllPropConfigs or GetPropConfigs request sent to the Android VHAL.  <a href="structAnboxVhalAnswerGetConfigs.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxVhalCommandGet.html">AnboxVhalCommandGet</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAnboxVhalCommandGet.html" title="AnboxVhalCommandGet describes a get request to send to the Android VHAL.">AnboxVhalCommandGet</a> describes a get request to send to the Android VHAL.  <a href="structAnboxVhalCommandGet.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxVhalCommandSet.html">AnboxVhalCommandSet</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAnboxVhalCommandSet.html" title="AnboxVhalCommandSet describes a set request to send to the Android VHAL.">AnboxVhalCommandSet</a> describes a set request to send to the Android VHAL.  <a href="structAnboxVhalCommandSet.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxVideoDecoderConfig.html">AnboxVideoDecoderConfig</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAnboxVideoDecoderConfig.html" title="AnboxVideoDecoderConfig describes the configuration of a video decoder.">AnboxVideoDecoderConfig</a> describes the configuration of a video decoder.  <a href="structAnboxVideoDecoderConfig.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -273,11 +291,40 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6baa6ab15ddd91da7c99ef83e89136b4bef">ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_8888</a> = 5
 , <br />
-&#160;&#160;<a class="el" href="types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba0a175356a485d926e0d4c33b54c63129">ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGBA_16F</a> = 6
+&#160;&#160;<a class="el" href="types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6bac3af7df7c6d7aa9f8b03543f90c6ccd4">ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_16161616F</a> = 6
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba0a175356a485d926e0d4c33b54c63129">ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGBA_16F</a> = ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_16161616F
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba5080f4e5ab28ced6ed3768dcb3cd51c6">ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_GR_88</a> = 7
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6baaa1b15cbdf58143c3ead2927560f6783">ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_2101010</a> = 8
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba2002868264531fbcd7930cb32ba7bc54">ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_YUV_420</a> = 9
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba50d5c2582c6439d24febf799841d4075">ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_R_8</a> = 10
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba680c3086ac46b96aa4bdc2d55cd953e5">ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_NV_12</a> = 11
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba564d502083b537b1edba24c63d5ffaff">ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_XBGR_8888</a> = 12
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6bac9c1ee267807d664dcf344b1fe54aff0">ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_YVU_420</a> = 13
 <br />
  }</td></tr>
 <tr class="memdesc:a1f6a9fcd4c1d1566ef8dbb68ab990c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel format used for the pixels stored in a <a class="el" href="structAnboxGraphicsBuffer.html" title="Graphics buffer.">AnboxGraphicsBuffer</a> or <a class="el" href="structAnboxGraphicsBuffer2.html" title="Graphics buffer.">AnboxGraphicsBuffer2</a>.  <a href="types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6b">More...</a><br /></td></tr>
 <tr class="separator:a1f6a9fcd4c1d1566ef8dbb68ab990c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02236902f72304a93ae54ebdc1f31fdf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a02236902f72304a93ae54ebdc1f31fdf">AnboxGraphicsBufferUsage</a> { <br />
+&#160;&#160;<a class="el" href="types_8h.html#a02236902f72304a93ae54ebdc1f31fdfa4763f0fddc464e2920687e6a6994a053">ANBOX_GRAPHICS_BUFFER_USAGE_UNKNOWN</a> = 0
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a02236902f72304a93ae54ebdc1f31fdfad7da8a2479b21f47c22a7448888479b1">ANBOX_GRAPHICS_BUFFER_USAGE_SCANOUT</a> = (1 &lt;&lt; 0)
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a02236902f72304a93ae54ebdc1f31fdfa75b7b1c50d7f2e03098f9676f6de7d4e">ANBOX_GRAPHICS_BUFFER_USAGE_RENDERING</a> = (1 &lt;&lt; 1)
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a02236902f72304a93ae54ebdc1f31fdfa204956a369ca849330a4bc1da1b5df52">ANBOX_GRAPHICS_BUFFER_USAGE_WRITE</a> = (1 &lt;&lt; 2)
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a02236902f72304a93ae54ebdc1f31fdfaf1e7d70e092effda11964b799d054211">ANBOX_GRAPHICS_BUFFER_USAGE_LINEAR</a> = (1 &lt;&lt; 3)
+<br />
+ }</td></tr>
+<tr class="separator:a02236902f72304a93ae54ebdc1f31fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad670af381fe2a26f66dcf726d2130702"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#ad670af381fe2a26f66dcf726d2130702">AnboxGraphicsImplementationType</a> : uint8_t { <br />
 &#160;&#160;<a class="el" href="types_8h.html#ad670af381fe2a26f66dcf726d2130702a283000879cf021bcad2adbee1dbe9566">ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_UNKNOWN</a> = 0
 , <br />
@@ -308,6 +355,8 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="types_8h.html#ad941286af23aaea1407072ec3e1a5174ab3664dbd146259436dddd9d8dc8b57b4">ANBOX_GRAPHICS_VULKAN_VERSION_1_1</a> = 2
 , <br />
 &#160;&#160;<a class="el" href="types_8h.html#ad941286af23aaea1407072ec3e1a5174ae33ed43152dc7ff8eb2d2cdc2e3f7443">ANBOX_GRAPHICS_VULKAN_VERSION_1_2</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#ad941286af23aaea1407072ec3e1a5174a0c970c8ce5763b0824b82bd4124672c4">ANBOX_GRAPHICS_VULKAN_VERSION_1_3</a> = 4
 <br />
  }</td></tr>
 <tr class="memdesc:ad941286af23aaea1407072ec3e1a5174"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxGraphicsVulkanVersion describes a particular Vulkan API version.  <a href="types_8h.html#ad941286af23aaea1407072ec3e1a5174">More...</a><br /></td></tr>
@@ -538,6 +587,72 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ada4f1d01bd8be2756c43da68b7ebe95d"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxSensorType describes all sensor types supported by Anbox.  <a href="types_8h.html#ada4f1d01bd8be2756c43da68b7ebe95d">More...</a><br /></td></tr>
 <tr class="separator:ada4f1d01bd8be2756c43da68b7ebe95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa74622c326573d620cf0352fd56769ba"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#aa74622c326573d620cf0352fd56769ba">AnboxVhalPropertyStatus</a> { <br />
+&#160;&#160;<a class="el" href="types_8h.html#aa74622c326573d620cf0352fd56769baa402572117a8de1fe25e8d5ee2fca9d67">ANBOX_VHAL_PROPERTY_STATUS_AVAILABLE</a> = 0x0
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#aa74622c326573d620cf0352fd56769baa7cdad9a43b940537fec1f11078a7de97">ANBOX_VHAL_PROPERTY_STATUS_UNAVAILABLE</a> = 0x1
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#aa74622c326573d620cf0352fd56769baa33e23ec3585b8c9ce034fa851b991238">ANBOX_VHAL_PROPERTY_STATUS_ERROR</a> = 0x2
+<br />
+ }</td></tr>
+<tr class="memdesc:aa74622c326573d620cf0352fd56769ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxVhalPropertyStatus describes the status of a VHAL property.  <a href="types_8h.html#aa74622c326573d620cf0352fd56769ba">More...</a><br /></td></tr>
+<tr class="separator:aa74622c326573d620cf0352fd56769ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2873a70508c66e874f0c63f0b5b6f53b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a2873a70508c66e874f0c63f0b5b6f53b">AnboxVhalPropertyType</a> { <br />
+&#160;&#160;<a class="el" href="types_8h.html#a2873a70508c66e874f0c63f0b5b6f53bab4baa4fb76acda31d17598077e0aa1d0">ANBOX_VHAL_PROPERTY_TYPE_STRING</a> = 0x00100000
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba95f516f5e7620cc3d9ad1b4b67e720f5">ANBOX_VHAL_PROPERTY_TYPE_BOOLEAN</a> = 0x00200000
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba23ba37ebfab1dc648cc587bebb060464">ANBOX_VHAL_PROPERTY_TYPE_INT32</a> = 0x00400000
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba7b82c9af51121949f1e1c85a498b9ac4">ANBOX_VHAL_PROPERTY_TYPE_INT32_VEC</a> = 0x00410000
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a2873a70508c66e874f0c63f0b5b6f53baed8692140ee19491cdeeb78b9e4eb621">ANBOX_VHAL_PROPERTY_TYPE_INT64</a> = 0x00500000
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba4652eeb08e196d4417dfed932b2853e6">ANBOX_VHAL_PROPERTY_TYPE_INT64_VEC</a> = 0x00510000
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba9e2197661677008161ea3e9db004581a">ANBOX_VHAL_PROPERTY_TYPE_FLOAT</a> = 0x00600000
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba1a57490d4e64d4d793f9f778499b259d">ANBOX_VHAL_PROPERTY_TYPE_FLOAT_VEC</a> = 0x00610000
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba37c5c3df7a215570319a33e68b9401f1">ANBOX_VHAL_PROPERTY_TYPE_BYTES</a> = 0x00700000
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba31dd0aab985ee0691d9433adbcc4b7b8">ANBOX_VHAL_PROPERTY_TYPE_MIXED</a> = 0x00e00000
+<br />
+ }</td></tr>
+<tr class="memdesc:a2873a70508c66e874f0c63f0b5b6f53b"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxVhalPropertyType describes the type of the value stored by a VHAL property.  <a href="types_8h.html#a2873a70508c66e874f0c63f0b5b6f53b">More...</a><br /></td></tr>
+<tr class="separator:a2873a70508c66e874f0c63f0b5b6f53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93558518d5a26641ddd6fcbe3a3bb30b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a93558518d5a26641ddd6fcbe3a3bb30b">AnboxVhalPropertyAccess</a> { <br />
+&#160;&#160;<a class="el" href="types_8h.html#a93558518d5a26641ddd6fcbe3a3bb30badc0d4712bbe4d087f9462909f861c939">ANBOX_VHAL_PROPERTY_ACCESS_NONE</a> = 0x00
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a93558518d5a26641ddd6fcbe3a3bb30ba50c6ca33ac27c393c1e9b2af2f785455">ANBOX_VHAL_PROPERTY_ACCESS_READ</a> = 0x01
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a93558518d5a26641ddd6fcbe3a3bb30ba2a246d168f41344706cd27ced459c40b">ANBOX_VHAL_PROPERTY_ACCESS_WRITE</a> = 0x02
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a93558518d5a26641ddd6fcbe3a3bb30bab8e93f5f86204c0e727b732c7c754a6b">ANBOX_VHAL_PROPERTY_ACCESS_READ_WRITE</a> = 0x03
+<br />
+ }</td></tr>
+<tr class="memdesc:a93558518d5a26641ddd6fcbe3a3bb30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxVhalPropertyAccess describes if the property is read, write, or both.  <a href="types_8h.html#a93558518d5a26641ddd6fcbe3a3bb30b">More...</a><br /></td></tr>
+<tr class="separator:a93558518d5a26641ddd6fcbe3a3bb30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01593d6e5aedaa69ce2d7b9176f73300"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300">AnboxVhalPropertyChangeMode</a> { <br />
+&#160;&#160;<a class="el" href="types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300abf322b42dd89ff4395ca0a5f7eaa2457">ANBOX_VHAL_PROPERTY_CHANGE_MODE_STATIC</a> = 0x00
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300a3ad4ccb552d81aa473d45136351f16b7">ANBOX_VHAL_PROPERTY_CHANGE_MODE_ON_CHANGE</a> = 0x01
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300a2a4958a641c2520683b0241a61cd9a32">ANBOX_VHAL_PROPERTY_CHANGE_MODE_CONTINUOUS</a> = 0x02
+<br />
+ }</td></tr>
+<tr class="memdesc:a01593d6e5aedaa69ce2d7b9176f73300"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxVhalPropertyChangeMode describes how the property changes.  <a href="types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300">More...</a><br /></td></tr>
+<tr class="separator:a01593d6e5aedaa69ce2d7b9176f73300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc49ac8ac8984077d933a3b35cafaae3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#abc49ac8ac8984077d933a3b35cafaae3">AnboxVhalAnswerStatus</a> { <br />
+&#160;&#160;<a class="el" href="types_8h.html#abc49ac8ac8984077d933a3b35cafaae3a6ee202335de808fe8b1f4d98ae3fd429">ANBOX_VHAL_ANSWER_STATUS_OK</a> = 0
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#abc49ac8ac8984077d933a3b35cafaae3accd9c4775c5b57b3078ca0555ea570dc">ANBOX_VHAL_ANSWER_STATUS_INVALID</a> = 1
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#abc49ac8ac8984077d933a3b35cafaae3a3f42dbdfdfb76a16ee503f3eff6d9120">ANBOX_VHAL_ANSWER_STATUS_UNKNOWN</a> = 2
+<br />
+ }</td></tr>
+<tr class="memdesc:abc49ac8ac8984077d933a3b35cafaae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxVhalAnswerStatus describes the return status of a request sent to the Android VHAL.  <a href="types_8h.html#abc49ac8ac8984077d933a3b35cafaae3">More...</a><br /></td></tr>
+<tr class="separator:abc49ac8ac8984077d933a3b35cafaae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a542c5a12a80bf1d2aaa235ad133a7a34"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a542c5a12a80bf1d2aaa235ad133a7a34">AnboxVideoCodecType</a> : uint8_t { <br />
 &#160;&#160;<a class="el" href="types_8h.html#a542c5a12a80bf1d2aaa235ad133a7a34ad5fd480e1929f838fd1d87ce75d207cf">ANBOX_VIDEO_CODEC_TYPE_UNKNOWN</a> = 0
 , <br />
@@ -599,7 +714,7 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 <p>Maximum number of planes a buffer can have </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00255">255</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00286">286</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -633,7 +748,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00685">685</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00718">718</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -665,7 +780,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01243">1243</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01276">1276</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -697,7 +812,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01244">1244</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01277">1277</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -748,7 +863,7 @@ Enumerations</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01428">1428</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01658">1658</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -766,7 +881,7 @@ Enumerations</h2></td></tr>
 
 <p>Method prototype which will be used to determine if the given tracing category is enabled for tracing inside the Anbox runtime. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01388">1388</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01618">1618</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -783,7 +898,7 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 <p>Milliseconds since January 1, 1970 </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00688">688</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00721">721</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -905,7 +1020,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00652">652</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00685">685</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -929,7 +1044,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00642">642</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00675">675</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -955,7 +1070,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00604">604</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00637">637</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -983,7 +1098,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01114">1114</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01147">1147</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1013,10 +1128,55 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a1f6a9fcd4c1d1566ef8dbb68ab990c6baa6ab15ddd91da7c99ef83e89136b4bef"></a>ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_8888&#160;</td><td class="fielddoc"><p>32 bit BGRA </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a1f6a9fcd4c1d1566ef8dbb68ab990c6ba0a175356a485d926e0d4c33b54c63129"></a>ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGBA_16F&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f6a9fcd4c1d1566ef8dbb68ab990c6bac3af7df7c6d7aa9f8b03543f90c6ccd4"></a>ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_16161616F&#160;</td><td class="fielddoc"><p>Floating point 64 bit ABGR </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1f6a9fcd4c1d1566ef8dbb68ab990c6ba0a175356a485d926e0d4c33b54c63129"></a>ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGBA_16F&#160;</td><td class="fielddoc"><p>Floating point 64 bit ABGR </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1f6a9fcd4c1d1566ef8dbb68ab990c6ba5080f4e5ab28ced6ed3768dcb3cd51c6"></a>ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_GR_88&#160;</td><td class="fielddoc"><p>16 bit GR </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1f6a9fcd4c1d1566ef8dbb68ab990c6baaa1b15cbdf58143c3ead2927560f6783"></a>ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_2101010&#160;</td><td class="fielddoc"><p>32 bit ABGR </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1f6a9fcd4c1d1566ef8dbb68ab990c6ba2002868264531fbcd7930cb32ba7bc54"></a>ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_YUV_420&#160;</td><td class="fielddoc"><p>3 plane YCbCr </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1f6a9fcd4c1d1566ef8dbb68ab990c6ba50d5c2582c6439d24febf799841d4075"></a>ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_R_8&#160;</td><td class="fielddoc"><p>8 bit R </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1f6a9fcd4c1d1566ef8dbb68ab990c6ba680c3086ac46b96aa4bdc2d55cd953e5"></a>ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_NV_12&#160;</td><td class="fielddoc"><p>2 plane YCbCr </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1f6a9fcd4c1d1566ef8dbb68ab990c6ba564d502083b537b1edba24c63d5ffaff"></a>ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_XBGR_8888&#160;</td><td class="fielddoc"><p>32 bt XBGR </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1f6a9fcd4c1d1566ef8dbb68ab990c6bac9c1ee267807d664dcf344b1fe54aff0"></a>ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_YVU_420&#160;</td><td class="fielddoc"><p>3 plane YCbCr </p>
+</td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00218">218</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a id="a02236902f72304a93ae54ebdc1f31fdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02236902f72304a93ae54ebdc1f31fdf">&#9670;&nbsp;</a></span>AnboxGraphicsBufferUsage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="types_8h.html#a02236902f72304a93ae54ebdc1f31fdf">AnboxGraphicsBufferUsage</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Usage flags for graphics buffers </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a02236902f72304a93ae54ebdc1f31fdfa4763f0fddc464e2920687e6a6994a053"></a>ANBOX_GRAPHICS_BUFFER_USAGE_UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a02236902f72304a93ae54ebdc1f31fdfad7da8a2479b21f47c22a7448888479b1"></a>ANBOX_GRAPHICS_BUFFER_USAGE_SCANOUT&#160;</td><td class="fielddoc"><p>Buffer is meant to be used for display scanout </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a02236902f72304a93ae54ebdc1f31fdfa75b7b1c50d7f2e03098f9676f6de7d4e"></a>ANBOX_GRAPHICS_BUFFER_USAGE_RENDERING&#160;</td><td class="fielddoc"><p>Buffer is meant to be used for rendering </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a02236902f72304a93ae54ebdc1f31fdfa204956a369ca849330a4bc1da1b5df52"></a>ANBOX_GRAPHICS_BUFFER_USAGE_WRITE&#160;</td><td class="fielddoc"><p>Buffer can be mapped and written to from CPU </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a02236902f72304a93ae54ebdc1f31fdfaf1e7d70e092effda11964b799d054211"></a>ANBOX_GRAPHICS_BUFFER_USAGE_LINEAR&#160;</td><td class="fielddoc"><p>Buffer is linear, not tiled </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00254">254</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1042,7 +1202,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01145">1145</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01178">1178</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1065,7 +1225,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="ad670af381fe2a26f66dcf726d2130702a394a953625f2da7c9a23a1950174c1ac"></a>ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_DIRECT_RENDERING&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00293">293</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00324">324</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1089,7 +1249,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="ad51a17ffe980d42dbcf67fdd619f33ccaf3db39b6d435437d03a88c9fc5484ff1"></a>ANBOX_GRAPHICS_OPENGL_ES_VERSION_3_2&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00306">306</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00337">337</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1113,7 +1273,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01158">1158</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01191">1191</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1135,9 +1295,10 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="ad941286af23aaea1407072ec3e1a5174ae3935993143da32460e330f31c30ff11"></a>ANBOX_GRAPHICS_VULKAN_VERSION_1_0&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad941286af23aaea1407072ec3e1a5174ab3664dbd146259436dddd9d8dc8b57b4"></a>ANBOX_GRAPHICS_VULKAN_VERSION_1_1&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad941286af23aaea1407072ec3e1a5174ae33ed43152dc7ff8eb2d2cdc2e3f7443"></a>ANBOX_GRAPHICS_VULKAN_VERSION_1_2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad941286af23aaea1407072ec3e1a5174a0c970c8ce5763b0824b82bd4124672c4"></a>ANBOX_GRAPHICS_VULKAN_VERSION_1_3&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00320">320</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00351">351</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1165,7 +1326,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01211">1211</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01244">1244</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1184,7 +1345,7 @@ Enumerations</h2></td></tr>
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2db22e4829c8c814a7b302fd0f8c1d4ca8a583f16e8d237a423c8c1d9087a4c72"></a>BOOLEAN&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00371">371</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00404">404</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1245,7 +1406,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0dafcb3ebeabdd44ab7c5765b5e35d511c1"></a>PLATFORM_CONFIGURATION_ID_END&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00410">410</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00443">443</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1273,7 +1434,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00616">616</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00649">649</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1313,7 +1474,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01249">1249</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01282">1282</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1340,7 +1501,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a9e881174b3514989ddda05b70ca5cc60ad885db41158571fc04ddbdac8447ed75"></a>ANBOX_TRACE_EVENT_ARG_TYPE_COPY_STRING&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01404">1404</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01634">1634</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1364,7 +1525,141 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a2d5fe2482c9d323c9d80c37b84ba11fda0dd1730f273e7289aa3ea124893322d6"></a>ANBOX_TRACE_EVENT_PHASE_COUNTER&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01393">1393</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01623">1623</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a id="abc49ac8ac8984077d933a3b35cafaae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc49ac8ac8984077d933a3b35cafaae3">&#9670;&nbsp;</a></span>AnboxVhalAnswerStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="types_8h.html#abc49ac8ac8984077d933a3b35cafaae3">AnboxVhalAnswerStatus</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AnboxVhalAnswerStatus describes the return status of a request sent to the Android VHAL. </p>
+<dl class="section note"><dt>Note</dt><dd>Experimental - subject to change. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abc49ac8ac8984077d933a3b35cafaae3a6ee202335de808fe8b1f4d98ae3fd429"></a>ANBOX_VHAL_ANSWER_STATUS_OK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc49ac8ac8984077d933a3b35cafaae3accd9c4775c5b57b3078ca0555ea570dc"></a>ANBOX_VHAL_ANSWER_STATUS_INVALID&#160;</td><td class="fielddoc"><p>The request was invalid. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc49ac8ac8984077d933a3b35cafaae3a3f42dbdfdfb76a16ee503f3eff6d9120"></a>ANBOX_VHAL_ANSWER_STATUS_UNKNOWN&#160;</td><td class="fielddoc"><p>An unknown or internal error occurred. </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01499">1499</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a id="a93558518d5a26641ddd6fcbe3a3bb30b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93558518d5a26641ddd6fcbe3a3bb30b">&#9670;&nbsp;</a></span>AnboxVhalPropertyAccess</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="types_8h.html#a93558518d5a26641ddd6fcbe3a3bb30b">AnboxVhalPropertyAccess</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AnboxVhalPropertyAccess describes if the property is read, write, or both. </p>
+<dl class="section note"><dt>Note</dt><dd>Experimental - subject to change.</dd></dl>
+<p>Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2686-2698">VehiclePropertyAccess</a> enum of the Android VHAL interface. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a93558518d5a26641ddd6fcbe3a3bb30badc0d4712bbe4d087f9462909f861c939"></a>ANBOX_VHAL_PROPERTY_ACCESS_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a93558518d5a26641ddd6fcbe3a3bb30ba50c6ca33ac27c393c1e9b2af2f785455"></a>ANBOX_VHAL_PROPERTY_ACCESS_READ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a93558518d5a26641ddd6fcbe3a3bb30ba2a246d168f41344706cd27ced459c40b"></a>ANBOX_VHAL_PROPERTY_ACCESS_WRITE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a93558518d5a26641ddd6fcbe3a3bb30bab8e93f5f86204c0e727b732c7c754a6b"></a>ANBOX_VHAL_PROPERTY_ACCESS_READ_WRITE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01403">1403</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a id="a01593d6e5aedaa69ce2d7b9176f73300"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01593d6e5aedaa69ce2d7b9176f73300">&#9670;&nbsp;</a></span>AnboxVhalPropertyChangeMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300">AnboxVhalPropertyChangeMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AnboxVhalPropertyChangeMode describes how the property changes. </p>
+<dl class="section note"><dt>Note</dt><dd>Experimental - subject to change.</dd></dl>
+<p>Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2657-2684">VehiclePropertyChangeMode</a> enum of the Android VHAL interface. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a01593d6e5aedaa69ce2d7b9176f73300abf322b42dd89ff4395ca0a5f7eaa2457"></a>ANBOX_VHAL_PROPERTY_CHANGE_MODE_STATIC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a01593d6e5aedaa69ce2d7b9176f73300a3ad4ccb552d81aa473d45136351f16b7"></a>ANBOX_VHAL_PROPERTY_CHANGE_MODE_ON_CHANGE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a01593d6e5aedaa69ce2d7b9176f73300a2a4958a641c2520683b0241a61cd9a32"></a>ANBOX_VHAL_PROPERTY_CHANGE_MODE_CONTINUOUS&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01416">1416</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a id="aa74622c326573d620cf0352fd56769ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa74622c326573d620cf0352fd56769ba">&#9670;&nbsp;</a></span>AnboxVhalPropertyStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="types_8h.html#aa74622c326573d620cf0352fd56769ba">AnboxVhalPropertyStatus</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AnboxVhalPropertyStatus describes the status of a VHAL property. </p>
+<dl class="section note"><dt>Note</dt><dd>Experimental - subject to change.</dd></dl>
+<p>Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2700-2720">VehiclePropertyStatus</a> enum of the Android VHAL interface. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa74622c326573d620cf0352fd56769baa402572117a8de1fe25e8d5ee2fca9d67"></a>ANBOX_VHAL_PROPERTY_STATUS_AVAILABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa74622c326573d620cf0352fd56769baa7cdad9a43b940537fec1f11078a7de97"></a>ANBOX_VHAL_PROPERTY_STATUS_UNAVAILABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa74622c326573d620cf0352fd56769baa33e23ec3585b8c9ce034fa851b991238"></a>ANBOX_VHAL_PROPERTY_STATUS_ERROR&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01368">1368</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a id="a2873a70508c66e874f0c63f0b5b6f53b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2873a70508c66e874f0c63f0b5b6f53b">&#9670;&nbsp;</a></span>AnboxVhalPropertyType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="types_8h.html#a2873a70508c66e874f0c63f0b5b6f53b">AnboxVhalPropertyType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AnboxVhalPropertyType describes the type of the value stored by a VHAL property. </p>
+<dl class="section note"><dt>Note</dt><dd>Experimental - subject to change.</dd></dl>
+<p>Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=19-42">VehiclePropertyType</a> enum of the Android VHAL interface. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2873a70508c66e874f0c63f0b5b6f53bab4baa4fb76acda31d17598077e0aa1d0"></a>ANBOX_VHAL_PROPERTY_TYPE_STRING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2873a70508c66e874f0c63f0b5b6f53ba95f516f5e7620cc3d9ad1b4b67e720f5"></a>ANBOX_VHAL_PROPERTY_TYPE_BOOLEAN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2873a70508c66e874f0c63f0b5b6f53ba23ba37ebfab1dc648cc587bebb060464"></a>ANBOX_VHAL_PROPERTY_TYPE_INT32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2873a70508c66e874f0c63f0b5b6f53ba7b82c9af51121949f1e1c85a498b9ac4"></a>ANBOX_VHAL_PROPERTY_TYPE_INT32_VEC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2873a70508c66e874f0c63f0b5b6f53baed8692140ee19491cdeeb78b9e4eb621"></a>ANBOX_VHAL_PROPERTY_TYPE_INT64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2873a70508c66e874f0c63f0b5b6f53ba4652eeb08e196d4417dfed932b2853e6"></a>ANBOX_VHAL_PROPERTY_TYPE_INT64_VEC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2873a70508c66e874f0c63f0b5b6f53ba9e2197661677008161ea3e9db004581a"></a>ANBOX_VHAL_PROPERTY_TYPE_FLOAT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2873a70508c66e874f0c63f0b5b6f53ba1a57490d4e64d4d793f9f778499b259d"></a>ANBOX_VHAL_PROPERTY_TYPE_FLOAT_VEC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2873a70508c66e874f0c63f0b5b6f53ba37c5c3df7a215570319a33e68b9401f1"></a>ANBOX_VHAL_PROPERTY_TYPE_BYTES&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2873a70508c66e874f0c63f0b5b6f53ba31dd0aab985ee0691d9433adbcc4b7b8"></a>ANBOX_VHAL_PROPERTY_TYPE_MIXED&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01382">1382</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1386,7 +1681,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a542c5a12a80bf1d2aaa235ad133a7a34a3b2e6191088f6251546e79c85d91ab7a"></a>ANBOX_VIDEO_CODEC_TYPE_H264&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01331">1331</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01561">1561</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1412,7 +1707,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00630">630</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00663">663</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1434,7 +1729,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="aa57c05de4b297da1d028ceedcaafb876a23726397ea7e2ab1593fe88369850ed9"></a>ANBOX_VIDEO_PIXEL_FORMAT_YUV420P&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01340">1340</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01570">1570</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1467,7 +1762,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00740">740</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00773">773</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1493,7 +1788,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a4a78e8148254ece4b4c92a4d3816f680af6d041d14f6a7e8a76ae3f0eae6b9814"></a>GALILEO&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00693">693</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00726">726</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1532,7 +1827,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="aa479d42a9b58eeeae0cf06b90bc7ba08a363bd6e65ff817b80413c402bf2d2c8e"></a>STATE_GLO_TOD_KNOWN&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00717">717</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00750">750</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1542,7 +1837,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4f1595be0889d3a0a4532aea0648ca74.html">anbox-platform-sdk</a></li><li class="navelem"><a class="el" href="types_8h.html">types.h</a></li>
-    <li class="footer">Generated on Wed Nov 8 2023 14:30:12 for anbox-platform-sdk by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Thu Feb 8 2024 19:02:01 for anbox-platform-sdk by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

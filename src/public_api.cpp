@@ -418,4 +418,20 @@ ANBOX_EXPORT int anbox_video_decoder_retrieve_image(const AnboxVideoDecoder* dec
 
   return decoder->instance->retrieve_image(img);
 }
+
+ANBOX_EXPORT const AnboxVhalConnector* anbox_platform_get_vhal_connector(const AnboxPlatform* platform) {
+  if (!platform || !platform->vhal_connector.instance)
+    return nullptr;
+  return &platform->vhal_connector;
+}
+
+ANBOX_EXPORT int anbox_vhal_connector_set_callbacks(const AnboxVhalConnector* connector,
+                                                    const AnboxVhalConnectorCallbacks& callbacks,
+                                                    void* user_data) {
+  if (!connector || !connector->instance)
+    return -EINVAL;
+  connector->instance->set_callbacks(callbacks, user_data);
+  return 0;
+}
+
 } // extern "C"

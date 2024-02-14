@@ -30,6 +30,7 @@
 #include "anbox-platform-sdk/camera_processor.h"
 #include "anbox-platform-sdk/anbox_proxy.h"
 #include "anbox-platform-sdk/video_decoder.h"
+#include "anbox-platform-sdk/experimental/vhal_connector.h"
 
 namespace anbox {
 
@@ -138,6 +139,18 @@ class Platform {
   }
 
   /**
+   * @brief Retrieve the platform vhal connector instance.
+   *
+   * A platform is supposed to have only a single vhal connector
+   * instance at all time.
+   *
+   * @return a valid VhalConnector instance, otherwise NULL when an error occured,
+   * or the platform does not support connecting to the vhal service
+   * running in Android container.
+   */
+  virtual VhalConnector* vhal_connector() { return &vhal_connector_; }
+
+  /**
    * @brief Query the platform for its ready status
    *
    * A platform is supposed to have different status during initialization
@@ -229,6 +242,7 @@ class Platform {
 
  private:
   AnboxProxy  anbox_proxy_;
+  VhalConnector vhal_connector_;
 };
 }
 

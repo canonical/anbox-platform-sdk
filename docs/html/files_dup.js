@@ -25,6 +25,7 @@ var files_dup =
     ] ],
     [ "types.h", "types_8h.html", "types_8h" ],
     [ "version.h", "version_8h.html", "version_8h" ],
+    [ "vhal_connector.h", "vhal__connector_8h.html", "vhal__connector_8h" ],
     [ "video_decoder.h", "video__decoder_8h.html", [
       [ "VideoDecoder", "classanbox_1_1VideoDecoder.html", "classanbox_1_1VideoDecoder" ]
     ] ]

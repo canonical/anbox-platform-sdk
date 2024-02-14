@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.20.0</span>
+   &#160;<span id="projectnumber">1.21.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -109,6 +109,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1ee96e86683ca845ef6df9817e982336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Present the given buffer to a display or other output.  <a href="classanbox_1_1GraphicsProcessor.html#a1ee96e86683ca845ef6df9817e982336">More...</a><br /></td></tr>
 <tr class="separator:a1ee96e86683ca845ef6df9817e982336"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87713a66bf61c032230d549ed7443c74"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1GraphicsProcessor.html#a87713a66bf61c032230d549ed7443c74">create_buffer</a> (uint32_t width, uint32_t height, uint32_t format, uint32_t usage, <a class="el" href="structAnboxGraphicsBuffer2.html">AnboxGraphicsBuffer2</a> **buffer)</td></tr>
+<tr class="memdesc:a87713a66bf61c032230d549ed7443c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a buffer with the given specifications.  <a href="classanbox_1_1GraphicsProcessor.html#a87713a66bf61c032230d549ed7443c74">More...</a><br /></td></tr>
 <tr class="separator:a87713a66bf61c032230d549ed7443c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -275,7 +276,20 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00186">186</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p>Create a buffer with the given specifications. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>Width of the buffer in pixels </td></tr>
+    <tr><td class="paramname">height</td><td>Height of the buffer in pixels </td></tr>
+    <tr><td class="paramname">format</td><td>Color format of the buffer. See AnboxGraphicsBufferPixelFormat </td></tr>
+    <tr><td class="paramname">usage</td><td>Usage flags of the buffer. See AnboxGraphicsBufferUsage </td></tr>
+    <tr><td class="paramname">buffer</td><td>Allocated buffer object. See <a class="el" href="structAnboxGraphicsBuffer2.html" title="Graphics buffer.">AnboxGraphicsBuffer2</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the buffer was successfully created, false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00199">199</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -600,6 +614,7 @@ Public Member Functions</h2></td></tr>
 <p>Used when graphics implementation is ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_DIRECT_RENDERING or ANBOX_GRAPHICS_IMPLEMENTATION_TYPE_HOST_RENDERING</p>
 <p>This method will be called by Anbox when Android has submitted a new buffer to be presented on the output managed by the platform. The buffer contains information about dimension, format and the handle to the buffer itself.</p>
 <p>The buffer handle is opaque to Anbox and it's up to the platform to map it to something which it can handle. For all GPUs the handle is a file descriptor of a DMA buffer (see <a href="https://www.kernel.org/doc/html/latest/driver-api/dma-buf.html">https://www.kernel.org/doc/html/latest/driver-api/dma-buf.html</a>) which can imported into APIs like EGL or Vulkan for further processing. For software rendering the handle is a memfd (<a href="https://man7.org/linux/man-pages/man2/memfd_create.2.html">https://man7.org/linux/man-pages/man2/memfd_create.2.html</a>) pointing to a shared memory region containing the buffer data.</p>
+<p>Passed buffer objects are reused by the caller so the given address for the <a class="el" href="structAnboxGraphicsBuffer2.html" title="Graphics buffer.">AnboxGraphicsBuffer2</a> can be used as identifier for cache implementations.</p>
 <p>When the platform has finished presenting the buffer it has to call the provided callback in order to return the buffer to Anbox for reuse. Not returning the buffer will cause the rendering pipeline to become stuck.</p>
 <p>If <a class="el" href="classanbox_1_1GraphicsProcessor.html#ac796f7d8812c19e8528bdde7754892ac" title="Present the given buffer to a display or other output.">present</a> returns false it is expected that #callback is not called by the implementation.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -611,7 +626,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the buffer was accepted for presentation, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00180">180</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00183">183</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -624,7 +639,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceanbox.html">anbox</a></li><li class="navelem"><a class="el" href="classanbox_1_1GraphicsProcessor.html">GraphicsProcessor</a></li>
-    <li class="footer">Generated on Wed Nov 8 2023 14:30:13 for anbox-platform-sdk by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Thu Feb 8 2024 19:02:02 for anbox-platform-sdk by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -228,9 +228,40 @@ typedef enum {
   ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGB_565 = 4,
   /** 32 bit BGRA **/
   ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_8888 = 5,
-  /** **/
-  ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGBA_16F = 6,
+  /** Floating point 64 bit ABGR **/
+  ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_16161616F = 6,
+  /** Floating point 64 bit ABGR **/
+  ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGBA_16F = ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_16161616F,
+  /** 16 bit GR **/
+  ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_GR_88 = 7,
+  /** 32 bit ABGR **/
+  ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_2101010 = 8,
+  /** 3 plane YCbCr **/
+  ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_YUV_420 = 9,
+  /** 8 bit R **/
+  ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_R_8 = 10,
+  /** 2 plane YCbCr **/
+  ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_NV_12 = 11,
+  /** 32 bt XBGR **/
+  ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_XBGR_8888 = 12,
+  /** 3 plane YCbCr */
+  ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_YVU_420 = 13,
 } AnboxGraphicsBufferPixelFormat;
+
+/**
+ * Usage flags for graphics buffers
+ */
+typedef enum {
+  ANBOX_GRAPHICS_BUFFER_USAGE_UNKNOWN = 0,
+  /** Buffer is meant to be used for display scanout **/
+  ANBOX_GRAPHICS_BUFFER_USAGE_SCANOUT = (1 << 0),
+  /** Buffer is meant to be used for rendering **/
+  ANBOX_GRAPHICS_BUFFER_USAGE_RENDERING = (1 << 1),
+  /** Buffer can be mapped and written to from CPU **/
+  ANBOX_GRAPHICS_BUFFER_USAGE_WRITE = (1 << 2),
+  /** Buffer is linear, not tiled **/
+  ANBOX_GRAPHICS_BUFFER_USAGE_LINEAR = (1 << 3),
+} AnboxGraphicsBufferUsage;
 
 /**
  * @brief Graphics buffer
@@ -326,6 +357,8 @@ typedef enum {
   ANBOX_GRAPHICS_VULKAN_VERSION_1_1 = 2,
   /* Vulkan 1.2 */
   ANBOX_GRAPHICS_VULKAN_VERSION_1_2 = 3,
+  /* Vulkan 1.3 */
+  ANBOX_GRAPHICS_VULKAN_VERSION_1_3 = 4,
 } AnboxGraphicsVulkanVersion;
 
 /**
@@ -1323,6 +1356,203 @@ struct AnboxSensorData {
     /** Sensor data for humidity */
     float           humidity;
   };
+};
+
+/**
+ * @brief AnboxVhalPropertyStatus describes the status of a VHAL property.
+ * @note Experimental - subject to change.
+ *
+ * Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2700-2720">VehiclePropertyStatus</a>
+ * enum of the Android VHAL interface.
+ */
+typedef enum {
+  ANBOX_VHAL_PROPERTY_STATUS_AVAILABLE   = 0x0,
+  ANBOX_VHAL_PROPERTY_STATUS_UNAVAILABLE = 0x1,
+  ANBOX_VHAL_PROPERTY_STATUS_ERROR       = 0x2,
+} AnboxVhalPropertyStatus;
+
+/**
+ * @brief AnboxVhalPropertyType describes the type of the value stored by a VHAL
+ * property.
+ * @note Experimental - subject to change.
+ *
+ * Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=19-42">VehiclePropertyType</a>
+ * enum of the Android VHAL interface.
+ */
+typedef enum {
+  ANBOX_VHAL_PROPERTY_TYPE_STRING    = 0x00100000,
+  ANBOX_VHAL_PROPERTY_TYPE_BOOLEAN   = 0x00200000,
+  ANBOX_VHAL_PROPERTY_TYPE_INT32     = 0x00400000,
+  ANBOX_VHAL_PROPERTY_TYPE_INT32_VEC = 0x00410000,
+  ANBOX_VHAL_PROPERTY_TYPE_INT64     = 0x00500000,
+  ANBOX_VHAL_PROPERTY_TYPE_INT64_VEC = 0x00510000,
+  ANBOX_VHAL_PROPERTY_TYPE_FLOAT     = 0x00600000,
+  ANBOX_VHAL_PROPERTY_TYPE_FLOAT_VEC = 0x00610000,
+  ANBOX_VHAL_PROPERTY_TYPE_BYTES     = 0x00700000,
+  ANBOX_VHAL_PROPERTY_TYPE_MIXED     = 0x00e00000,
+} AnboxVhalPropertyType;
+
+/**
+ * @brief AnboxVhalPropertyAccess describes if the property is read, write, or
+ * both.
+ * @note Experimental - subject to change.
+ *
+ * Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2686-2698">VehiclePropertyAccess</a>
+ * enum of the Android VHAL interface.
+ */
+typedef enum {
+  ANBOX_VHAL_PROPERTY_ACCESS_NONE       = 0x00,
+  ANBOX_VHAL_PROPERTY_ACCESS_READ       = 0x01,
+  ANBOX_VHAL_PROPERTY_ACCESS_WRITE      = 0x02,
+  ANBOX_VHAL_PROPERTY_ACCESS_READ_WRITE = 0x03,
+} AnboxVhalPropertyAccess;
+
+/**
+ * @brief AnboxVhalPropertyChangeMode describes how the property changes.
+ * @note Experimental - subject to change.
+ *
+ * Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2657-2684">VehiclePropertyChangeMode</a> enum of the Android VHAL interface.
+ */
+typedef enum {
+  ANBOX_VHAL_PROPERTY_CHANGE_MODE_STATIC     = 0x00,
+  ANBOX_VHAL_PROPERTY_CHANGE_MODE_ON_CHANGE  = 0x01,
+  ANBOX_VHAL_PROPERTY_CHANGE_MODE_CONTINUOUS = 0x02,
+} AnboxVhalPropertyChangeMode;
+
+/**
+ * @brief AnboxVhalPropertyValue describes the current value of a VHAL property,
+ * as returned by a get call to the Android VHAL.
+ * @note Experimental - subject to change.
+ *
+ * Matches the <a
+ * href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2862-2911">VehiclePropValue</a>
+ * struct of the Android VHAL interface.
+ */
+struct AnboxVhalPropertyValue {
+  int64_t timestamp;
+  int32_t area_id;
+  int32_t prop;
+  AnboxVhalPropertyStatus status;
+  uint32_t int32_values_size;
+  int32_t* int32_values;
+  uint32_t float_values_size;
+  float* float_values;
+  uint32_t int64_values_size;
+  int64_t* int64_values;
+  uint32_t bytes_size;
+  uint8_t* bytes;
+  uint32_t string_value_size;
+  char* string_value;
+};
+
+/**
+ * @brief AnboxVhalAreaConfig describes the configuration of a given area id
+ * for a VHAL property.
+ * @note Experimental - subject to change.
+ *
+ * Matches the <a
+ * href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2797-2819">VehicleAreaConfig</a>
+ * struct of the Android VHAL interface.
+ */
+struct AnboxVhalAreaConfig {
+  int32_t area_id;
+  int32_t min_int32_value;
+  int32_t max_int32_value;
+  int64_t min_int64_value;
+  int64_t max_int64_value;
+  float min_float_value;
+  float max_float_value;
+};
+
+/**
+ * @brief AnboxVhalPropertyConfig describes the configuration of a VHAL
+ * property.
+ * @note Experimental - subject to change.
+ *
+ * Matches the <a
+ * href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2821-2860">VehiclePropConfig</a>
+ * struct of the Android VHAL interface.
+ *
+ * The AnboxVhalPropertyType value_type is not part of Android VHAL interface
+ * but is added to AnboxVhalPropertyValue for convenience.
+ */
+struct AnboxVhalPropertyConfig {
+  int32_t prop;
+  AnboxVhalPropertyType value_type;
+  AnboxVhalPropertyAccess access;
+  AnboxVhalPropertyChangeMode change_mode;
+  uint32_t area_configs_size;
+  AnboxVhalAreaConfig* area_configs;
+  uint32_t config_array_size;
+  int32_t* config_array;
+  uint32_t config_string_size;
+  char* config_string;
+  float min_sample_rate;
+  float max_sample_rate;
+};
+
+/**
+ * @brief AnboxVhalAnswerStatus describes the return status of a request sent to
+ * the Android VHAL.
+ * @note Experimental - subject to change.
+ */
+typedef enum {
+  ANBOX_VHAL_ANSWER_STATUS_OK = 0,
+  /** The request was invalid. */
+  ANBOX_VHAL_ANSWER_STATUS_INVALID = 1,
+  /** An unknown or internal error occurred. */
+  ANBOX_VHAL_ANSWER_STATUS_UNKNOWN = 2,
+} AnboxVhalAnswerStatus;
+
+/**
+ * @brief AnboxVhalAnswerGet contains the answer for a GetAllPropConfigs or
+ * GetPropConfigs request sent to the Android VHAL.
+ * @note Experimental - subject to change.
+ */
+struct AnboxVhalAnswerGetConfigs {
+  uint32_t configs_size;
+  AnboxVhalPropertyConfig* configs;
+};
+
+/**
+ * @brief AnboxVhalCommandGet describes a get request to send to the Android
+ * VHAL.
+ * @note Experimental - subject to change.
+ */
+struct AnboxVhalCommandGet {
+  int32_t prop_id;
+  int32_t area_id;
+  uint32_t int32_values_size;
+  int32_t* int32_values;
+  uint32_t float_values_size;
+  float* float_values;
+  uint32_t int64_values_size;
+  int64_t* int64_values;
+  uint32_t bytes_size;
+  uint8_t* bytes;
+  uint32_t string_value_size;
+  char* string_value;
+};
+
+/**
+ * @brief AnboxVhalCommandSet describes a set request to send to the Android
+ * VHAL.
+ * @note Experimental - subject to change.
+ */
+struct AnboxVhalCommandSet {
+  int32_t prop_id;
+  int32_t area_id;
+  AnboxVhalPropertyStatus status;
+  uint32_t int32_values_size;
+  int32_t* int32_values;
+  uint32_t float_values_size;
+  float* float_values;
+  uint32_t int64_values_size;
+  int64_t* int64_values;
+  uint32_t bytes_size;
+  uint8_t* bytes;
+  uint32_t string_value_size;
+  char* string_value;
 };
 
 /**

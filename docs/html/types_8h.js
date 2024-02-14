@@ -24,6 +24,12 @@ var types_8h =
     [ "AnboxInputEvent", "structAnboxInputEvent.html", "structAnboxInputEvent" ],
     [ "AnboxSensorVector", "structAnboxSensorVector.html", "structAnboxSensorVector" ],
     [ "AnboxSensorData", "structAnboxSensorData.html", "structAnboxSensorData" ],
+    [ "AnboxVhalPropertyValue", "structAnboxVhalPropertyValue.html", "structAnboxVhalPropertyValue" ],
+    [ "AnboxVhalAreaConfig", "structAnboxVhalAreaConfig.html", "structAnboxVhalAreaConfig" ],
+    [ "AnboxVhalPropertyConfig", "structAnboxVhalPropertyConfig.html", "structAnboxVhalPropertyConfig" ],
+    [ "AnboxVhalAnswerGetConfigs", "structAnboxVhalAnswerGetConfigs.html", "structAnboxVhalAnswerGetConfigs" ],
+    [ "AnboxVhalCommandGet", "structAnboxVhalCommandGet.html", "structAnboxVhalCommandGet" ],
+    [ "AnboxVhalCommandSet", "structAnboxVhalCommandSet.html", "structAnboxVhalCommandSet" ],
     [ "AnboxVideoDecoderConfig", "structAnboxVideoDecoderConfig.html", "structAnboxVideoDecoderConfig" ],
     [ "AnboxVideoImage", "structAnboxVideoImage.html", "structAnboxVideoImage" ],
     [ "ANBOX_GRAPHICS_BUFFER_MAX_PLANES", "types_8h.html#ae77a3a2edf1ece63c9f377608743f9a2", null ],
@@ -86,7 +92,22 @@ var types_8h =
       [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGB_888", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6baefa16789a8ac4fc07bb9b31bc06454f4", null ],
       [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGB_565", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6bae2e23cc7b4af531c9c991c6b9605cb0b", null ],
       [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_8888", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6baa6ab15ddd91da7c99ef83e89136b4bef", null ],
-      [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGBA_16F", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba0a175356a485d926e0d4c33b54c63129", null ]
+      [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_16161616F", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6bac3af7df7c6d7aa9f8b03543f90c6ccd4", null ],
+      [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_RGBA_16F", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba0a175356a485d926e0d4c33b54c63129", null ],
+      [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_GR_88", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba5080f4e5ab28ced6ed3768dcb3cd51c6", null ],
+      [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_ABGR_2101010", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6baaa1b15cbdf58143c3ead2927560f6783", null ],
+      [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_YUV_420", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba2002868264531fbcd7930cb32ba7bc54", null ],
+      [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_R_8", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba50d5c2582c6439d24febf799841d4075", null ],
+      [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_NV_12", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba680c3086ac46b96aa4bdc2d55cd953e5", null ],
+      [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_XBGR_8888", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6ba564d502083b537b1edba24c63d5ffaff", null ],
+      [ "ANBOX_GRAPHICS_BUFFER_PIXEL_FORMAT_YVU_420", "types_8h.html#a1f6a9fcd4c1d1566ef8dbb68ab990c6bac9c1ee267807d664dcf344b1fe54aff0", null ]
+    ] ],
+    [ "AnboxGraphicsBufferUsage", "types_8h.html#a02236902f72304a93ae54ebdc1f31fdf", [
+      [ "ANBOX_GRAPHICS_BUFFER_USAGE_UNKNOWN", "types_8h.html#a02236902f72304a93ae54ebdc1f31fdfa4763f0fddc464e2920687e6a6994a053", null ],
+      [ "ANBOX_GRAPHICS_BUFFER_USAGE_SCANOUT", "types_8h.html#a02236902f72304a93ae54ebdc1f31fdfad7da8a2479b21f47c22a7448888479b1", null ],
+      [ "ANBOX_GRAPHICS_BUFFER_USAGE_RENDERING", "types_8h.html#a02236902f72304a93ae54ebdc1f31fdfa75b7b1c50d7f2e03098f9676f6de7d4e", null ],
+      [ "ANBOX_GRAPHICS_BUFFER_USAGE_WRITE", "types_8h.html#a02236902f72304a93ae54ebdc1f31fdfa204956a369ca849330a4bc1da1b5df52", null ],
+      [ "ANBOX_GRAPHICS_BUFFER_USAGE_LINEAR", "types_8h.html#a02236902f72304a93ae54ebdc1f31fdfaf1e7d70e092effda11964b799d054211", null ]
     ] ],
     [ "AnboxGraphicsFlipMode", "types_8h.html#a88f5eeb5ba694f6e2520594a53182338", [
       [ "FLIP_MODE_NONE", "types_8h.html#a88f5eeb5ba694f6e2520594a53182338a3789be1711031a849e5b3a5d82bc0d1c", null ],
@@ -112,7 +133,8 @@ var types_8h =
       [ "ANBOX_GRAPHICS_VULKAN_VERSION_UNSUPPORTED", "types_8h.html#ad941286af23aaea1407072ec3e1a5174a19a8e059da20e8590c2fe83e7b87e07e", null ],
       [ "ANBOX_GRAPHICS_VULKAN_VERSION_1_0", "types_8h.html#ad941286af23aaea1407072ec3e1a5174ae3935993143da32460e330f31c30ff11", null ],
       [ "ANBOX_GRAPHICS_VULKAN_VERSION_1_1", "types_8h.html#ad941286af23aaea1407072ec3e1a5174ab3664dbd146259436dddd9d8dc8b57b4", null ],
-      [ "ANBOX_GRAPHICS_VULKAN_VERSION_1_2", "types_8h.html#ad941286af23aaea1407072ec3e1a5174ae33ed43152dc7ff8eb2d2cdc2e3f7443", null ]
+      [ "ANBOX_GRAPHICS_VULKAN_VERSION_1_2", "types_8h.html#ad941286af23aaea1407072ec3e1a5174ae33ed43152dc7ff8eb2d2cdc2e3f7443", null ],
+      [ "ANBOX_GRAPHICS_VULKAN_VERSION_1_3", "types_8h.html#ad941286af23aaea1407072ec3e1a5174a0c970c8ce5763b0824b82bd4124672c4", null ]
     ] ],
     [ "AnboxInputDeviceType", "types_8h.html#adf8cc8125db12fa5f76b530f2f9939bc", [
       [ "POINTER", "types_8h.html#adf8cc8125db12fa5f76b530f2f9939bcaad7dce162b42b3d0968ffa57fad43512", null ],
@@ -174,6 +196,39 @@ var types_8h =
       [ "ANBOX_TRACE_EVENT_PHASE_END", "types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fda27088717c857b98f0e816dd00f600944", null ],
       [ "ANBOX_TRACE_EVENT_PHASE_INSTANT", "types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fda767bcf528f27ff2788aa75b66ba212bc", null ],
       [ "ANBOX_TRACE_EVENT_PHASE_COUNTER", "types_8h.html#a2d5fe2482c9d323c9d80c37b84ba11fda0dd1730f273e7289aa3ea124893322d6", null ]
+    ] ],
+    [ "AnboxVhalAnswerStatus", "types_8h.html#abc49ac8ac8984077d933a3b35cafaae3", [
+      [ "ANBOX_VHAL_ANSWER_STATUS_OK", "types_8h.html#abc49ac8ac8984077d933a3b35cafaae3a6ee202335de808fe8b1f4d98ae3fd429", null ],
+      [ "ANBOX_VHAL_ANSWER_STATUS_INVALID", "types_8h.html#abc49ac8ac8984077d933a3b35cafaae3accd9c4775c5b57b3078ca0555ea570dc", null ],
+      [ "ANBOX_VHAL_ANSWER_STATUS_UNKNOWN", "types_8h.html#abc49ac8ac8984077d933a3b35cafaae3a3f42dbdfdfb76a16ee503f3eff6d9120", null ]
+    ] ],
+    [ "AnboxVhalPropertyAccess", "types_8h.html#a93558518d5a26641ddd6fcbe3a3bb30b", [
+      [ "ANBOX_VHAL_PROPERTY_ACCESS_NONE", "types_8h.html#a93558518d5a26641ddd6fcbe3a3bb30badc0d4712bbe4d087f9462909f861c939", null ],
+      [ "ANBOX_VHAL_PROPERTY_ACCESS_READ", "types_8h.html#a93558518d5a26641ddd6fcbe3a3bb30ba50c6ca33ac27c393c1e9b2af2f785455", null ],
+      [ "ANBOX_VHAL_PROPERTY_ACCESS_WRITE", "types_8h.html#a93558518d5a26641ddd6fcbe3a3bb30ba2a246d168f41344706cd27ced459c40b", null ],
+      [ "ANBOX_VHAL_PROPERTY_ACCESS_READ_WRITE", "types_8h.html#a93558518d5a26641ddd6fcbe3a3bb30bab8e93f5f86204c0e727b732c7c754a6b", null ]
+    ] ],
+    [ "AnboxVhalPropertyChangeMode", "types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300", [
+      [ "ANBOX_VHAL_PROPERTY_CHANGE_MODE_STATIC", "types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300abf322b42dd89ff4395ca0a5f7eaa2457", null ],
+      [ "ANBOX_VHAL_PROPERTY_CHANGE_MODE_ON_CHANGE", "types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300a3ad4ccb552d81aa473d45136351f16b7", null ],
+      [ "ANBOX_VHAL_PROPERTY_CHANGE_MODE_CONTINUOUS", "types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300a2a4958a641c2520683b0241a61cd9a32", null ]
+    ] ],
+    [ "AnboxVhalPropertyStatus", "types_8h.html#aa74622c326573d620cf0352fd56769ba", [
+      [ "ANBOX_VHAL_PROPERTY_STATUS_AVAILABLE", "types_8h.html#aa74622c326573d620cf0352fd56769baa402572117a8de1fe25e8d5ee2fca9d67", null ],
+      [ "ANBOX_VHAL_PROPERTY_STATUS_UNAVAILABLE", "types_8h.html#aa74622c326573d620cf0352fd56769baa7cdad9a43b940537fec1f11078a7de97", null ],
+      [ "ANBOX_VHAL_PROPERTY_STATUS_ERROR", "types_8h.html#aa74622c326573d620cf0352fd56769baa33e23ec3585b8c9ce034fa851b991238", null ]
+    ] ],
+    [ "AnboxVhalPropertyType", "types_8h.html#a2873a70508c66e874f0c63f0b5b6f53b", [
+      [ "ANBOX_VHAL_PROPERTY_TYPE_STRING", "types_8h.html#a2873a70508c66e874f0c63f0b5b6f53bab4baa4fb76acda31d17598077e0aa1d0", null ],
+      [ "ANBOX_VHAL_PROPERTY_TYPE_BOOLEAN", "types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba95f516f5e7620cc3d9ad1b4b67e720f5", null ],
+      [ "ANBOX_VHAL_PROPERTY_TYPE_INT32", "types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba23ba37ebfab1dc648cc587bebb060464", null ],
+      [ "ANBOX_VHAL_PROPERTY_TYPE_INT32_VEC", "types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba7b82c9af51121949f1e1c85a498b9ac4", null ],
+      [ "ANBOX_VHAL_PROPERTY_TYPE_INT64", "types_8h.html#a2873a70508c66e874f0c63f0b5b6f53baed8692140ee19491cdeeb78b9e4eb621", null ],
+      [ "ANBOX_VHAL_PROPERTY_TYPE_INT64_VEC", "types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba4652eeb08e196d4417dfed932b2853e6", null ],
+      [ "ANBOX_VHAL_PROPERTY_TYPE_FLOAT", "types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba9e2197661677008161ea3e9db004581a", null ],
+      [ "ANBOX_VHAL_PROPERTY_TYPE_FLOAT_VEC", "types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba1a57490d4e64d4d793f9f778499b259d", null ],
+      [ "ANBOX_VHAL_PROPERTY_TYPE_BYTES", "types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba37c5c3df7a215570319a33e68b9401f1", null ],
+      [ "ANBOX_VHAL_PROPERTY_TYPE_MIXED", "types_8h.html#a2873a70508c66e874f0c63f0b5b6f53ba31dd0aab985ee0691d9433adbcc4b7b8", null ]
     ] ],
     [ "AnboxVideoCodecType", "types_8h.html#a542c5a12a80bf1d2aaa235ad133a7a34", [
       [ "ANBOX_VIDEO_CODEC_TYPE_UNKNOWN", "types_8h.html#a542c5a12a80bf1d2aaa235ad133a7a34ad5fd480e1929f838fd1d87ce75d207cf", null ],
