@@ -113,8 +113,9 @@ class VhalConnector {
    * @param result structure holding the returned configs.
    * The 'configs' member will be allocated on the heap, as well as all arrays
    * for each AnboxVhalPropertyConfig (area_configs, config_array,
-   * config_string). The caller is responsible for freeing their memory after
-   * the call.
+   * config_string, prop_name). Each AnboxVhalAreaConfig has the area_names
+   * array also allocated on the heap. The caller is responsible for freeing
+   * their memory after the call.
    * @return ANBOX_VHAL_ANSWER_STATUS_OK on success, error code otherwise.
    */
   AnboxVhalAnswerStatus get_all_prop_configs(
@@ -134,8 +135,8 @@ class VhalConnector {
    * @param result structure holding the returned configs.
    * The 'configs' member will be allocated on the heap, as well as all arrays
    * for each AnboxVhalPropertyConfig (area_configs, config_array,
-   * config_string). The caller is responsible for freeing their memory after
-   * the call.
+   * config_string, prop_name). The caller is responsible for freeing their
+   * memory after the call.
    * @return ANBOX_VHAL_ANSWER_STATUS_OK on success, error code otherwise.
    */
   AnboxVhalAnswerStatus get_prop_configs(int32_t *props, size_t props_size,

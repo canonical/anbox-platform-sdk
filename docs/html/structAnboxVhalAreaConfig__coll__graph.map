@@ -1,6 +1,8 @@
 <map id="AnboxVhalAreaConfig" name="AnboxVhalAreaConfig">
-<area shape="rect" id="node1" title="AnboxVhalAreaConfig describes the configuration of a given area id for a VHAL property." alt="" coords="104,175,267,252"/>
+<area shape="rect" id="node1" title="AnboxVhalAreaConfig describes the configuration of a given area id for a VHAL property." alt="" coords="231,175,393,252"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,56,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="152,5,219,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="311,5,377,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="132,5,183,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="279,5,345,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="437,5,504,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="588,5,663,83"/>
 </map>

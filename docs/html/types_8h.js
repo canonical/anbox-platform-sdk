@@ -39,6 +39,7 @@ var types_8h =
     [ "MAX_SENSOR_DATA_LENGTH", "types_8h.html#a51695587bec89af1d4f5c4f4c0034036", null ],
     [ "MAX_STRING_LENGTH", "types_8h.html#a6789ebc0df71a8ef76bfbb4fb5f74aad", null ],
     [ "MAX_VECTOR_DATA_LENGTH", "types_8h.html#a5a477e0aed144f1e05330c05e7d9ac50", null ],
+    [ "MAX_VHAL_AREA_NAME_LENGTH", "types_8h.html#a6dfffcc9812f64a4af47def8ba8a9b99", null ],
     [ "AnboxNativeHandle", "types_8h.html#aeee9b5b982892491ddbda9f7933d4232", null ],
     [ "AnboxTracerAddEventFunc", "types_8h.html#a9d68cc180fd50c073914cf9099d747af", null ],
     [ "AnboxTracerGetCategoryEnabledFunc", "types_8h.html#a64a55e2b49dede6ae033b3d6eb7941ee", null ],

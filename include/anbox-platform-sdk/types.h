@@ -30,6 +30,7 @@
 
 #define MAX_NAME_LENGTH 100
 #define MAX_STRING_LENGTH 256
+#define MAX_VHAL_AREA_NAME_LENGTH 32
 
 /**
  * @brief A particular elf section that Anbox needs various information
@@ -1453,6 +1454,11 @@ struct AnboxVhalPropertyValue {
  * Matches the <a
  * href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2797-2819">VehicleAreaConfig</a>
  * struct of the Android VHAL interface.
+ *
+ * The following properties are not part of the Android VHAL interface but are
+ * added for convenience:
+ * - area_names: array of area names making up the area, as defined for each
+ *   area type, e.g. [ROW_1_LEFT, ROW_1_RIGHT].
  */
 struct AnboxVhalAreaConfig {
   int32_t area_id;
@@ -1462,6 +1468,8 @@ struct AnboxVhalAreaConfig {
   int64_t max_int64_value;
   float min_float_value;
   float max_float_value;
+  uint32_t area_names_size;
+  char (*area_names)[MAX_VHAL_AREA_NAME_LENGTH];
 };
 
 /**
@@ -1473,8 +1481,11 @@ struct AnboxVhalAreaConfig {
  * href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2821-2860">VehiclePropConfig</a>
  * struct of the Android VHAL interface.
  *
- * The AnboxVhalPropertyType value_type is not part of Android VHAL interface
- * but is added to AnboxVhalPropertyValue for convenience.
+ * The following properties are not part of the Android VHAL interface but are
+ * added for convenience:
+ * - value_type: value type of the property
+ * - prop_name: name of the property, as defined in the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=119-2324">
+ * VehicleProperty</a> enum, e.g.: INFO_VIN, HVAC_TEMPERATURE_CURRENT
  */
 struct AnboxVhalPropertyConfig {
   int32_t prop;
@@ -1489,6 +1500,8 @@ struct AnboxVhalPropertyConfig {
   char* config_string;
   float min_sample_rate;
   float max_sample_rate;
+  uint32_t prop_name_size;
+  char* prop_name;
 };
 
 /**

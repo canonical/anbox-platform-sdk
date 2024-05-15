@@ -11,5 +11,7 @@ var structAnboxVhalPropertyConfig =
     [ "max_sample_rate", "structAnboxVhalPropertyConfig.html#aad2238e8abb24dfaeb965978705bbf25", null ],
     [ "min_sample_rate", "structAnboxVhalPropertyConfig.html#a4e6ae1b86414f31ec57d334cb8337a3f", null ],
     [ "prop", "structAnboxVhalPropertyConfig.html#ab2c8179977adc726a8fd2a7ecfab8ab2", null ],
+    [ "prop_name", "structAnboxVhalPropertyConfig.html#af1c941a2a9ec9205632c10f2211e8523", null ],
+    [ "prop_name_size", "structAnboxVhalPropertyConfig.html#af2682b009d47081b6b99f5e96ec1aaa3", null ],
     [ "value_type", "structAnboxVhalPropertyConfig.html#a4fc5549b8104edd6fcb7502dc6d79a63", null ]
 ];
