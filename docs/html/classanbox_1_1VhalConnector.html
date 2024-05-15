@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.21.0</span>
+   &#160;<span id="projectnumber">1.22.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -232,9 +232,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>ANBOX_VHAL_ANSWER_STATUS_OK on success, error code otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="vhal__connector_8h_source.html#l00161">161</a> of file <a class="el" href="vhal__connector_8h_source.html">vhal_connector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vhal__connector_8h_source.html#l00162">162</a> of file <a class="el" href="vhal__connector_8h_source.html">vhal_connector.h</a>.</p>
 
-<p class="reference">References <a class="el" href="types_8h_source.html#l01502">ANBOX_VHAL_ANSWER_STATUS_INVALID</a>, and <a class="el" href="vhal__connector_8h_source.html#l00079">AnboxVhalConnectorCallbacks::get_callback</a>.</p>
+<p class="reference">References <a class="el" href="types_8h_source.html#l01515">ANBOX_VHAL_ANSWER_STATUS_INVALID</a>, and <a class="el" href="vhal__connector_8h_source.html#l00079">AnboxVhalConnectorCallbacks::get_callback</a>.</p>
 
 </div>
 </div>
@@ -266,15 +266,15 @@ Public Member Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Experimental - subject to change.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">result</td><td>structure holding the returned configs. The 'configs' member will be allocated on the heap, as well as all arrays for each <a class="el" href="structAnboxVhalPropertyConfig.html" title="AnboxVhalPropertyConfig describes the configuration of a VHAL property.">AnboxVhalPropertyConfig</a> (area_configs, config_array, config_string). The caller is responsible for freeing their memory after the call. </td></tr>
+    <tr><td class="paramname">result</td><td>structure holding the returned configs. The 'configs' member will be allocated on the heap, as well as all arrays for each <a class="el" href="structAnboxVhalPropertyConfig.html" title="AnboxVhalPropertyConfig describes the configuration of a VHAL property.">AnboxVhalPropertyConfig</a> (area_configs, config_array, config_string, prop_name). Each <a class="el" href="structAnboxVhalAreaConfig.html" title="AnboxVhalAreaConfig describes the configuration of a given area id for a VHAL property.">AnboxVhalAreaConfig</a> has the area_names array also allocated on the heap. The caller is responsible for freeing their memory after the call. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>ANBOX_VHAL_ANSWER_STATUS_OK on success, error code otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="vhal__connector_8h_source.html#l00120">120</a> of file <a class="el" href="vhal__connector_8h_source.html">vhal_connector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vhal__connector_8h_source.html#l00121">121</a> of file <a class="el" href="vhal__connector_8h_source.html">vhal_connector.h</a>.</p>
 
-<p class="reference">References <a class="el" href="types_8h_source.html#l01502">ANBOX_VHAL_ANSWER_STATUS_INVALID</a>, and <a class="el" href="vhal__connector_8h_source.html#l00076">AnboxVhalConnectorCallbacks::get_all_prop_configs_callback</a>.</p>
+<p class="reference">References <a class="el" href="types_8h_source.html#l01515">ANBOX_VHAL_ANSWER_STATUS_INVALID</a>, and <a class="el" href="vhal__connector_8h_source.html#l00076">AnboxVhalConnectorCallbacks::get_all_prop_configs_callback</a>.</p>
 
 </div>
 </div>
@@ -324,15 +324,15 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">props</td><td>pointer to an array of size props_size. The array will not be modified by the callee. </td></tr>
     <tr><td class="paramname">props_size</td><td>Size of the array pointed to by props. </td></tr>
-    <tr><td class="paramname">result</td><td>structure holding the returned configs. The 'configs' member will be allocated on the heap, as well as all arrays for each <a class="el" href="structAnboxVhalPropertyConfig.html" title="AnboxVhalPropertyConfig describes the configuration of a VHAL property.">AnboxVhalPropertyConfig</a> (area_configs, config_array, config_string). The caller is responsible for freeing their memory after the call. </td></tr>
+    <tr><td class="paramname">result</td><td>structure holding the returned configs. The 'configs' member will be allocated on the heap, as well as all arrays for each <a class="el" href="structAnboxVhalPropertyConfig.html" title="AnboxVhalPropertyConfig describes the configuration of a VHAL property.">AnboxVhalPropertyConfig</a> (area_configs, config_array, config_string, prop_name). The caller is responsible for freeing their memory after the call. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>ANBOX_VHAL_ANSWER_STATUS_OK on success, error code otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="vhal__connector_8h_source.html#l00141">141</a> of file <a class="el" href="vhal__connector_8h_source.html">vhal_connector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vhal__connector_8h_source.html#l00142">142</a> of file <a class="el" href="vhal__connector_8h_source.html">vhal_connector.h</a>.</p>
 
-<p class="reference">References <a class="el" href="types_8h_source.html#l01502">ANBOX_VHAL_ANSWER_STATUS_INVALID</a>, and <a class="el" href="vhal__connector_8h_source.html#l00077">AnboxVhalConnectorCallbacks::get_prop_configs_callback</a>.</p>
+<p class="reference">References <a class="el" href="types_8h_source.html#l01515">ANBOX_VHAL_ANSWER_STATUS_INVALID</a>, and <a class="el" href="vhal__connector_8h_source.html#l00077">AnboxVhalConnectorCallbacks::get_prop_configs_callback</a>.</p>
 
 </div>
 </div>
@@ -429,9 +429,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>ANBOX_VHAL_ANSWER_STATUS_OK on success, error code otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="vhal__connector_8h_source.html#l00176">176</a> of file <a class="el" href="vhal__connector_8h_source.html">vhal_connector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vhal__connector_8h_source.html#l00177">177</a> of file <a class="el" href="vhal__connector_8h_source.html">vhal_connector.h</a>.</p>
 
-<p class="reference">References <a class="el" href="types_8h_source.html#l01502">ANBOX_VHAL_ANSWER_STATUS_INVALID</a>, and <a class="el" href="vhal__connector_8h_source.html#l00080">AnboxVhalConnectorCallbacks::set_callback</a>.</p>
+<p class="reference">References <a class="el" href="types_8h_source.html#l01515">ANBOX_VHAL_ANSWER_STATUS_INVALID</a>, and <a class="el" href="vhal__connector_8h_source.html#l00080">AnboxVhalConnectorCallbacks::set_callback</a>.</p>
 
 </div>
 </div>
@@ -479,7 +479,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vhal__connector_8h_source.html#l00189">189</a> of file <a class="el" href="vhal__connector_8h_source.html">vhal_connector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vhal__connector_8h_source.html#l00190">190</a> of file <a class="el" href="vhal__connector_8h_source.html">vhal_connector.h</a>.</p>
 
 </div>
 </div>
@@ -492,7 +492,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceanbox.html">anbox</a></li><li class="navelem"><a class="el" href="classanbox_1_1VhalConnector.html">VhalConnector</a></li>
-    <li class="footer">Generated on Thu Feb 8 2024 19:02:02 for anbox-platform-sdk by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Wed May 8 2024 20:58:30 for anbox-platform-sdk by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
