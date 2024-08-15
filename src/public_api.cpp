@@ -382,6 +382,16 @@ ANBOX_EXPORT int anbox_proxy_set_trigger_action_callback(const AnboxProxy* anbox
   return  0;
 }
 
+ANBOX_EXPORT int anbox_proxy_set_create_adb_connection_callback(const AnboxProxy* anbox_proxy,
+                                                                const AnboxCreateADBConnectionCallback& callback,
+                                                                void* user_data) {
+  if (!anbox_proxy || !anbox_proxy->instance)
+    return -EINVAL;
+  anbox_proxy->instance->set_create_adb_connection_callback(callback, user_data);
+  return  0;
+}
+
+
 ANBOX_EXPORT int anbox_video_decoder_release(AnboxVideoDecoder* decoder) {
   if (!decoder || !decoder->instance)
     return -EINVAL;

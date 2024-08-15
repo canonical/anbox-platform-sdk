@@ -25,7 +25,6 @@
 /**
  * @brief AnboxVhalGetAllPropConfigsCallback is invoked when requesting all prop
  * configs.
- * @note Experimental - subject to change.
  * @return ANBOX_VHAL_ANSWER_STATUS_OK on success, error code otherwise.
  */
 typedef AnboxVhalAnswerStatus (*AnboxVhalGetAllPropConfigsCallback)(
@@ -34,7 +33,6 @@ typedef AnboxVhalAnswerStatus (*AnboxVhalGetAllPropConfigsCallback)(
 /**
  * @brief AnboxVhalGetPropConfigsCallback is invoked when requesting some prop
  * configs.
- * @note Experimental - subject to change.
  * @return ANBOX_VHAL_ANSWER_STATUS_OK on success, error code otherwise.
  */
 typedef AnboxVhalAnswerStatus (*AnboxVhalGetPropConfigsCallback)(
@@ -44,14 +42,12 @@ typedef AnboxVhalAnswerStatus (*AnboxVhalGetPropConfigsCallback)(
 /**
  * @brief AnboxVhalIsAvailableCallback is invoked when checking if the Android
  * VHAL is supported and available.
- * @note Experimental - subject to change.
  * @return 1 if available, 0 otherwise
  */
 typedef bool (*AnboxVhalIsAvailableCallback)(void *user_data);
 
 /**
  * @brief AnboxVhalGetCallback is invoked when requesting property values.
- * @note Experimental - subject to change.
  * @return ANBOX_VHAL_ANSWER_STATUS_OK on success, error code otherwise.
  */
 typedef AnboxVhalAnswerStatus (*AnboxVhalGetCallback)(
@@ -61,7 +57,6 @@ typedef AnboxVhalAnswerStatus (*AnboxVhalGetCallback)(
 /**
  * @brief AnboxVhalSetCallback is invoked when requesting to change property
  * values.
- * @note Experimental - subject to change.
  * @return ANBOX_VHAL_ANSWER_STATUS_OK on success, error code otherwise.
  */
 typedef AnboxVhalAnswerStatus (*AnboxVhalSetCallback)(
@@ -70,7 +65,6 @@ typedef AnboxVhalAnswerStatus (*AnboxVhalSetCallback)(
 /**
  * @brief AnboxVhalConnectorCallbacks is the structure holding all VHAL-related
  * callbacks.
- * @note Experimental - subject to change.
  */
 struct AnboxVhalConnectorCallbacks {
   AnboxVhalGetAllPropConfigsCallback get_all_prop_configs_callback = nullptr;
@@ -85,7 +79,6 @@ namespace anbox {
  * @brief Connects a platform with the Android VHAL interface. The platform can
  * invoke the callbacks which are provided by Anbox on demand when answering a
  * request.
- * @note Experimental - subject to change.
  */
 class VhalConnector {
  public:
@@ -96,7 +89,6 @@ class VhalConnector {
 
   /**
    * @brief Check if the Android VHAL is supported and available.
-   * @note Experimental - subject to change.
    *
    * @return true if available, false otherwise
    */
@@ -108,7 +100,6 @@ class VhalConnector {
 
   /**
    * @brief Get all property configs.
-   * @note Experimental - subject to change.
    *
    * @param result structure holding the returned configs.
    * The 'configs' member will be allocated on the heap, as well as all arrays
@@ -127,7 +118,6 @@ class VhalConnector {
 
   /**
    * @brief Get requested property configs.
-   * @note Experimental - subject to change.
    *
    * @param props pointer to an array of size props_size. The array will not be
    * modified by the callee.
@@ -149,7 +139,6 @@ class VhalConnector {
 
   /**
    * @brief Get the requested value
-   * @note Experimental - subject to change.
    *
    * @param request structure holding the Get request. It will not be modified
    * by the callee.
@@ -168,7 +157,6 @@ class VhalConnector {
 
   /**
    * @brief Set the requested value
-   * @note Experimental - subject to change.
    *
    * @param request structure holding the Set request. It will not be modified
    * by the callee.
@@ -182,7 +170,6 @@ class VhalConnector {
 
   /**
    * @brief Set all VHAL-related callbacks.
-   * @note Experimental - subject to change.
    *
    * @param callbacks Structure holding all the callbacks.
    * @param user_data Pointer that will be passed to callbacks.

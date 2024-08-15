@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.22.0</span>
+   &#160;<span id="projectnumber">1.23.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -69,7 +69,7 @@ $(document).ready(function(){initNavTree('public__api_8h.html',''); initResizabl
 <area shape="rect" title=" " alt="" coords="587,5,687,32"/>
 <area shape="rect" href="platform_8h.html" title=" " alt="" coords="561,80,712,121"/>
 <area shape="rect" href="types_8h.html" title=" " alt="" coords="232,348,383,389"/>
-<area shape="rect" href="common_8h.html" title=" " alt="" coords="1384,169,1535,211"/>
+<area shape="rect" href="common_8h.html" title=" " alt="" coords="1308,169,1459,211"/>
 <area shape="rect" href="version_8h.html" title=" " alt="" coords="1048,348,1199,389"/>
 <area shape="rect" href="audio__processor_8h.html" title=" " alt="" coords="732,259,883,300"/>
 <area shape="rect" href="input__processor_8h.html" title=" " alt="" coords="5,259,156,300"/>
@@ -79,7 +79,7 @@ $(document).ready(function(){initNavTree('public__api_8h.html',''); initResizabl
 <area shape="rect" href="camera__processor_8h.html" title=" " alt="" coords="552,259,708,300"/>
 <area shape="rect" href="anbox__proxy_8h.html" title=" " alt="" coords="907,259,1057,300"/>
 <area shape="rect" href="video__decoder_8h.html" title=" " alt="" coords="619,169,769,211"/>
-<area shape="rect" href="vhal__connector_8h.html" title=" " alt="" coords="1133,169,1359,211"/>
+<area shape="rect" href="vhal__connector_8h.html" title=" " alt="" coords="1133,169,1284,211"/>
 <area shape="rect" title=" " alt="" coords="896,437,967,464"/>
 <area shape="rect" title=" " alt="" coords="507,437,582,464"/>
 <area shape="rect" title=" " alt="" coords="797,437,871,464"/>
@@ -221,6 +221,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:aa8a83a323a5ca7b3a5327d624f5f76f4"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#aa8a83a323a5ca7b3a5327d624f5f76f4">AnboxProxySetTriggerActionCallbackFunc</a>) (const <a class="el" href="structAnboxProxy.html">AnboxProxy</a> *proxy, const <a class="el" href="anbox__proxy_8h.html#aadadbe551a4580965514e87fa82592be">AnboxTriggerActionCallback</a> &amp;callback, void *user_data)</td></tr>
 <tr class="memdesc:aa8a83a323a5ca7b3a5327d624f5f76f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows the platform to trigger an action within the Android system.  <a href="public__api_8h.html#aa8a83a323a5ca7b3a5327d624f5f76f4">More...</a><br /></td></tr>
 <tr class="separator:aa8a83a323a5ca7b3a5327d624f5f76f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a656566bcb87a127bec4f94de7c112bec"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#a656566bcb87a127bec4f94de7c112bec">AnboxProxySetCreateAdbConnectionCallbackFunc</a>) (const <a class="el" href="structAnboxProxy.html">AnboxProxy</a> *proxy, const <a class="el" href="anbox__proxy_8h.html#a07d06c3ac422b31c2c8a7159ede4d843">AnboxCreateADBConnectionCallback</a> &amp;callback, void *user_data)</td></tr>
+<tr class="memdesc:a656566bcb87a127bec4f94de7c112bec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows the platform to create ADB connection.  <a href="public__api_8h.html#a656566bcb87a127bec4f94de7c112bec">More...</a><br /></td></tr>
+<tr class="separator:a656566bcb87a127bec4f94de7c112bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3669448d232be08b521e6a8fcd7ed38f"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="public__api_8h.html#a3669448d232be08b521e6a8fcd7ed38f">AnboxGpsProcessorStartFunc</a>) (const <a class="el" href="structAnboxGpsProcessor.html">AnboxGpsProcessor</a> *gps_processor)</td></tr>
 <tr class="memdesc:a3669448d232be08b521e6a8fcd7ed38f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request Gps processor to start forwarding the GPS data to Android container.  <a href="public__api_8h.html#a3669448d232be08b521e6a8fcd7ed38f">More...</a><br /></td></tr>
 <tr class="separator:a3669448d232be08b521e6a8fcd7ed38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -395,7 +398,7 @@ Typedefs</h2></td></tr>
 <p>Close a camera device. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1CameraProcessor.html#a051e33b1fa7c073e03bdec0e083bb8df" title="Close the camera device for not receiving video frames from the platform further.">anbox::CameraProcessor::close_device</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00518">518</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00529">529</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -414,7 +417,7 @@ Typedefs</h2></td></tr>
 <p>Open a camera device. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1CameraProcessor.html#a2cebe02bbd5e4ff9fa3e8767ed56f8d9" title="Get camera device specifications of the platform.">anbox::CameraProcessor::get_device_specs</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00496">496</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00507">507</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -433,7 +436,7 @@ Typedefs</h2></td></tr>
 <p>Inject a video frame into <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a>. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1CameraProcessor.html#a3df209945228c24cb648edbededee688" title="Inject a video frame into AnboxPlatform.">anbox::CameraProcessor::inject_frame</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00539">539</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00550">550</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -452,7 +455,7 @@ Typedefs</h2></td></tr>
 <p>Open a camera device. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1CameraProcessor.html#a967b5d97bae600bb3d73d9d5477abf30" title="Open the camera device and being ready for posting video frames to Android container.">anbox::CameraProcessor::open_device</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00507">507</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00518">518</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -471,7 +474,7 @@ Typedefs</h2></td></tr>
 <p>Read next available video frame. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1CameraProcessor.html#ae759e0e80a73be14c394954d4a0f81f4" title="Read next available video frame.">anbox::CameraProcessor::read_frame</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00528">528</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00539">539</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -490,7 +493,7 @@ Typedefs</h2></td></tr>
 <p>Inject a gps data into <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a>. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1SensorProcessor.html#aaade1f91f7fce6e904d6f358c8162bb5" title="Inject sensor data into AnboxPlatform.">anbox::SensorProcessor::inject_data</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00486">486</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00497">497</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -509,7 +512,7 @@ Typedefs</h2></td></tr>
 <p>Read next available gps data. </p>
 <p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1GpsProcessor.html#a9b2339b4ef39c25b2bbabaa220b1276e" title="Read available gps data.">anbox::GpsProcessor::read_data</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00475">475</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00486">486</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -528,7 +531,7 @@ Typedefs</h2></td></tr>
 <p>Request Gps processor to start forwarding the GPS data to Android container. </p>
 <p>The function prototype for C API function which stands for the C++ method of anbox::GpsProcessor::start </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00457">457</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00468">468</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -547,7 +550,7 @@ Typedefs</h2></td></tr>
 <p>Request Gps processor to stop forwarding the GPS data to Android container. </p>
 <p>The function prototype for C API function which stands for the C++ method of anbox::GpsProcessor::stop </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00466">466</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00477">477</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -962,7 +965,7 @@ Typedefs</h2></td></tr>
 <p>Retrieve the platform vhal connector instance. </p>
 <p>Every platform implementation has to export a symbol named 'anbox_platform_get_vhal_connector' implementing the AnboxPlatformGetVhalConnector function prototype. </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00590">590</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00601">601</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -1156,6 +1159,25 @@ Typedefs</h2></td></tr>
 
 </div>
 </div>
+<a id="a656566bcb87a127bec4f94de7c112bec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a656566bcb87a127bec4f94de7c112bec">&#9670;&nbsp;</a></span>AnboxProxySetCreateAdbConnectionCallbackFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* AnboxProxySetCreateAdbConnectionCallbackFunc) (const <a class="el" href="structAnboxProxy.html">AnboxProxy</a> *proxy, const <a class="el" href="anbox__proxy_8h.html#a07d06c3ac422b31c2c8a7159ede4d843">AnboxCreateADBConnectionCallback</a> &amp;callback, void *user_data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows the platform to create ADB connection. </p>
+<p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1AnboxProxy.html#a47c2c3a3f7ed92a01bf0a3808412a685" title="Set the ADB connection creation callback.">anbox::AnboxProxy::set_create_adb_connection_callback</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00457">457</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+
+</div>
+</div>
 <a id="aa8a83a323a5ca7b3a5327d624f5f76f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8a83a323a5ca7b3a5327d624f5f76f4">&#9670;&nbsp;</a></span>AnboxProxySetTriggerActionCallbackFunc</h2>
 
@@ -1169,7 +1191,7 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Allows the platform to trigger an action within the Android system. </p>
-<p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1AnboxProxy.html#a3a3889387a1bda7ec1af5ad193affb62" title="Trigger an action which is executed within the Android container.">anbox::AnboxProxy::trigger_action</a> </p>
+<p>The function prototype for C API function which stands for the C++ method of <a class="el" href="classanbox_1_1AnboxProxy.html#a8c1439694607607aa52f610f30cdff25" title="Set the trigger action callback.">anbox::AnboxProxy::set_trigger_action_callback</a> </p>
 
 <p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00446">446</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
@@ -1266,7 +1288,7 @@ Typedefs</h2></td></tr>
 <p>Allows the platform to call Android VHAL functions through Anbox. </p>
 <p>The function prototype for C API function which stands for the C++ method of anbox::AnboxVhalConnector::set_callbacks </p>
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00599">599</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00610">610</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -1282,7 +1304,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00554">554</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00565">565</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -1298,7 +1320,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00572">572</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00583">583</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -1314,7 +1336,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00563">563</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00574">574</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -1330,7 +1352,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00545">545</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00556">556</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -1346,7 +1368,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00581">581</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__api_8h_source.html#l00592">592</a> of file <a class="el" href="public__api_8h_source.html">public_api.h</a>.</p>
 
 </div>
 </div>
@@ -1356,7 +1378,7 @@ Typedefs</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4f1595be0889d3a0a4532aea0648ca74.html">anbox-platform-sdk</a></li><li class="navelem"><a class="el" href="public__api_8h.html">public_api.h</a></li>
-    <li class="footer">Generated on Wed May 8 2024 20:58:29 for anbox-platform-sdk by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Thu Aug 15 2024 19:05:00 for anbox-platform-sdk by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

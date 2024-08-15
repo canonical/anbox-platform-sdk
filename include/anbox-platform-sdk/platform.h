@@ -30,7 +30,7 @@
 #include "anbox-platform-sdk/camera_processor.h"
 #include "anbox-platform-sdk/anbox_proxy.h"
 #include "anbox-platform-sdk/video_decoder.h"
-#include "anbox-platform-sdk/experimental/vhal_connector.h"
+#include "anbox-platform-sdk/vhal_connector.h"
 
 namespace anbox {
 

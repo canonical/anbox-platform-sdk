@@ -440,12 +440,23 @@ typedef int (*AnboxProxySendMessageFunc)(const AnboxProxy* anbox_proxy,
  * @brief Allows the platform to trigger an action within the Android system
  *
  * The function prototype for C API function which stands for
- * the C++ method of anbox::AnboxProxy::trigger_action
+ * the C++ method of anbox::AnboxProxy::set_trigger_action_callback
  *
  **/
 typedef int (*AnboxProxySetTriggerActionCallbackFunc)(const AnboxProxy* proxy,
                                                       const AnboxTriggerActionCallback& callback,
                                                       void* user_data);
+
+/**
+ * @brief Allows the platform to create ADB connection
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::AnboxProxy::set_create_adb_connection_callback
+ *
+ **/
+typedef int (*AnboxProxySetCreateAdbConnectionCallbackFunc)(const AnboxProxy* proxy,
+                                                            const AnboxCreateADBConnectionCallback& callback,
+                                                            void* user_data);
 
 /**
  * @brief Request Gps processor to start forwarding the GPS data to Android container.

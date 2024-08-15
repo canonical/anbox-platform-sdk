@@ -10,6 +10,7 @@ var types_8h =
     [ "AnboxDirectGraphicsConfiguration", "structAnboxDirectGraphicsConfiguration.html", "structAnboxDirectGraphicsConfiguration" ],
     [ "AnboxPlatformConfigurationItemInfo", "structAnboxPlatformConfigurationItemInfo.html", "structAnboxPlatformConfigurationItemInfo" ],
     [ "AnboxPlatformConfigurationInfo", "structAnboxPlatformConfigurationInfo.html", "structAnboxPlatformConfigurationInfo" ],
+    [ "AnboxAndroidSystemProperties", "structAnboxAndroidSystemProperties.html", "structAnboxAndroidSystemProperties" ],
     [ "AnboxPlatformConfiguration", "structAnboxPlatformConfiguration.html", null ],
     [ "AnboxPlatformDescriptor", "structAnboxPlatformDescriptor.html", "structAnboxPlatformDescriptor" ],
     [ "AnboxCameraSpec", "structAnboxCameraSpec.html", "structAnboxCameraSpec" ],
@@ -162,6 +163,8 @@ var types_8h =
       [ "CONTAINER_BASE_UID", "types_8h.html#a0ea2707450519d64745267790a9f2f0da436501b8c76f4bad0846307087daea19", null ],
       [ "VULKAN_ICD_PATH", "types_8h.html#a0ea2707450519d64745267790a9f2f0daa5fc8504f3d6b627bdba6cf7c57f3b17", null ],
       [ "DRM_RENDER_NODE_PATH", "types_8h.html#a0ea2707450519d64745267790a9f2f0da57643484e14afec792c943d9eb701ff7", null ],
+      [ "ENABLE_SW_SYNC_SUPPORT", "types_8h.html#a0ea2707450519d64745267790a9f2f0da1901892aabfd0b0ad1fdfb5d62312456", null ],
+      [ "ANDROID_SYSTEM_PROPERTIES", "types_8h.html#a0ea2707450519d64745267790a9f2f0da3537d0b55906c19c3dd049579d175004", null ],
       [ "PLATFORM_CONFIGURATION_ID_START", "types_8h.html#a0ea2707450519d64745267790a9f2f0dae1f035c40b68d56fe2220442ab8ddd67", null ],
       [ "PLATFORM_CONFIGURATION_ID_END", "types_8h.html#a0ea2707450519d64745267790a9f2f0dafcb3ebeabdd44ab7c5765b5e35d511c1", null ]
     ] ],

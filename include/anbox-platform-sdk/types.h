@@ -438,6 +438,20 @@ typedef struct {
 } AnboxPlatformConfigurationInfo;
 
 /**
+ * @brief AnboxAndroidSystemProperties describes the Android system properties
+ *        provided by a platform to be forwarded to the Android container.
+ *
+ * This enables the platform implmentation to provide required Android
+ * system properties for itself to function within Anbox runtime.
+ */
+typedef struct {
+  /* Number of Android system properties required by a platform*/
+  uint16_t size;
+  /* Array of Android system properties */
+  const char** properties;
+} AnboxAndroidSystemProperties;
+
+/**
  * @brief AnboxPlatformConfigurationKey specifies configuration items which
  * allow to influence the behavior and configuration of Anbox.
  */
@@ -595,6 +609,22 @@ typedef enum {
    * The value of this configuration item is of type `const char*`
    */
   DRM_RENDER_NODE_PATH = 14,
+
+  /*
+   * Whether the platform requires support for sw sync primitives or not.
+   *
+   * The value of this configuration item is of type `uint8_t` which
+   * represents a boolean value, encoded as 8 bit unsigned integer type
+   * (uint8_t) where 0 = false and > 0 = true
+   */
+  ENABLE_SW_SYNC_SUPPORT = 15,
+
+  /*
+   * Android system properties required to forward to Android container
+   *
+   * The value of this configuration item is of type `AnboxAndroidSystemProperties`
+   */
+  ANDROID_SYSTEM_PROPERTIES = 16,
 
   /*
    * The API defines a range of platform specific configuration items which can be
@@ -1361,7 +1391,6 @@ struct AnboxSensorData {
 
 /**
  * @brief AnboxVhalPropertyStatus describes the status of a VHAL property.
- * @note Experimental - subject to change.
  *
  * Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2700-2720">VehiclePropertyStatus</a>
  * enum of the Android VHAL interface.
@@ -1375,7 +1404,6 @@ typedef enum {
 /**
  * @brief AnboxVhalPropertyType describes the type of the value stored by a VHAL
  * property.
- * @note Experimental - subject to change.
  *
  * Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=19-42">VehiclePropertyType</a>
  * enum of the Android VHAL interface.
@@ -1396,7 +1424,6 @@ typedef enum {
 /**
  * @brief AnboxVhalPropertyAccess describes if the property is read, write, or
  * both.
- * @note Experimental - subject to change.
  *
  * Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2686-2698">VehiclePropertyAccess</a>
  * enum of the Android VHAL interface.
@@ -1410,7 +1437,6 @@ typedef enum {
 
 /**
  * @brief AnboxVhalPropertyChangeMode describes how the property changes.
- * @note Experimental - subject to change.
  *
  * Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2657-2684">VehiclePropertyChangeMode</a> enum of the Android VHAL interface.
  */
@@ -1423,7 +1449,6 @@ typedef enum {
 /**
  * @brief AnboxVhalPropertyValue describes the current value of a VHAL property,
  * as returned by a get call to the Android VHAL.
- * @note Experimental - subject to change.
  *
  * Matches the <a
  * href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2862-2911">VehiclePropValue</a>
@@ -1449,7 +1474,6 @@ struct AnboxVhalPropertyValue {
 /**
  * @brief AnboxVhalAreaConfig describes the configuration of a given area id
  * for a VHAL property.
- * @note Experimental - subject to change.
  *
  * Matches the <a
  * href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2797-2819">VehicleAreaConfig</a>
@@ -1475,7 +1499,6 @@ struct AnboxVhalAreaConfig {
 /**
  * @brief AnboxVhalPropertyConfig describes the configuration of a VHAL
  * property.
- * @note Experimental - subject to change.
  *
  * Matches the <a
  * href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2821-2860">VehiclePropConfig</a>
@@ -1507,7 +1530,6 @@ struct AnboxVhalPropertyConfig {
 /**
  * @brief AnboxVhalAnswerStatus describes the return status of a request sent to
  * the Android VHAL.
- * @note Experimental - subject to change.
  */
 typedef enum {
   ANBOX_VHAL_ANSWER_STATUS_OK = 0,
@@ -1520,7 +1542,6 @@ typedef enum {
 /**
  * @brief AnboxVhalAnswerGet contains the answer for a GetAllPropConfigs or
  * GetPropConfigs request sent to the Android VHAL.
- * @note Experimental - subject to change.
  */
 struct AnboxVhalAnswerGetConfigs {
   uint32_t configs_size;
@@ -1530,7 +1551,6 @@ struct AnboxVhalAnswerGetConfigs {
 /**
  * @brief AnboxVhalCommandGet describes a get request to send to the Android
  * VHAL.
- * @note Experimental - subject to change.
  */
 struct AnboxVhalCommandGet {
   int32_t prop_id;
@@ -1550,7 +1570,6 @@ struct AnboxVhalCommandGet {
 /**
  * @brief AnboxVhalCommandSet describes a set request to send to the Android
  * VHAL.
- * @note Experimental - subject to change.
  */
 struct AnboxVhalCommandSet {
   int32_t prop_id;

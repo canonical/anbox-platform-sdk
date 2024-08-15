@@ -1,7 +1,7 @@
 <map id="platform.h" name="platform.h">
 <area shape="rect" id="node1" title=" " alt="" coords="591,5,682,32"/>
 <area shape="rect" id="node2" href="$types_8h.html" title=" " alt="" coords="232,259,383,300"/>
-<area shape="rect" id="node9" href="$common_8h.html" title=" " alt="" coords="1384,80,1535,121"/>
+<area shape="rect" id="node9" href="$common_8h.html" title=" " alt="" coords="1308,80,1459,121"/>
 <area shape="rect" id="node10" href="$version_8h.html" title=" " alt="" coords="1048,259,1199,300"/>
 <area shape="rect" id="node11" href="$audio__processor_8h.html" title=" " alt="" coords="732,169,883,211"/>
 <area shape="rect" id="node13" href="$input__processor_8h.html" title=" " alt="" coords="5,169,156,211"/>
@@ -11,7 +11,7 @@
 <area shape="rect" id="node18" href="$camera__processor_8h.html" title=" " alt="" coords="552,169,708,211"/>
 <area shape="rect" id="node19" href="$anbox__proxy_8h.html" title=" " alt="" coords="907,169,1057,211"/>
 <area shape="rect" id="node20" href="$video__decoder_8h.html" title=" " alt="" coords="619,80,769,121"/>
-<area shape="rect" id="node21" href="$vhal__connector_8h.html" title=" " alt="" coords="1133,80,1359,121"/>
+<area shape="rect" id="node21" href="$vhal__connector_8h.html" title=" " alt="" coords="1133,80,1284,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="896,348,967,375"/>
 <area shape="rect" id="node4" title=" " alt="" coords="507,348,582,375"/>
 <area shape="rect" id="node5" title=" " alt="" coords="797,348,871,375"/>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.22.0</span>
+   &#160;<span id="projectnumber">1.23.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -136,6 +136,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxPlatformConfigurationItemInfo.html">AnboxPlatformConfigurationItemInfo</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxPlatformConfigurationInfo.html">AnboxPlatformConfigurationInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxAndroidSystemProperties.html">AnboxAndroidSystemProperties</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAnboxAndroidSystemProperties.html" title="AnboxAndroidSystemProperties describes the Android system properties provided by a platform to be for...">AnboxAndroidSystemProperties</a> describes the Android system properties provided by a platform to be forwarded to the Android container.  <a href="structAnboxAndroidSystemProperties.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnboxPlatformConfiguration.html">AnboxPlatformConfiguration</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAnboxPlatformConfiguration.html" title="AnboxPlatformConfiguration holds platform configuration options which Anbox supplies to the platform ...">AnboxPlatformConfiguration</a> holds platform configuration options which Anbox supplies to the platform implementation at initialization time.  <a href="structAnboxPlatformConfiguration.html#details">More...</a><br /></td></tr>
@@ -396,6 +399,10 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="types_8h.html#a0ea2707450519d64745267790a9f2f0daa5fc8504f3d6b627bdba6cf7c57f3b17">VULKAN_ICD_PATH</a> = 13
 , <br />
 &#160;&#160;<a class="el" href="types_8h.html#a0ea2707450519d64745267790a9f2f0da57643484e14afec792c943d9eb701ff7">DRM_RENDER_NODE_PATH</a> = 14
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a0ea2707450519d64745267790a9f2f0da1901892aabfd0b0ad1fdfb5d62312456">ENABLE_SW_SYNC_SUPPORT</a> = 15
+, <br />
+&#160;&#160;<a class="el" href="types_8h.html#a0ea2707450519d64745267790a9f2f0da3537d0b55906c19c3dd049579d175004">ANDROID_SYSTEM_PROPERTIES</a> = 16
 , <br />
 &#160;&#160;<a class="el" href="types_8h.html#a0ea2707450519d64745267790a9f2f0dae1f035c40b68d56fe2220442ab8ddd67">PLATFORM_CONFIGURATION_ID_START</a> = 1000
 , <br />
@@ -750,7 +757,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00719">719</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00749">749</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -782,7 +789,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01277">1277</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01307">1307</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -814,7 +821,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01278">1278</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01308">1308</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -881,7 +888,7 @@ Enumerations</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01671">1671</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01690">1690</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -899,7 +906,7 @@ Enumerations</h2></td></tr>
 
 <p>Method prototype which will be used to determine if the given tracing category is enabled for tracing inside the Anbox runtime. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01631">1631</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01650">1650</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -916,7 +923,7 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 <p>Milliseconds since January 1, 1970 </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00722">722</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00752">752</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1038,7 +1045,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00686">686</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00716">716</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1062,7 +1069,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00676">676</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00706">706</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1088,7 +1095,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00638">638</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00668">668</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1116,7 +1123,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01148">1148</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01178">1178</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1220,7 +1227,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01179">1179</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01209">1209</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1291,7 +1298,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01192">1192</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01222">1222</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1344,7 +1351,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01245">1245</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01275">1275</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1420,11 +1427,13 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0da436501b8c76f4bad0846307087daea19"></a>CONTAINER_BASE_UID&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0daa5fc8504f3d6b627bdba6cf7c57f3b17"></a>VULKAN_ICD_PATH&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0da57643484e14afec792c943d9eb701ff7"></a>DRM_RENDER_NODE_PATH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0da1901892aabfd0b0ad1fdfb5d62312456"></a>ENABLE_SW_SYNC_SUPPORT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0da3537d0b55906c19c3dd049579d175004"></a>ANDROID_SYSTEM_PROPERTIES&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0dae1f035c40b68d56fe2220442ab8ddd67"></a>PLATFORM_CONFIGURATION_ID_START&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0ea2707450519d64745267790a9f2f0dafcb3ebeabdd44ab7c5765b5e35d511c1"></a>PLATFORM_CONFIGURATION_ID_END&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00444">444</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00458">458</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1452,7 +1461,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00650">650</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00680">680</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1492,7 +1501,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01283">1283</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01313">1313</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1519,7 +1528,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a9e881174b3514989ddda05b70ca5cc60ad885db41158571fc04ddbdac8447ed75"></a>ANBOX_TRACE_EVENT_ARG_TYPE_COPY_STRING&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01647">1647</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01666">1666</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1543,7 +1552,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a2d5fe2482c9d323c9d80c37b84ba11fda0dd1730f273e7289aa3ea124893322d6"></a>ANBOX_TRACE_EVENT_PHASE_COUNTER&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01636">1636</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01655">1655</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1560,7 +1569,6 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p>AnboxVhalAnswerStatus describes the return status of a request sent to the Android VHAL. </p>
-<dl class="section note"><dt>Note</dt><dd>Experimental - subject to change. </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abc49ac8ac8984077d933a3b35cafaae3a6ee202335de808fe8b1f4d98ae3fd429"></a>ANBOX_VHAL_ANSWER_STATUS_OK&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abc49ac8ac8984077d933a3b35cafaae3accd9c4775c5b57b3078ca0555ea570dc"></a>ANBOX_VHAL_ANSWER_STATUS_INVALID&#160;</td><td class="fielddoc"><p>The request was invalid. </p>
@@ -1569,7 +1577,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01512">1512</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01534">1534</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1586,7 +1594,6 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p>AnboxVhalPropertyAccess describes if the property is read, write, or both. </p>
-<dl class="section note"><dt>Note</dt><dd>Experimental - subject to change.</dd></dl>
 <p>Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2686-2698">VehiclePropertyAccess</a> enum of the Android VHAL interface. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a93558518d5a26641ddd6fcbe3a3bb30badc0d4712bbe4d087f9462909f861c939"></a>ANBOX_VHAL_PROPERTY_ACCESS_NONE&#160;</td><td class="fielddoc"></td></tr>
@@ -1595,7 +1602,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a93558518d5a26641ddd6fcbe3a3bb30bab8e93f5f86204c0e727b732c7c754a6b"></a>ANBOX_VHAL_PROPERTY_ACCESS_READ_WRITE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01404">1404</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01431">1431</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1612,7 +1619,6 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p>AnboxVhalPropertyChangeMode describes how the property changes. </p>
-<dl class="section note"><dt>Note</dt><dd>Experimental - subject to change.</dd></dl>
 <p>Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2657-2684">VehiclePropertyChangeMode</a> enum of the Android VHAL interface. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a01593d6e5aedaa69ce2d7b9176f73300abf322b42dd89ff4395ca0a5f7eaa2457"></a>ANBOX_VHAL_PROPERTY_CHANGE_MODE_STATIC&#160;</td><td class="fielddoc"></td></tr>
@@ -1620,7 +1626,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a01593d6e5aedaa69ce2d7b9176f73300a2a4958a641c2520683b0241a61cd9a32"></a>ANBOX_VHAL_PROPERTY_CHANGE_MODE_CONTINUOUS&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01417">1417</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01443">1443</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1637,7 +1643,6 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p>AnboxVhalPropertyStatus describes the status of a VHAL property. </p>
-<dl class="section note"><dt>Note</dt><dd>Experimental - subject to change.</dd></dl>
 <p>Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2700-2720">VehiclePropertyStatus</a> enum of the Android VHAL interface. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa74622c326573d620cf0352fd56769baa402572117a8de1fe25e8d5ee2fca9d67"></a>ANBOX_VHAL_PROPERTY_STATUS_AVAILABLE&#160;</td><td class="fielddoc"></td></tr>
@@ -1645,7 +1650,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="aa74622c326573d620cf0352fd56769baa33e23ec3585b8c9ce034fa851b991238"></a>ANBOX_VHAL_PROPERTY_STATUS_ERROR&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01369">1369</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01398">1398</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1662,7 +1667,6 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p>AnboxVhalPropertyType describes the type of the value stored by a VHAL property. </p>
-<dl class="section note"><dt>Note</dt><dd>Experimental - subject to change.</dd></dl>
 <p>Matches the <a href="https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=19-42">VehiclePropertyType</a> enum of the Android VHAL interface. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2873a70508c66e874f0c63f0b5b6f53bab4baa4fb76acda31d17598077e0aa1d0"></a>ANBOX_VHAL_PROPERTY_TYPE_STRING&#160;</td><td class="fielddoc"></td></tr>
@@ -1677,7 +1681,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a2873a70508c66e874f0c63f0b5b6f53ba31dd0aab985ee0691d9433adbcc4b7b8"></a>ANBOX_VHAL_PROPERTY_TYPE_MIXED&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01383">1383</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01411">1411</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1699,7 +1703,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a542c5a12a80bf1d2aaa235ad133a7a34a3b2e6191088f6251546e79c85d91ab7a"></a>ANBOX_VIDEO_CODEC_TYPE_H264&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01574">1574</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01593">1593</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1725,7 +1729,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00664">664</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00694">694</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1747,7 +1751,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="aa57c05de4b297da1d028ceedcaafb876a23726397ea7e2ab1593fe88369850ed9"></a>ANBOX_VIDEO_PIXEL_FORMAT_YUV420P&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01583">1583</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l01602">1602</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1780,7 +1784,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00774">774</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00804">804</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1806,7 +1810,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a4a78e8148254ece4b4c92a4d3816f680af6d041d14f6a7e8a76ae3f0eae6b9814"></a>GALILEO&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00727">727</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00757">757</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1845,7 +1849,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="aa479d42a9b58eeeae0cf06b90bc7ba08a363bd6e65ff817b80413c402bf2d2c8e"></a>STATE_GLO_TOD_KNOWN&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00751">751</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00781">781</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -1855,7 +1859,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4f1595be0889d3a0a4532aea0648ca74.html">anbox-platform-sdk</a></li><li class="navelem"><a class="el" href="types_8h.html">types.h</a></li>
-    <li class="footer">Generated on Wed May 8 2024 20:58:29 for anbox-platform-sdk by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Thu Aug 15 2024 19:05:00 for anbox-platform-sdk by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
