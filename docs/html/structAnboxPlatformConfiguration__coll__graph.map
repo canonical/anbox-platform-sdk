@@ -1,3 +1,5 @@
 <map id="AnboxPlatformConfiguration" name="AnboxPlatformConfiguration">
-<area shape="rect" id="node1" title="AnboxPlatformConfiguration holds platform configuration options which Anbox supplies to the platform ..." alt="" coords="5,5,212,83"/>
+<area shape="rect" id="node1" title="AnboxPlatformConfiguration holds platform configuration options which Anbox supplies to the platform ..." alt="" coords="9,145,215,223"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,56,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="156,5,231,83"/>
 </map>

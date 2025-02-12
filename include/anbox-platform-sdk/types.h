@@ -633,7 +633,7 @@ typedef enum {
    */
   PLATFORM_CONFIGURATION_ID_START = 1000,
 
-    /*
+  /*
    * The API defines a range of platform specific configuration items which can be
    * dynamically exposed by the platform. PLATFORM_CONFIGURATION_END specifies
    * the last configuration item id.
@@ -646,6 +646,15 @@ typedef enum {
  * Anbox supplies to the platform implementation at initialization time.
  */
 struct AnboxPlatformConfiguration {
+  /** This API level is used at runtime by Android system **/
+  uint32_t android_api_level;
+
+  /*
+   * A pointer to a null-terminated ('\0') string containing additional configuration
+   * data used by the platform during initialization or NULL if no additional
+   * configuration data is available.
+   */
+  const char* extra_config_data;
 };
 
 /**
