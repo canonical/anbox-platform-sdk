@@ -56,6 +56,12 @@ typedef int (*AnboxTriggerActionCallback)(const char* name, const char **args, s
  */
 typedef int (*AnboxCreateADBConnectionCallback)(const char* id, void* user_data);
 
+/**
+ * @brief AnboxDisconnectADBConnectionCallback is invoked when disconnecting ADB connection.
+ * @return 0 on success otherwise returns EINVAL on error occurs.
+ */
+typedef int (*AnboxDisconnectADBConnectionCallback)(const char* id, void* user_data);
+
 namespace anbox {
 /**
  * @brief AnboxProxy provides a proxy layer which encapsulates callbacks that can be used by a platform
@@ -194,18 +200,39 @@ class AnboxProxy {
      create_adb_connection_callback_user_data_ = user_data;
    }
 
+   /**
+    * @brief Disconnect ADB connection
+    *
+    * @param id the unique ID of the ADB connection
+    * @return 0 on success, otherwise returns a negative value on error.
+    **/
+   int disconnect_adb_connection(const char* id) {
+     if (!disconnect_adb_connection_callback_)
+       return -EINVAL;
+     return disconnect_adb_connection_callback_(id, disconnect_adb_connection_callback_user_data_);
+   }
+
+   /** @brief Set the ADB connection disconnect callback. */
+   void set_disconnect_adb_connection_callback(const AnboxDisconnectADBConnectionCallback& callback,
+                                               void* user_data) {
+     disconnect_adb_connection_callback_ = callback;
+     disconnect_adb_connection_callback_user_data_ = user_data;
+   }
+
   private:
    AnboxChangeScreenOrientationCallback change_screen_orientation_callback_{nullptr};
    AnboxChangeDisplayDensityCallback change_display_density_callback_{nullptr};
    AnboxChangeDisplaySizeCallback change_display_size_callback_{nullptr};
    AnboxTriggerActionCallback trigger_action_callback_{nullptr};
    AnboxCreateADBConnectionCallback create_adb_connection_callback_{nullptr};
+   AnboxDisconnectADBConnectionCallback disconnect_adb_connection_callback_{nullptr};
 
    void* screen_orientation_callback_user_data_{nullptr};
    void* display_density_callback_user_data_{nullptr};
    void* display_size_callback_user_data_{nullptr};
    void* trigger_action_callback_user_data_{nullptr};
    void* create_adb_connection_callback_user_data_{nullptr};
+   void* disconnect_adb_connection_callback_user_data_{nullptr};
 };
 } // namespace anbox
 

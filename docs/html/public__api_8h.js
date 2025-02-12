@@ -48,6 +48,7 @@ var public__api_8h =
     [ "AnboxProxySetChangeDisplaySizeCallbackFunc", "public__api_8h.html#ad81dac8688501740cf976f745bdf2b0e", null ],
     [ "AnboxProxySetChangeScreenOrientationCallbackFunc", "public__api_8h.html#a8814a51975a3a4acea7c2dc6f3ff0447", null ],
     [ "AnboxProxySetCreateAdbConnectionCallbackFunc", "public__api_8h.html#a656566bcb87a127bec4f94de7c112bec", null ],
+    [ "AnboxProxySetDisconnectAdbConnectionCallbackFunc", "public__api_8h.html#acb91c1fb67bf87a91a701f307a7bdfa7", null ],
     [ "AnboxProxySetTriggerActionCallbackFunc", "public__api_8h.html#aa8a83a323a5ca7b3a5327d624f5f76f4", null ],
     [ "AnboxReleasePlatformFunc", "public__api_8h.html#ad8d5bef2a99a19983ace86513af6fdb7", null ],
     [ "AnboxSensorProcessorInjectDataFunc", "public__api_8h.html#a0f5eb866a08ac559130029b0b9d7c601", null ],
