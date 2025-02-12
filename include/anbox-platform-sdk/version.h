@@ -22,10 +22,10 @@
 #include <stdint.h>
 
 #define ANBOX_PLATFORM_MAJOR_VERSION 1
-#define ANBOX_PLATFORM_MINOR_VERSION 24
+#define ANBOX_PLATFORM_MINOR_VERSION 25
 #define ANBOX_PLATFORM_PATCH_VERSION 0
 
-#define ANBOX_PLATFORM_VERSION 12400
+#define ANBOX_PLATFORM_VERSION 12500
 
 /**
  * @brief      Get the individual version numbers from the combined version number.

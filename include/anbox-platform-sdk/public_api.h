@@ -459,6 +459,17 @@ typedef int (*AnboxProxySetCreateAdbConnectionCallbackFunc)(const AnboxProxy* pr
                                                             void* user_data);
 
 /**
+ * @brief Allows the platform to disconnect ADB connection
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::AnboxProxy::set_disconnect_adb_connection_callback
+ *
+ **/
+typedef int (*AnboxProxySetDisconnectAdbConnectionCallbackFunc)(const AnboxProxy* proxy,
+                                                                const AnboxDisconnectADBConnectionCallback& callback,
+                                                                void* user_data);
+
+/**
  * @brief Request Gps processor to start forwarding the GPS data to Android container.
  *
  * The function prototype for C API function which stands for

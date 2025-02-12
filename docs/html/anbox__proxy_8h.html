@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.24.0</span>
+   &#160;<span id="projectnumber">1.25.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -126,6 +126,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a07d06c3ac422b31c2c8a7159ede4d843"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anbox__proxy_8h.html#a07d06c3ac422b31c2c8a7159ede4d843">AnboxCreateADBConnectionCallback</a>) (const char *id, void *user_data)</td></tr>
 <tr class="memdesc:a07d06c3ac422b31c2c8a7159ede4d843"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxCreateADBConnectionCallback is invoked when creating ADB connection.  <a href="anbox__proxy_8h.html#a07d06c3ac422b31c2c8a7159ede4d843">More...</a><br /></td></tr>
 <tr class="separator:a07d06c3ac422b31c2c8a7159ede4d843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e26d109232dbfc501fe6bfe5692b214"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anbox__proxy_8h.html#a1e26d109232dbfc501fe6bfe5692b214">AnboxDisconnectADBConnectionCallback</a>) (const char *id, void *user_data)</td></tr>
+<tr class="memdesc:a1e26d109232dbfc501fe6bfe5692b214"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnboxDisconnectADBConnectionCallback is invoked when disconnecting ADB connection.  <a href="anbox__proxy_8h.html#a1e26d109232dbfc501fe6bfe5692b214">More...</a><br /></td></tr>
+<tr class="separator:a1e26d109232dbfc501fe6bfe5692b214"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="ae4fde40767c8c65bf78c9d0972220e20"></a>
@@ -204,6 +207,25 @@ Typedefs</h2></td></tr>
 
 </div>
 </div>
+<a id="a1e26d109232dbfc501fe6bfe5692b214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e26d109232dbfc501fe6bfe5692b214">&#9670;&nbsp;</a></span>AnboxDisconnectADBConnectionCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* AnboxDisconnectADBConnectionCallback) (const char *id, void *user_data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AnboxDisconnectADBConnectionCallback is invoked when disconnecting ADB connection. </p>
+<dl class="section return"><dt>Returns</dt><dd>0 on success otherwise returns EINVAL on error occurs. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="anbox__proxy_8h_source.html#l00063">63</a> of file <a class="el" href="anbox__proxy_8h_source.html">anbox_proxy.h</a>.</p>
+
+</div>
+</div>
 <a id="aadadbe551a4580965514e87fa82592be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aadadbe551a4580965514e87fa82592be">&#9670;&nbsp;</a></span>AnboxTriggerActionCallback</h2>
 
@@ -229,7 +251,7 @@ Typedefs</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4f1595be0889d3a0a4532aea0648ca74.html">anbox-platform-sdk</a></li><li class="navelem"><a class="el" href="anbox__proxy_8h.html">anbox_proxy.h</a></li>
-    <li class="footer">Generated on Wed Feb 12 2025 14:43:28 for anbox-platform-sdk by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Wed Feb 12 2025 12:09:55 for anbox-platform-sdk by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
