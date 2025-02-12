@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"plugin_8h.html#afd9984492655871a85d7908e3d1f2d01":[7,0,8,11],
+"plugin_8h_source.html":[7,0,8],
 "public__api_8h.html":[7,0,9],
 "public__api_8h.html#a00d3767113f9f93adb059b8bcee2cde7":[7,0,9,27],
 "public__api_8h.html#a01d365135caccdf8d40cf36e2a3b6f09":[7,0,9,58],
@@ -166,6 +168,8 @@ var NAVTREEINDEX1 =
 "structAnboxPlatform.html#af566df5f3dcf83c3898cf23ca1a6133a":[6,0,21,8],
 "structAnboxPlatform.html#af65666a2e78f5136ddc2711cae4bd2f6":[6,0,21,2],
 "structAnboxPlatformConfiguration.html":[6,0,22],
+"structAnboxPlatformConfiguration.html#acaa46f3af2b6051377b245ea4b3e5691":[6,0,22,0],
+"structAnboxPlatformConfiguration.html#afc6898f1ac42ce2113018cc2d280e6b6":[6,0,22,1],
 "structAnboxPlatformConfigurationInfo.html":[6,0,23],
 "structAnboxPlatformConfigurationInfo.html#a5b6c89d570b3ac8b847506df37c99fbb":[6,0,23,0],
 "structAnboxPlatformConfigurationInfo.html#aa6d2b4e08e51051142f43aa0ef941974":[6,0,23,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX1 =
 "structAnboxVhalCommandSet.html":[6,0,34],
 "structAnboxVhalCommandSet.html#a13fb0184320bf04f8e114ba43561b1f6":[6,0,34,8],
 "structAnboxVhalCommandSet.html#a150d7e834ddbf81b47e9f5ab00bae1a3":[6,0,34,6],
-"structAnboxVhalCommandSet.html#a2faef3373a3b2a70e7c7ab365adf3f52":[6,0,34,5],
-"structAnboxVhalCommandSet.html#a3415432f9a725096293b9a8a75181349":[6,0,34,11],
-"structAnboxVhalCommandSet.html#a442c0c81f3965a636d360c0642112181":[6,0,34,1],
-"structAnboxVhalCommandSet.html#a61d7b0e5e2403ea5ba95c24fd4734d28":[6,0,34,12],
-"structAnboxVhalCommandSet.html#a6b095581ef5f14ba3067858ca511c79f":[6,0,34,10]
+"structAnboxVhalCommandSet.html#a2faef3373a3b2a70e7c7ab365adf3f52":[6,0,34,5]
 };

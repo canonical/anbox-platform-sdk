@@ -11,7 +11,7 @@ var types_8h =
     [ "AnboxPlatformConfigurationItemInfo", "structAnboxPlatformConfigurationItemInfo.html", "structAnboxPlatformConfigurationItemInfo" ],
     [ "AnboxPlatformConfigurationInfo", "structAnboxPlatformConfigurationInfo.html", "structAnboxPlatformConfigurationInfo" ],
     [ "AnboxAndroidSystemProperties", "structAnboxAndroidSystemProperties.html", "structAnboxAndroidSystemProperties" ],
-    [ "AnboxPlatformConfiguration", "structAnboxPlatformConfiguration.html", null ],
+    [ "AnboxPlatformConfiguration", "structAnboxPlatformConfiguration.html", "structAnboxPlatformConfiguration" ],
     [ "AnboxPlatformDescriptor", "structAnboxPlatformDescriptor.html", "structAnboxPlatformDescriptor" ],
     [ "AnboxCameraSpec", "structAnboxCameraSpec.html", "structAnboxCameraSpec" ],
     [ "AnboxVideoFrame", "structAnboxVideoFrame.html", "structAnboxVideoFrame" ],
