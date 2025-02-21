@@ -1,0 +1,33 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Tag name for the release'
+        required: true
+      target_commitish:
+        description: |
+          Target commitish (see GH API) for tag creation.
+          Can be empty - it will default to the head of the branch it is run from.
+        required: false
+
+# To publish assets to on GitHub release pages
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+    - name: Release
+      uses: softprops/action-gh-release@c062e08bd532815e2082a85e87e3ef29c3e6d191 # v2
+      with:
+        tag_name: ${{ inputs.tag_name }}
+        target_commitish: ${{ inputs.target_commitish }}
+        body: |
+          See https://documentation.ubuntu.com/anbox-cloud/reference/release-notes/${{ inputs.tag_name }}/ for more information.
