@@ -238,6 +238,14 @@ ANBOX_EXPORT bool anbox_graphics_processor_create_buffer(const AnboxGraphicsProc
   return graphics_processor->instance->create_buffer(width, height, format, usage, buffer);
 }
 
+ANBOX_EXPORT void anbox_graphics_processor_set_vsync_callback(
+  const AnboxGraphicsProcessor* graphics_processor,
+  const AnboxVsyncCallback& callback, void* user_data) {
+  if (!graphics_processor || !graphics_processor->instance)
+    return;
+  return graphics_processor->instance->set_vsync_callback(callback, user_data);
+}
+
 ANBOX_EXPORT const AnboxSensorProcessor* anbox_platform_get_sensor_processor(const AnboxPlatform* platform) {
   if (!platform || !platform->sensor_processor.instance)
     return nullptr;

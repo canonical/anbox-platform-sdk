@@ -12,5 +12,7 @@ var classanbox_1_1GraphicsProcessor =
     [ "initialize", "classanbox_1_1GraphicsProcessor.html#abcea3c95c981a93e3fff222cb2043019", null ],
     [ "operator=", "classanbox_1_1GraphicsProcessor.html#a319661e5be57a4d77c075a62ffb52880", null ],
     [ "present", "classanbox_1_1GraphicsProcessor.html#ac796f7d8812c19e8528bdde7754892ac", null ],
-    [ "present", "classanbox_1_1GraphicsProcessor.html#a1ee96e86683ca845ef6df9817e982336", null ]
+    [ "present", "classanbox_1_1GraphicsProcessor.html#a1ee96e86683ca845ef6df9817e982336", null ],
+    [ "set_vsync_callback", "classanbox_1_1GraphicsProcessor.html#a8b2ec06a49dea00d5ae802385f50f88c", null ],
+    [ "signal_vsync", "classanbox_1_1GraphicsProcessor.html#a7870d668b6ad2f913a8a972ddbbeba2a", null ]
 ];

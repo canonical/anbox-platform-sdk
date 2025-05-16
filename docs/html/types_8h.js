@@ -215,7 +215,7 @@ var types_8h =
     [ "AnboxVhalPropertyChangeMode", "types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300", [
       [ "ANBOX_VHAL_PROPERTY_CHANGE_MODE_STATIC", "types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300abf322b42dd89ff4395ca0a5f7eaa2457", null ],
       [ "ANBOX_VHAL_PROPERTY_CHANGE_MODE_ON_CHANGE", "types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300a3ad4ccb552d81aa473d45136351f16b7", null ],
-      [ "ANBOX_VHAL_PROPERTY_CHANGE_MODE_CONTINUOUS", "types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300a2a4958a641c2520683b0241a61cd9a32", null ]
+      [ "ANBOX_VHAL_PROPERTY_CHANGE_MODE_CONTINUOUS", "types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300a2a4958a641.26.0683b0241a61cd9a32", null ]
     ] ],
     [ "AnboxVhalPropertyStatus", "types_8h.html#aa74622c326573d620cf0352fd56769ba", [
       [ "ANBOX_VHAL_PROPERTY_STATUS_AVAILABLE", "types_8h.html#aa74622c326573d620cf0352fd56769baa402572117a8de1fe25e8d5ee2fca9d67", null ],

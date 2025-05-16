@@ -11,9 +11,7 @@ var files_dup =
     [ "gps_processor.h", "gps__processor_8h.html", [
       [ "GpsProcessor", "classanbox_1_1GpsProcessor.html", "classanbox_1_1GpsProcessor" ]
     ] ],
-    [ "graphics_processor.h", "graphics__processor_8h.html", [
-      [ "GraphicsProcessor", "classanbox_1_1GraphicsProcessor.html", "classanbox_1_1GraphicsProcessor" ]
-    ] ],
+    [ "graphics_processor.h", "graphics__processor_8h.html", "graphics__processor_8h" ],
     [ "input_processor.h", "input__processor_8h.html", [
       [ "InputProcessor", "classanbox_1_1InputProcessor.html", "classanbox_1_1InputProcessor" ]
     ] ],

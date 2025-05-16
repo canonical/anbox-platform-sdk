@@ -21,6 +21,14 @@
 
 #include "anbox-platform-sdk/types.h"
 
+/**
+ * @brief AnboxVsyncCallback is invoked to signal a new vsync is about to start.
+ *
+ * The provided timestamp is the time the callee will use to determine the start
+ * time of the vsync.
+ */
+typedef void (*AnboxVsyncCallback)(uint64_t time_ns, void* user_data);
+
 namespace anbox {
 /**
  * @brief GraphicsProcessor allows integration with the graphics engine inside Anbox.
@@ -205,6 +213,35 @@ class GraphicsProcessor {
       (void) buffer;
       return false;
     }
+
+  /**
+   * @brief Sets a callback which will be invoked whenever a new vsync is about
+   * to start.
+   *
+   * With the start of a vsync the previous frame will no longer be visible on
+   * the output and a new one will be shown instead. The callback allows an
+   * external client to synchronize to the internal vsync of the platform.
+   *
+   * @param callback Callback to set
+   * @param user_data User data to be handed back with the callback
+   */
+  virtual void set_vsync_callback(const AnboxVsyncCallback& callback,
+                                  void* user_data) {
+    vsync_callback_ = callback;
+    vsync_callback_user_data_ = user_data;
+  }
+
+ protected:
+  void signal_vsync(uint64_t time_ns) {
+    if (!vsync_callback_)
+      return;
+
+    vsync_callback_(time_ns, vsync_callback_user_data_);
+  }
+
+ private:
+  AnboxVsyncCallback vsync_callback_ = nullptr;
+  void* vsync_callback_user_data_ = nullptr;
 };
 } // namespace anbox
 
