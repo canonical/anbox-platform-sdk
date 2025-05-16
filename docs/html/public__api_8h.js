@@ -24,6 +24,7 @@ var public__api_8h =
     [ "AnboxGraphicsProcessorInitializeFunc", "public__api_8h.html#a04234860725f490f48e03580d6df9e1a", null ],
     [ "AnboxGraphicsProcessorPresent2Func", "public__api_8h.html#a6eec9b56464611dc0d4b0b9ac0955992", null ],
     [ "AnboxGraphicsProcessorPresentFunc", "public__api_8h.html#ae44ba9e16e31ab8e045289a4095e09bb", null ],
+    [ "AnboxGraphicsProcessorSetVsyncCallbackFunc", "public__api_8h.html#a90eb9d00e28ac2f5380b11b34ac9b2e4", null ],
     [ "AnboxInitializePlatformFunc", "public__api_8h.html#ac09b323c0bfe6d401e5d45e36bdfc0e4", null ],
     [ "AnboxInputProcessorInjectEventFunc", "public__api_8h.html#ac3fec6b570a6563157ae7e9d1af10cec", null ],
     [ "AnboxInputProcessorReadEventFunc", "public__api_8h.html#ad82a8caae8e776b31440c2357f3a525b", null ],

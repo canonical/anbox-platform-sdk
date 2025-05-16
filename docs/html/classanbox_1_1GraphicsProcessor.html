@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.25.0</span>
+   &#160;<span id="projectnumber">1.26.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -54,6 +54,7 @@ $(document).ready(function(){initNavTree('classanbox_1_1GraphicsProcessor.html',
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classanbox_1_1GraphicsProcessor-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">anbox::GraphicsProcessor Class Reference</div>  </div>
@@ -71,7 +72,7 @@ $(document).ready(function(){initNavTree('classanbox_1_1GraphicsProcessor.html',
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classanbox_1_1GraphicsProcessor__coll__graph.png" border="0" usemap="#aanbox_1_1GraphicsProcessor_coll__map" alt="Collaboration graph"/></div>
 <map name="aanbox_1_1GraphicsProcessor_coll__map" id="aanbox_1_1GraphicsProcessor_coll__map">
-<area shape="rect" title="GraphicsProcessor allows integration with the graphics engine inside Anbox." alt="" coords="5,5,224,259"/>
+<area shape="rect" title="GraphicsProcessor allows integration with the graphics engine inside Anbox." alt="" coords="5,5,224,288"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -111,11 +112,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a87713a66bf61c032230d549ed7443c74"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1GraphicsProcessor.html#a87713a66bf61c032230d549ed7443c74">create_buffer</a> (uint32_t width, uint32_t height, uint32_t format, uint32_t usage, <a class="el" href="structAnboxGraphicsBuffer2.html">AnboxGraphicsBuffer2</a> **buffer)</td></tr>
 <tr class="memdesc:a87713a66bf61c032230d549ed7443c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a buffer with the given specifications.  <a href="classanbox_1_1GraphicsProcessor.html#a87713a66bf61c032230d549ed7443c74">More...</a><br /></td></tr>
 <tr class="separator:a87713a66bf61c032230d549ed7443c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b2ec06a49dea00d5ae802385f50f88c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1GraphicsProcessor.html#a8b2ec06a49dea00d5ae802385f50f88c">set_vsync_callback</a> (const <a class="el" href="graphics__processor_8h.html#a346dae10de6e119625df318273410391">AnboxVsyncCallback</a> &amp;callback, void *user_data)</td></tr>
+<tr class="memdesc:a8b2ec06a49dea00d5ae802385f50f88c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a callback which will be invoked whenever a new vsync is about to start.  <a href="classanbox_1_1GraphicsProcessor.html#a8b2ec06a49dea00d5ae802385f50f88c">More...</a><br /></td></tr>
+<tr class="separator:a8b2ec06a49dea00d5ae802385f50f88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a7870d668b6ad2f913a8a972ddbbeba2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1GraphicsProcessor.html#a7870d668b6ad2f913a8a972ddbbeba2a">signal_vsync</a> (uint64_t time_ns)</td></tr>
+<tr class="separator:a7870d668b6ad2f913a8a972ddbbeba2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classanbox_1_1GraphicsProcessor.html" title="GraphicsProcessor allows integration with the graphics engine inside Anbox.">GraphicsProcessor</a> allows integration with the graphics engine inside Anbox. </p>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00028">28</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00036">36</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6d095b313e234a75405842423b32eeef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d095b313e234a75405842423b32eeef">&#9670;&nbsp;</a></span>GraphicsProcessor() <span class="overload">[1/2]</span></h2>
@@ -220,7 +229,7 @@ Public Member Functions</h2></td></tr>
 <p>Called from Anbox when a new frame is started. </p>
 <p>This function is called by Anbox from its render thread after the call to eglMakeCurrent to make the main rendering surface and context current. Any operation performed should be as fast as possible to not delay the frame for too long. </p>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00070">70</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00078">78</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -289,7 +298,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the buffer was successfully created, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00199">199</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00207">207</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -320,7 +329,7 @@ Public Member Functions</h2></td></tr>
 <p>This function is called by Anbox when it initializes the rendering pipeline to create an EGLDisplay to use for rendering. In case that a platform provides no implementation or EGL_NO_DISPLAY is returned Anbox will use EGL_DEFAULT_DISPLAY to create an EGLDisplay</p>
 <dl class="section return"><dt>Returns</dt><dd>EGLDisplay A valid EGLDisplay or EGL_NO_DISPLAY </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00045">45</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00053">53</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -376,7 +385,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Created EGLSurface or EGL_NO_SURFACE on error </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00092">92</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00100">100</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -424,7 +433,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true, if the surface is successfully destroyed and false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00108">108</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00116">116</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -454,7 +463,7 @@ Public Member Functions</h2></td></tr>
 <p>Called from Anbox when a frame was fully rendered. </p>
 <p>This function is called by Anbox from its render thread before its calling eglSwapBuffers on the main EGL surface. Any operation performed should be as fast as possible to not delay the frame for too long. </p>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00079">79</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00087">87</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -492,7 +501,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, a negative error code otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00057">57</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00065">65</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -572,7 +581,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the buffer was accepted for presentation, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00146">146</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00154">154</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -626,7 +635,83 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the buffer was accepted for presentation, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00183">183</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00191">191</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+
+</div>
+</div>
+<a id="a8b2ec06a49dea00d5ae802385f50f88c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b2ec06a49dea00d5ae802385f50f88c">&#9670;&nbsp;</a></span>set_vsync_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void anbox::GraphicsProcessor::set_vsync_callback </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="graphics__processor_8h.html#a346dae10de6e119625df318273410391">AnboxVsyncCallback</a> &amp;&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets a callback which will be invoked whenever a new vsync is about to start. </p>
+<p>With the start of a vsync the previous frame will no longer be visible on the output and a new one will be shown instead. The callback allows an external client to synchronize to the internal vsync of the platform.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>Callback to set </td></tr>
+    <tr><td class="paramname">user_data</td><td>User data to be handed back with the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00228">228</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
+
+</div>
+</div>
+<a id="a7870d668b6ad2f913a8a972ddbbeba2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7870d668b6ad2f913a8a972ddbbeba2a">&#9670;&nbsp;</a></span>signal_vsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void anbox::GraphicsProcessor::signal_vsync </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>time_ns</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="graphics__processor_8h_source.html#l00235">235</a> of file <a class="el" href="graphics__processor_8h_source.html">graphics_processor.h</a>.</p>
 
 </div>
 </div>
@@ -639,7 +724,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceanbox.html">anbox</a></li><li class="navelem"><a class="el" href="classanbox_1_1GraphicsProcessor.html">GraphicsProcessor</a></li>
-    <li class="footer">Generated on Wed Feb 12 2025 12:09:55 for anbox-platform-sdk by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

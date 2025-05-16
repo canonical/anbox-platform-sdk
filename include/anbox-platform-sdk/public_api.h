@@ -360,6 +360,17 @@ typedef bool (*AnboxGraphicsProcessorCreateBufferFunc)(const AnboxGraphicsProces
                                                        uint32_t width, uint32_t height, uint32_t format,
                                                        uint32_t usage, AnboxGraphicsBuffer2** buffer);
 
+
+/*
+ * @brief Set the vsync callback
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::GraphicsProcessor::set_vsync_callback
+ */
+typedef bool (*AnboxGraphicsProcessorSetVsyncCallbackFunc)(
+  const AnboxGraphicsProcessor* graphics_processor,
+  const AnboxVsyncCallback& callback, void* user_data);
+
 /**
  * @brief Sensors supported by the platform
  *
