@@ -616,6 +616,8 @@ typedef enum {
    * The value of this configuration item is of type `uint8_t` which
    * represents a boolean value, encoded as 8 bit unsigned integer type
    * (uint8_t) where 0 = false and > 0 = true
+   *
+   * Not used anymore since 1.27
    */
   ENABLE_SW_SYNC_SUPPORT = 15,
 
