@@ -97,7 +97,7 @@ var NAVTREEINDEX2 =
 "structGnssMeasurement.html#ab76c17f6c53876bacabf9a859e8d35d6":[6,0,44,6],
 "types_8h.html":[7,0,11],
 "types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300":[7,0,11,68],
-"types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300a2a4958a641.26.0683b0241a61cd9a32":[7,0,11,68,2],
+"types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300a2a4958a641c2520683b0241a61cd9a32":[7,0,11,68,2],
 "types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300a3ad4ccb552d81aa473d45136351f16b7":[7,0,11,68,1],
 "types_8h.html#a01593d6e5aedaa69ce2d7b9176f73300abf322b42dd89ff4395ca0a5f7eaa2457":[7,0,11,68,0],
 "types_8h.html#a02236902f72304a93ae54ebdc1f31fdf":[7,0,11,53],
