@@ -2,10 +2,23 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
+    "helpers:pinGitHubActionDigestsToSemver",
     ":disableDependencyDashboard",
-    "schedule:earlyMondays",
-    ":combinePatchMinorReleases",
     ":ignoreUnstable",
-    "helpers:pinGitHubActionDigests"
+    "group:allNonMajor"
+  ],
+  "packageRules": [
+    {
+      "groupName": "GitHub actions",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "digest",
+        "patch",
+        "minor",
+        "major"
+      ]
+    }
   ]
 }
