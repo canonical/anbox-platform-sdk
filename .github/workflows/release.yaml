@@ -25,9 +25,10 @@ jobs:
       uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
 
     - name: Release
-      uses: softprops/action-gh-release@c062e08bd532815e2082a85e87e3ef29c3e6d191 # v2
-      with:
-        tag_name: ${{ inputs.tag_name }}
-        target_commitish: ${{ inputs.target_commitish }}
-        body: |
-          See https://documentation.ubuntu.com/anbox-cloud/reference/release-notes/${{ inputs.tag_name }}/ for more information.
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh release create "${{ inputs.tag_name }}" \
+          --target "${{ inputs.target_commitish || github.ref }}" \
+          --title "${{ inputs.tag_name }}" \
+          --notes "See https://documentation.ubuntu.com/anbox-cloud/reference/release-notes/${{ inputs.tag_name }}/ for more information."
