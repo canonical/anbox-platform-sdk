@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.26.0</span>
+   &#160;<span id="projectnumber">1.27.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -71,7 +71,7 @@ $(document).ready(function(){initNavTree('classanbox_1_1SensorProcessor.html',''
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classanbox_1_1SensorProcessor__coll__graph.png" border="0" usemap="#aanbox_1_1SensorProcessor_coll__map" alt="Collaboration graph"/></div>
 <map name="aanbox_1_1SensorProcessor_coll__map" id="aanbox_1_1SensorProcessor_coll__map">
-<area shape="rect" title="SensorProcessor allows processing sensor events from the Android container and perform sensor process..." alt="" coords="5,5,183,171"/>
+<area shape="rect" title="SensorProcessor allows processing sensor events from the Android container and perform sensor process..." alt="" coords="5,5,183,185"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -94,11 +94,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaade1f91f7fce6e904d6f358c8162bb5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1SensorProcessor.html#aaade1f91f7fce6e904d6f358c8162bb5">inject_data</a> (<a class="el" href="structAnboxSensorData.html">AnboxSensorData</a> data)=0</td></tr>
 <tr class="memdesc:aaade1f91f7fce6e904d6f358c8162bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inject sensor data into <a class="el" href="structAnboxPlatform.html">AnboxPlatform</a>.  <a href="classanbox_1_1SensorProcessor.html#aaade1f91f7fce6e904d6f358c8162bb5">More...</a><br /></td></tr>
 <tr class="separator:aaade1f91f7fce6e904d6f358c8162bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae86504445d908016d6958dd9eeac0e73"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanbox_1_1SensorProcessor.html#ae86504445d908016d6958dd9eeac0e73">activate_sensor</a> (<a class="el" href="types_8h.html#ada4f1d01bd8be2756c43da68b7ebe95d">AnboxSensorType</a> type, bool on)</td></tr>
+<tr class="memdesc:ae86504445d908016d6958dd9eeac0e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate or deactivate a specific sensor.  <a href="classanbox_1_1SensorProcessor.html#ae86504445d908016d6958dd9eeac0e73">More...</a><br /></td></tr>
+<tr class="separator:ae86504445d908016d6958dd9eeac0e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classanbox_1_1SensorProcessor.html" title="SensorProcessor allows processing sensor events from the Android container and perform sensor process...">SensorProcessor</a> allows processing sensor events from the Android container and perform sensor processing for a variety of sensor devices. </p>
 
-<p class="definition">Definition at line <a class="el" href="sensor__processor_8h_source.html#l00029">29</a> of file <a class="el" href="sensor__processor_8h_source.html">sensor_processor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sensor__processor_8h_source.html#l00031">31</a> of file <a class="el" href="sensor__processor_8h_source.html">sensor_processor.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a74338a9780a40c244955d65a067d47a8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a74338a9780a40c244955d65a067d47a8">&#9670;&nbsp;</a></span>SensorProcessor() <span class="overload">[1/2]</span></h2>
@@ -177,6 +180,55 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae86504445d908016d6958dd9eeac0e73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae86504445d908016d6958dd9eeac0e73">&#9670;&nbsp;</a></span>activate_sensor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int anbox::SensorProcessor::activate_sensor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#ada4f1d01bd8be2756c43da68b7ebe95d">AnboxSensorType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>on</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Activate or deactivate a specific sensor. </p>
+<p>Anbox will call this function whenever Android container requests to enable or disable a specific sensor. The implementation should make sure the requested sensor is properly initialized and starts producing data when activated, and release or stop producing data when deactivated.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>the type of the sensor to activate or deactivate </td></tr>
+    <tr><td class="paramname">on</td><td>true to activate (enable) the sensor, false to deactivate (disable) it </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success otherwise returns EINVAL on error occurs. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="sensor__processor_8h_source.html#l00094">94</a> of file <a class="el" href="sensor__processor_8h_source.html">sensor_processor.h</a>.</p>
+
+</div>
+</div>
 <a id="aaade1f91f7fce6e904d6f358c8162bb5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaade1f91f7fce6e904d6f358c8162bb5">&#9670;&nbsp;</a></span>inject_data()</h2>
 

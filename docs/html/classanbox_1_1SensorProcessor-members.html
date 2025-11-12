@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">anbox-platform-sdk
-   &#160;<span id="projectnumber">1.26.0</span>
+   &#160;<span id="projectnumber">1.27.0</span>
    </div>
    <div id="projectbrief">Anbox Platform SDK API documentation</div>
   </td>
@@ -59,13 +59,14 @@ $(document).ready(function(){initNavTree('classanbox_1_1SensorProcessor.html',''
 
 <p>This is the complete list of members for <a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html#aaade1f91f7fce6e904d6f358c8162bb5">inject_data</a>(AnboxSensorData data)=0</td><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html#a7e2a041bc8e159374491b3001b68ee76">operator=</a>(const SensorProcessor &amp;)=delete</td><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html#a6be51ee1116dc036c5b7c642036af76c">read_data</a>(AnboxSensorData *data, int timeout)=0</td><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html#a74338a9780a40c244955d65a067d47a8">SensorProcessor</a>()=default</td><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html#aa809cce84e0444cd19c685ba239ecb73">SensorProcessor</a>(const SensorProcessor &amp;)=delete</td><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html#a503eca5e80480d6f62d5cc7970264188">supported_sensors</a>() const =0</td><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html#aea515ade1b711d6af4e5b7c6c99dcb87">~SensorProcessor</a>()=default</td><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html#ae86504445d908016d6958dd9eeac0e73">activate_sensor</a>(AnboxSensorType type, bool on)</td><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html#aaade1f91f7fce6e904d6f358c8162bb5">inject_data</a>(AnboxSensorData data)=0</td><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html#a7e2a041bc8e159374491b3001b68ee76">operator=</a>(const SensorProcessor &amp;)=delete</td><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html#a6be51ee1116dc036c5b7c642036af76c">read_data</a>(AnboxSensorData *data, int timeout)=0</td><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html#a74338a9780a40c244955d65a067d47a8">SensorProcessor</a>()=default</td><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html#aa809cce84e0444cd19c685ba239ecb73">SensorProcessor</a>(const SensorProcessor &amp;)=delete</td><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html#a503eca5e80480d6f62d5cc7970264188">supported_sensors</a>() const =0</td><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html#aea515ade1b711d6af4e5b7c6c99dcb87">~SensorProcessor</a>()=default</td><td class="entry"><a class="el" href="classanbox_1_1SensorProcessor.html">anbox::SensorProcessor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
