@@ -381,6 +381,18 @@ typedef bool (*AnboxGraphicsProcessorSetVsyncCallbackFunc)(
 typedef AnboxSensorType (*AnboxSensorProcessorSupportedSensorsFunc)(const AnboxSensorProcessor* sensor_processor);
 
 /**
+ * @brief Activate or deactivate a specific sensor
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::SensorProcessor::activate_sensor
+ *
+ **/
+typedef int (*AnboxSensorProcessorActivateSensorFunc)(const AnboxSensorProcessor* sensor_processor,
+                                                      const AnboxSensorType type,
+                                                      bool on);
+
+
+/**
  * @brief Read next available sensor data.
  *
  * The function prototype for C API function which stands for

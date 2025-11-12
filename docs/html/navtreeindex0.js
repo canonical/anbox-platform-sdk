@@ -123,12 +123,13 @@ var NAVTREEINDEX0 =
 "classanbox_1_1Platform.html#af0ada09473c66da26efafa0828fe74d7":[6,0,0,6,14],
 "classanbox_1_1Platform.html#af7a0fcf1b3d7f08a47b880215b63745c":[6,0,0,6,17],
 "classanbox_1_1SensorProcessor.html":[6,0,0,7],
-"classanbox_1_1SensorProcessor.html#a503eca5e80480d6f62d5cc7970264188":[6,0,0,7,6],
-"classanbox_1_1SensorProcessor.html#a6be51ee1116dc036c5b7c642036af76c":[6,0,0,7,5],
+"classanbox_1_1SensorProcessor.html#a503eca5e80480d6f62d5cc7970264188":[6,0,0,7,7],
+"classanbox_1_1SensorProcessor.html#a6be51ee1116dc036c5b7c642036af76c":[6,0,0,7,6],
 "classanbox_1_1SensorProcessor.html#a74338a9780a40c244955d65a067d47a8":[6,0,0,7,0],
-"classanbox_1_1SensorProcessor.html#a7e2a041bc8e159374491b3001b68ee76":[6,0,0,7,4],
+"classanbox_1_1SensorProcessor.html#a7e2a041bc8e159374491b3001b68ee76":[6,0,0,7,5],
 "classanbox_1_1SensorProcessor.html#aa809cce84e0444cd19c685ba239ecb73":[6,0,0,7,2],
-"classanbox_1_1SensorProcessor.html#aaade1f91f7fce6e904d6f358c8162bb5":[6,0,0,7,3],
+"classanbox_1_1SensorProcessor.html#aaade1f91f7fce6e904d6f358c8162bb5":[6,0,0,7,4],
+"classanbox_1_1SensorProcessor.html#ae86504445d908016d6958dd9eeac0e73":[6,0,0,7,3],
 "classanbox_1_1SensorProcessor.html#aea515ade1b711d6af4e5b7c6c99dcb87":[6,0,0,7,1],
 "classanbox_1_1VhalConnector.html":[6,0,0,8],
 "classanbox_1_1VhalConnector.html#a014fe5a308da2003fdf89185ce98d197":[6,0,0,8,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "index.html#overview":[0,1],
 "input__processor_8h.html":[7,0,6],
 "input__processor_8h_source.html":[7,0,6],
-"namespaceanbox.html":[5,0,0],
-"namespaces.html":[5,0]
+"namespaceanbox.html":[5,0,0]
 };

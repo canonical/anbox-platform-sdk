@@ -52,6 +52,7 @@ var public__api_8h =
     [ "AnboxProxySetDisconnectAdbConnectionCallbackFunc", "public__api_8h.html#acb91c1fb67bf87a91a701f307a7bdfa7", null ],
     [ "AnboxProxySetTriggerActionCallbackFunc", "public__api_8h.html#aa8a83a323a5ca7b3a5327d624f5f76f4", null ],
     [ "AnboxReleasePlatformFunc", "public__api_8h.html#ad8d5bef2a99a19983ace86513af6fdb7", null ],
+    [ "AnboxSensorProcessorActivateSensorFunc", "public__api_8h.html#a02bdfaf51f17d8131408496f76b1fbe0", null ],
     [ "AnboxSensorProcessorInjectDataFunc", "public__api_8h.html#a0f5eb866a08ac559130029b0b9d7c601", null ],
     [ "AnboxSensorProcessorReadDataFunc", "public__api_8h.html#a9e2c869068c200fde2a4b5c9387b392c", null ],
     [ "AnboxSensorProcessorSupportedSensorsFunc", "public__api_8h.html#acd70b2d9434c6a034cd234a01a31c749", null ],

@@ -258,6 +258,13 @@ ANBOX_EXPORT AnboxSensorType anbox_sensor_processor_supported_sensors(const Anbo
   return sensor_processor->instance->supported_sensors();
 }
 
+ANBOX_EXPORT int anbox_sensor_processor_activate_sensor(const AnboxSensorProcessor* sensor_processor,
+                                                        const AnboxSensorType type, bool on) {
+  if (!sensor_processor || !sensor_processor->instance)
+    return AnboxSensorType::NONE;
+  return sensor_processor->instance->activate_sensor(type, on);
+}
+
 ANBOX_EXPORT int anbox_sensor_processor_read_data(const AnboxSensorProcessor* sensor_processor,
                                                   AnboxSensorData* data,
                                                   int timeout) {

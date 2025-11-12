@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"structAnboxVhalCommandGet.html#a891adde22a59332d01663842f02ba08f":[6,0,33,9],
+"structAnboxVhalCommandGet.html#aaf099dcbe21233ec27f32e9897ff1c2d":[6,0,33,2],
 "structAnboxVhalCommandGet.html#ad5fce3636bfedf57084902c3905a8039":[6,0,33,1],
 "structAnboxVhalCommandGet.html#aef7d6de23be4aad3750756bddaa26427":[6,0,33,7],
 "structAnboxVhalCommandGet.html#afdbe223cc1e4969ce2677500fe82e982":[6,0,33,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "types_8h.html#aa479d42a9b58eeeae0cf06b90bc7ba08ac397b170b4df2d232c0eb693e5129834":[7,0,11,76,10],
 "types_8h.html#aa479d42a9b58eeeae0cf06b90bc7ba08acb6a6e5a7931781cde3a0cd677db2858":[7,0,11,76,12],
 "types_8h.html#aa479d42a9b58eeeae0cf06b90bc7ba08ad5791d68db83cab03ec5975be001ccc2":[7,0,11,76,4],
-"types_8h.html#aa479d42a9b58eeeae0cf06b90bc7ba08ae61cce57eb4a42c393cc2db35a63257d":[7,0,11,76,9],
-"types_8h.html#aa57c05de4b297da1d028ceedcaafb876":[7,0,11,73],
-"types_8h.html#aa57c05de4b297da1d028ceedcaafb876a23726397ea7e2ab1593fe88369850ed9":[7,0,11,73,1]
+"types_8h.html#aa479d42a9b58eeeae0cf06b90bc7ba08ae61cce57eb4a42c393cc2db35a63257d":[7,0,11,76,9]
 };

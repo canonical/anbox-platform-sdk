@@ -21,6 +21,8 @@
 
 #include "anbox-platform-sdk/types.h"
 
+#include <errno.h>
+
 namespace anbox {
 /**
  * @brief SensorProcessor allows processing sensor events from the Android container
@@ -76,6 +78,24 @@ class SensorProcessor {
      *       tests and it is subject to change at any time.
      **/
     virtual int inject_data(AnboxSensorData data) = 0;
+
+    /**
+     * @brief Activate or deactivate a specific sensor
+     *
+     * Anbox will call this function whenever Android container requests to enable or
+     * disable a specific sensor. The implementation should make sure the requested
+     * sensor is properly initialized and starts producing data when activated, and
+     * release or stop producing data when deactivated.
+     *
+     * @param type the type of the sensor to activate or deactivate
+     * @param on true to activate (enable) the sensor, false to deactivate (disable) it
+     * @return 0 on success otherwise returns EINVAL on error occurs.
+     */
+    virtual int activate_sensor(AnboxSensorType type, bool on) {
+      (void) type;
+      (void) on;
+      return -EIO;
+    }
 };
 } // namespace anbox
 

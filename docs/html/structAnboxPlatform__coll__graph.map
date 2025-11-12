@@ -3,7 +3,7 @@
 <area shape="rect" id="node2" href="$structAnboxProxy.html" title=" " alt="" coords="103,358,203,435"/>
 <area shape="rect" id="node3" href="$classanbox_1_1AnboxProxy.html" title="AnboxProxy provides a proxy layer which encapsulates callbacks that can be used by a platform to chan..." alt="" coords="5,13,244,281"/>
 <area shape="rect" id="node4" href="$structAnboxSensorProcessor.html" title=" " alt="" coords="285,358,455,435"/>
-<area shape="rect" id="node5" href="$classanbox_1_1SensorProcessor.html" title="SensorProcessor allows processing sensor events from the Android container and perform sensor process..." alt="" coords="268,64,445,229"/>
+<area shape="rect" id="node5" href="$classanbox_1_1SensorProcessor.html" title="SensorProcessor allows processing sensor events from the Android container and perform sensor process..." alt="" coords="268,57,445,237"/>
 <area shape="rect" id="node6" href="$structAnboxGraphicsProcessor.html" title=" " alt="" coords="501,358,684,435"/>
 <area shape="rect" id="node7" href="$classanbox_1_1GraphicsProcessor.html" title="GraphicsProcessor allows integration with the graphics engine inside Anbox." alt="" coords="470,5,689,288"/>
 <area shape="rect" id="node8" href="$structAnboxGpsProcessor.html" title=" " alt="" coords="719,358,869,435"/>
