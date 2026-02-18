@@ -41,6 +41,7 @@ var public__api_8h =
     [ "AnboxPlatformHandleEventFunc", "public__api_8h.html#ac847d9913e63acf079620f2b38e9f5b9", null ],
     [ "AnboxPlatformReadyFunc", "public__api_8h.html#a2ee229f9fcd113b3ed0b88454357bd2a", null ],
     [ "AnboxPlatformSetConfigItemFunc", "public__api_8h.html#afe50d4ab98249692af0f55ccc13ae6dc", null ],
+    [ "AnboxPlatformSetConfigItemsFunc", "public__api_8h.html#a6b6abe649f0781b80a0b67dd64e9e7f5", null ],
     [ "AnboxPlatformSetupEventTracerFunc", "public__api_8h.html#a81df915d0716744fe54173313b0d9d8c", null ],
     [ "AnboxPlatformStopFunc", "public__api_8h.html#a386a23a6f4d0de4463cebe404846762f", null ],
     [ "AnboxPlatformWaitUntilReadyFunc", "public__api_8h.html#a46de799d1c3ff840c3a030f47c561826", null ],

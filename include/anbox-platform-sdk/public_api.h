@@ -161,6 +161,17 @@ typedef int (*AnboxPlatformSetConfigItemFunc)(const AnboxPlatform* platform,
                                               void* data, size_t data_size);
 
 /**
+ * @brief Set multiple configuration items to the platform in a single transaction.
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::Platform::set_config_items
+ *
+ **/
+typedef int (*AnboxPlatformSetConfigItemsFunc)(const AnboxPlatform* platform,
+                                               const AnboxPlatformConfigurationItem* items,
+                                               size_t count);
+
+/**
  * @brief Register an external event tracing implementation with the platform
  *
  * The function prototype for C API function which stands for
