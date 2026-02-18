@@ -170,15 +170,19 @@ class Platform {
   virtual int wait_until_ready() = 0;
 
   /**
-   * @brief Retrieve the configuration options provided by platform plugin.
+   * @brief Retrieve the configuration options provided by the platform plugin.
    *
-   * This function provides a way for anbox to read a configuration option from the plugin.
-   * @param key plugin configuration option key.
-   * @param data pointer stores the address of the configuration key value.
-   * @param data_size size of the memory the `data` pointer points to
-   * @return 0 on success, a negative error code otherwise. Possible are -EINVAL
-   * (invalid arguments supplied) and -ENOMEM (provided memory is not large enough
-   * to store the value of the configuration item).
+   * This function provides a way for Anbox to read a specific configuration option from the plugin.
+   *
+   * @param key Plugin configuration option key to retrieve.
+   * @param data Pointer to the buffer where the configuration value will be stored.
+   * @param data_size Size in bytes of the memory buffer @p data points to.
+   * @return 0 on success, or a negative error code on failure. Possible codes include:
+   * - -EINVAL: Invalid arguments supplied (e.g., @p data is @c nullptr).
+   * - -ENOENT: The component of the platform plugin identified by @p key does not exist.
+   * - -ENOMEM: The buffer provided via @p data_size is not large enough to hold the value.
+   * - -EIO: An I/O error occurred while retrieving the value from the platform backend.
+   * - -EFAULT: An internal error occurred when accessing the configuration memory.
    */
   virtual int get_config_item(AnboxPlatformConfigurationKey key, void* data, size_t data_size) = 0;
 
@@ -211,19 +215,54 @@ class Platform {
   /**
    * @brief Set the configuration options by Anbox to the platform.
    *
-   * This function provides a way for anbox to write a configuration option to the plugin.
+   * This function provides a way for Anbox to write a configuration option to the plugin.
    *
-   * @param key plugin configuration option key.
-   * @param data pointer stores the address of the configuration key value.
-   * @param data_size size of the memory the `data` pointer points to
-   * @return 0 on success, a negative error code otherwise. Possible are -EINVAL
-   * (invalid arguments supplied) and -ENOMEM (provided memory is not large enough
-   * to store the value of the configuration item).
+   * @param key Plugin configuration option key.
+   * @param data Pointer stores the address of the configuration key value.
+   * If @c nullptr is provided along with a @p data_size of @c 0, the platform
+   * should reset the configuration item to its default value.
+   * @param data_size Size in bytes of the memory the @p data pointer points to.
+   * Must be @c 0 when @p data is @c nullptr for a reset operation.
+   * @return 0 on success, a negative error code otherwise. Possible codes include:
+   * - -EINVAL: Invalid arguments supplied.
+   * - -ENOMEM: The buffer provided via @p data_size is not large enough to hold the value.
+   * - -EIO: An I/O error occurred while communicating with the platform plugin.
+   * - -EFAULT: An internal error occurred when handling configuration item.
    */
   virtual int set_config_item(AnboxPlatformConfigurationKey key, void* data, size_t data_size) {
     (void)key;
     (void)data;
     (void)data_size;
+    return 0;
+  }
+
+  /**
+   * @brief Set multiple configuration options to the platform in a single transaction.
+   *
+   * This function allows setting multiple configuration items simultaneously. It is
+   * particularly useful for updating interdependent parameters (e.g., min and max
+   * video bitrates) where individual updates might fail due to temporary validation
+   * inconsistencies.
+   *
+   * @param items Pointer to an array of AnboxPlatformConfigurationItem structures.
+   * Each item in the array follows the same reset logic as @ref set_config_item:
+   * if an item has its @c data field set to @c nullptr and @c data_size set to @c 0,
+   * that specific configuration item should be reset to its default value.
+   * @param count The number of configuration items in the items array.
+   *
+   * @return 0 on success, or a negative error code on failure.
+   * Possible error codes include:
+   *  -EINVAL: If any provided argument is invalid or if the combined configuration
+   * logic is inconsistent.
+   *  -ENOMEM: If the provided data size for an item is incorrect or memory allocation fails.
+   *  -EIO: If the platform fails to apply the configuration.
+   *
+   * @note Implementation should guarantee atomicity: if any single item in the batch
+   * fails validation or application, no changes from the entire batch should be applied.
+   */
+  virtual int set_config_items(const AnboxPlatformConfigurationItem* items, size_t count) {
+    (void)items;
+    (void)count;
     return 0;
   }
 

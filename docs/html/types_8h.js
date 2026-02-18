@@ -11,6 +11,7 @@ var types_8h =
     [ "AnboxPlatformConfigurationItemInfo", "structAnboxPlatformConfigurationItemInfo.html", "structAnboxPlatformConfigurationItemInfo" ],
     [ "AnboxPlatformConfigurationInfo", "structAnboxPlatformConfigurationInfo.html", "structAnboxPlatformConfigurationInfo" ],
     [ "AnboxAndroidSystemProperties", "structAnboxAndroidSystemProperties.html", "structAnboxAndroidSystemProperties" ],
+    [ "AnboxPlatformConfigurationItem", "structAnboxPlatformConfigurationItem.html", "structAnboxPlatformConfigurationItem" ],
     [ "AnboxPlatformConfiguration", "structAnboxPlatformConfiguration.html", "structAnboxPlatformConfiguration" ],
     [ "AnboxPlatformDescriptor", "structAnboxPlatformDescriptor.html", "structAnboxPlatformDescriptor" ],
     [ "AnboxCameraSpec", "structAnboxCameraSpec.html", "structAnboxCameraSpec" ],
@@ -145,7 +146,9 @@ var types_8h =
       [ "GAMEPAD", "types_8h.html#adf8cc8125db12fa5f76b530f2f9939bca273c15ddc1f5abadaf24cd191e7db5e0", null ]
     ] ],
     [ "AnboxPlatformConfigurationItemValueType", "types_8h.html#a2db22e4829c8c814a7b302fd0f8c1d4c", [
-      [ "BOOLEAN", "types_8h.html#a2db22e4829c8c814a7b302fd0f8c1d4ca8a583f16e8d237a423c8c1d9087a4c72", null ]
+      [ "BOOLEAN", "types_8h.html#a2db22e4829c8c814a7b302fd0f8c1d4ca8a583f16e8d237a423c8c1d9087a4c72", null ],
+      [ "UINT32", "types_8h.html#a2db22e4829c8c814a7b302fd0f8c1d4ca473815478d857d6a0dbe1f84f44a8592", null ],
+      [ "STRING", "types_8h.html#a2db22e4829c8c814a7b302fd0f8c1d4caee847e634a4297b274316de8a8ca9921", null ]
     ] ],
     [ "AnboxPlatformConfigurationKey", "types_8h.html#a0ea2707450519d64745267790a9f2f0d", [
       [ "EGL_DRIVER_PATH", "types_8h.html#a0ea2707450519d64745267790a9f2f0dae8ab64cd5952052e49c3d623a10b9715", null ],

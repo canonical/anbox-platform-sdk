@@ -405,6 +405,10 @@ typedef struct {
 typedef enum {
   /* boolean value, represented as 8 bit unsigned integer type (uint8_t) where 0 = false and > 0 = true */
   BOOLEAN,
+  /* 32-bit unsigned integer value */
+  UINT32,
+  /* string value, represented as a null-terminated character array */
+  STRING,
 } AnboxPlatformConfigurationItemValueType;
 
 /*
@@ -643,6 +647,31 @@ typedef enum {
   PLATFORM_CONFIGURATION_ID_END = 1999,
 } AnboxPlatformConfigurationKey;
 
+
+/**
+ * @brief Represents a single configuration item.
+ */
+struct AnboxPlatformConfigurationItem {
+  /**
+   * @brief The unique identifier for the configuration option.
+   */
+  AnboxPlatformConfigurationKey key;
+
+  /**
+   * @brief Pointer to the value buffer for this configuration key.
+   * The caller is responsible for ensuring the memory pointed to by this
+   * pointer remains valid for the duration of the API call. The platform
+   * should copy the data if it needs to persist the value beyond the call.
+   */
+  void* data;
+
+  /**
+   * @brief The size of the memory buffer (in bytes) pointed to by `data`.
+   * This is used for type-safety and bounds checking to prevent memory
+   * corruption during configuration updates.
+   */
+  size_t data_size;
+};
 /**
  * @brief AnboxPlatformConfiguration holds platform configuration options which
  * Anbox supplies to the platform implementation at initialization time.

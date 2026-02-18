@@ -18,6 +18,40 @@
 
 #include "anbox-platform-sdk/plugin.h"
 
+#include <iostream>
+
+namespace {
+// Helper function to call a function and return a default value in case of
+// exceptions
+template <typename Func, typename DefaultValue>
+auto exception_safe_call(Func&& func, DefaultValue&& default_value) noexcept
+  -> decltype(func()) {
+  try {
+    return func();
+  } catch (const std::exception& e) {
+    std::cerr << "Anbox Platform SDK caught exception: " << e.what()
+              << std::endl;
+    return std::forward<DefaultValue>(default_value);
+  } catch (...) {
+    std::cerr << "Anbox Platform SDK caught unknown exception." << std::endl;
+    return std::forward<DefaultValue>(default_value);
+  }
+}
+
+// Helper function to call a void function and ignore exceptions
+template <typename Func>
+void exception_safe_call_void(Func&& func) noexcept {
+  try {
+    func();
+  } catch (const std::exception& e) {
+    std::cerr << "Anbox Platform SDK caught exception: " << e.what()
+              << std::endl;
+  } catch (...) {
+    std::cerr << "Anbox Platform SDK caught unknown exception." << std::endl;
+  }
+}
+} // namespace
+
 extern "C" {
 ANBOX_EXPORT const AnboxAudioProcessor* anbox_platform_get_audio_processor(const AnboxPlatform* platform) {
   if (!platform || !platform->audio_processor.instance)
@@ -38,212 +72,263 @@ ANBOX_EXPORT const AnboxGraphicsProcessor* anbox_platform_get_graphics_processor
 }
 
 ANBOX_EXPORT bool anbox_platform_ready(const AnboxPlatform* platform) {
-  if (!platform || !platform->instance)
-    return false;
-  return platform->instance->ready();
+  return exception_safe_call([&]() {
+    if (!platform || !platform->instance)
+      return false;
+    return platform->instance->ready();
+  }, false);
 }
 
 ANBOX_EXPORT int anbox_platform_wait_until_ready(const AnboxPlatform* platform) {
-  if (!platform || !platform->instance)
-    return -EINVAL;
-  return platform->instance->wait_until_ready();
+  return exception_safe_call([&]() {
+    if (!platform || !platform->instance)
+      return -EINVAL;
+    return platform->instance->wait_until_ready();
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_platform_get_config_item(const AnboxPlatform* platform,
                                                 AnboxPlatformConfigurationKey key,
                                                 void* data, size_t data_size) {
-  if (!platform || !platform->instance)
-    return -EINVAL;
-  return platform->instance->get_config_item(key, data, data_size);
+  return exception_safe_call([&]() {
+    if (!platform || !platform->instance)
+      return -EINVAL;
+    return platform->instance->get_config_item(key, data, data_size);
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_platform_set_config_item(const AnboxPlatform* platform,
                                                 AnboxPlatformConfigurationKey key,
                                                 void* data, size_t data_size) {
-  if (!platform || !platform->instance)
-    return -EINVAL;
-  return platform->instance->set_config_item(key, data, data_size);
+  return exception_safe_call([&]() {
+    if (!platform || !platform->instance)
+      return -EINVAL;
+    return platform->instance->set_config_item(key, data, data_size);
+  }, -EIO);
+}
+
+ANBOX_EXPORT int anbox_platform_set_config_items(const AnboxPlatform* platform,
+                                                 const AnboxPlatformConfigurationItem* items,
+                                                 size_t count) {
+  return exception_safe_call([&]() {
+    if (!platform || !platform->instance)
+      return -EINVAL;
+    return platform->instance->set_config_items(items, count);
+  }, -EIO);
 }
 
 ANBOX_EXPORT void anbox_platform_setup_event_tracer(const AnboxPlatform* platform,
                                                     AnboxTracerGetCategoryEnabledFunc get_category_enabled_callback,
                                                     AnboxTracerAddEventFunc add_event_callback) {
-  if (!platform || !platform->instance)
-    return;
-
-  platform->instance->setup_event_tracer(get_category_enabled_callback, add_event_callback);
+  exception_safe_call_void([&]() {
+    if (!platform || !platform->instance)
+      return;
+    platform->instance->setup_event_tracer(get_category_enabled_callback, add_event_callback);
+  });
 }
 
 ANBOX_EXPORT int anbox_platform_stop(const AnboxPlatform* platform) {
-  if (!platform->instance)
-    return -EINVAL;
-
-  return platform->instance->stop();
+  return exception_safe_call([&]() {
+    if (!platform || !platform->instance)
+      return -EINVAL;
+    return platform->instance->stop();
+  }, -EIO);
 }
 
 ANBOX_EXPORT void anbox_platform_handle_event(const AnboxPlatform* platform,
                                               AnboxEventType type) {
-  if (!platform->instance)
-    return;
-
-  platform->instance->handle_event(type);
+  exception_safe_call_void([&]() {
+    if (!platform || !platform->instance)
+      return;
+    platform->instance->handle_event(type);
+  });
 }
 
 ANBOX_EXPORT AnboxVideoDecoder* anbox_platform_create_video_decoder(const AnboxPlatform* platform,
                                                                     AnboxVideoCodecType codec_type) {
-  if (!platform || !platform->instance)
-    return nullptr;
-
-  std::unique_ptr<anbox::VideoDecoder> decoder(platform->instance->create_video_decoder(codec_type));
-  if (!decoder)
-    return nullptr;
-
-  return new AnboxVideoDecoder{std::move(decoder)};
+  return exception_safe_call([&]() -> AnboxVideoDecoder* {
+    if (!platform || !platform->instance)
+      return nullptr;
+    std::unique_ptr<anbox::VideoDecoder> decoder(platform->instance->create_video_decoder(codec_type));
+    if (!decoder)
+      return nullptr;
+    return new AnboxVideoDecoder{std::move(decoder)};
+  }, nullptr);
 }
 
 ANBOX_EXPORT size_t anbox_audio_processor_process_data(const AnboxAudioProcessor* audio_processor,
                                                        const uint8_t* data,
                                                        size_t size) {
-  if (!audio_processor || !audio_processor->instance)
-    return 0;
-
+  return exception_safe_call([&]() {
+    if (!audio_processor || !audio_processor->instance)
+      return static_cast<size_t>(0);
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-  return audio_processor->instance->process_data(data, size);
+    return audio_processor->instance->process_data(data, size);
 #pragma GCC diagnostic pop
+  }, static_cast<size_t>(0));
 }
 
 ANBOX_EXPORT ssize_t anbox_audio_processor_write_data(const AnboxAudioProcessor* audio_processor,
                                                       const uint8_t* data,
                                                       size_t size) {
-  if (!audio_processor || !audio_processor->instance)
-    return 0;
-  return audio_processor->instance->write_data(data, size);
+  return exception_safe_call([&]() {
+    if (!audio_processor || !audio_processor->instance)
+      return static_cast<ssize_t>(0);
+    return audio_processor->instance->write_data(data, size);
+  }, static_cast<ssize_t>(0));
 }
 
 ANBOX_EXPORT ssize_t anbox_audio_processor_read_data(const AnboxAudioProcessor* audio_processor,
                                                      uint8_t* data,
                                                      size_t size) {
-  if (!audio_processor || !audio_processor->instance)
-    return 0;
-  return audio_processor->instance->read_data(data, size);
+  return exception_safe_call([&]() {
+    if (!audio_processor || !audio_processor->instance)
+      return static_cast<ssize_t>(0);
+    return audio_processor->instance->read_data(data, size);
+  }, static_cast<ssize_t>(0));
 }
 
 ANBOX_EXPORT int anbox_audio_processor_activate(const AnboxAudioProcessor* audio_processor,
                                                 AnboxAudioStreamType type) {
-  if (!audio_processor || !audio_processor->instance)
-    return -EINVAL;
-  return audio_processor->instance->activate(type);
+  return exception_safe_call([&]() {
+    if (!audio_processor || !audio_processor->instance)
+      return -EINVAL;
+    return audio_processor->instance->activate(type);
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_audio_processor_standby(const AnboxAudioProcessor* audio_processor,
                                                AnboxAudioStreamType type) {
-  if (!audio_processor || !audio_processor->instance)
-    return -EINVAL;
-  return audio_processor->instance->standby(type);
+  return exception_safe_call([&]() {
+    if (!audio_processor || !audio_processor->instance)
+      return -EINVAL;
+    return audio_processor->instance->standby(type);
+  }, -EIO);
 }
 
 ANBOX_EXPORT bool anbox_audio_processor_need_silence_on_standby(const AnboxAudioProcessor* audio_processor) {
-  if (!audio_processor || !audio_processor->instance)
-    return false;
-  return audio_processor->instance->need_silence_on_standby();
+  return exception_safe_call([&]() {
+    if (!audio_processor || !audio_processor->instance)
+      return false;
+    return audio_processor->instance->need_silence_on_standby();
+  }, false);
 }
 
 ANBOX_EXPORT int anbox_input_processor_read_event(const AnboxInputProcessor* input_processor,
                                                   AnboxInputEvent* event,
                                                   int timeout) {
-  if (!input_processor || !input_processor->instance)
-    return -EINVAL;
-  return input_processor->instance->read_event(event, timeout);
+  return exception_safe_call([&]() {
+    if (!input_processor || !input_processor->instance)
+      return -EINVAL;
+    return input_processor->instance->read_event(event, timeout);
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_input_processor_inject_event(const AnboxInputProcessor* input_processor,
                                                     AnboxInputEvent event) {
-  if (!input_processor || !input_processor->instance)
-    return -EINVAL;
-  return input_processor->instance->inject_event(event);
+  return exception_safe_call([&]() {
+    if (!input_processor || !input_processor->instance)
+      return -EINVAL;
+    return input_processor->instance->inject_event(event);
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_graphics_processor_initialize(const AnboxGraphicsProcessor* graphics_processor,
                                                      AnboxGraphicsConfiguration* configuration) {
-  if (!graphics_processor || !graphics_processor->instance)
-    return -EINVAL;
-  return graphics_processor->instance->initialize(configuration);
+  return exception_safe_call([&]() {
+    if (!graphics_processor || !graphics_processor->instance)
+      return -EINVAL;
+    return graphics_processor->instance->initialize(configuration);
+  }, -EIO);
 }
 
 ANBOX_EXPORT EGLDisplay anbox_graphics_processor_create_display(const AnboxGraphicsProcessor* graphics_processor) {
-  if (!graphics_processor || !graphics_processor->instance)
-    return EGL_NO_DISPLAY;
-  return graphics_processor->instance->create_display();
+  return exception_safe_call([&]() {
+    if (!graphics_processor || !graphics_processor->instance)
+      return EGL_NO_DISPLAY;
+    return graphics_processor->instance->create_display();
+  }, EGL_NO_DISPLAY);
 }
 
 ANBOX_EXPORT void anbox_graphics_processor_begin_frame(const AnboxGraphicsProcessor* graphics_processor) {
-  if (!graphics_processor || !graphics_processor->instance)
-    return;
-
-  graphics_processor->instance->begin_frame();
+  exception_safe_call_void([&]() {
+    if (!graphics_processor || !graphics_processor->instance)
+      return;
+    graphics_processor->instance->begin_frame();
+  });
 }
 
 ANBOX_EXPORT void anbox_graphics_processor_finish_frame(const AnboxGraphicsProcessor* graphics_processor) {
-  if (!graphics_processor || !graphics_processor->instance)
-    return;
-
-  graphics_processor->instance->finish_frame();
+  exception_safe_call_void([&]() {
+    if (!graphics_processor || !graphics_processor->instance)
+      return;
+    graphics_processor->instance->finish_frame();
+  });
 }
 
 ANBOX_EXPORT EGLSurface anbox_graphics_processor_create_offscreen_surface(const AnboxGraphicsProcessor* graphics_processor,
                                                                     EGLDisplay display,
                                                                     EGLConfig config,
                                                                     const EGLint* attribs) {
-  if (!graphics_processor || !graphics_processor->instance)
-    return EGL_NO_SURFACE;
-  return graphics_processor->instance->create_offscreen_surface(display, config, attribs);
+  return exception_safe_call([&]() {
+    if (!graphics_processor || !graphics_processor->instance)
+      return EGL_NO_SURFACE;
+    return graphics_processor->instance->create_offscreen_surface(display, config, attribs);
+  }, EGL_NO_SURFACE);
 }
 
 ANBOX_EXPORT bool anbox_graphics_processor_destroy_offscreen_surface(const AnboxGraphicsProcessor* graphics_processor,
                                                                      EGLDisplay display,
                                                                      EGLSurface surface) {
-  if (!graphics_processor || !graphics_processor->instance)
-    return false;
-  return graphics_processor->instance->destroy_offscreen_surface(display, surface);
+  return exception_safe_call([&]() {
+    if (!graphics_processor || !graphics_processor->instance)
+      return false;
+    return graphics_processor->instance->destroy_offscreen_surface(display, surface);
+  }, false);
 }
 
 ANBOX_EXPORT bool anbox_graphics_processor_present(const AnboxGraphicsProcessor* graphics_processor,
                                                    AnboxGraphicsBuffer* buffer,
                                                    AnboxCallback* callback) {
-  if (!graphics_processor || !graphics_processor->instance)
-    return false;
-
+  return exception_safe_call([&]() {
+    if (!graphics_processor || !graphics_processor->instance)
+      return false;
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-  return graphics_processor->instance->present(buffer, callback);
+    return graphics_processor->instance->present(buffer, callback);
 #pragma GCC diagnostic pop
+  }, false);
 }
 
 ANBOX_EXPORT bool anbox_graphics_processor_present2(const AnboxGraphicsProcessor* graphics_processor,
                                                     AnboxGraphicsBuffer2* buffer,
                                                     AnboxCallback* callback) {
-  if (!graphics_processor || !graphics_processor->instance)
-    return false;
-
-  return graphics_processor->instance->present(buffer, callback);
+  return exception_safe_call([&]() {
+    if (!graphics_processor || !graphics_processor->instance)
+      return false;
+    return graphics_processor->instance->present(buffer, callback);
+  }, false);
 }
 
 ANBOX_EXPORT bool anbox_graphics_processor_create_buffer(const AnboxGraphicsProcessor* graphics_processor,
                                                          uint32_t width, uint32_t height, uint32_t format,
                                                          uint32_t usage, AnboxGraphicsBuffer2** buffer) {
-  if (!graphics_processor || !graphics_processor->instance)
-    return false;
-
-  return graphics_processor->instance->create_buffer(width, height, format, usage, buffer);
+  return exception_safe_call([&]() {
+    if (!graphics_processor || !graphics_processor->instance)
+      return false;
+    return graphics_processor->instance->create_buffer(width, height, format, usage, buffer);
+  }, false);
 }
 
 ANBOX_EXPORT void anbox_graphics_processor_set_vsync_callback(
   const AnboxGraphicsProcessor* graphics_processor,
   const AnboxVsyncCallback& callback, void* user_data) {
-  if (!graphics_processor || !graphics_processor->instance)
-    return;
-  return graphics_processor->instance->set_vsync_callback(callback, user_data);
+  exception_safe_call_void([&]() {
+    if (!graphics_processor || !graphics_processor->instance)
+      return;
+    graphics_processor->instance->set_vsync_callback(callback, user_data);
+  });
 }
 
 ANBOX_EXPORT const AnboxSensorProcessor* anbox_platform_get_sensor_processor(const AnboxPlatform* platform) {
@@ -253,31 +338,39 @@ ANBOX_EXPORT const AnboxSensorProcessor* anbox_platform_get_sensor_processor(con
 }
 
 ANBOX_EXPORT AnboxSensorType anbox_sensor_processor_supported_sensors(const AnboxSensorProcessor* sensor_processor) {
-  if (!sensor_processor || !sensor_processor->instance)
-    return AnboxSensorType::NONE;
-  return sensor_processor->instance->supported_sensors();
+  return exception_safe_call([&]() {
+    if (!sensor_processor || !sensor_processor->instance)
+      return AnboxSensorType::NONE;
+    return sensor_processor->instance->supported_sensors();
+  }, AnboxSensorType::NONE);
 }
 
 ANBOX_EXPORT int anbox_sensor_processor_activate_sensor(const AnboxSensorProcessor* sensor_processor,
                                                         const AnboxSensorType type, bool on) {
-  if (!sensor_processor || !sensor_processor->instance)
-    return AnboxSensorType::NONE;
-  return sensor_processor->instance->activate_sensor(type, on);
+  return exception_safe_call([&]() {
+    if (!sensor_processor || !sensor_processor->instance)
+      return static_cast<int>(AnboxSensorType::NONE);
+    return sensor_processor->instance->activate_sensor(type, on);
+  }, static_cast<int>(AnboxSensorType::NONE));
 }
 
 ANBOX_EXPORT int anbox_sensor_processor_read_data(const AnboxSensorProcessor* sensor_processor,
                                                   AnboxSensorData* data,
                                                   int timeout) {
-  if (!sensor_processor || !sensor_processor->instance)
-    return -EINVAL;
-  return sensor_processor->instance->read_data(data, timeout);
+  return exception_safe_call([&]() {
+    if (!sensor_processor || !sensor_processor->instance)
+      return -EINVAL;
+    return sensor_processor->instance->read_data(data, timeout);
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_sensor_processor_inject_data(const AnboxSensorProcessor* sensor_processor,
                                                     AnboxSensorData data) {
-  if (!sensor_processor || !sensor_processor->instance)
-    return -EINVAL;
-  return sensor_processor->instance->inject_data(data);
+  return exception_safe_call([&]() {
+    if (!sensor_processor || !sensor_processor->instance)
+      return -EINVAL;
+    return sensor_processor->instance->inject_data(data);
+  }, -EIO);
 }
 
 ANBOX_EXPORT const AnboxGpsProcessor* anbox_platform_get_gps_processor(const AnboxPlatform* platform) {
@@ -289,17 +382,20 @@ ANBOX_EXPORT const AnboxGpsProcessor* anbox_platform_get_gps_processor(const Anb
 ANBOX_EXPORT int anbox_gps_processor_read_data(const AnboxGpsProcessor* gps_processor,
                                                AnboxGpsData* data,
                                                int timeout) {
-  if (!gps_processor || !gps_processor->instance) {
-    return -EINVAL;
-  }
-  return gps_processor->instance->read_data(data, timeout);
+  return exception_safe_call([&]() {
+    if (!gps_processor || !gps_processor->instance)
+      return -EINVAL;
+    return gps_processor->instance->read_data(data, timeout);
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_gps_processor_inject_data(const AnboxGpsProcessor* gps_processor,
                                                  AnboxGpsData data) {
-  if (!gps_processor || !gps_processor->instance)
-    return -EINVAL;
-  return gps_processor->instance->inject_data(data);
+  return exception_safe_call([&]() {
+    if (!gps_processor || !gps_processor->instance)
+      return -EINVAL;
+    return gps_processor->instance->inject_data(data);
+  }, -EIO);
 }
 
 ANBOX_EXPORT const AnboxCameraProcessor* anbox_platform_get_camera_processor(const AnboxPlatform* platform) {
@@ -311,38 +407,48 @@ ANBOX_EXPORT const AnboxCameraProcessor* anbox_platform_get_camera_processor(con
 ANBOX_EXPORT int anbox_camera_processor_get_device_specs(const AnboxCameraProcessor* camera_processor,
                                                          AnboxCameraSpec** specs,
                                                          size_t *length) {
-  if (!camera_processor || !camera_processor->instance)
-    return -EINVAL;
-  return camera_processor->instance->get_device_specs(specs, length);
+  return exception_safe_call([&]() {
+    if (!camera_processor || !camera_processor->instance)
+      return -EINVAL;
+    return camera_processor->instance->get_device_specs(specs, length);
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_camera_processor_open_device(const AnboxCameraProcessor* camera_processor,
                                                     AnboxCameraSpec spec,
                                                     AnboxCameraOrientation orientation) {
-  if (!camera_processor || !camera_processor->instance)
-    return -EINVAL;
-  return camera_processor->instance->open_device(spec, orientation);
+  return exception_safe_call([&]() {
+    if (!camera_processor || !camera_processor->instance)
+      return -EINVAL;
+    return camera_processor->instance->open_device(spec, orientation);
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_camera_processor_close_device(const AnboxCameraProcessor* camera_processor) {
-  if (!camera_processor || !camera_processor->instance)
-    return -EINVAL;
-  return camera_processor->instance->close_device();
+  return exception_safe_call([&]() {
+    if (!camera_processor || !camera_processor->instance)
+      return -EINVAL;
+    return camera_processor->instance->close_device();
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_camera_processor_read_frame(const AnboxCameraProcessor* camera_processor,
                                                    AnboxVideoFrame* frame,
                                                    int timeout) {
-  if (!camera_processor || !camera_processor->instance)
-    return -EINVAL;
-  return camera_processor->instance->read_frame(frame, timeout);
+  return exception_safe_call([&]() {
+    if (!camera_processor || !camera_processor->instance)
+      return -EINVAL;
+    return camera_processor->instance->read_frame(frame, timeout);
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_camera_processor_inject_frame(const AnboxCameraProcessor* camera_processor,
                                                      AnboxVideoFrame frame) {
-  if (!camera_processor || !camera_processor->instance)
-    return -EINVAL;
-  return camera_processor->instance->inject_frame(frame);
+  return exception_safe_call([&]() {
+    if (!camera_processor || !camera_processor->instance)
+      return -EINVAL;
+    return camera_processor->instance->inject_frame(frame);
+  }, -EIO);
 }
 
 ANBOX_EXPORT const AnboxProxy* anbox_platform_get_anbox_proxy(const AnboxPlatform* platform) {
@@ -354,28 +460,34 @@ ANBOX_EXPORT const AnboxProxy* anbox_platform_get_anbox_proxy(const AnboxPlatfor
 ANBOX_EXPORT int anbox_proxy_set_change_screen_orientation_callback(const AnboxProxy* anbox_proxy,
                                                                     const AnboxChangeScreenOrientationCallback& callback,
                                                                     void* user_data) {
-  if (!anbox_proxy || !anbox_proxy->instance)
-    return -EINVAL;
-  anbox_proxy->instance->set_change_screen_orientation_callback(callback, user_data);
-  return 0;
+  return exception_safe_call([&]() {
+    if (!anbox_proxy || !anbox_proxy->instance)
+      return -EINVAL;
+    anbox_proxy->instance->set_change_screen_orientation_callback(callback, user_data);
+    return 0;
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_proxy_set_change_display_density_callback(const AnboxProxy* anbox_proxy,
                                                                  const AnboxChangeDisplayDensityCallback& callback,
                                                                  void* user_data) {
-  if (!anbox_proxy || !anbox_proxy->instance)
-    return -EINVAL;
-  anbox_proxy->instance->set_change_display_density_callback(callback, user_data);
-  return 0;
+  return exception_safe_call([&]() {
+    if (!anbox_proxy || !anbox_proxy->instance)
+      return -EINVAL;
+    anbox_proxy->instance->set_change_display_density_callback(callback, user_data);
+    return 0;
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_proxy_set_change_display_size_callback(const AnboxProxy* anbox_proxy,
                                                               const AnboxChangeDisplaySizeCallback& callback,
                                                               void* user_data) {
-  if (!anbox_proxy || !anbox_proxy->instance)
-    return -EINVAL;
-  anbox_proxy->instance->set_change_display_size_callback(callback, user_data);
-  return  0;
+  return exception_safe_call([&]() {
+    if (!anbox_proxy || !anbox_proxy->instance)
+      return -EINVAL;
+    anbox_proxy->instance->set_change_display_size_callback(callback, user_data);
+    return 0;
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_proxy_send_message(const AnboxProxy* anbox_proxy,
@@ -383,73 +495,86 @@ ANBOX_EXPORT int anbox_proxy_send_message(const AnboxProxy* anbox_proxy,
                                           size_t type_size,
                                           const char* data,
                                           size_t data_size) {
-  if (!anbox_proxy || !anbox_proxy->instance)
-    return -EINVAL;
-  return anbox_proxy->instance->send_message(type, type_size, data, data_size);
+  return exception_safe_call([&]() {
+    if (!anbox_proxy || !anbox_proxy->instance)
+      return -EINVAL;
+    return anbox_proxy->instance->send_message(type, type_size, data, data_size);
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_proxy_set_trigger_action_callback(const AnboxProxy* anbox_proxy,
                                                          const AnboxTriggerActionCallback& callback,
                                                          void* user_data) {
-  if (!anbox_proxy || !anbox_proxy->instance)
-    return -EINVAL;
-  anbox_proxy->instance->set_trigger_action_callback(callback, user_data);
-  return  0;
+  return exception_safe_call([&]() {
+    if (!anbox_proxy || !anbox_proxy->instance)
+      return -EINVAL;
+    anbox_proxy->instance->set_trigger_action_callback(callback, user_data);
+    return 0;
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_proxy_set_create_adb_connection_callback(const AnboxProxy* anbox_proxy,
                                                                 const AnboxCreateADBConnectionCallback& callback,
                                                                 void* user_data) {
-  if (!anbox_proxy || !anbox_proxy->instance)
-    return -EINVAL;
-  anbox_proxy->instance->set_create_adb_connection_callback(callback, user_data);
-  return  0;
+  return exception_safe_call([&]() {
+    if (!anbox_proxy || !anbox_proxy->instance)
+      return -EINVAL;
+    anbox_proxy->instance->set_create_adb_connection_callback(callback, user_data);
+    return 0;
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_proxy_set_disconnect_adb_connection_callback(const AnboxProxy* anbox_proxy,
                                                                     const AnboxDisconnectADBConnectionCallback& callback,
                                                                     void* user_data) {
-  if (!anbox_proxy || !anbox_proxy->instance)
-    return -EINVAL;
-  anbox_proxy->instance->set_disconnect_adb_connection_callback(callback, user_data);
-  return  0;
+  return exception_safe_call([&]() {
+    if (!anbox_proxy || !anbox_proxy->instance)
+      return -EINVAL;
+    anbox_proxy->instance->set_disconnect_adb_connection_callback(callback, user_data);
+    return 0;
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_video_decoder_release(AnboxVideoDecoder* decoder) {
-  if (!decoder || !decoder->instance)
-    return -EINVAL;
-
-  decoder->instance.reset();
-  delete decoder;
-  return 0;
+  return exception_safe_call([&]() {
+    if (!decoder || !decoder->instance)
+      return -EINVAL;
+    decoder->instance.reset();
+    delete decoder;
+    return 0;
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_video_decoder_configure(const AnboxVideoDecoder* decoder, AnboxVideoDecoderConfig config) {
-  if (!decoder || !decoder->instance)
-    return -EINVAL;
-
-  return decoder->instance->configure(config);
+  return exception_safe_call([&]() {
+    if (!decoder || !decoder->instance)
+      return -EINVAL;
+    return decoder->instance->configure(config);
+  }, -EIO);
 }
 
 ANBOX_EXPORT int anbox_video_decoder_flush(const AnboxVideoDecoder* decoder) {
-  if (!decoder || !decoder->instance)
-    return -EINVAL;
-
-  return decoder->instance->flush();
+  return exception_safe_call([&]() {
+    if (!decoder || !decoder->instance)
+      return -EINVAL;
+    return decoder->instance->flush();
+  }, -EIO);
 }
 
 ANBOX_EXPORT uint64_t anbox_video_decoder_decode_frame(const AnboxVideoDecoder* decoder, const AnboxVideoFrame* frame, uint64_t pts) {
-  if (!decoder || !decoder->instance)
-    return 0;
-
-  return decoder->instance->decode_frame(frame, pts);
+  return exception_safe_call([&]() {
+    if (!decoder || !decoder->instance)
+      return static_cast<uint64_t>(0);
+    return decoder->instance->decode_frame(frame, pts);
+  }, static_cast<uint64_t>(0));
 }
 
 ANBOX_EXPORT int anbox_video_decoder_retrieve_image(const AnboxVideoDecoder* decoder, AnboxVideoImage* img) {
-  if (!decoder || !decoder->instance)
-    return -EINVAL;
-
-  return decoder->instance->retrieve_image(img);
+  return exception_safe_call([&]() {
+    if (!decoder || !decoder->instance)
+      return -EINVAL;
+    return decoder->instance->retrieve_image(img);
+  }, -EIO);
 }
 
 ANBOX_EXPORT const AnboxVhalConnector* anbox_platform_get_vhal_connector(const AnboxPlatform* platform) {
@@ -461,10 +586,11 @@ ANBOX_EXPORT const AnboxVhalConnector* anbox_platform_get_vhal_connector(const A
 ANBOX_EXPORT int anbox_vhal_connector_set_callbacks(const AnboxVhalConnector* connector,
                                                     const AnboxVhalConnectorCallbacks& callbacks,
                                                     void* user_data) {
-  if (!connector || !connector->instance)
-    return -EINVAL;
-  connector->instance->set_callbacks(callbacks, user_data);
-  return 0;
+  return exception_safe_call([&]() {
+    if (!connector || !connector->instance)
+      return -EINVAL;
+    connector->instance->set_callbacks(callbacks, user_data);
+    return 0;
+  }, -EIO);
 }
-
 } // extern "C"
