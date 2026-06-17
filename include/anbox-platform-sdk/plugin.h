@@ -78,7 +78,7 @@ struct AnboxPlatform {
  * instance, This function will helps to register all the required methods that
  * a platform plugin implemented.
  */
-extern AnboxPlatform* anbox_platform_plugin_register(std::unique_ptr<anbox::Platform>&& platform);
+extern AnboxPlatform* anbox_platform_plugin_register(std::unique_ptr<anbox::Platform>&& platform) noexcept;
 
 /**
  * @brief Unregister a platform plugin.
@@ -88,6 +88,6 @@ extern AnboxPlatform* anbox_platform_plugin_register(std::unique_ptr<anbox::Plat
  * a platform plugin implemented.
 
  */
-extern void anbox_platform_plugin_unregister(AnboxPlatform*);
+extern void anbox_platform_plugin_unregister(AnboxPlatform*) noexcept;
 
 #endif

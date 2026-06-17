@@ -1,5 +1,7 @@
 <map id="AnboxDirectGraphicsConfiguration" name="AnboxDirectGraphicsConfiguration">
-<area shape="rect" id="node1" title="AnboxDirectGraphicsConfiguration defines how Anbox should configure the graphics implementation insid..." alt="" coords="5,175,252,252"/>
-<area shape="rect" id="node2" title=" " alt="" coords="34,5,85,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="161,5,235,83"/>
+<area shape="rect" id="Node000001" title="AnboxDirectGraphicsConfiguration defines how Anbox should configure the graphics implementation insid..." alt="" coords="5,163,244,228"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="34,5,77,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,71,51,104,59,138,66,149,62,152,54,140,46,105,46,71"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="161,5,227,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,71,181,105,167,140,161,150,157,148,162,138,176,103,185,70"/>
 </map>

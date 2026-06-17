@@ -1,5 +1,7 @@
 <map id="AnboxGraphicsBuffer" name="AnboxGraphicsBuffer">
-<area shape="rect" id="node1" title="Graphics buffer." alt="" coords="13,189,171,267"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,80,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="104,5,181,83"/>
+<area shape="rect" id="Node000001" title="Graphics buffer." alt="" coords="10,177,161,243"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,75,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="38,71,37,111,45,153,49,162,44,164,40,154,32,111,33,71"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="99,5,165,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,72,105,154,103,162,98,161,100,153,122,70"/>
 </map>

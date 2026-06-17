@@ -1,4 +1,5 @@
 <map id="AnboxProxy" name="AnboxProxy">
-<area shape="rect" id="node1" title=" " alt="" coords="75,336,175,413"/>
-<area shape="rect" id="node2" href="$classanbox_1_1AnboxProxy.html" title="AnboxProxy provides a proxy layer which encapsulates callbacks that can be used by a platform to chan..." alt="" coords="5,5,244,273"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="75,377,167,443"/>
+<area shape="rect" id="Node000002" href="$classanbox_1_1AnboxProxy.html" title="AnboxProxy provides a proxy layer which encapsulates callbacks that can be used by a platform to chan..." alt="" coords="5,5,236,315"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,315,123,361,118,361,118,315"/>
 </map>

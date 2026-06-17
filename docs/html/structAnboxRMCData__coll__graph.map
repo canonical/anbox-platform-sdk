@@ -1,7 +1,11 @@
 <map id="AnboxRMCData" name="AnboxRMCData">
-<area shape="rect" id="node1" title=" " alt="" coords="163,189,287,267"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,72,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="117,5,168,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="284,5,335,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="415,5,481,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="122,177,238,243"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,64,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="34,71,37,112,44,133,54,152,78,174,107,189,105,194,75,178,50,155,39,135,32,113,29,71"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,5,132,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="107,71,105,111,108,132,114,152,122,164,117,167,110,154,102,134,99,112,101,71"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="220,5,279,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="247,71,238,112,222,154,217,165,212,162,218,152,233,110,242,70"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="332,5,375,71"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="353,72,343,114,333,136,319,155,289,179,255,195,253,190,286,174,315,151,329,133,338,112,348,70"/>
 </map>

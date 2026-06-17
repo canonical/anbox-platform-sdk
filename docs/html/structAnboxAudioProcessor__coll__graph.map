@@ -1,4 +1,5 @@
 <map id="AnboxAudioProcessor" name="AnboxAudioProcessor">
-<area shape="rect" id="node1" title=" " alt="" coords="31,277,194,355"/>
-<area shape="rect" id="node2" href="$classanbox_1_1AudioProcessor.html" title="AudioProcessor allows processing audio data from the Android container and perform audio processing l..." alt="" coords="5,5,220,215"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="31,313,185,379"/>
+<area shape="rect" id="Node000002" href="$classanbox_1_1AudioProcessor.html" title="AudioProcessor allows processing audio data from the Android container and perform audio processing l..." alt="" coords="5,5,211,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,251,111,297,105,297,105,251"/>
 </map>

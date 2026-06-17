@@ -31,10 +31,8 @@ target_include_directories(anbox-platform-sdk-internal INTERFACE
 # as after having been installed and going to be used by the user, we have to use generator expressions to create the source files
 set(SOURCE
 	# For building the sdk itself internally - use the source directories
-    $<BUILD_INTERFACE:${anbox-platform-sdk_SOURCE_DIR}/src/registry.cpp>
     $<BUILD_INTERFACE:${anbox-platform-sdk_SOURCE_DIR}/src/public_api.cpp>
      # For client in install mode - use the INSTALL_PREFIX
-    $<INSTALL_INTERFACE:$<INSTALL_PREFIX>/src/registry.cpp>
     $<INSTALL_INTERFACE:$<INSTALL_PREFIX>/src/public_api.cpp>)
 target_sources(anbox-platform-sdk-internal INTERFACE ${SOURCE})
 

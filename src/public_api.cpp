@@ -52,6 +52,36 @@ void exception_safe_call_void(Func&& func) noexcept {
 }
 } // namespace
 
+AnboxPlatform* anbox_platform_plugin_register(
+  std::unique_ptr<anbox::Platform>&& platform) noexcept {
+  return exception_safe_call([&]() {
+    std::unique_ptr<AnboxPlatform> anbox_platform = std::make_unique<AnboxPlatform>();
+    anbox_platform->audio_processor.instance = platform->audio_processor();
+    anbox_platform->input_processor.instance = platform->input_processor();
+    anbox_platform->graphics_processor.instance =
+      platform->graphics_processor();
+    anbox_platform->sensor_processor.instance = platform->sensor_processor();
+    anbox_platform->anbox_proxy.instance = platform->anbox_proxy();
+    anbox_platform->gps_processor.instance = platform->gps_processor();
+    anbox_platform->camera_processor.instance = platform->camera_processor();
+    anbox_platform->vhal_connector.instance = platform->vhal_connector();
+    anbox_platform->instance = std::move(platform);
+    return anbox_platform.release();
+  }, nullptr);
+}
+
+void anbox_platform_plugin_unregister(AnboxPlatform* platform) noexcept {
+  exception_safe_call_void([&]() {
+    if (!platform)
+      return;
+
+    if (platform->instance)
+      platform->instance.reset();
+
+    delete platform;
+  });
+}
+
 extern "C" {
 ANBOX_EXPORT const AnboxAudioProcessor* anbox_platform_get_audio_processor(const AnboxPlatform* platform) {
   if (!platform || !platform->audio_processor.instance)

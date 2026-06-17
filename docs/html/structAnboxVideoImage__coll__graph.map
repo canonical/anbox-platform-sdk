@@ -1,8 +1,13 @@
 <map id="AnboxVideoImage" name="AnboxVideoImage">
-<area shape="rect" id="node1" title="AnboxVideoImage describes a decoded image returned by the video decoder." alt="" coords="161,204,303,281"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,80,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="104,5,171,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="195,5,269,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="293,5,360,83"/>
-<area shape="rect" id="node6" title=" " alt="" coords="385,5,562,83"/>
+<area shape="rect" id="Node000001" title="AnboxVideoImage describes a decoded image returned by the video decoder." alt="" coords="254,192,387,257"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,175,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,71,107,120,118,145,135,166,157,184,183,197,239,214,237,219,181,202,154,188,131,170,113,148,102,122,90,72"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="199,5,266,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,71,242,118,250,143,260,167,268,178,264,181,256,169,245,145,237,119,231,71"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="291,5,350,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="323,71,323,175,318,175,318,71"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="374,5,433,71"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="399,72,385,119,364,169,358,180,354,177,360,167,380,117,394,70"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="506,5,573,71"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="542,71,535,121,525,147,509,170,486,189,460,203,404,220,403,215,458,198,483,184,505,166,520,145,530,120,537,71"/>
 </map>

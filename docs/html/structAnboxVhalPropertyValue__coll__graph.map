@@ -1,10 +1,17 @@
 <map id="AnboxVhalPropertyValue" name="AnboxVhalPropertyValue">
-<area shape="rect" id="node1" title="AnboxVhalPropertyValue describes the current value of a VHAL property, as returned by a get call to t..." alt="" coords="404,204,587,281"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,193,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="218,5,269,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="345,5,395,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="462,5,529,83"/>
-<area shape="rect" id="node6" title=" " alt="" coords="591,5,658,83"/>
-<area shape="rect" id="node7" title=" " alt="" coords="713,5,787,83"/>
-<area shape="rect" id="node8" title=" " alt="" coords="875,5,942,83"/>
+<area shape="rect" id="Node000001" title="AnboxVhalPropertyValue describes the current value of a VHAL property, as returned by a get call to t..." alt="" coords="298,192,473,257"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,64,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="33,71,36,121,44,145,58,166,72,177,93,186,149,200,216,210,282,216,282,221,215,215,148,205,92,191,70,181,54,170,39,147,30,121,28,71"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="125,5,184,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="159,71,169,120,180,145,197,166,215,181,236,193,283,210,281,215,234,198,212,186,193,170,176,148,164,122,154,72"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="209,5,389,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="298,71,300,118,306,143,316,167,324,179,320,182,311,169,301,145,295,119,293,71"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="413,5,480,71"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="415,64,400,79,389,96,379,136,380,176,374,176,374,135,384,94,396,75,411,60"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="523,5,565,71"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="547,71,540,121,531,146,517,170,489,194,485,189,513,166,526,144,535,119,542,71"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="640,5,699,71"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="674,71,668,122,658,148,642,170,617,185,580,197,490,215,489,210,578,192,615,180,638,166,653,145,662,120,668,71"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="731,5,773,71"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="757,71,751,122,741,148,725,170,708,181,685,191,627,205,558,215,490,221,489,216,557,210,625,200,684,186,705,177,721,166,736,145,746,121,751,71"/>
 </map>

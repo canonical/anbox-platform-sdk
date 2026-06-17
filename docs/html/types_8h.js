@@ -44,7 +44,7 @@ var types_8h =
     [ "MAX_VHAL_AREA_NAME_LENGTH", "types_8h.html#a6dfffcc9812f64a4af47def8ba8a9b99", null ],
     [ "AnboxNativeHandle", "types_8h.html#aeee9b5b982892491ddbda9f7933d4232", null ],
     [ "AnboxTracerAddEventFunc", "types_8h.html#a9d68cc180fd50c073914cf9099d747af", null ],
-    [ "AnboxTracerGetCategoryEnabledFunc", "types_8h.html#a64a55e2b49dede6ae033b3d6eb7941ee", null ],
+    [ "AnboxTracerGetCategoryEnabledFunc", "types_8h.html#ad31fb4e005f6fc05dc0e81b530e79b0c", null ],
     [ "GpsUtcTime", "types_8h.html#af2b0ea531a44c010f81a4abd27504c15", null ],
     [ "AnboxAudioFormat", "types_8h.html#aec9e9f831c3e15bc1f4838979468685f", [
       [ "AUDIO_FORMAT_INVALID", "types_8h.html#aec9e9f831c3e15bc1f4838979468685fae578d2fc363ee3e1e9a7c53d4e07d86a", null ],

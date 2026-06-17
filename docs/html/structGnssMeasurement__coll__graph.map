@@ -1,9 +1,15 @@
 <map id="GnssMeasurement" name="GnssMeasurement">
-<area shape="rect" id="node1" title=" " alt="" coords="399,204,543,281"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,72,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="173,5,224,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="348,5,415,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="455,5,633,83"/>
-<area shape="rect" id="node6" title=" " alt="" coords="657,5,724,83"/>
-<area shape="rect" id="node7" title=" " alt="" coords="748,5,919,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="332,192,468,257"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,64,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,69,94,120,119,145,147,166,187,186,231,200,316,216,315,221,230,205,185,191,144,170,115,149,90,123,51,73"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="88,5,251,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,70,209,119,227,144,248,166,281,187,318,202,316,207,279,192,245,170,223,148,204,122,179,72"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="275,5,445,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="358,71,356,117,364,167,368,177,363,179,359,169,351,118,353,71"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="469,5,528,71"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="471,65,444,96,424,136,412,177,407,175,419,134,439,93,467,61"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="591,5,649,71"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="624,71,618,121,608,147,593,170,569,189,542,204,485,220,484,215,540,199,566,185,589,166,603,145,612,120,619,71"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="759,5,801,71"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="785,71,779,122,769,148,752,170,733,183,707,193,638,208,560,218,485,223,484,218,559,213,637,203,705,188,731,178,749,166,764,145,774,121,779,71"/>
 </map>

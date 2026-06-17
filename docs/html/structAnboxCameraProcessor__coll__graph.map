@@ -1,4 +1,5 @@
 <map id="AnboxCameraProcessor" name="AnboxCameraProcessor">
-<area shape="rect" id="node1" title=" " alt="" coords="9,263,186,340"/>
-<area shape="rect" id="node2" href="$classanbox_1_1CameraProcessor.html" title="CameraProcessor allows a plugin to respond to the camera actions triggered from Anobx and post video ..." alt="" coords="5,5,189,200"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="9,293,178,359"/>
+<area shape="rect" id="Node000002" href="$classanbox_1_1CameraProcessor.html" title="CameraProcessor allows a plugin to respond to the camera actions triggered from Anobx and post video ..." alt="" coords="5,5,181,231"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,231,96,277,91,277,91,231"/>
 </map>

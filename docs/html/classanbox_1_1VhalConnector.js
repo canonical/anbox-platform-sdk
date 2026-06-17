@@ -7,7 +7,7 @@ var classanbox_1_1VhalConnector =
     [ "get_all_prop_configs", "classanbox_1_1VhalConnector.html#a4163d0af65bb21f3abeba326a701d4db", null ],
     [ "get_prop_configs", "classanbox_1_1VhalConnector.html#af32825dc1a71a7fc98f7d4665b0fc9a4", null ],
     [ "is_available", "classanbox_1_1VhalConnector.html#a2089f8f3c78ec6bb3944104f4a51c382", null ],
-    [ "operator=", "classanbox_1_1VhalConnector.html#a93697c0f3f1ca83152ec0053ebf56510", null ],
+    [ "operator=", "classanbox_1_1VhalConnector.html#a7bce32da55d042206dfc1d86e82ed4c3", null ],
     [ "set", "classanbox_1_1VhalConnector.html#aba49365b37a2275eade121758d87f372", null ],
     [ "set_callbacks", "classanbox_1_1VhalConnector.html#a309b21cfb6aa455d5f98f43a813344e7", null ]
 ];

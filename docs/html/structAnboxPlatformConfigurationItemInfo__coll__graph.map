@@ -1,6 +1,9 @@
 <map id="AnboxPlatformConfigurationItemInfo" name="AnboxPlatformConfigurationItemInfo">
-<area shape="rect" id="node1" title=" " alt="" coords="81,160,287,252"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,13,56,90"/>
-<area shape="rect" id="node3" title=" " alt="" coords="81,5,287,97"/>
-<area shape="rect" id="node4" title=" " alt="" coords="311,13,350,90"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,148,204,228"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="28,13,59,78"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,77,74,123,78,132,73,134,69,125,51,79"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="83,13,126,78"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="107,78,107,132,102,132,102,78"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="149,5,348,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="210,88,158,139,154,135,207,84"/>
 </map>

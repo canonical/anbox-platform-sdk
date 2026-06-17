@@ -8,7 +8,7 @@ var classanbox_1_1AnboxProxy =
     [ "change_screen_orientation", "classanbox_1_1AnboxProxy.html#a59b5d87df0950408f6afc1314752eec3", null ],
     [ "create_adb_connection", "classanbox_1_1AnboxProxy.html#ae4281bb79338dfc6e639cb20c83fb0d7", null ],
     [ "disconnect_adb_connection", "classanbox_1_1AnboxProxy.html#a542090bc9b5a05f37a273059fb0a3b22", null ],
-    [ "operator=", "classanbox_1_1AnboxProxy.html#ae7f6d56b898c8b2a2e79709f451044fa", null ],
+    [ "operator=", "classanbox_1_1AnboxProxy.html#a8490fd9dd232d35c42e8fba08ffc7f0d", null ],
     [ "send_message", "classanbox_1_1AnboxProxy.html#a4f66c8b7d37198edb89300e0be7329ef", null ],
     [ "set_change_display_density_callback", "classanbox_1_1AnboxProxy.html#a890bec8aad1f7bbb0d9d5e369ed4d13d", null ],
     [ "set_change_display_size_callback", "classanbox_1_1AnboxProxy.html#a0082ec7ce8b7dc54905bb0be64298851", null ],

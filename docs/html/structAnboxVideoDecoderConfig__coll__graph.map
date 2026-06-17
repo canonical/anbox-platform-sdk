@@ -1,5 +1,7 @@
 <map id="AnboxVideoDecoderConfig" name="AnboxVideoDecoderConfig">
-<area shape="rect" id="node1" title="AnboxVideoDecoderConfig describes the configuration of a video decoder." alt="" coords="20,160,215,237"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,80,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="105,5,282,83"/>
+<area shape="rect" id="Node000001" title="AnboxVideoDecoderConfig describes the configuration of a video decoder." alt="" coords="16,148,203,213"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,72,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,70,88,131,83,134,52,72"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="97,5,266,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,72,146,125,141,135,136,132,142,123,166,70"/>
 </map>

@@ -1,6 +1,9 @@
 <map id="AnboxInputEvent" name="AnboxInputEvent">
-<area shape="rect" id="node1" title="AnboxInputEvent is similar to the input_event that is defined in the Linux kernel API...." alt="" coords="123,160,256,237"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,80,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="104,5,275,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="299,5,365,83"/>
+<area shape="rect" id="Node000001" title="AnboxInputEvent is similar to the input_event that is defined in the Linux kernel API...." alt="" coords="159,148,284,213"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,168,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,70,107,97,123,122,146,142,143,146,119,126,102,99,92,72"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="192,5,251,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="224,71,224,131,219,131,219,71"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="296,5,363,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="326,72,317,99,302,126,290,139,286,136,298,122,312,97,321,70"/>
 </map>

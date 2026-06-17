@@ -1,14 +1,33 @@
 <map id="types.h" name="types.h">
-<area shape="rect" id="node1" title=" " alt="" coords="396,5,467,32"/>
-<area shape="rect" id="node2" href="$anbox__proxy_8h.html" title=" " alt="" coords="5,155,121,181"/>
-<area shape="rect" id="node3" href="$platform_8h.html" title=" " alt="" coords="429,229,519,256"/>
-<area shape="rect" id="node6" href="$audio__processor_8h.html" title=" " alt="" coords="197,155,335,181"/>
-<area shape="rect" id="node7" href="$camera__processor_8h.html" title=" " alt="" coords="299,80,451,107"/>
-<area shape="rect" id="node9" href="$gps__processor_8h.html" title=" " alt="" coords="563,155,689,181"/>
-<area shape="rect" id="node10" href="$graphics__processor_8h.html" title=" " alt="" coords="527,80,685,107"/>
-<area shape="rect" id="node11" href="$input__processor_8h.html" title=" " alt="" coords="710,80,846,107"/>
-<area shape="rect" id="node12" href="$sensor__processor_8h.html" title=" " alt="" coords="870,80,1017,107"/>
-<area shape="rect" id="node4" href="$plugin_8h.html" title=" " alt="" coords="381,304,455,331"/>
-<area shape="rect" id="node5" href="$public__api_8h.html" title=" " alt="" coords="480,304,580,331"/>
-<area shape="rect" id="node8" href="$video__decoder_8h.html" title=" " alt="" coords="410,155,538,181"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="396,5,467,31"/>
+<area shape="rect" id="Node000002" href="$anbox__proxy_8h.html" title=" " alt="" coords="5,152,121,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="382,23,330,27,268,37,203,54,142,81,119,97,100,117,72,154,68,150,96,113,116,93,139,76,201,49,267,32,329,22,382,18"/>
+<area shape="rect" id="Node000003" href="$platform_8h.html" title=" " alt="" coords="429,225,519,251"/>
+<area shape="poly" id="edge17_Node000001_Node000003" title=" " alt="" coords="383,32,306,53,266,68,228,85,198,105,179,126,175,138,174,150,178,162,187,176,202,188,226,199,291,215,364,226,429,231,428,237,363,231,290,220,224,204,199,192,183,179,173,164,169,150,170,137,175,124,195,101,226,80,263,63,305,48,381,27"/>
+<area shape="rect" id="Node000006" href="$audio__processor_8h.html" title=" " alt="" coords="197,152,335,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="383,30,333,48,310,62,289,80,279,97,273,117,268,152,263,151,267,116,274,95,285,77,306,58,331,43,382,25"/>
+<area shape="rect" id="Node000007" href="$camera__processor_8h.html" title=" " alt="" coords="299,79,451,104"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="416,43,386,80,382,77,411,40"/>
+<area shape="rect" id="Node000009" href="$gps__processor_8h.html" title=" " alt="" coords="563,152,689,177"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="452,39,481,70,517,102,560,129,601,150,598,154,557,134,514,106,477,74,448,43"/>
+<area shape="rect" id="Node000010" href="$graphics__processor_8h.html" title=" " alt="" coords="527,79,685,104"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="473,33,578,76,576,81,471,38"/>
+<area shape="rect" id="Node000011" href="$input__processor_8h.html" title=" " alt="" coords="710,79,846,104"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="481,27,722,76,721,81,480,32"/>
+<area shape="rect" id="Node000012" href="$sensor__processor_8h.html" title=" " alt="" coords="870,79,1017,104"/>
+<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="481,23,870,77,870,83,480,29"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="136,176,429,226,428,231,135,181"/>
+<area shape="rect" id="Node000004" href="$plugin_8h.html" title=" " alt="" coords="381,299,455,324"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="458,263,429,300,425,297,454,260"/>
+<area shape="rect" id="Node000005" href="$public__api_8h.html" title=" " alt="" coords="480,299,580,324"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="494,260,523,297,519,300,490,263"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="313,179,441,223,439,228,312,184"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="380,117,387,146,400,176,426,203,454,223,451,227,422,207,396,179,382,148,375,118"/>
+<area shape="rect" id="Node000008" href="$video__decoder_8h.html" title=" " alt="" coords="410,152,538,177"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="404,110,459,150,456,154,400,114"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="477,191,477,225,471,225,471,191"/>
+<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="591,185,500,228,498,223,588,181"/>
+<area shape="poly" id="edge14_Node000010_Node000003" title=" " alt="" coords="651,107,677,121,698,137,710,157,710,168,704,179,692,190,674,199,626,215,520,234,519,229,624,210,672,194,689,185,700,176,705,167,705,158,695,141,674,125,648,112"/>
+<area shape="poly" id="edge16_Node000011_Node000003" title=" " alt="" coords="771,118,753,150,725,179,674,207,619,224,566,234,520,238,519,233,565,229,618,219,672,202,722,175,748,147,766,116"/>
+<area shape="poly" id="edge19_Node000012_Node000003" title=" " alt="" coords="911,113,840,146,755,180,628,213,520,233,519,227,627,208,753,175,838,142,909,108"/>
 </map>

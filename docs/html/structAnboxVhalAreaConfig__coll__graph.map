@@ -1,8 +1,13 @@
 <map id="AnboxVhalAreaConfig" name="AnboxVhalAreaConfig">
-<area shape="rect" id="node1" title="AnboxVhalAreaConfig describes the configuration of a given area id for a VHAL property." alt="" coords="231,175,393,252"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,56,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="132,5,183,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="279,5,345,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="437,5,504,83"/>
-<area shape="rect" id="node6" title=" " alt="" coords="588,5,663,83"/>
+<area shape="rect" id="Node000001" title="AnboxVhalAreaConfig describes the configuration of a given area id for a VHAL property." alt="" coords="271,163,425,228"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,64,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="39,70,47,106,55,122,67,137,97,153,144,166,255,183,254,189,143,171,95,158,64,141,51,125,42,107,34,71"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="160,5,219,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,70,200,105,207,122,217,137,235,154,257,167,254,171,232,158,213,140,202,124,195,107,188,71"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="327,5,369,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="351,71,351,146,345,146,345,71"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="469,5,536,71"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="503,71,494,107,475,140,442,167,438,163,471,137,489,105,498,70"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="641,5,684,71"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="663,71,653,108,644,125,631,141,599,158,552,171,442,188,441,183,551,166,597,153,628,137,640,122,648,106,658,70"/>
 </map>

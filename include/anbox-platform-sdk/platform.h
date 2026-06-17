@@ -32,6 +32,9 @@
 #include "anbox-platform-sdk/video_decoder.h"
 #include "anbox-platform-sdk/vhal_connector.h"
 
+#include <iostream>
+#include <exception>
+
 namespace anbox {
 
 /**
@@ -298,16 +301,32 @@ class Platform {
  *     - description: The description of the platform.
  *
  **/
-#define ANBOX_PLATFORM_PLUGIN_DESCRIBE(platform_type, name, vendor, description) \
-  AnboxPlatformDescriptor anbox_platform_descriptor __attribute((section(ANBOX_PLATFORM_DESCRIPTOR_SECTION))) = \
-    { name, vendor, description, ANBOX_PLATFORM_VERSION }; \
-extern "C" { \
-  ANBOX_EXPORT AnboxPlatform* anbox_initialize(const AnboxPlatformConfiguration* configuration) { \
-    auto platform = std::make_unique<platform_type>(configuration); \
-    return anbox_platform_plugin_register(std::move(platform)); \
-  } \
-  ANBOX_EXPORT void anbox_deinitialize(AnboxPlatform* platform) { \
-      anbox_platform_plugin_unregister(platform); \
-  } \
-}
+
+#define ANBOX_PLATFORM_PLUGIN_DESCRIBE(platform_type, name, vendor,         \
+                                       description)                         \
+  AnboxPlatformDescriptor anbox_platform_descriptor                         \
+    __attribute((section(ANBOX_PLATFORM_DESCRIPTOR_SECTION))) = {           \
+      name, vendor, description, ANBOX_PLATFORM_VERSION};                   \
+  extern "C" {                                                              \
+  ANBOX_EXPORT AnboxPlatform* anbox_initialize(                             \
+    const AnboxPlatformConfiguration* configuration) {                      \
+    try {                                                                   \
+      auto platform = std::make_unique<platform_type>(configuration);       \
+      return anbox_platform_plugin_register(std::move(platform));           \
+    } catch (const std::exception& e) {                                     \
+      std::cerr << "Anbox Platform SDK caught exception: " << e.what()      \
+                << std::endl;                                               \
+      return nullptr;                                                       \
+    } catch (...) {                                                         \
+      std::cerr << "Anbox Platform SDK caught unknown exception."           \
+                << std::endl;                                               \
+      return nullptr;                                                       \
+    }                                                                       \
+  }                                                                         \
+                                                                            \
+  ANBOX_EXPORT void anbox_deinitialize(AnboxPlatform* platform) {           \
+    anbox_platform_plugin_unregister(platform);                             \
+  }                                                                         \
+  }
+
 #endif

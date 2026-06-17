@@ -5,7 +5,7 @@ var classanbox_1_1SensorProcessor =
     [ "SensorProcessor", "classanbox_1_1SensorProcessor.html#aa809cce84e0444cd19c685ba239ecb73", null ],
     [ "activate_sensor", "classanbox_1_1SensorProcessor.html#ae86504445d908016d6958dd9eeac0e73", null ],
     [ "inject_data", "classanbox_1_1SensorProcessor.html#aaade1f91f7fce6e904d6f358c8162bb5", null ],
-    [ "operator=", "classanbox_1_1SensorProcessor.html#a7e2a041bc8e159374491b3001b68ee76", null ],
+    [ "operator=", "classanbox_1_1SensorProcessor.html#a98d5bc9509cdc1f2ad0e41d47bb241e3", null ],
     [ "read_data", "classanbox_1_1SensorProcessor.html#a6be51ee1116dc036c5b7c642036af76c", null ],
     [ "supported_sensors", "classanbox_1_1SensorProcessor.html#a503eca5e80480d6f62d5cc7970264188", null ]
 ];
