@@ -1,7 +1,11 @@
 <map id="GnssClock" name="GnssClock">
-<area shape="rect" id="node1" title=" " alt="" coords="205,219,296,296"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,72,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="156,5,223,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="276,5,351,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="448,5,573,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="192,207,275,272"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,64,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="31,71,29,98,30,127,37,156,51,181,77,204,109,219,143,229,176,234,175,239,142,234,107,224,75,208,47,184,32,158,25,128,24,98,26,71"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="129,5,188,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,71,150,125,153,154,162,181,181,204,176,208,158,184,148,155,144,125,149,71"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="276,5,343,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="310,71,302,125,282,184,276,195,272,192,278,182,297,124,305,71"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="448,5,565,71"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="512,71,511,98,506,129,496,159,478,185,446,203,398,217,292,235,291,229,397,211,444,198,474,181,491,156,501,127,505,98,506,71"/>
 </map>

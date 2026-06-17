@@ -1,4 +1,5 @@
 <map id="AnboxGraphicsProcessor" name="AnboxGraphicsProcessor">
-<area shape="rect" id="node1" title=" " alt="" coords="23,351,206,428"/>
-<area shape="rect" id="node2" href="$classanbox_1_1GraphicsProcessor.html" title="GraphicsProcessor allows integration with the graphics engine inside Anbox." alt="" coords="5,5,224,288"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="23,413,197,479"/>
+<area shape="rect" id="Node000002" href="$classanbox_1_1GraphicsProcessor.html" title="GraphicsProcessor allows integration with the graphics engine inside Anbox." alt="" coords="5,5,215,351"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,351,113,397,107,397,107,351"/>
 </map>

@@ -1,8 +1,13 @@
 <map id="AnboxGraphicsConfiguration" name="AnboxGraphicsConfiguration">
-<area shape="rect" id="node1" title="AnboxDisplaySpec describes properties of the Anbox rendering pipeline the platform plugin can influen..." alt="" coords="371,145,577,223"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,177,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="201,5,371,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="395,5,575,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="609,5,659,83"/>
-<area shape="rect" id="node6" title=" " alt="" coords="684,5,899,83"/>
+<area shape="rect" id="Node000001" title="AnboxDisplaySpec describes properties of the Anbox rendering pipeline the platform plugin can influen..." alt="" coords="365,133,564,199"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,167,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,68,173,89,212,107,281,129,350,144,349,150,280,134,210,112,170,94,133,73"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="191,5,355,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="303,69,348,107,374,123,371,128,344,111,300,73"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="379,5,551,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="467,71,467,117,462,117,462,71"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="575,5,781,71"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="649,73,601,112,569,129,567,124,598,107,646,69"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="806,5,849,71"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="808,63,776,89,738,112,660,138,581,154,580,149,658,132,736,107,773,85,804,59"/>
 </map>

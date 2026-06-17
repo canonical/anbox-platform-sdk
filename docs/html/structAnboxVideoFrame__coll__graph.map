@@ -1,5 +1,7 @@
 <map id="AnboxVideoFrame" name="AnboxVideoFrame">
-<area shape="rect" id="node1" title="AnboxVideoFrame represents a single complete video frame." alt="" coords="9,145,150,223"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,65,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="90,5,157,83"/>
+<area shape="rect" id="Node000001" title="AnboxVideoFrame represents a single complete video frame." alt="" coords="8,133,141,199"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,64,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="37,71,43,109,46,118,41,120,37,110,31,71"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,5,141,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="107,72,92,118,87,117,102,70"/>
 </map>

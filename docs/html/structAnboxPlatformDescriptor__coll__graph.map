@@ -1,5 +1,7 @@
 <map id="AnboxPlatformDescriptor" name="AnboxPlatformDescriptor">
-<area shape="rect" id="node1" title="AnboxPlatformDescriptor provides information about the implemented platform." alt="" coords="5,175,192,252"/>
-<area shape="rect" id="node2" title=" " alt="" coords="15,5,65,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="121,5,196,83"/>
+<area shape="rect" id="Node000001" title="AnboxPlatformDescriptor provides information about the implemented platform." alt="" coords="5,163,184,228"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="15,5,57,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="33,71,32,104,40,138,46,148,41,151,35,140,27,105,28,71"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="121,5,188,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,72,128,140,124,149,119,147,123,138,145,70"/>
 </map>

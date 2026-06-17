@@ -1,8 +1,13 @@
 <map id="AnboxPlatformConfigurationInfo" name="AnboxPlatformConfigurationInfo">
-<area shape="rect" id="node1" title=" " alt="" coords="5,315,236,392"/>
-<area shape="rect" id="node2" title=" " alt="" coords="23,167,98,245"/>
-<area shape="rect" id="node3" href="$structAnboxPlatformConfigurationItemInfo.html" title=" " alt="" coords="123,160,329,252"/>
-<area shape="rect" id="node4" title=" " alt="" coords="47,13,98,90"/>
-<area shape="rect" id="node5" title=" " alt="" coords="123,5,329,97"/>
-<area shape="rect" id="node6" title=" " alt="" coords="353,13,392,90"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,291,228,356"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="23,155,90,221"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,220,78,266,83,276,79,278,73,268,59,222"/>
+<area shape="rect" id="Node000003" href="$structAnboxPlatformConfigurationItemInfo.html" title=" " alt="" coords="113,148,312,228"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,230,167,268,158,280,154,276,162,265,188,227"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="136,13,167,78"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="164,77,182,123,186,132,181,134,177,125,159,79"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="191,13,234,78"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="215,78,215,132,210,132,210,78"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="257,5,456,85"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="318,88,266,139,262,135,315,84"/>
 </map>

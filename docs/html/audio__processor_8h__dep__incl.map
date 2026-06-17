@@ -1,6 +1,9 @@
 <map id="audio_processor.h" name="audio_processor.h">
-<area shape="rect" id="node1" title=" " alt="" coords="29,5,168,32"/>
-<area shape="rect" id="node2" href="$platform_8h.html" title=" " alt="" coords="53,80,144,107"/>
-<area shape="rect" id="node3" href="$plugin_8h.html" title=" " alt="" coords="5,155,80,181"/>
-<area shape="rect" id="node4" href="$public__api_8h.html" title=" " alt="" coords="105,155,205,181"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="29,5,168,31"/>
+<area shape="rect" id="Node000002" href="$platform_8h.html" title=" " alt="" coords="53,79,144,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,44,101,79,96,79,96,44"/>
+<area shape="rect" id="Node000003" href="$plugin_8h.html" title=" " alt="" coords="5,152,80,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="83,117,54,154,50,150,79,113"/>
+<area shape="rect" id="Node000004" href="$public__api_8h.html" title=" " alt="" coords="105,152,205,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="119,113,148,150,144,154,114,117"/>
 </map>

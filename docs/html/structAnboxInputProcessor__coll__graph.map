@@ -1,4 +1,5 @@
 <map id="AnboxInputProcessor" name="AnboxInputProcessor">
-<area shape="rect" id="node1" title=" " alt="" coords="9,219,168,296"/>
-<area shape="rect" id="node2" href="$classanbox_1_1InputProcessor.html" title="InputProcessor allows a plugin to propagate input events to Anbox which will forward them to the Andr..." alt="" coords="5,5,172,156"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="9,233,160,299"/>
+<area shape="rect" id="Node000002" href="$classanbox_1_1InputProcessor.html" title="InputProcessor allows a plugin to propagate input events to Anbox which will forward them to the Andr..." alt="" coords="5,5,164,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,171,87,217,82,217,82,171"/>
 </map>

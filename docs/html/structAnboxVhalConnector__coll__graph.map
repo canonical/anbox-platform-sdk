@@ -1,4 +1,5 @@
 <map id="AnboxVhalConnector" name="AnboxVhalConnector">
-<area shape="rect" id="node1" title=" " alt="" coords="16,277,175,355"/>
-<area shape="rect" id="node2" href="$classanbox_1_1VhalConnector.html" title="Connects a platform with the Android VHAL interface. The platform can invoke the callbacks which are ..." alt="" coords="5,5,185,215"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="16,313,167,379"/>
+<area shape="rect" id="Node000002" href="$classanbox_1_1VhalConnector.html" title="Connects a platform with the Android VHAL interface. The platform can invoke the callbacks which are ..." alt="" coords="5,5,177,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,251,94,297,89,297,89,251"/>
 </map>

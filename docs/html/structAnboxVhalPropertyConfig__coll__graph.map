@@ -1,12 +1,25 @@
 <map id="AnboxVhalPropertyConfig" name="AnboxVhalPropertyConfig">
-<area shape="rect" id="node1" title="AnboxVhalPropertyConfig describes the configuration of a VHAL property." alt="" coords="610,315,798,392"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,175,237,252"/>
-<area shape="rect" id="node3" title=" " alt="" coords="262,175,439,252"/>
-<area shape="rect" id="node4" title=" " alt="" coords="1040,5,1091,83"/>
-<area shape="rect" id="node9" href="$structAnboxVhalAreaConfig.html" title="AnboxVhalAreaConfig describes the configuration of a given area id for a VHAL property." alt="" coords="789,175,952,252"/>
-<area shape="rect" id="node5" title=" " alt="" coords="511,5,561,83"/>
-<area shape="rect" id="node6" title=" " alt="" coords="1339,5,1405,83"/>
-<area shape="rect" id="node7" title=" " alt="" coords="629,5,704,83"/>
-<area shape="rect" id="node8" title=" " alt="" coords="1321,175,1513,252"/>
-<area shape="rect" id="node10" title=" " alt="" coords="837,5,904,83"/>
+<area shape="rect" id="Node000001" title="AnboxVhalPropertyConfig describes the configuration of a VHAL property." alt="" coords="633,291,813,356"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="141,5,200,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,57,92,89,40,133,22,156,10,180,10,204,22,226,50,241,104,256,263,281,450,300,616,313,616,318,449,305,262,286,103,261,48,246,18,230,5,205,5,179,17,153,37,129,89,85,140,53"/>
+<area shape="rect" id="Node000007" href="$structAnboxVhalAreaConfig.html" title="AnboxVhalAreaConfig describes the configuration of a given area id for a VHAL property." alt="" coords="957,163,1112,228"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="201,43,412,85,710,136,774,143,825,145,875,149,939,160,941,161,940,166,938,165,874,155,824,151,774,148,709,141,411,91,200,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="129,163,298,228"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="299,222,311,225,471,266,617,298,616,304,470,272,310,231,297,227"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="323,163,507,228"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="493,226,631,282,629,287,491,231"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="531,163,755,228"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="659,227,680,265,687,276,683,279,675,268,654,229"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="791,5,857,71"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="824,71,810,177,799,230,786,268,779,279,774,276,782,265,794,229,805,176,818,71"/>
+<area shape="poly" id="edge10_Node000007_Node000006" title=" " alt="" coords="833,70,847,105,869,137,942,161,940,166,866,141,842,108,828,72"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="958,230,817,287,815,282,956,225"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="977,5,1036,71"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="1006,71,1006,104,1011,138,1013,146,1008,148,1005,139,1001,104,1001,71"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="1376,5,1419,71"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="1421,53,1439,71,1453,94,1459,117,1453,140,1434,174,1413,196,1386,213,1350,230,1308,246,1252,260,1114,284,963,303,830,316,829,311,963,297,1113,279,1251,255,1307,241,1348,226,1383,209,1409,192,1430,171,1448,138,1454,117,1448,96,1435,74,1417,57"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="1377,59,1269,141,1199,167,1128,184,1127,179,1197,162,1267,136,1374,54"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="1201,5,1244,71"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="1246,61,1265,94,1271,117,1265,140,1237,177,1206,198,1125,230,1050,260,973,282,829,311,828,306,971,277,1049,254,1123,226,1204,194,1234,174,1260,138,1266,117,1260,96,1242,64"/>
+<area shape="poly" id="edge11_Node000007_Node000010" title=" " alt="" coords="1203,61,1169,96,1154,119,1138,141,1118,156,1115,152,1134,137,1150,116,1164,93,1199,57"/>
 </map>

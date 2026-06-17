@@ -217,8 +217,12 @@ ssize_t AudioStreamingPlatformAudioProcessor::read_data(uint8_t* data, size_t si
 }
 
 int AudioStreamingPlatformAudioProcessor::configure_audio(const AnboxAudioSpec& audio_spec) {
+// NOTE: av_register_all() was deprecated in FFmpeg 4.0 and completely 
+// removed in FFmpeg 5.0 and later versions.
+#if LIBAVFORMAT_VERSION_INT < AV_VERSION_INT(58, 9, 100)
   // Register all codecs and formats.
   av_register_all();
+#endif
 
   // Initialize the network components.
   avformat_network_init();
