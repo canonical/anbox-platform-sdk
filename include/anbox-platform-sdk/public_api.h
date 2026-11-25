@@ -361,6 +361,17 @@ typedef bool (*AnboxGraphicsProcessorPresent2Func)(const AnboxGraphicsProcessor*
                                                   AnboxGraphicsBuffer2* buffer,
                                                   AnboxCallback* callback);
 
+/**
+ * @brief Present the given buffer to one specific display or other output
+ *
+ * The function prototype for C API function which stands for
+ * the C++ method of anbox::GraphicsProcessor::present
+ */
+typedef bool (*AnboxGraphicsProcessorPresent3Func)(const AnboxGraphicsProcessor* graphics_processor,
+                                                  AnboxGraphicsBuffer2* buffer,
+                                                  AnboxCallback* callback,
+                                                  uint32_t display_id);
+
 /*
  * @brief Create a new graphics buffer
  *

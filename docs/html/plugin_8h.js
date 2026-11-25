@@ -10,6 +10,6 @@ var plugin_8h =
     [ "AnboxVideoDecoder", "structAnboxVideoDecoder.html", "structAnboxVideoDecoder" ],
     [ "AnboxVhalConnector", "structAnboxVhalConnector.html", "structAnboxVhalConnector" ],
     [ "AnboxPlatform", "structAnboxPlatform.html", "structAnboxPlatform" ],
-    [ "anbox_platform_plugin_register", "plugin_8h.html#a828452a7bb809bcb063a60ede28b9fe1", null ],
+    [ "anbox_platform_plugin_register", "plugin_8h.html#aad1b0a76b72b5dbfd624b54b883a482c", null ],
     [ "anbox_platform_plugin_unregister", "plugin_8h.html#a671d81fcb3089e8548822a637c3e6e6a", null ]
 ];
