@@ -287,6 +287,26 @@ typedef struct {
 #define ANBOX_GRAPHICS_BUFFER_MAX_PLANES 4
 
 /**
+ * Anbox private modifier vendor for Vulkan memory exported as an opaque fd
+ * (not a dma-buf), e.g. gfxstream ColorBuffers on NVIDIA. Such buffers can
+ * only be imported through the driver's external memory API (e.g. CUDA).
+ *
+ *   bits 56-63  vendor   ANBOX_GRAPHICS_BUFFER_MODIFIER_VENDOR_ANBOX
+ *   bits 48-55  version  ANBOX_GRAPHICS_BUFFER_MODIFIER_OPAQUE_VERSION
+ *   bits 40-47  flags    ANBOX_GRAPHICS_BUFFER_MODIFIER_OPAQUE_FLAG_*
+ *   bits  0-39  size     allocation size in bytes
+ **/
+#define ANBOX_GRAPHICS_BUFFER_MODIFIER_VENDOR_ANBOX 0xabULL
+#define ANBOX_GRAPHICS_BUFFER_MODIFIER_OPAQUE_VERSION 1ULL
+#define ANBOX_GRAPHICS_BUFFER_MODIFIER_OPAQUE_SIZE_MASK ((1ULL << 40) - 1)
+#define ANBOX_GRAPHICS_BUFFER_MODIFIER_OPAQUE_FLAG_DEDICATED (1U << 0)
+#define ANBOX_GRAPHICS_BUFFER_MODIFIER_OPAQUE_FLAG_COLOR_ATTACHMENT (1U << 1)
+#define ANBOX_GRAPHICS_BUFFER_MODIFIER_OPAQUE_FLAG_STORAGE (1U << 2)
+
+#define ANBOX_GRAPHICS_BUFFER_MODIFIER_IS_OPAQUE(modifier) \
+  (((modifier) >> 56) == ANBOX_GRAPHICS_BUFFER_MODIFIER_VENDOR_ANBOX)
+
+/**
  * @brief Graphics buffer
  */
 typedef struct {

@@ -341,6 +341,17 @@ ANBOX_EXPORT bool anbox_graphics_processor_present2(const AnboxGraphicsProcessor
   }, false);
 }
 
+ANBOX_EXPORT bool anbox_graphics_processor_present3(const AnboxGraphicsProcessor* graphics_processor,
+                                                    AnboxGraphicsBuffer2* buffer,
+                                                    AnboxCallback* callback,
+                                                    uint32_t display_id) {
+  return exception_safe_call([&]() {
+    if (!graphics_processor || !graphics_processor->instance)
+      return false;
+    return graphics_processor->instance->present(buffer, callback, display_id);
+  }, false);
+}
+
 ANBOX_EXPORT bool anbox_graphics_processor_create_buffer(const AnboxGraphicsProcessor* graphics_processor,
                                                          uint32_t width, uint32_t height, uint32_t format,
                                                          uint32_t usage, AnboxGraphicsBuffer2** buffer) {

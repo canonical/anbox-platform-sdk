@@ -25,7 +25,11 @@
 var NAVTREE =
 [
   [ "anbox-platform-sdk", "index.html", [
-    [ "Anbox Platform SDK", "index.html", "index" ],
+    [ "Anbox Platform SDK", "index.html", [
+      [ "Introduction", "index.html#introduction", null ],
+      [ "Overview", "index.html#overview", null ],
+      [ "Get Started", "index.html#get_started", null ]
+    ] ],
     [ "API Overview", "anbox_sdk_api_overview_page.html", [
       [ "Introduction", "anbox_sdk_api_overview_page.html#API", null ],
       [ "Abstract classes", "anbox_sdk_api_overview_page.html#abstract_classes", [
@@ -48,13 +52,7 @@ var NAVTREE =
       [ "Package as AMS addon", "anbox_sdk_plugin_package_and_deploy.html#package_as_ams_addon", null ],
       [ "Use platform in a container", "anbox_sdk_plugin_package_and_deploy.html#use_platform_in_a_container", null ]
     ] ],
-    [ "Examples", "anbox_sdk_examples.html", [
-      [ "Introduction", "anbox_sdk_examples.html#example_introduction", null ],
-      [ "Build the example platform plugins", "anbox_sdk_examples.html#build_example_plugins", null ],
-      [ "Test the example platform plugins", "anbox_sdk_examples.html#test_example_plugins", null ],
-      [ "Minimal Platform", "anbox_sdk_example_minimal.html", null ],
-      [ "Audio Streaming Platform", "anbox_sdk_example_audio_streaming.html", null ]
-    ] ],
+    [ "Examples", "anbox_sdk_examples.html", "anbox_sdk_examples" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],
@@ -84,9 +82,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "anbox__proxy_8h.html",
-"classanbox_1_1VhalConnector.html#ad2fb0b3a84794856881246d924597baa",
-"structAnboxGGAData.html#a670fc6a5a5171c44f593bbc0e8610c2f",
-"types_8h.html#a0ca8be6ea8f0678d8867db0a10e18115"
+"index.html#overview",
+"structAnboxVhalAreaConfig.html#ac4db614d9e99e58b1da9542deafb30fd",
+"types_8h.html#aa479d42a9b58eeeae0cf06b90bc7ba08"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

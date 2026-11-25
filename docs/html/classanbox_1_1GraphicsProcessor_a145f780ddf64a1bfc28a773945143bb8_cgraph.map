@@ -1,0 +1,4 @@
+<map id="anbox::GraphicsProcessor::present" name="anbox::GraphicsProcessor::present">
+<area shape="rect" id="node1" title="Present the given buffer to a specific display output." alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node2" href="$classanbox_1_1GraphicsProcessor.html#ac796f7d8812c19e8528bdde7754892ac" title="Present the given buffer to a display or other output." alt="" coords="244,5,435,47"/>
+</map>

@@ -195,6 +195,22 @@ class GraphicsProcessor {
     }
 
     /**
+     * @brief Present the given buffer to a specific display output
+     *
+     * Multi-display variant of #present(AnboxGraphicsBuffer2*, AnboxCallback*).
+     * The @p display_id parameter identifies which display the buffer belongs to
+     *
+     * @param buffer Buffer to be presented on the output
+     * @param callback A callback to be called by the platform when the buffer has been presented
+     * @param display_id Zero-based index of the target display
+     * @return true if the buffer was accepted for presentation, false otherwise.
+     */
+    virtual bool present(AnboxGraphicsBuffer2* buffer, AnboxCallback* callback, uint32_t display_id) {
+      (void) display_id;
+      return present(buffer, callback);
+    }
+
+    /**
      * @brief Create a buffer with the given specifications
      *
      * @param width Width of the buffer in pixels
